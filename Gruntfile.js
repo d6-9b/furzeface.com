@@ -569,18 +569,16 @@ module.exports = function(grunt) {
           bucket: '<%= config.aws.bucket %>'
         },
         cwd: 'dist/',
-        src: '**'
-      },
+        src: '**/*'
+      }/*,
       static: {
         options: {
           bucket: '<%= config.aws.bucketStatic %>'
         },
         cwd: 'static', // @todo: targets for static assets
         src: '**'
-      }
+      }*/
     }
-
-
 
   });
 
@@ -661,7 +659,7 @@ module.exports = function(grunt) {
   // Deploy task.
   grunt.registerTask('deploy', [
     'build_production',
-    's3:site',
-    'newer:s3:static'
+    's3:site'/*,
+    's3:static'*/
   ]);
 };
