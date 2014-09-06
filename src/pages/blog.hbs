@@ -8,5 +8,13 @@ pageClass: page-blog
 
 <h1>Blog Homepage</h1>
 
+<ul>
+  {{#each posts}}
+  <li class="file">
+    <a href="{{slug}}">{{title}}</a>
+  </li>
+  {{/each}}
+</ul>
+
 {{/content}}
 {{/extend}}

@@ -1,6 +1,10 @@
-# [[ TODO list:](http://daniel.furzeface.com)]( http://daniel.furzeface.com )
+# [[Daniel Furze Blog TODO list:](http://daniel.furzeface.com)]( http://daniel.furzeface.com )
 
 **Version:** `3.0.0`
+
+> The personal blog of Daniel Furze, Manchester UK based front end developer.
+
+* * *
 
 ## TODO
 
@@ -18,4 +22,4 @@
 
 * * *
 
-Last generated: Sat Sep 06 2014 20:48:59 by [grunt-todo](https://github.com/leny/grunt-todo).
+Last generated: Sat Sep 06 2014 21:49:36 by [grunt-todo](https://github.com/leny/grunt-todo).
