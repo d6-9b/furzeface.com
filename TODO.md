@@ -11,13 +11,12 @@
 ## Gruntfile.js
 
 -  **todo** `(line 11)` : Use grunt-newer
--  **todo** `(line 120)` : Reimplement this
--  **todo** `(line 457)` : Responsive images task
--  **todo** `(line 495)` : robots.txt task
--  **todo** `(line 496)` : sitemap task
--  **todo** `(line 537)` : AWS Deploy task
+-  **todo** `(line 126)` : Reimplement this
+-  **todo** `(line 529)` : robots.txt task
+-  **todo** `(line 530)` : sitemap task
+-  **todo** `(line 578)` : targets for static assets
 
 
 * * *
 
-Last generated: Sat Sep 06 2014 22:58:48 by [grunt-todo](https://github.com/leny/grunt-todo).
+Last generated: Sat Sep 06 2014 23:28:42 by [grunt-todo](https://github.com/leny/grunt-todo).
