@@ -11,15 +11,13 @@
 ## Gruntfile.js
 
 -  **todo** `(line 11)` : Use grunt-newer
--  **todo** `(line 82)` : Image watchers
--  **todo** `(line 111)` : Reimplement this
--  **todo** `(line 463)` : Imagemin task
--  **todo** `(line 464)` : Responsive images task
--  **todo** `(line 469)` : robots.txt task
--  **todo** `(line 470)` : sitemap task
--  **todo** `(line 511)` : AWS Deploy task
+-  **todo** `(line 120)` : Reimplement this
+-  **todo** `(line 457)` : Responsive images task
+-  **todo** `(line 495)` : robots.txt task
+-  **todo** `(line 496)` : sitemap task
+-  **todo** `(line 537)` : AWS Deploy task
 
 
 * * *
 
-Last generated: Sat Sep 06 2014 21:49:36 by [grunt-todo](https://github.com/leny/grunt-todo).
+Last generated: Sat Sep 06 2014 22:58:48 by [grunt-todo](https://github.com/leny/grunt-todo).

@@ -78,9 +78,18 @@ module.exports = function(grunt) {
           'modernizr'
         ]
       },
-
-      // @todo: Image watchers
-
+      images: {
+        files: [
+          '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcImages %>/**/*.{png,jpg,gif}'
+        ],
+        tasks: [
+          'imagemin'//,
+          //'responsive_images'
+        ],
+        options: {
+          spawn: false
+        }
+      },
       livereload: {
         options: {
           livereload: '<%= connect.options.livereload %>'
@@ -428,6 +437,26 @@ module.exports = function(grunt) {
       ]
     },
 
+
+    // Image tasks
+    imagemin: {
+      main: {
+        files: [
+          {
+            expand: true,
+            cwd: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcImages %>/',
+            src: [
+              '**/*.{gif,jpg,jpeg,png}'
+            ],
+            dest: '<%= config.dist %>/<%= config.distImages %>/'
+          }
+        ]
+      }
+    },
+
+    // @todo: Responsive images task
+
+
     // Misc build tasks
     modernizr: {
       dist: {
@@ -459,9 +488,6 @@ module.exports = function(grunt) {
         }
       }
     },
-
-    // @todo: Imagemin task
-    // @todo: Responsive images task
 
 
     // Deployment tasks
