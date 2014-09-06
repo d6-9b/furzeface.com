@@ -46,17 +46,14 @@ module.exports = function(grunt) {
       distSassDocs: 'sassdocs',
       mainCss: 'main.css',
       // Misc settings
-      pagePrefix: '<%= pkg.name %>_',
-      partialPrefix: '<%= pkg.name %>_partial-',
-      helpers: 'helpers',
-      assembleExt: 'hbs'
+      helpers: 'helpers'
     },
 
     // Watchers
     watch: {
       html: {
         files: [
-          '<%= config.src %>/{data,pages,partials,layouts}/{,*/}*.{<%= config.assembleExt %>,yml,json}'
+          '<%= config.src %>/{data,pages,partials,layouts}/**/*.{hbs,yml,json}'
         ],
         tasks: [
           'build_html'
@@ -187,8 +184,8 @@ module.exports = function(grunt) {
         layout: false,
         mainCss: '<%= config.mainCss %>',
         partials: [
-          '<%= config.src %>/partials/**/*.<%= config.assembleExt %>',
-          '<%= config.src %>/layouts/**/*.<%= config.assembleExt %>'
+          '<%= config.src %>/partials/**/*.hbs',
+          '<%= config.src %>/layouts/**/*.hbs'
         ],
         styles: '<%= config.distStyles %>',
         scripts: '<%= config.distScripts %>',
@@ -199,44 +196,31 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= config.src %>/pages/',
-          src: '**/*.<%= config.assembleExt %>',
+          src: '**/*.hbs',
           dest: '<%= config.dist %>/',
           rename: function(dest, src) {
             var filename = src;
+
             if (src.substring(0, 1) === '_') {
+              // If prefixed with _
               filename = dest + src.substring(1);
+              // Filename = filename without _
             } else if(src.indexOf('/') !== -1) {
+              // If in a subdirectory
               var index = null,
-                splitSrc = src.split('/');
-              filename = dest + '<%= config.pagePrefix %>';
+              splitSrc = src.split('/');
+              filename = dest;
+
               for (index = 0; index < splitSrc.length; ++index) {
                 filename = filename + splitSrc[index];
-                if (src.indexOf('.<%= config.assembleExt %>')) {
-                  filename = filename + '-';
+
+                if (src.indexOf('.hbs')) {
+                  filename = filename + '/';
                 }
               }
             } else {
-              filename = dest + '<%= config.pagePrefix %>' + src;
-            }
-            return filename;
-          }
-        }]
-      },
-      components: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.src %>/partials/',
-          src: '**/*.<%= config.assembleExt %>',
-          dest: '<%= config.dist %>/',
-          rename: function(dest, src) {
-            var filename = src;
-            if (src.substring(0, 1) === '_') {
-              filename = dest + src.substring(1);
-            } else if(src.indexOf('/') !== -1) {
-              var splitSrc = src.split('/');
-              filename = dest + '<%= config.partialPrefix %>' + splitSrc.pop();
-            } else {
-              filename = dest + '<%= config.partialPrefix %>' + src;
+              // Else it's a top level page - create a directory and index file for it. eg: about/index.html
+              filename = dest + src.replace('.hbs', '') + '/index';
             }
             return filename;
           }
@@ -589,9 +573,7 @@ module.exports = function(grunt) {
 
   // Default task.
   grunt.registerTask('default', [
-    'clean:everything',
-    'build_dev',
-    'watch'
+    'server'
   ]);
 
   // Local server task.
