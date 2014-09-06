@@ -1,6 +1,6 @@
 # [[ TODO list:](http://daniel.furzeface.com)]( http://daniel.furzeface.com )
 
-**Version:** `0.3.0`
+**Version:** `3.0.0`
 
 ## TODO
 
@@ -18,4 +18,4 @@
 
 * * *
 
-Last generated: Sat Sep 06 2014 19:00:02 by [grunt-todo](https://github.com/leny/grunt-todo).
+Last generated: Sat Sep 06 2014 19:05:40 by [grunt-todo](https://github.com/leny/grunt-todo).

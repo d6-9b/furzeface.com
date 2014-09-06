@@ -1,6 +1,6 @@
 /**
  * @file Gruntfile
- * @version 0.3.0
+ * @version 3.0.0
  * @author {@link https://github.com/furzeface Daniel Furze}
  */
 
