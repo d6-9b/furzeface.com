@@ -1,0 +1,29 @@
+/**
+ * Selection
+ *
+ * @author Daniel Furze
+ */
+
+//=User Select
+// Options: selection [none | text | all | element]
+// Note: 'element' only supported in IE.
+@mixin user-select($selection: text) {
+  -webkit-user-select: $selection;
+  -moz-user-select: $selection;
+  -ms-user-select: $selection;
+  user-select: $selection;
+}
+
+//=Text Selection Highlight
+// Options: background, color.
+@mixin selection($background: #262626, $color: #F5F5F5) {
+  ::-moz-selection {
+    color: $color;
+    background: $background;
+  }
+
+  ::selection {
+    color: $color;
+    background: $background;
+  }
+}

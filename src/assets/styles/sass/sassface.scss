@@ -1,0 +1,25 @@
+/**
+ * Main Scss file
+ *
+ * Imports all the things.
+ *
+ */
+//=Setup
+@import 'setup/variables';
+@import 'setup/placeholders';
+@import 'setup/mixins';
+//=Base
+@import 'base/normalize';
+@import 'helpers/clearfix';
+@import 'helpers/lists';
+@import 'helpers/size';
+@import 'base/base';
+@import 'base/grid';
+//=Typography
+@import 'typography/headings';
+@import 'typography/type';
+//=Components
+@import 'components/buttons';
+//=Extra Awesome
+@import 'components/shapes';
+@import 'misc/selection';

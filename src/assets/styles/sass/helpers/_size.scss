@@ -1,0 +1,15 @@
+/**
+ * Mixin to return sizing.
+ *
+ * @author Daniel Furze
+ */
+
+/*
+ * @mixin size
+ * @param {Number} $width - the specified width
+ * @param {Number} $height ($width) - the specified height
+ */
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}

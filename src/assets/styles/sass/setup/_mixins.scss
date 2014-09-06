@@ -1,0 +1,91 @@
+/**
+ * Mixins
+ *
+ * @author Daniel Furze
+ */
+
+//@TODO separate these out.
+
+/**
+ * Media Queries
+ *
+ * @author Daniel Furze
+ */
+@mixin MQ($canvas) {
+  @if $canvas == XS {
+    @media all and (min-width: $breakpoint-extra-small) {
+      @content;
+    }
+  } @else if $canvas == S {
+    @media all and (min-width: $breakpoint-small) {
+      @content;
+    }
+  } @else if $canvas == M {
+    @media all and (min-width: $breakpoint-medium) {
+      @content;
+    }
+  } @else if $canvas == XM {
+    @media all and (min-width: $breakpoint-extra-medium) {
+      @content;
+    }
+  } @else if $canvas == L {
+    @media all and (min-width: $breakpoint-large) {
+      @content;
+    }
+  } @else if $canvas == XL {
+    @media all and (min-width: $breakpoint-extra-large) {
+      @content;
+    }
+  }
+}
+
+/**
+ * Heading font size
+ *
+ * @author Daniel Furze
+ */
+@mixin font-size($font-size) {
+  font-size: $font-size;
+  line-height: 1; // So when a heading goes onto 2 lines there isn't a huge space.
+  margin-bottom: $font-size * 0.618;
+}
+
+/**
+ * Color contrast (from Compass)
+ *
+ * @author ...
+ @link http://compass-style.org/reference/compass/utilities/color/contrast
+ */
+$contrasted-dark-default: #262626 !default;
+$contrasted-light-default: #F9F9F9 !default;
+$contrasted-lightness-threshold: 30% !default;
+
+// Returns the $light color when the $color is dark and the $dark color when the $color is light.
+// The $threshold is a percent between 0% and 100% and it determines when the lightness of $color changes from 'dark' to 'light'.
+@function contrast($color,
+$dark: $contrasted-dark-default,
+$light: $contrasted-light-default,
+$threshold: $contrasted-lightness-threshold) {
+  @return if(lightness($color) < $threshold, $light, $dark)
+}
+
+// Sets the specified background color and calculates a dark or light contrasted text color.
+// The arguments are passed through to the contrast function
+@mixin contrasted($background-color,
+$dark: $contrasted-dark-default,
+$light: $contrasted-light-default,
+$threshold: $contrasted-lightness-threshold) {
+  background-color: $background-color;
+  color: contrast($background-color, $dark, $light, $threshold);
+}
+
+/**
+ * Opacity
+ *
+ * @author Daniel Furze
+ */
+@mixin opacity($level) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$level})";
+  filter: alpha(opacity=$level);
+  opacity: $level / 100;
+}

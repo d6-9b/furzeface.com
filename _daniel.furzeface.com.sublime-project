@@ -1,0 +1,17 @@
+{
+  "folders":
+  [
+    {
+      "path": ".",
+        "folder_exclude_patterns": [
+        ".sass-cache",
+        //"components",
+        "node_modules"
+      ],
+      "file_exclude_patterns": [
+        //"*.css",
+        "*.sublime-workspace"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+/**
+ * Variables
+ * @author Daniel Furze
+ *
+ */
+
+/**
+ * Overrides variable in components/normalize-scss/normalize.scss for IE 6/7 support.
+ * @type Bool (false)
+ */
+ $legacy_browser_support: false !default;
+
+/**
+ * Base
+ */
+ 
+ /**
+ * Sets default body background color.
+ * @type String (#F9F9F9)
+ */
+ $body-bg: #F9F9F9 !default;
+ 
+ /**
+ * Sets default body text color.
+ * @type String (#262626)
+ */
+ $body-color: #262626 !default;
+
+//$body-color: contrast($body-bg); //@TODO implement this again.
+
+/**
+ * Sizing
+ */
+
+ /**
+ * Sets default global margin.
+ * @type Number (1.5rem)
+ */
+ $global-margin: 1.5rem !default;
+
+ /**
+ * Sets default global padding.
+ * @type Number (1.5rem)
+ */
+ $global-padding: 1.5rem !default;
+
+/**
+ * Grid
+ */
+
+ /**
+ * Sets default number of grid columns.
+ * @type Number (12)
+ */
+ $grid-cols: 12 !default;
+
+ /**
+ * Sets default padding for grid columns.
+ * @type Number ($global-padding)
+ */
+ $grid-col-gutters: $global-padding !default;
+
+ /**
+ * Sets default breakpoint for grid columns.
+ * @type Number (M)
+ */
+ $grid-col-breakpoint: M !default;
+
+ /**
+ * Configures whether or not to create CSS selectors for columns or silent placeholders.
+ * @type Bool (true)
+ */
+ $grid-include-selectors: true !default;
+
+/**
+ * Colors
+ */
+
+ /**
+ * Brand color white.
+ * @type String
+ */
+ $color-white: #FFF;
+ 
+ /**
+ * Brand color grey.
+ * @type String
+ */
+ $color-grey: #C9C9C9;  
+
+ /**
+ * Brand color grey (darker).
+ * @type String (darken($color-grey, 10%))
+ */
+ $color-grey--dark: darken($color-grey, 10%);
+
+ /**
+ * Brand color black.
+ * @type String
+ */
+ $color-black: #000;
+
+ /**
+ * Brand color black (lighter).
+ * @type String (lighten($color-black, 10%))
+ */
+ $color-black--light: lighten($color-black, 10%);
+
+/**
+ * Media Queries
+ */
+
+ /**
+ * Extra small breakpoint
+ * @type Number
+ */
+ $breakpoint-extra-small: 20em;
+ 
+ /**
+ * Small breakpoint
+ * @type Number
+ */
+ $breakpoint-small: 30em;
+ 
+ /**
+ * Medium breakpoint
+ * @type Number
+ */
+ $breakpoint-medium: 50em;
+ 
+ /**
+ * Extra medium breakpoint
+ * @type Number
+ */
+ $breakpoint-extra-medium: 65em;
+ 
+ /**
+ * Large breakpoint
+ * @type Number
+ */
+ $breakpoint-large: 80em;
+ 
+ /**
+ * Extra large breakpoint
+ * @type Number
+ */
+ $breakpoint-extra-large: 100em;

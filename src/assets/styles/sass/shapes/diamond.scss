@@ -1,0 +1,25 @@
+/**
+ * Diamond
+ *
+ */
+
+@mixin diamond($size: 1rem) {
+  @include size($size);
+
+  overflow: hidden;
+  transform: rotate(45deg);
+  transform-origin: 50% 50%;
+
+  //Child selector is also a diamond and rotated -45deg so the content is facing the right way up.
+  > * {
+    display: block;
+    margin: -25%;
+    transform: rotate(-45deg);
+    transform-origin: 50% 50%;
+    width: 150%;
+  }
+}
+
+.diamond {
+  @include diamond();
+}

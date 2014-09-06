@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+
+# Logging
+*.log
+tmp
+
+# Project meta
+.sass-cache
+*.sublime-workspace
+
+# Don’t commit dependencies!
+node_modules
+components
+
+# Generated files
+dist

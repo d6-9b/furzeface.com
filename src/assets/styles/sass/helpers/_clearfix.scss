@@ -1,0 +1,9 @@
+/**
+ * Clearfix
+ *
+ * @author Daniel Furze
+ */
+
+.group {
+  @extend %clearfix;
+}

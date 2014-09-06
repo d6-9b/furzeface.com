@@ -1,0 +1,33 @@
+/**
+ * Type
+ *
+ * Other type sizing.
+ * Defines CSS classes to add to elements for font sizing,
+ * as well as placeholders if the sizing itself needs to be extended silently.
+ *
+ * Depends on setup/variables.
+ *
+ * Contents:
+ *    =Placeholders
+ *    =Sizing Classes
+ */
+
+//=Placeholders
+// So they can be extended silently on to any element.
+
+%type--eta {
+  @include font-size(1rem);
+}
+
+%type--theta {
+  @include font-size(.75rem);
+}
+
+//=Sizing Classes
+.type--eta {
+  @extend %type--eta;
+}
+
+.type--theta {
+  @extend %type--theta;
+}

@@ -1,0 +1,65 @@
+/**
+ * Base
+ *
+ * @author Daniel Furze
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+//=Basic
+html {
+  font-size: 65%; // Use for rem measurements
+  transition: font .25s linear;
+  transition-delay: .15s;
+
+  @include MQ(S) {
+    font-size: 85%;
+  }
+
+  @include MQ(M) {
+    font-size: 100%;
+  }
+
+  @include MQ(L) {
+    font-size: 120%;
+  }
+
+  @include MQ(XL) {
+    font-size: 125%;
+  }
+}
+
+body {
+  background: $body-bg;
+  color: $body-color;
+  // @include contrasted($body-bg); //Does body background-color and color. //@TODO this
+  -webkit-font-smoothing: subpixel-antialiased; //For use with dark text on light backgrounds //@TODO set this dynamically based on body background & color
+  // -webkit-font-smoothing: antialiased; //Uncomment for use with light text on dark backgrounds.
+
+  text-size-adjust: 100%;
+  // Opts out of browsers *fixing* text size zooming for non mobile ready sites on mobile devices.
+  // If you're not building a responsive or mobile first site you won't need this CSS property. But you should be.
+  // Careful, don't use 'none' for this property - see [http://www.456bereastreet.com/archive/201011/beware_of_-webkit-text-size-adjustnone].
+}
+
+small {
+  font-size: 61.8%; // Golden ratio.
+}
+
+label {
+  cursor: pointer; // Cos labels should be used semantically and attached to inputs!
+}
+
+pre,
+code {
+  font-family: Consolas, 'Lucida Console', 'Lucida Sans Typewriter', 'Liberation Mono', 'Courier New', Courier, monospace; // Adapted from [http://www.sitepoint.com/eight-definitive-font-stacks-2].
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}

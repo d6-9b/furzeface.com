@@ -1,0 +1,26 @@
+---
+hide: true
+title: File List
+layout: src/layouts/_bb.hbs
+---
+<div class="container">
+	<header class="header" role="banner">
+		<h1 class="project-title">
+			{{package.name}} {{package.version}}
+			<span class="last-modified">
+				<b>Last Modified:</b> <span>{{timestamp}}</span>
+			</span>
+		</h1>
+	</header>
+
+	<main id="main" class="main" role="main">
+		{{>page-list}}
+    {{>docs-link}}
+		{{>todo-link}}
+		{{>responsive-link}}
+	</main>
+
+  <footer class="footer" role="contentinfo">
+		<p>&copy; Copyright {{package.author.name}} {{copyrightYear}}</p>
+	</footer>
+</div>

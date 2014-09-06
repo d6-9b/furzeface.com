@@ -1,0 +1,101 @@
+/**
+ * Grid
+ *
+ * @author Daniel Furze
+ */
+
+//=Setup
+
+/* Options [default to values from setup/variables]:
+
+    $grid-columns [number]- number of columns.
+    $padding [number + unit] - padding for each one.
+    $breakpoint [XS | S | M | XM | L | XL] - point at which cols stack.
+    $selectors [bool] - include actual CSS selectors or just Sass placeholders to be extended.
+
+    */
+
+@mixin grid($grid-columns: $grid-cols, $gutters: $grid-col-gutters, $breakpoint: $grid-col-breakpoint, $selectors: $grid-include-selectors) {
+
+  // Placeholder for base col styles, to be extended silently.
+  %col-base {
+    @include MQ($breakpoint) {
+      //box-sizing: border-box; // Assumes box sizing is set globally, uncomment this line if not.
+      float: left;
+      margin-bottom: $gutters;
+      padding: 0 $gutters;
+    }
+  }
+
+  // Selector to be used in markup.
+  @if ($selectors){
+    [class^='col--'] {
+      @extend %col-base;
+    }
+  }
+
+  @include MQ(M) {
+    // Only include after a certain breakpoint for full width columns for mobile.
+
+    // Create 'col' classes and placeholders
+    @for $i from 1 through $grid-columns {
+
+      // Creates placeholders to be extended silently in Sass.
+      %col--#{$i}-of-#{$grid-columns} {
+        width: ((100% / $grid-columns) * $i);
+      }
+
+      // Creates selectors to be used in markup.
+      @if ($selectors){
+        .col--#{$i}-of-#{$grid-columns} {
+          @extend %col--#{$i}-of-#{$grid-columns};
+        }
+      }
+    }
+
+    // Create 'push' classes and placeholders
+    @for $i from 1 to $grid-columns {
+      // Using 'from 1 to 12' instead of 'from 1 through 12' as there's no need for .push--12
+
+      // Creates placeholders to be extended silently in Sass.
+      %push--#{$i} {
+        margin-left: ((100% / $grid-columns) * $i);
+      }
+
+      // Creates selectors to be used in markup.
+      @if ($selectors){
+        .push--#{$i} {
+          @extend %push--#{$i};
+        }
+      }
+
+    }
+
+    // Create 'pull' classes and placeholders
+    @for $i from 1 to $grid-columns {
+      // Using 'from 1 to 12' instead of 'from 1 through 12' as there's no need for .pull--12
+
+      // Creates placeholders to be extended silently in Sass.
+      %pull--#{$i} {
+        margin-right: ((100% / $grid-columns) * $i);
+      }
+
+      // Creates selectors to be used in markup.
+      @if ($selectors){
+        .pull--#{$i} {
+          @extend %pull--#{$i};
+        }
+      }
+
+    }
+
+    //end MQ
+  }
+
+  //end mixin
+}
+
+//=Build It!
+// With defaults set in setup/variables
+
+@include grid($grid-cols, $grid-col-gutters, $grid-col-breakpoint, $grid-include-selectors);
