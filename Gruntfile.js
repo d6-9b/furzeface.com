@@ -62,7 +62,7 @@ module.exports = function(grunt) {
       },
       styles: {
         files: [
-          '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/<%= config.srcSass %>/*.scss'
+          '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/<%= config.srcSass %>/**/*.scss'
         ],
         tasks: [
           'build_styles',
