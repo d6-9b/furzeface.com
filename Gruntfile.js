@@ -83,8 +83,8 @@ module.exports = function(grunt) {
           '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcImages %>/**/*.{png,jpg,gif}'
         ],
         tasks: [
-          'imagemin'//,
-          //'responsive_images'
+          // 'responsive_images',
+          'imagemin'
         ],
         options: {
           spawn: false
@@ -439,6 +439,36 @@ module.exports = function(grunt) {
 
 
     // Image tasks
+    responsive_images: {
+      options: {
+        engine: 'im',
+        separator: '--',
+        sizes: [
+        {
+          name: 'small',
+          width: 250
+        },
+        {
+          name: 'medium',
+          width: 750
+        },
+        {
+          name: 'large',
+          width: 1440
+        }]
+      },
+      main: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcImages %>/',
+          src: [
+            '**/*.{gif,jpg,jpeg,png}'
+          ],
+          dest: '<%= config.src %>/<%= config.srcImages %>/'
+        }]
+      },
+    },
+
     imagemin: {
       main: {
         files: [
@@ -453,8 +483,6 @@ module.exports = function(grunt) {
         ]
       }
     },
-
-    // @todo: Responsive images task
 
 
     // Misc build tasks
@@ -570,18 +598,25 @@ module.exports = function(grunt) {
     'copy:assets'
   ]);
 
-  grunt.registerTask('build_dev', [
-    'build_html',
-    'build_scripts',
-    'build_styles',
-    'modernizr',
-    'humans_txt'
+  grunt.registerTask('build_images', [
+    // 'responsive_images',
+    'imagemin'
   ]);
 
   grunt.registerTask('build_docs', [
     'todo',
     'jsdoc',
     'sassdoc'
+  ]);
+
+
+  // Task aliases.
+  grunt.registerTask('build_dev', [
+    'build_html',
+    'build_scripts',
+    'build_styles',
+    'modernizr',
+    'humans_txt'
   ]);
 
   grunt.registerTask('build_production', [
