@@ -7,27 +7,26 @@ title: Master Page
 	<head>
 		{{#block "master-head"}}
 			{{>head-meta}}
-			{{>head-app}}
 			{{>head-icons}}
-			{{#if rtl}}
-				{{>head-css-rtl}}
-			{{else}}
-				{{>head-css}}
-			{{/if}}
+			{{>head-css}}
 			{{>head-fonts}}
 			{{>head-scripts}}
 		{{/block}}
 	</head>
 	<body>
+
 		{{>header}}
-		<div id="page" class="page{{#if pageClass}} {{pageClass}}{{/if}}{{#if visibleGrid}} visible-grid{{/if}}">
+
+    <div id="page" class="page{{#if pageClass}} {{pageClass}}{{/if}}{{#if visibleGrid}} visible-grid{{/if}}">
 			{{#block "master-body"}}
 				{{body}}
 			{{/block}}
 			{{>footer}}
 		</div>
-		{{#block "master-foot"}}
+
+    {{#block "master-foot"}}
 			{{>foot-scripts}}
 		{{/block}}
-	</body>
+
+  </body>
 </html>

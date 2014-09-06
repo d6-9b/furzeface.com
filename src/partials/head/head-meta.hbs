@@ -3,10 +3,16 @@ component: head-meta
 hide: true
 published: false
 ---
+
+{{!-- Page title + package.json name --}}
+<title>{{title}} | {{package.name}}</title>
+
 <meta charset="utf-8" />
-<meta http-equiv="cleartype" content="on" />
+
+{{!-- Force latest IE compatibility mode and Chrome Frame if possible --}}
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+{{!-- Don't allow device to auto scale - for responsive build --}}
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>{{title}} | {{project.client}}</title>
-<meta name="description" content="" />
-<meta name="keywords" content="" />
+
+{{!-- SEO shizzle --}}
+<meta name="description" content="{{package.description}}" />
