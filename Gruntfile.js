@@ -548,7 +548,8 @@ module.exports = function(grunt) {
     'build_html',
     'build_scripts',
     'build_styles',
-    'modernizr'
+    'modernizr',
+    'humans_txt'
   ]);
 
   grunt.registerTask('build_docs', [
@@ -582,7 +583,6 @@ module.exports = function(grunt) {
   // Deploy task.
   grunt.registerTask('deploy', [
     'build_production',
-    'humans_txt',
     'zip:deploy'
     // 'aws_deploy'
   ]);
