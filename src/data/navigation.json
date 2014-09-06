@@ -1,22 +1,22 @@
 [
 	{
-		"title": "Link 1",
-		"url": "#",
+		"title": "Home",
+		"url": "/home",
 		"id": 1
 	},
 	{
-		"title": "Link 2",
-		"url": "#",
+		"title": "About",
+		"url": "/about",
 		"id": 2
 	},
 	{
-		"title": "Link 3",
-		"url": "#",
+		"title": "Blog",
+		"url": "/blog",
 		"id": 3
 	},
 	{
-		"title": "Link 4",
-		"url": "#",
+		"title": "Docs",
+		"url": "/docs",
 		"id": 4
 	}
 ]

@@ -7,15 +7,15 @@
 ## Gruntfile.js
 
 -  **todo** `(line 11)` : Use grunt-newer
--  **todo** `(line 81)` : Image watchers
--  **todo** `(line 110)` : Reimplement this
--  **todo** `(line 468)` : Imagemin task
--  **todo** `(line 469)` : Responsive images task
--  **todo** `(line 474)` : robots.txt task
--  **todo** `(line 475)` : sitemap task
--  **todo** `(line 516)` : AWS Deploy task
+-  **todo** `(line 82)` : Image watchers
+-  **todo** `(line 111)` : Reimplement this
+-  **todo** `(line 459)` : Imagemin task
+-  **todo** `(line 460)` : Responsive images task
+-  **todo** `(line 465)` : robots.txt task
+-  **todo** `(line 466)` : sitemap task
+-  **todo** `(line 507)` : AWS Deploy task
 
 
 * * *
 
-Last generated: Sat Sep 06 2014 20:16:59 by [grunt-todo](https://github.com/leny/grunt-todo).
+Last generated: Sat Sep 06 2014 20:27:33 by [grunt-todo](https://github.com/leny/grunt-todo).

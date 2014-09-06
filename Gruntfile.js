@@ -42,6 +42,7 @@ module.exports = function(grunt) {
       distTemp: 'temp',
       distImages: 'images',
       distFonts: 'fonts',
+      distDocs: 'docs',
       distJsDocs: 'jsdocs',
       distSassDocs: 'sassdocs',
       mainCss: 'main.css',
@@ -135,7 +136,7 @@ module.exports = function(grunt) {
           '<%= config.src %>/<%= config.helpers %>/helper-*.js'
         ],
         options: {
-          destination: '<%= config.dist %>/<%= config.distJsDocs %>',
+          destination: '<%= config.dist %>/<%= config.distDocs %>/<%= config.distJsDocs %>',
           template: 'node_modules/grunt-jsdoc/node_modules/ink-docstrap/template',
           configure: '.jsdoc.conf.json'
         }
@@ -145,7 +146,7 @@ module.exports = function(grunt) {
     sassdoc: {
       main: {
         src: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/<%= config.srcSass %>/',
-        dest: '<%= config.dist %>/<%= config.distSassDocs %>'
+        dest: '<%= config.dist %>/<%= config.distDocs %>/<%= config.distSassDocs %>'
       }
     },
 
@@ -229,16 +230,6 @@ module.exports = function(grunt) {
     },
 
     copy: {
-      bb: {
-        files: [
-          {
-            expand: true,
-            cwd: '<%= config.src %>/<%= config.srcAssets %>/_bb/',
-            src: ['**'],
-            dest: '<%= config.dist %>/_bb'
-          }
-        ]
-      },
       assets: {
         files: [
           {
@@ -553,8 +544,7 @@ module.exports = function(grunt) {
     'build_html',
     'build_scripts',
     'build_styles',
-    'modernizr',
-    'copy:bb'
+    'modernizr'
   ]);
 
   grunt.registerTask('build_docs', [
