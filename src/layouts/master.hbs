@@ -14,16 +14,14 @@ title: Master Page
       {{>head-social}}
 		{{/block}}
 	</head>
-	<body>
+	<body class="hentry {{#if pageClass}}{{pageClass}}{{/if}}">
 
 		{{>header}}
 
-    <div id="page" class="page {{#if pageClass}}{{pageClass}}{{/if}}">
-			{{#block "master-body"}}
-				{{body}}
-			{{/block}}
-			{{>footer}}
-		</div>
+		{{#block "master-body"}}
+			{{body}}
+		{{/block}}
+		{{>footer}}
 
     {{#block "master-foot"}}
 			{{>foot-scripts}}
