@@ -1,5 +1,6 @@
 {
-  "name": "daniel.furzeface.com",
+  "name": "Daniel Furze Blog",
+  "description": "The personal blog of Daniel Furze, Manchester UK based front end developer.",
   "version": "3.0.0",
   "license": "MIT",
   "repository": {
