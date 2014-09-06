@@ -207,20 +207,24 @@ module.exports = function(grunt) {
               filename = dest + src.substring(1);
               // Filename = filename without _
             } else if(src.indexOf('/') !== -1) {
-              // If in a subdirectory
+              // If in a subdirectory: blog/post-title.hbs
               var index = null,
-              splitSrc = src.split('/');
-              filename = dest;
+              splitSrc = src.split('/'); // ['blog', 'post-title.hbs']
+              filename = dest; // 'dist/'
 
               for (index = 0; index < splitSrc.length; ++index) {
                 filename = filename + splitSrc[index];
+                // 'dist/blog/post-title'
 
                 if (src.indexOf('.hbs')) {
-                  filename = filename + '/';
+                  // Replace the extension
+                  filename = filename.replace('.hbs', '') + '/';
                 }
               }
+              // Create an index file for it: blog/post-title/index.html
+              filename = filename + 'index';
             } else {
-              // Else it's a top level page - create a directory and index file for it. eg: about/index.html
+              // Else it's a top level page - create a directory and index file for it: about/index.html
               filename = dest + src.replace('.hbs', '') + '/index';
             }
             return filename;
