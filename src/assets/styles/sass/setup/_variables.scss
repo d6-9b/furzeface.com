@@ -13,13 +13,13 @@
 /**
  * Base
  */
- 
+
  /**
  * Sets default body background color.
  * @type String (#F9F9F9)
  */
  $body-bg: #F9F9F9 !default;
- 
+
  /**
  * Sets default body text color.
  * @type String (#262626)
@@ -28,6 +28,29 @@
 
 //$body-color: contrast($body-bg); //@TODO implement this again.
 
+ /**
+ * Sets default sans-serif font.
+ * @type String
+ */
+$font-family-sans-serif: 'Proxima Nova', Helvetica, Arial, sans-serif;
+
+/**
+ * Sets default serif font.
+ * @type String
+ */
+$font-family-serif: 'adriane', Georgia, serif;
+
+/**
+ * Sets default mono font.
+ * @type String
+ */
+ $font-family-mono: Consolas, 'Lucida Console', 'Lucida Sans Typewriter', 'Liberation Mono', 'Courier New', Courier, monospace; // Adapted from [http://www.sitepoint.com/eight-definitive-font-stacks-2].
+
+/**
+ * Sets default base font.
+ * @type String
+ */
+$font-family-base: $font-family-sans-serif;
 /**
  * Sizing
  */
@@ -81,12 +104,12 @@
  * @type String
  */
  $color-white: #FFF;
- 
+
  /**
  * Brand color grey.
  * @type String
  */
- $color-grey: #C9C9C9;  
+ $color-grey: #C9C9C9;
 
  /**
  * Brand color grey (darker).
@@ -115,31 +138,31 @@
  * @type Number
  */
  $breakpoint-extra-small: 20em;
- 
+
  /**
  * Small breakpoint
  * @type Number
  */
  $breakpoint-small: 30em;
- 
+
  /**
  * Medium breakpoint
  * @type Number
  */
  $breakpoint-medium: 50em;
- 
+
  /**
  * Extra medium breakpoint
  * @type Number
  */
  $breakpoint-extra-medium: 65em;
- 
+
  /**
  * Large breakpoint
  * @type Number
  */
  $breakpoint-large: 80em;
- 
+
  /**
  * Extra large breakpoint
  * @type Number

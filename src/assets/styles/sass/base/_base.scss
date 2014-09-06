@@ -36,6 +36,7 @@ html {
 body {
   background: $body-bg;
   color: $body-color;
+  font-family: $font-family-serif;
   // @include contrasted($body-bg); //Does body background-color and color. //@TODO this
   -webkit-font-smoothing: subpixel-antialiased; //For use with dark text on light backgrounds //@TODO set this dynamically based on body background & color
   // -webkit-font-smoothing: antialiased; //Uncomment for use with light text on dark backgrounds.
@@ -56,7 +57,7 @@ label {
 
 pre,
 code {
-  font-family: Consolas, 'Lucida Console', 'Lucida Sans Typewriter', 'Liberation Mono', 'Courier New', Courier, monospace; // Adapted from [http://www.sitepoint.com/eight-definitive-font-stacks-2].
+  font-family: $font-family-mono;
 }
 
 img {
