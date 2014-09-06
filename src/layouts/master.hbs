@@ -7,17 +7,18 @@ title: Master Page
 	<head>
 		{{#block "master-head"}}
 			{{>head-meta}}
-			{{>head-icons}}
-			{{>head-css}}
 			{{>head-fonts}}
+      {{>head-css}}
 			{{>head-scripts}}
+      {{>head-icons}}
+      {{>head-social}}
 		{{/block}}
 	</head>
 	<body>
 
 		{{>header}}
 
-    <div id="page" class="page{{#if pageClass}} {{pageClass}}{{/if}}{{#if visibleGrid}} visible-grid{{/if}}">
+    <div id="page" class="page {{#if pageClass}}{{pageClass}}{{/if}}">
 			{{#block "master-body"}}
 				{{body}}
 			{{/block}}

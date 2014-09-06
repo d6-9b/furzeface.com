@@ -11,8 +11,22 @@ published: false
 
 {{!-- Force latest IE compatibility mode and Chrome Frame if possible --}}
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+{{!-- DNS Prefetch for assets from my static domains --}}
+<link rel="dns-prefetch" href="//static.furzeface.com">
+<link rel="dns-prefetch" href="//static1.furzeface.com">
+
 {{!-- Don't allow device to auto scale - for responsive build --}}
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-{{!-- SEO shizzle --}}
+{{!-- For your friendly neighbourhood search engine spiders --}}
 <meta name="description" content="{{package.description}}" />
+
+{{!-- We are people, not machines! [http://humanstxt.org] --}}
+<link rel="author" href="/humans.txt"/>
+
+{{!-- For the lovely photo on Google SERPs --}}
+<link rel="author" href="https://plus.google.com/106382369885551097403"/>
+
+{{!-- Verify for Webmaster Tools too [https://www.google.com/webmasters/tools] --}}
+<meta name="google-site-verification" content="1pWHmMIohzm7Q2C68XoWv-bwufp8NmrB1d0kYdz3PWU"/>

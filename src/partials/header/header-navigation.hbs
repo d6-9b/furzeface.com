@@ -3,15 +3,16 @@ component: header-navigation
 hide: true
 published: false
 ---
-<nav class="navigation" id="navigation" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-	<h4 class="navigation-title">Navigation</h4>
-	<ul class="navigation-menu menu-level-0">
-	{{#each navigation}}
-		<li>
-			<a href="{{url}}" class="{{#if class}}{{class}}{{/if}} {{#is id ../activePageId}}active{{/is}}">
-				<span>{{title}}</span>
-			</a>
-		</li>
-	{{/each}}
-	</ul>
+
+<nav id="navigation-site" class="navigation-site" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+	<ul class="navigation-site__list">
+    {{!-- Loops navigation data source --}}
+    {{#each navigation}}
+    <li class="navigation-site__item">
+      <a href="{{url}}" class="navigation-site__link {{#if class}}{{class}}{{/if}}">
+        {{title}}
+      </a>
+    </li>
+    {{/each}}
+  </ul>
 </nav>
