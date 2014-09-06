@@ -1,10 +1,10 @@
 {
-  "name": "danielfurzefacecom",
-  "version": "0.0.0",
+  "name": "daniel.furzeface.com",
+  "version": "3.0.0",
   "ignore": [
     "**/.*",
     "node_modules",
-    "src/assets/bower"
+    "src/assets/components"
   ],
   "dependencies": {
   },
