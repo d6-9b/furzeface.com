@@ -473,7 +473,8 @@ module.exports = function(grunt) {
             expand: true,
             cwd: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcImages %>/',
             src: [
-              '**/*.{gif,jpg,jpeg,png}'
+              '**/*.{gif,jpg,jpeg,png}',
+              '!emojis' // @todo exclude these
             ],
             dest: '<%= config.dist %>/<%= config.distImages %>/'
           }
@@ -632,7 +633,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build_images', [
     // 'responsive_images',
-    'imagemin',
+    //'imagemin', // @todo: put back in when emojis excluded
     'copy:images'
   ]);
 
