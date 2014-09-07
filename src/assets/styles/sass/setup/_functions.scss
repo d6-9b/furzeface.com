@@ -12,3 +12,14 @@
  @function strip-units($number) {
   @return $number / ($number * 0 + 1);
 }
+
+/**
+ * Return rem value from input pixel value
+ *
+ * @author Daniel Furze
+ */
+@function px-to-rem($pixel-value) {
+  $base-size: strip-units($base-font-size);
+
+  @return strip-units($pixel-value) / $base-size * 1rem;
+}
