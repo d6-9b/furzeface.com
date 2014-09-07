@@ -11,11 +11,11 @@
 ## Gruntfile.js
 
 -  **todo** `(line 11)` : Use grunt-newer
--  **todo** `(line 126)` : Reimplement this
+-  **todo** `(line 124)` : Reimplement this
 -  **todo** `(line 532)` : excludes
 -  **todo** `(line 605)` : targets for static assets
 
 
 * * *
 
-Last generated: Sun Sep 07 2014 09:56:50 by [grunt-todo](https://github.com/leny/grunt-todo).
+Last generated: Sun Sep 07 2014 10:26:16 by [grunt-todo](https://github.com/leny/grunt-todo).

@@ -2,7 +2,7 @@
 component: banner
 ---
 
-<header class="banner banner--full banner--post" style="position:relative;background:rgba(0,0,0,0.5);">
+<header class="banner banner--full banner--post">
 
   <h1><a href="#TLDR">{{title}}</a></h1>
 
@@ -10,6 +10,8 @@ component: banner
     Posted on <time datetime="" pubdate="" class="updated published">{{pubDate}}</time> in <em>{{category}}</em>
     by <span class="vcard author"><span class="fn n">{{package.author.name}}</span></span>.
   </p>
+  {{!-- @todo: pubdate --}}
+  {{!-- @todo: category link? --}}
 
   {{#if bannerImage}}
     <img src="{{assets}}/{{images}}/{{bannerImage}}" alt="{{title}}" class="banner__image" />
