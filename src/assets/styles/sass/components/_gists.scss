@@ -1,0 +1,13 @@
+/**
+ * GitHub Gists Style Overrides
+ *
+ * @author Daniel Furze
+ */
+
+ .gist {
+  font-size: .75rem;
+
+  @media only screen and (max-width: $breakpoint-small) {
+    font-size: .5rem;
+  }
+}
