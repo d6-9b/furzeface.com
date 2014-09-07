@@ -1,12 +1,91 @@
 ---
-title: Command Line Ain't Scary
 pageClass: page-post
+title: Command Line Ain't Scary.
+category: Tutorials
+pubDate: '3rd Aug, 2014'
+bannerImage: '1440x785.gif'
 ---
 
-{{#extend "layout-page"}}
-{{#content "region-a"}}
+{{#extend "layout-post"}}
 
-<blockquote>This article is part of a new series I’ll write entitled Ain’t Scary, where I’ll write little tips to get you going on things that I’ve just discovered little tips to get me going on.</blockquote>
-
+{{#content "post-summary"}}
+This article is part of a new series I’ll write entitled Ain’t Scary, where I’ll write little tips to get you going on things that I’ve just discovered little tips to get me going on.
 {{/content}}
+
+
+{{#content "post-content"}}
+<small>Note: I primarily use the command line on my Mac so this is going to be more geared towards <del>hipsters</del> Mac users.</small>
+
+<h2>Navigating your environment</h2>
+<p>I barely ever use <em>Finder</em> on my Mac anymore as navigating your directory structure on your machine is super easy with the command line. <small>(even easier with shortcuts - more on that later)</small>.</p>
+
+<h3>Remember these</h3>
+<p>Change directory:</p>
+<code>$ cd</code>
+<p>Change directory to your machine’s root, for example:</p>
+<code>$ cd ~</code>
+<p>Back up one directory:</p>
+<code>$ cd ..</code>
+<p>List contents in a directory:</p>
+<code>$ ls</code>
+<p>List contents in a directory, with full detail:</p>
+<code>$ ls -la</code>
+
+<h2>Creating files</h2>
+<p>Creating files and directories is easy too - I often create a bunch via the command line before starting a project.</p>
+
+<h3>Use these</h3>
+<p>Create a directory (and head into it):</p>
+<code>
+  $ mkdir yourProject && cd yourProject
+</code>
+<small>Note: Performing commands one after another with <em>&&</em> makes things a little quicker too.</small>
+<p>Create a file:</p>
+<code>$ touch .gitignore</code>
+<p>Write to a file (also creates files if it doesn’t exist):</p>
+<code>$ echo "Hello, World!" > index.html</code>
+<p>Open a file:</p>
+<code>$ open _yourProject.sublime-project</code>
+<p>Open the directory you’re in:</p>
+<code>$ open .</code>
+
+<h2>History</h2>
+<p>Searching your previous commands can be useful if your workflow involves a lot of repetition.</p>
+
+<h3>Try these</h3>
+<p>If you want to repeat a command you know you did a little while ago:</p>
+<code>$ history</code>
+<p>List a specific number of commands:</p>
+<code>$ history 5</code>
+<p>To search your history:</p>
+<code>$ history | grep git</code>
+<p>Where <em>git</em> is your search term.</p>
+<p>When your command history comes back they’ll all have indexes beside them, so to run one of the commands in the list use:</p>
+<code>$ !12</code>
+<p>To run number 12 in the list for example.</p>
+
+<h2>Sudo</h2>
+<p>You may know <code>$ sudo</code> for overriding privileges, running as an admin when you execute commands, but this pretty handy tip is to hit:</p>
+<code>$ sudo !!</code>
+<p>When you’ve tried to do something that fails without the correct privileges.</p>
+<p>This simply repeats the previous command with <em>superuser</em> privileges.</p>
+
+<h2>Bonus round!</h2>
+<p>Your challenge:</p>
+<ul>
+  <li>Don't use <em>Finder</em> for a day</li>
+  <li>Create some <a href="http://daniel.furzeface.com/blog/bash-profile-shortcuts">shortcuts in your .bash_profile</a> for your most frequently used navigational commands</li>
+  <li>See how much quicker it is!</li>
+  <li>Then comment below and let me know how you got on!</li>
+</ul>
+{{/content}}
+
+
+{{#content "post-tldr"}}
+<p>There’s not too much here yet but I’ll be adding to <em>Command Line Ain’t Scary</em> as I go, as well as writing more <em>Ain't Scary</em> posts introducing (mainly front end) technologies to beginners.</p>
+{{/content}}
+
 {{/extend}}
+
+
+
