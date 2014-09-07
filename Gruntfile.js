@@ -659,7 +659,7 @@ module.exports = function(grunt) {
   // Deploy task.
   grunt.registerTask('deploy', [
     'build_production',
-    's3:site'/*,
+    /*'s3:site',
     's3:static'*/
   ]);
 };
