@@ -26,9 +26,15 @@ title: Layout Post
     {{/if_block}}
 
     {{#if_block "post-tldr"}}
-    <h3 id="TLDR">TL;DR</h3>
-    {{#block "post-tldr"}}{{/block}}
+    <footer class="post-footer">
+      <h3 id="TLDR">TL;DR</h3>
+      {{#block "post-tldr"}}{{/block}}
+
+      <hr />
+    </footer>
     {{/if_block}}
+
+    {{>comments}}
 
   </article>
 

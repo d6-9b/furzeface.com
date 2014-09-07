@@ -29,3 +29,13 @@
 .articles-list__item {
   padding: $global-padding / 2 0;
 }
+
+
+.post-footer {
+  margin-bottom: px-to-rem(50px);
+
+  hr {
+    @extend %col--10-of-12;
+    @extend %push--1;
+  }
+}
