@@ -25,7 +25,7 @@ module.exports = function(grunt) {
     },
     config: {
       aws: {
-        credentials: grunt.file.readJSON('.aws.json'),
+        //credentials: grunt.file.readJSON('.aws.json'),
         bucket: 'daniel.furzeface.com',
         bucketStatic: 'furzeface-cdn',
         region: 'eu-west-1' // Ireland
