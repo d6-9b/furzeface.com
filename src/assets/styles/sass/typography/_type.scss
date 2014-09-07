@@ -6,24 +6,21 @@
  * as well as placeholders if the sizing itself needs to be extended silently.
  *
  * Depends on setup/variables.
- *
- * Contents:
- *    =Placeholders
- *    =Sizing Classes
  */
 
-//=Placeholders
+// Placeholders
 // So they can be extended silently on to any element.
 
 %type--eta {
-  @include font-size(1rem);
+  @include font-size($base-font-size);
 }
 
 %type--theta {
-  @include font-size(.75rem);
+ @include font-size(12px);
 }
 
-//=Sizing Classes
+// Sizing Classes
+p,
 .type--eta {
   @extend %type--eta;
 }

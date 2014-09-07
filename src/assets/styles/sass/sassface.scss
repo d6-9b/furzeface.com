@@ -8,11 +8,13 @@
 // Setup
 @import 'setup/variables';
 @import 'setup/placeholders';
+@import 'setup/functions';
 @import 'setup/mixins';
 
 // Base
 @import 'base/normalize';
 @import 'helpers/clearfix';
+@import 'helpers/font-size';
 @import 'helpers/lists';
 @import 'helpers/size';
 @import 'helpers/vertical-align';

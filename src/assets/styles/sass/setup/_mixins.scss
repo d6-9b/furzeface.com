@@ -40,17 +40,6 @@
 }
 
 /**
- * Heading font size
- *
- * @author Daniel Furze
- */
-@mixin font-size($font-size) {
-  font-size: $font-size;
-  line-height: 1; // So when a heading goes onto 2 lines there isn't a huge space.
-  margin-bottom: $font-size * 0.618;
-}
-
-/**
  * Color contrast (from Compass)
  *
  * @author ...

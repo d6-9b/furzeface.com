@@ -1,0 +1,17 @@
+/**
+ * Functions
+ *
+ * @author Daniel Furze
+ */
+
+/**
+ * Strip units from px value
+ *
+ * @param $number
+ * @returns $number
+ *
+ * @author Daniel Furze
+ */
+ @function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}

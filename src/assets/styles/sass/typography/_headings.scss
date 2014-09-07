@@ -1,7 +1,7 @@
 /**
  * Headings
  *
- * Sets sizes on base heading elements, 
+ * Sets sizes on base heading elements,
  * as well as defining CSS classes for said sizes to style according to size using a semantically correct element,
  * and placeholders if the sizing itself needs to be extended silently.
  *
@@ -25,37 +25,37 @@
 
 %heading--mega {
   @extend %heading-base;
-  @include font-size(5rem)
+ // @include font-size(5rem);
 }
 
 %heading--alpha {
   @extend %heading-base;
-  @include font-size(3.75rem)
+ // @include font-size(3.75rem);
 }
 
 %heading--beta {
   @extend %heading-base;
-  @include font-size(3.5rem)
+//  @include font-size(3.5rem);
 }
 
 %heading--gamma {
   @extend %heading-base;
-  @include font-size(3.25rem)
+  @include font-size(24px);
 }
 
 %heading--delta {
   @extend %heading-base;
-  @include font-size(3rem)
+ // @include font-size(3rem);
 }
 
 %heading--epsilon {
   @extend %heading-base;
-  @include font-size(2.5rem)
+ // @include font-size(2.5rem);
 }
 
 %heading--zeta {
   @extend %heading-base;
-  @include font-size(2rem)
+ // @include font-size(2rem);
 }
 
 //=Base Elements And Heading Classes

@@ -13,8 +13,6 @@
 //=Basic
 html {
   font-size: 65%; // Use for rem measurements
-  transition: font .25s linear;
-  transition-delay: .15s;
 
   @include MQ(S) {
     font-size: 85%;
