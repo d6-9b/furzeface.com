@@ -23,19 +23,20 @@
   //See also [https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering]
 }
 
+
 %heading--mega {
   @extend %heading-base;
- // @include font-size(5rem);
+  @include font-size(80px);
 }
 
 %heading--alpha {
   @extend %heading-base;
- // @include font-size(3.75rem);
+  @include font-size(60px);
 }
 
 %heading--beta {
   @extend %heading-base;
-//  @include font-size(3.5rem);
+  @include font-size(56px);
 }
 
 %heading--gamma {
@@ -45,20 +46,20 @@
 
 %heading--delta {
   @extend %heading-base;
- // @include font-size(3rem);
+  @include font-size(48px);
 }
 
 %heading--epsilon {
   @extend %heading-base;
- // @include font-size(2.5rem);
+  @include font-size(40px);
 }
 
 %heading--zeta {
   @extend %heading-base;
- // @include font-size(2rem);
+  @include font-size(28px);
 }
 
-//=Base Elements And Heading Classes
+// Base Elements And Heading Classes
 .heading--mega {
   @extend %heading--mega;
 }

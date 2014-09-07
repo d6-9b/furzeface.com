@@ -1,0 +1,10 @@
+/**
+ * Layout
+ *
+ * @author Daniel Furze
+ */
+
+ .inner {
+  margin: 0 auto;
+  @extend %col--6-of-12;
+ }

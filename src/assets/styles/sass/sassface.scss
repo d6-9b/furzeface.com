@@ -18,7 +18,14 @@
 @import 'helpers/lists';
 @import 'helpers/size';
 @import 'helpers/vertical-align';
+
+// Extra Awesome
+@import 'misc/selection';
+@import 'components/shapes';
+
+// Global
 @import 'base/base';
+@import 'base/layout';
 @import 'base/grid';
 
 // Typography
@@ -28,7 +35,3 @@
 // Components
 @import 'components/banners';
 @import 'components/buttons';
-
-// Extra Awesome
-@import 'components/shapes';
-@import 'misc/selection';

@@ -29,6 +29,8 @@ html {
   @include MQ(XL) {
     font-size: 125%;
   }
+
+  @include selection();
 }
 
 body {
