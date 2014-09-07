@@ -8,11 +8,13 @@
   @extend %inner;
 
   blockquote {
-    @extend %col--10-of-12;
-    @extend %push--1;
-
     font-style: italic;
     margin: px-to-rem(50px) 0;
+  }
+
+  blockquote {
+    @extend %col--10-of-12;
+    @extend %push--1;
   }
 
   h2 {
@@ -22,6 +24,17 @@
   .pullquote {
     // <blockquote>
     color: $brand-blue;
+    display: block;
+    padding: px-to-rem(10px);
+
+    &::before {
+      color: $brand-grey;
+      content: open-quote;
+      font-size: 4rem;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em;
+    }
   }
 }
 
@@ -40,5 +53,12 @@
   hr {
     @extend %col--10-of-12;
     @extend %push--1;
+  }
+}
+
+figure {
+  figcaption {
+    font-style: italic;
+    text-align: center;
   }
 }
