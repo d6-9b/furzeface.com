@@ -7,9 +7,15 @@ bannerImage: '1440x785.gif'
 ---
 
 {{#extend "layout-post"}}
-{{#content "post-content"}}
 
-<blockquote>I wrote <a href="https://gist.github.com/furzeface/60406a88026f856ce73f" target="_blank">this Gist</a> a while ago and it came in handy last week when I was showing a colleague some handy shortcuts to add to his <code>.bash_profile</code> - so here it is.</blockquote>
+{{#content "post-summary"}}
+
+I wrote <a href="https://gist.github.com/furzeface/60406a88026f856ce73f" target="_blank">this Gist</a> a while ago and it came in handy last week when I was showing a colleague some handy shortcuts to add to his <code>.bash_profile</code> - so here it is.
+
+{{/content}}
+
+
+{{#content "post-content"}}
 
 <h2>The Gist:</h2>
 
@@ -22,8 +28,13 @@ bannerImage: '1440x785.gif'
 
 <p>Type <code>source ~/.bash_profile</code> to reload it, then you can use the shortcuts <code>editBash</code> to add in the other shortcuts and <code>reloadBash</code> to reload it afterwards.</p>
 
-<h3 id="TLDR">TL;DR</h3>
+{{/content}}
+
+
+{{#content "post-tldr"}}
+
 <p>Bash profile shortcuts are dead handy. Here are some cool ones I use.</p>
 
 {{/content}}
+
 {{/extend}}

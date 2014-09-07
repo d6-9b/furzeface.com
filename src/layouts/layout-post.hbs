@@ -13,8 +13,19 @@ title: Layout Post
 
   {{body}}
 
+  {{#if_block "post-summary"}}
+  <blockquote>
+    {{#block "post-summary"}}{{/block}}
+  </blockquote>
+  {{/if_block}}
+
   {{#if_block "post-content"}}
-    {{#block "post-content"}}{{/block}}
+  {{#block "post-content"}}{{/block}}
+  {{/if_block}}
+
+  {{#if_block "post-tldr"}}
+  <h3 id="TLDR">TL;DR</h3>
+  {{#block "post-tldr"}}{{/block}}
   {{/if_block}}
 
 </main>
