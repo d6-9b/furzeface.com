@@ -527,7 +527,15 @@ module.exports = function(grunt) {
     // Deployment tasks
 
     // @todo: robots.txt task
-    // @todo: sitemap task
+    sitemap: {
+      options: {
+        changefreq: 'weekly',
+        pattern: '**/*.html'
+      },
+      site: {
+        siteRoot: 'dist/'
+      }
+    },
 
     humans_txt: {
       options: {
@@ -630,8 +638,7 @@ module.exports = function(grunt) {
     'build_html',
     'build_scripts',
     'build_styles',
-    'modernizr',
-    'humans_txt'
+    'modernizr'
   ]);
 
   grunt.registerTask('build_production', [
@@ -639,6 +646,8 @@ module.exports = function(grunt) {
     'cssmin',
     'uglify',
     'htmlmin',
+    'humans_txt',
+    'sitemap',
     'clean:production'
   ]);
 
