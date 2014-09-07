@@ -525,15 +525,14 @@ module.exports = function(grunt) {
 
 
     // Deployment tasks
-
-    // @todo: robots.txt task
     sitemap: {
       options: {
         changefreq: 'weekly',
         pattern: '**/*.html'
+        // @todo: excludes
       },
       site: {
-        siteRoot: 'dist/'
+        siteRoot: '<%= config.dist %>/'
       }
     },
 
@@ -566,6 +565,26 @@ module.exports = function(grunt) {
       },
     },
 
+    robotstxt: {
+      site: {
+        dest: '<%= config.dist %>/',
+        policy: [
+          {
+            ua: '*',
+            disallow: '<%= config.distDocs %>'
+          },
+          {
+            sitemap: [
+              '<%= pkg.homepage %>/sitemap.xml'
+            ]
+          },
+          {
+            host: '<%= pkg.homepage %>'
+          }
+        ]
+      }
+    },
+
     s3: {
       options: {
         accessKeyId: '<%= config.aws.credentials.accessKeyId %>',
@@ -578,14 +597,14 @@ module.exports = function(grunt) {
         },
         cwd: 'dist/',
         src: '**/*'
-      }/*,
+      },
       static: {
         options: {
           bucket: '<%= config.aws.bucketStatic %>'
         },
         cwd: 'static', // @todo: targets for static assets
         src: '**'
-      }*/
+      }
     }
 
   });
