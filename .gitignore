@@ -11,7 +11,7 @@ tmp
 
 # Don’t commit dependencies!
 node_modules
-components
+src/assets/components
 
 # Generated files
 dist

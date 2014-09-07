@@ -1,0 +1,49 @@
+/**
+ * Banners
+ *
+ * @author Daniel Furze
+ */
+
+ .banner {
+  position: relative;
+}
+
+.banner__image-wrap {
+  &::after {
+    background: $brand-blue;
+    content: '';
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.banner__image {
+  display: block;
+}
+
+.banner__meta {
+  @include vertical-align();
+
+  color: $brand-white;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+
+  a {
+    color: $brand-white;
+  }
+}
+
+.published {
+  // <time>
+  font-style: italic;
+}
+
+.tldr {
+  // <a>
+  text-decoration: none;
+}
+

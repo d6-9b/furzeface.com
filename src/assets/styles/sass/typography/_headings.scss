@@ -17,7 +17,7 @@
 
 %heading-base {
   font-weight: normal; //Set to normal so <strong> can be used within headings
-  margin-top: 0;
+  //margin-top: 0;
   text-rendering: optimizeLegibility;
   //Using [text-rendering: optimizeLegibility] only on headings as if used globally this could impact performance
   //See also [https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering]
@@ -26,37 +26,37 @@
 
 %heading--mega {
   @extend %heading-base;
-  @include font-size(80px);
+  @include font-size(60px);
 }
 
 %heading--alpha {
   @extend %heading-base;
-  @include font-size(60px);
+  @include font-size(40px);
 }
 
 %heading--beta {
   @extend %heading-base;
-  @include font-size(56px);
+  @include font-size(36px);
 }
 
 %heading--gamma {
   @extend %heading-base;
-  @include font-size(24px);
+  @include font-size(32px);
 }
 
 %heading--delta {
   @extend %heading-base;
-  @include font-size(48px);
+  @include font-size(28px);
 }
 
 %heading--epsilon {
   @extend %heading-base;
-  @include font-size(40px);
+  @include font-size(24px);
 }
 
 %heading--zeta {
   @extend %heading-base;
-  @include font-size(28px);
+  @include font-size(20px);
 }
 
 // Base Elements And Heading Classes

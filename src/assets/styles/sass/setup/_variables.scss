@@ -118,6 +118,12 @@
  $brand-grey: #C9C9C9;
 
  /**
+ * Brand color grey (lighter).
+ * @type String (lighten($color-grey, 10%))
+ */
+ $brand-grey--light: lighten($brand-grey, 10%);
+
+ /**
  * Brand color grey (darker).
  * @type String (darken($color-grey, 10%))
  */

@@ -1,0 +1,22 @@
+/**
+ * Blog
+ *
+ * @author Daniel Furze
+ */
+
+ .post-content {
+  @extend %inner;
+
+  blockquote {
+    font-style: italic;
+  }
+
+  h2 {
+    border-bottom: 1px solid $brand-grey--light;
+  }
+
+  .pullquote {
+    // <blockquote>
+    color: $brand-blue;
+  }
+}

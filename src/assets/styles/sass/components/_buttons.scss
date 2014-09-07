@@ -1,0 +1,46 @@
+/**
+ * Buttons
+ *
+ * @author Daniel Furze
+ */
+
+@mixin btn--flat($background-color: $brand-grey) {
+  $dark_background_color: darken($background-color, 10%);
+
+  background: $background-color;
+  backface-visibility: hidden;
+  border: 0;
+  border-bottom: 2px solid $dark_background_color;
+  border-radius: 2px;
+  color: $brand-white; //@TODO contrast this
+  cursor: pointer;
+  display: inline-block;
+  font-size: .75rem;
+  letter-spacing: 0.1rem;
+  margin: 1rem auto;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.25s ease-in;
+  max-width: 100%;
+
+  &:hover,
+  &:focus, {
+    background: $dark_background_color;
+    border-bottom-color: darken($dark_background_color, 10);
+    color: $brand-white; //@TODO contrast this
+    transform: translate(0, -0.15rem);
+  }
+}
+
+.btn--flat {
+  @include btn--flat();
+}
+
+.btn--primary {
+  @include btn--flat(red);
+}
+
+.btn--secondary {
+  @include btn--flat(hotpink);
+}
