@@ -1,29 +1,10 @@
-/**
- * Adds `$value` at `$index` in `$list`.
- *
- * @author Hugo Giraudel
- *
- * @ignore Documentation: http://sassylists.com/documentation/#insert-nth
- *
- * @requires is-true
- *
- * @param {List}   $list  - list to update
- * @param {Number} $index - index to add
- * @param {*}      $value - value to add
- *
- * @throws List index $index is not a number for `insert-nth`.
- * @throws List index $index must be a non-zero integer for `insert-nth`.
- *
- * @return {List | Null}
- */
-
-//=Circle
+// Circle
 @mixin circle($size: 1rem) {
   @include size($size);
 
   border-radius: 50%;
 
-  //Child selector is also a circle.
+  // Child selector is also a circle.
   > * {
     border-radius: 50%;
     display: block;

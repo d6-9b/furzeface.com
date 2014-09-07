@@ -1,5 +1,5 @@
 /**
- * @file Global module
+ * @file Global site module.
  * @version 1.0.0
  * @author {@link http://github.com/furzeface Daniel Furze}
  */
@@ -26,9 +26,10 @@
 
         self.bindEvents();
         self.appendGist();
+        // self.syntaxHighlight();
       },
       /**
-      * Binds global module events
+      * Binds global module events.
       * @function bindEvents
       * @memberof Global
       */
@@ -41,7 +42,7 @@
         });
       },
       /**
-      * Appends GitHub gists after pageReady
+      * Appends GitHub gists after pageReady.
       * @function appendGist
       * @memberof Global
       * @see {@link https://www.chrispoulter.com/blog/post/loading-gists-asynchronously}
@@ -70,6 +71,15 @@
             }
           });
         });
+      },
+      /**
+      * Initialises syntax highlighting plugin.
+      * @function syntaxHighlight
+      * @memberof Global
+      * @see {@link https://highlightjs.org}
+      */
+      syntaxHighlight: function () {
+        hljs.initHighlightingOnLoad();
       }
     }
   });

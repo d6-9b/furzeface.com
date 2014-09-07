@@ -52,7 +52,6 @@
     "grunt-sassdoc": "^1.0.1",
     "grunt-sitemap": "^1.1.0",
     "grunt-todo": "^0.4.0",
-    "highlight.js": "^8.2.0",
     "jshint-stylish": "^0.4.0",
     "load-grunt-tasks": "^0.6.0",
     "time-grunt": "^1.0.0"

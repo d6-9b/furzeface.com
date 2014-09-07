@@ -7,6 +7,7 @@
   "eqnull": true,
   "evil": true,
   "globals": {
+    "hljs": true,
     "jQuery": true,
     "Modernizr": true,
     "module": true,
