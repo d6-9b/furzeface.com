@@ -22,7 +22,7 @@ Another reference for myself so I don’t have to trawl my memory banks <small>(
 <p>In these cases I use a VPS provided by <a href="https://ginernet.com/vps-ssd.php?language=English">Ginernet</a> for €6 or 7 a month to store my code repos on.</p>
 
 <h2 id="step:one">Step one</h2>
-<p>Open Terminal - <small>or <a href="http://www.iterm2.com">iTerm2</a> if you’re a hipster <span class="emoji">:sunglasses:</span></small> - and SSH onto your server <sup><a href="#note-1" id="note-1-ref">*</a></sup>. Or wherever.</p>
+<p>Open Terminal - <small>or <a href="http://www.iterm2.com">iTerm2</a> if you’re a hipster <span class="emoji">:sunglasses:</span></small> - and SSH onto your server {{#note 1}}{{/note}}. Or wherever.</p>
 <code>$ ssh dan@empire.furzeface.com</code>
 
 <p>Make a directory for your project and go into it.</p>
@@ -31,9 +31,7 @@ Another reference for myself so I don’t have to trawl my memory banks <small>(
 <p>Initialise git in that directory.</p>
 <code>$ git init</code>
 
-<small><sup><span id="note-1"><a href="#note-1-ref">^</a></span></sup>
-  <a href="http://tristanashley.com/setup-ssh">Tristan’s article</a> is good if you’ve not set up SSH keys before.
-</small>
+<small>{{#note_ref 1}}{{/note_ref}} <a href="http://tristanashley.com/setup-ssh">Tristan’s article</a> is good if you’ve not set up SSH keys before.</small>
 
 <h2 id="step:two">Step two</h2>
 <p>On your machine, make a directory for the project and go to it.</p>
