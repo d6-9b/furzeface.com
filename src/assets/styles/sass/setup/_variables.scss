@@ -103,31 +103,37 @@ $font-family-base: $font-family-sans-serif;
  * Brand color white.
  * @type String
  */
- $color-white: #FFF;
+ $brand-white: #FFF;
 
  /**
  * Brand color grey.
  * @type String
  */
- $color-grey: #C9C9C9;
+ $brand-grey: #C9C9C9;
 
  /**
  * Brand color grey (darker).
  * @type String (darken($color-grey, 10%))
  */
- $color-grey--dark: darken($color-grey, 10%);
+ $brand-grey--dark: darken($brand-grey, 10%);
 
  /**
  * Brand color black.
  * @type String
  */
- $color-black: #000;
+ $brand-black: #000;
+
+  /**
+ * Brand color blue.
+ * @type String
+ */
+ $brand-blue: #2A2C9F;
 
  /**
  * Brand color black (lighter).
  * @type String (lighten($color-black, 10%))
  */
- $color-black--light: lighten($color-black, 10%);
+ $brand-black--light: lighten($brand-black, 10%);
 
 /**
  * Media Queries

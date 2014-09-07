@@ -1,0 +1,15 @@
+/**
+ * Mixin to return easy vertical align.
+ *
+ * @author Daniel Furze
+ */
+
+/*
+ * @mixin vertical-align
+ */
+ @mixin vertical-align () {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
