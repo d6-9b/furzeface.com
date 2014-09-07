@@ -615,7 +615,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build_scripts', [
     'clean:scripts',
-    'jscs',
     'jshint',
     'concat:jquery',
     'concat:scripts',
