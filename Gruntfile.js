@@ -259,6 +259,18 @@ module.exports = function(grunt) {
           }
         ]
       },
+      images: {
+        files: [
+          {
+            expand: true,
+            cwd: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcImages %>',
+            src: [
+              '**/*'
+            ],
+            dest: '<%= config.dist %>/<%= config.distImages %>/'
+          }
+        ]
+      },
       scripts: {
         files: [
           {
@@ -286,18 +298,6 @@ module.exports = function(grunt) {
             cwd: '<%= config.bower %>/sassface/src',
             src: ['**/*'],
             dest: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/<%= config.srcSass %>'
-          }
-        ]
-      },
-      images: {
-        files: [
-          {
-            expand: true,
-            cwd: '<%= config.src %>/<%= config.srcImages %>',
-            src: [
-              '**/*'
-            ],
-            dest: '<%= config.dist %>/<%= config.distImages %>/'
           }
         ]
       }
@@ -656,6 +656,7 @@ module.exports = function(grunt) {
   // Task aliases.
   grunt.registerTask('build_dev', [
     'build_html',
+    'build_images',
     'build_scripts',
     'build_styles',
     'modernizr'
