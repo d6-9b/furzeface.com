@@ -8,6 +8,9 @@
   @extend %inner;
 
   blockquote {
+    @extend %col--10-of-12;
+    @extend %push--1;
+
     font-style: italic;
     margin: px-to-rem(50px) 0;
   }
