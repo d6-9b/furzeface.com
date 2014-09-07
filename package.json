@@ -43,7 +43,6 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-dev-update": "^0.6.0",
     "grunt-humans-txt": "^0.2.1",
-    "grunt-jscs": "^0.6.2",
     "grunt-jsdoc": "^0.5.7",
     "grunt-modernizr": "~0.5.1",
     "grunt-newer": "^0.7.0",

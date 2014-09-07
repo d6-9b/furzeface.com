@@ -434,15 +434,6 @@ module.exports = function(grunt) {
       }
     },
 
-    jscs: {
-      options: {
-        config: '.jscsrc'
-      },
-      scripts: [
-        '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/modules/**/*.js'
-      ]
-    },
-
 
     // Image tasks
     responsive_images: {
