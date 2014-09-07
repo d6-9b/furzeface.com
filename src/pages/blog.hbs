@@ -4,17 +4,18 @@ pageClass: page-blog
 ---
 
 {{#extend "layout-page"}}
-{{#content "region-a"}}
 
-<h1>Blog Homepage</h1>
+{{#content "page-content"}}
 
-<ul>
+{{!-- @todo --}}
+
+<ul class="articles-list">
   {{#each posts}}
-  <li class="file">
+  <li class="articles-list__item">
     <a href="{{slug}}">{{title}}</a>
   </li>
   {{/each}}
 </ul>
-
 {{/content}}
+
 {{/extend}}

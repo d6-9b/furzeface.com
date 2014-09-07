@@ -11,9 +11,14 @@ title: Layout Page
 
   {{body}}
 
-  {{#if_block "region-a"}}
-  {{#block "region-a"}}{{/block}}
-  {{/if_block}}
+  <article id="{{slugify title}}" class="page-content">
+
+    <h1 class="page-title">{{title}}</h1>
+
+    {{#if_block "page-content"}}
+    {{#block "page-content"}}{{/block}}
+    {{/if_block}}
+  </article>
 
 </main>
 

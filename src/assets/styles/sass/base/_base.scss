@@ -47,10 +47,6 @@ body {
   // Careful, don't use 'none' for this property - see [http://www.456bereastreet.com/archive/201011/beware_of_-webkit-text-size-adjustnone].
 }
 
-small {
-  font-size: 61.8%; // Golden ratio.
-}
-
 label {
   cursor: pointer; // Cos labels should be used semantically and attached to inputs!
 }

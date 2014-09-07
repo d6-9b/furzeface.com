@@ -1,19 +1,4 @@
 /**
- * Clearing
- *
- * @author Daniel Furze
- */
-%clearfix::before,
-%clearfix::after {
-  content: '';
-  display: table;
-}
-
-%clearfix::after {
-  clear: both;
-}
-
-/**
  * Float left
  *
  * @author Daniel Furze
@@ -38,17 +23,6 @@
  */
 %centered {
   margin: 0 auto;
-}
-
-/**
- * Vertically centered
- *
- * @author Daniel Furze
- */
-%vertically-centered {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 /**

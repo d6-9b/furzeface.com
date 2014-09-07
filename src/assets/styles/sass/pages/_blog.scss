@@ -20,3 +20,11 @@
     color: $brand-blue;
   }
 }
+
+.articles-list {
+  @extend %list-unstyled;
+}
+
+.articles-list__item {
+  padding: $global-padding / 2 0;
+}

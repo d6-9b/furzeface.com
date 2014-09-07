@@ -1,0 +1,17 @@
+/**
+ * Page
+ *
+ * @author Daniel Furze
+ */
+
+ .page-content {
+  @extend %inner;
+
+  h2 {
+    border-bottom: 1px solid $brand-grey--light;
+  }
+}
+
+.page-title {
+  text-align: center;
+}

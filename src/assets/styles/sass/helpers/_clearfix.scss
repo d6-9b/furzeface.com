@@ -4,6 +4,16 @@
  * @author Daniel Furze
  */
 
+ %clearfix::before,
+ %clearfix::after {
+  content: '';
+  display: table;
+}
+
+%clearfix::after {
+  clear: both;
+}
+
 .group {
   @extend %clearfix;
 }
