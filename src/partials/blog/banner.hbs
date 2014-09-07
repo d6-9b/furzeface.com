@@ -2,18 +2,22 @@
 component: banner
 ---
 
-<header class="banner banner--full banner--post">
-
-  <h1><a href="#TLDR" title="TL;DR? - Skip to the end.">{{title}}</a></h1>
-
-  <p class="banner--post__colophon eta">
-    Posted on <time datetime="{{pubDate}}" pubdate="{{pubDate}}" class="updated published">{{pubDate}}</time> in <em>{{category}}</em>
-    by <span class="vcard author"><span class="fn n">{{package.author.name}}</span></span>.
-  </p>
-  {{!-- @todo: proper pubdate --}}
-  {{!-- @todo: category link? --}}
-
-  {{#if bannerImage}}
+<header class="banner banner--post">
+  <div class="banner__image-wrap">
+    {{#if bannerImage}}
     <img src="{{assets}}/{{images}}/{{bannerImage}}" alt="{{title}}" class="banner__image" />
-  {{/if}}
+    {{/if}}
+  </div>
+
+  <div class="banner__meta">
+    <h1><a href="#TLDR" title="TL;DR? - Skip to the end." class="tldr">{{title}}</a></h1>
+
+    <p class="eta">
+      Posted on <time datetime="{{pubDate}}" pubdate="{{pubDate}}" class="updated published">{{pubDate}}</time> in <em>{{category}}</em>
+      by <span class="vcard author"><span class="fn n">{{package.author.name}}</span></span>.
+    </p>
+    {{!-- @todo: proper pubdate --}}
+    {{!-- @todo: category link? --}}
+  </div>
+
 </header>
