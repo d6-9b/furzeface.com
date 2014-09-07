@@ -1,12 +1,29 @@
 ---
-title: Command Line Ain't Scary
 pageClass: page-post
+title: Bash profile shortcuts.
+category: Tips
+pubDate: '4th Jul, 2014'
+bannerImage: '1440x785.gif'
 ---
 
-{{#extend "layout-page"}}
-{{#content "region-a"}}
+{{#extend "layout-post"}}
+{{#content "post-content"}}
 
-<blockquote>This article is part of a new series I’ll write entitled Ain’t Scary, where I’ll write little tips to get you going on things that I’ve just discovered little tips to get me going on.</blockquote>
+<blockquote>I wrote <a href="https://gist.github.com/furzeface/60406a88026f856ce73f" target="_blank">this Gist</a> a while ago and it came in handy last week when I was showing a colleague some handy shortcuts to add to his <code>.bash_profile</code> - so here it is.</blockquote>
+
+<h2>The Gist:</h2>
+
+<script src="https://gist.github.com/furzeface/60406a88026f856ce73f.js"></script>
+
+<h2>To use these:</h2>
+<p>Open a terminal window and type <code>open -e ~/.bash_profile</code> to open the file in your Mac's default text editor.</p>
+
+<p>Add the first two shortcuts, then save and exit.</p>
+
+<p>Type <code>source ~/.bash_profile</code> to reload it, then you can use the shortcuts <code>editBash</code> to add in the other shortcuts and <code>reloadBash</code> to reload it afterwards.</p>
+
+<h3 id="TLDR">TL;DR</h3>
+<p>Bash profile shortcuts are dead handy. Here are some cool ones I use.</p>
 
 {{/content}}
 {{/extend}}

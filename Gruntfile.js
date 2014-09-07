@@ -38,14 +38,12 @@ module.exports = function(grunt) {
       srcStyles: 'styles',
       srcSass: 'sass',
       srcScripts: 'scripts',
-      srcTemp: 'temp',
       srcImages: 'images',
       srcFonts: 'fonts',
       // Dist settings
       dist: 'dist',
       distStyles: 'styles',
       distScripts: 'scripts',
-      distTemp: 'temp',
       distImages: 'images',
       distFonts: 'fonts',
       distDocs: 'docs',
@@ -253,21 +251,11 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            cwd: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcImages %>/',
-            src: ['**'],
-            dest: '<%= config.dist %>/<%= config.distImages %>/'
-          },
-          {
-            expand: true,
             cwd: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcFonts %>/',
-            src: ['**'],
+            src: [
+              '**'
+            ],
             dest: '<%= config.dist %>/<%= config.distStyles %>/<%= config.distFonts %>/'
-          },
-          {
-            expand: true,
-            cwd: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcTemp %>/',
-            src: ['**'],
-            dest: '<%= config.dist %>/<%= config.distTemp %>/'
           }
         ]
       },
@@ -298,6 +286,18 @@ module.exports = function(grunt) {
             cwd: '<%= config.bower %>/sassface/src',
             src: ['**/*'],
             dest: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/<%= config.srcSass %>'
+          }
+        ]
+      },
+      images: {
+        files: [
+          {
+            expand: true,
+            cwd: '<%= config.src %>/<%= config.srcImages %>',
+            src: [
+              '**/*'
+            ],
+            dest: '<%= config.dist %>/<%= config.distImages %>/'
           }
         ]
       }
@@ -642,7 +642,8 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build_images', [
     // 'responsive_images',
-    'imagemin'
+    'imagemin',
+    'copy:images'
   ]);
 
   grunt.registerTask('build_docs', [

@@ -1,5 +1,5 @@
 ---
-title: Layout Page
+title: Layout Post
 ---
 
 {{#extend "master"}}
@@ -7,12 +7,14 @@ title: Layout Page
 {{!-- Main Content --}}
 {{#content "master-body"}}
 
+{{>banner}}
+
 <main id="main" class="main" role="main">
 
   {{body}}
 
-  {{#if_block "region-a"}}
-  {{#block "region-a"}}{{/block}}
+  {{#if_block "post-content"}}
+    {{#block "post-content"}}{{/block}}
   {{/if_block}}
 
 </main>
