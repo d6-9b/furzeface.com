@@ -4,9 +4,9 @@
  * @author Daniel Furze
  */
 
-*,
-*::before,
-*::after {
+ *,
+ *::before,
+ *::after {
   box-sizing: border-box;
 }
 
@@ -53,7 +53,15 @@ label {
 
 pre,
 code {
+  background: rgb(240, 240, 240);
+  display: block;
   font-family: $font-family-mono;
+  padding: $global-padding $global-padding / 2;
+
+  &.inline {
+    display: inline;
+    padding: 2px;
+  }
 }
 
 img {

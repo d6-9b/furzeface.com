@@ -1,0 +1,26 @@
+/**
+ * Navigation
+ *
+ * @author Daniel Furze
+ */
+
+ .navigation-site {
+  @extend %clearfix;
+
+}
+
+.navigation-site__list {
+  @extend %list-unstyled;
+
+}
+
+.navigation-site__item {
+  display: inline;
+}
+
+.navigation-site__link {
+  @extend %link-unstyled;
+
+  display: inline-block;
+  padding-right: $global-padding;
+}

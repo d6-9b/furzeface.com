@@ -1,0 +1,14 @@
+/**
+ * Link helper classes.
+ *
+ * @author Daniel Furze
+ */
+
+// Silent placeholder to be extended
+%link-unstyled {
+  text-decoration: none;
+}
+
+.list-unstyled {
+  @extend %link-unstyled;
+}

@@ -4,12 +4,14 @@
  * @author Daniel Furze
  */
 
-  // Silent placeholder to extend
-  %inner {
-    margin: 0 auto;
-    @extend %col--6-of-12;
-  }
+// Silent placeholder to extend
+%inner {
+  @extend %col--6-of-12;
+  @extend %push--3;
+}
 
-  .inner {
-    @extend %inner;
-  }
+.site-header,
+.site-footer {
+ @extend %col--10-of-12;
+ @extend %push--1;
+}

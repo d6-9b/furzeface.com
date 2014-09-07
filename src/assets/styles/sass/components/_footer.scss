@@ -4,8 +4,12 @@
  * @author Daniel Furze
  */
 
- .site-footer__colophon {
+ .site-footer {
+  padding: $global-padding 0;
+}
+
+.site-footer__colophon {
   // <small>
   display: block;
-  text-align: right;
+  text-align: center;
 }
