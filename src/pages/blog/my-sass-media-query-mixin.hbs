@@ -1,12 +1,35 @@
 ---
-title: Command Line Ain't Scary
 pageClass: page-post
+title: My Sass media query mixin.
+category: Front end
+pubDate: '23rd Apr, 2014'
+bannerImage: '1440x785.gif'
 ---
 
-{{#extend "layout-page"}}
-{{#content "region-a"}}
+{{#extend "layout-post"}}
 
-<blockquote>This article is part of a new series I’ll write entitled Ain’t Scary, where I’ll write little tips to get you going on things that I’ve just discovered little tips to get me going on.</blockquote>
-
+{{#content "post-summary"}}
+A gist of my Sass media query mixin. I keep forgetting to upload and share snippets of CSS/Sass with people who ask, so here it is!
 {{/content}}
+
+
+{{#content "post-content"}}
+<p>Another little tip, as I keep on finding myself having to dig through code to get this snippet to share with others every now and then!</p>
+<h2>The mixin</h2>
+<script src="https://gist.github.com/furzeface/11208920.js"></script>
+
+<p>I don't claim to have invented this all on my own, I don't necessarily think it's the very best way to do things but it's how I do.</p>
+
+<p>Mixins like this are useful I think for yourself and larger teams of developers, to ensure that consistent media query breakpoints are used and no random magic 'fixes' and overrides for very specific breakpoints are put in place.</p>
+
+<h2>Do away with specificity</h2>
+<p>Whilst I mention using specific breakpoints, using relative units for breakpoints is a subject I've written on before, so my rationale behind that idea is in my post <a href="http://daniel.furzeface.com/blog/do-away-with-specific-media-queries"><em>Do away with specific media queries</em></a>.</p>
+{{/content}}
+
+
+{{#content "post-tldr"}}
+<p>The Sass media query mixin I use.</p>
+<p>Enjoy!</p>
+{{/content}}
+
 {{/extend}}
