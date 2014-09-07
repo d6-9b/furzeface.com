@@ -12,6 +12,7 @@
      */
      global: {
       bb: null,
+      $images: $('img'),
       setGlobal: function (bb) {
         var self = this;
         self.bb = bb;
@@ -26,7 +27,8 @@
 
         self.bindEvents();
         self.appendGist();
-        // self.syntaxHighlight();
+        // self.syntaxHighlight();]
+        self.lazyImages();
       },
       /**
       * Binds global module events.
@@ -80,6 +82,17 @@
       */
       syntaxHighlight: function () {
         hljs.initHighlightingOnLoad();
+      },
+      /**
+      * Lazy Loading Images via jQuery plugin
+      * @function lazyImages
+      * @memberof Global
+      * @see {@link http://luis-almeida.github.io/unveil}
+      */
+      lazyImages: function () {
+        var self = this;
+
+        self.$images.unveil(400);
       }
     }
   });
