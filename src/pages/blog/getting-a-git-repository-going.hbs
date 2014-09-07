@@ -1,12 +1,67 @@
 ---
-title: Command Line Ain't Scary
 pageClass: page-post
+title: Getting a git repository going.
+category: Tutorials
+pubDate: '21st Jun, 2014'
+bannerImage: '1440x785.gif'
 ---
 
-{{#extend "layout-page"}}
-{{#content "region-a"}}
+{{#extend "layout-post"}}
 
-<blockquote>This article is part of a new series I’ll write entitled Ain’t Scary, where I’ll write little tips to get you going on things that I’ve just discovered little tips to get me going on.</blockquote>
-
+{{#content "post-summary"}}
+Another reference for myself so I don’t have to trawl my memory banks <small>(and the internet)</small> every time I set up a new project.
 {{/content}}
+
+
+{{#content "post-content"}}
+<small>Disclaimer - this is written from a Mac user’s perspective, I suck at Windows command line so it probably won’t be the same for Windows.</small>
+
+<h2>Getting going</h2>
+<p>When I start little personal projects or experiments, I tend to keep the source on <a href="https://github.com/furzeface" title="My GitHub page">GitHub</a> as a way to collaborate and share code with others. This also keeps me on my toes as I have to commit code I don’t mind people seeing and it makes me keep my code bases up to date.</p>
+<p>However there are always times when the code needs to be kept private - all freelance work and a couple of collaborative projects I’m contributing to under <abbr title="Non-Disclosure Agreements">NDAs</abbr>.</p>
+<p>In these cases I use a VPS provided by <a href="https://ginernet.com/vps-ssd.php?language=English">Ginernet</a> for €6 or 7 a month to store my code repos on.</p>
+
+<h2 id="step:one">Step one</h2>
+<p>Open Terminal (Or <a href="http://www.iterm2.com">iTerm2</a> if you’re a hipster) and SSH onto your server <sup><a href="#note-1" id="note-1-ref">*</a></sup>. Or wherever.</p>
+<code>$ ssh dan@empire.furzeface.com</code>
+
+<p>Make a directory for your project and go into it.</p>
+<code>$ mkdir my-project.com.git && cd my-project.com.git</code>
+
+<p>Initialise git in that directory.</p>
+<code>$ git init</code>
+
+<small><sup><span id="note-1"><a href="#note-1-ref">^</a></span></sup>
+  <a href="http://tristanashley.com/setup-ssh">Tristan’s article</a> is good if you’ve not set up SSH keys before.
+</small>
+
+<h2 id="step:two">Step two</h2>
+<p>On your machine, make a directory for the project and go to it.</p>
+<code>$ mkdir my-project.com && cd my-project.com</code>
+
+<p>Initialise git in that directory.</p>
+<code>$ git init</code>
+
+<p>Add files in that directory then set up your first commit.</p>
+<code>$ git add *</code>
+<code>$ git commit -m "First commit with all the things"</code>
+
+<p>Add the remote origin and push to it!</p>
+<code>$ git remote add origin dan@empire.furzeface.com:projects/my-project.com.git</code>
+<code>$ git push -u origin master</code>
+
+<h2 id="step:two-and-a-bit">Step-two-and-a-bit</h2>
+<p><del>When</del> If it doesn’t work and seems to be throwing a permissions error, get back onto the remote server and check the user and group permissions for the directory you just created. </p>
+<p>If the right permissions aren’t set, <code class="inline">chown</code> the directory as needed.</p>
+<p>I always forget this and pull my hair out for a bit.</p>
+
+<h2 id="step:three">Step three</h2>
+<p>Relax. And start working.</p>
+{{/content}}
+
+
+{{#content "post-tldr"}}
+<p>How I set up a remote Git repository and start working away.</p>
+{{/content}}
+
 {{/extend}}

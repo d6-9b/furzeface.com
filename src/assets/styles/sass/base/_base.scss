@@ -56,6 +56,7 @@ code {
   background: rgb(240, 240, 240);
   display: block;
   font-family: $font-family-mono;
+  margin: .25rem 0;
   padding: $global-padding $global-padding / 2;
 
   &.inline {
@@ -67,4 +68,11 @@ code {
 img {
   height: auto;
   max-width: 100%;
+}
+
+sup,
+sub {
+  a {
+    text-decoration: none;
+  }
 }
