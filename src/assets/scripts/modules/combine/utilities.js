@@ -54,10 +54,10 @@
       */
       log: function (content, style) {
         if (typeof(console) !== 'undefined') {
-          if(style){
+          if (style){
             console.log('%c' + content, style);
           }
-          else{
+          else {
             console.log(content);
           }
         }
