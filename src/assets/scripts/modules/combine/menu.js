@@ -1,16 +1,31 @@
+/**
+ * @file Menu module
+ * @version 1.0.0
+ * @author {@link http://github.com/furzeface Daniel Furze}
+ */
 var bb = bb ? bb : {};
 (function ($) {
 	$.extend(bb,{
-		menu : {
-			bb : null,
-			$handle : null,
-			menuInClass : 'menu-in',
+    /**
+    * Menu methods.
+    * @namespace Menu
+    */
+		menu: {
+			bb: null,
+			$handle: null,
+			menuInClass: 'menu-in',
 			setGlobal: function (bb) {
 				var self = this;
 				self.bb = bb;
 			},
-			init : function () {
+      /**
+      * Initialises menu namespaced methods
+      * @function init
+      * @memberof Menu
+      */
+			init: function () {
 				var self = this;
+
 				self.$handle = $('.action-menu');
 				self.$handle.on('click.menu', function (event) {
 					event.preventDefault();
@@ -21,12 +36,24 @@ var bb = bb ? bb : {};
 					}
 				});
 			},
+      /**
+      * Adds CSS class to <html>, opening menu.
+      * @function openMenu
+      * @memberof Menu
+      */
 			openMenu: function () {
 				var self = this;
+
 				self.bb.settings.$html.addClass(self.menuInClass).removeClass(self.bb.search.searchInClass);
 			},
+      /**
+      * Removes CSS class from <html>, closing menu.
+      * @function closeMenu
+      * @memberof Menu
+      */
 			closeMenu: function () {
 				var self = this;
+
 				self.bb.settings.$html.removeClass(self.menuInClass);
 			}
 		}
