@@ -25,6 +25,6 @@
 
     html.push('<span class="emoji">:' + emoji + ':</span>');
 
-    return html.join('');
+    return new Handlebars.SafeString(html.join(''));
   });
 };

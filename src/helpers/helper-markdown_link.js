@@ -14,7 +14,7 @@
     * Return an <html> link - helps converting my old content over.
     * @function link
     * @memberof Handlebars.helpers
-    * @param {string} emoji - emoji name
+    * @param {string} link - markdown syntax to parse
     * @example
     * // returns <a href="http://caniuse.com">Can I Use</a>
     * Handlebars.helpers.link('[Can I Use](http://caniuse.com)');
