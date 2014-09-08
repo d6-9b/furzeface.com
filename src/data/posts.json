@@ -34,5 +34,9 @@
   {
     "title": "No mouse mornings",
     "slug": "no-mouse-mornings"
+  },
+  {
+    "title": "Scarily easy UI testing with CasperJS",
+    "slug": "scarily-easy-ui-testing-with-casperjs"
   }
 ]

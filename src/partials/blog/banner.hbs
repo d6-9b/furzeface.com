@@ -14,7 +14,7 @@ component: banner
 
     <p class="eta">
       Posted on <time datetime="{{pubDate}}" pubdate="{{pubDate}}" class="updated published">{{pubDate}}</time> in <em>{{category}}</em>
-      by <span class="vcard author"><span class="fn n">{{package.author.name}}</span></span>.
+      by <span class="vcard author"><span class="fn n">{{#if postAuthor}}{{postAuthor}}{{else}}{{package.author.name}}{{/if}}</span></span>.
     </p>
     {{!-- @todo: proper pubdate --}}
     {{!-- @todo: category link? --}}
