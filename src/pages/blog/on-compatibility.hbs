@@ -1,25 +1,114 @@
 ---
 pageClass: page-post
-title: ...
-category: ...
-pubDate: ...
+title: On compatibility
+category: Work
+pubDate: 10th Apr, 2014
 bannerImage: 1440x785.gif
 ---
 
 {{#extend "layout-post"}}
 
 {{#content "post-summary"}}
-
+On Compatibility or: How I Learned to Stop Worrying and Dropped Legacy Browser Support.
 {{/content}}
 
 
 {{#content "post-content"}}
+<h2>My personal site</h2>
 
+<p>I recently undertook a refresh of the design of my personal website and blog and occasionally I get asked (mainly by other developers, never usually clients) if I've spent much time catering for legacy browsers and if not, why not. </p>
+<p>I started developing <em>on the edge</em> recently - using {{link '[Chrome Canary](https://www.google.co.uk/intl/en/chrome/browser/canary.html)'}} and testing in {{link '[Firefox Nightly](http://nightly.mozilla.org/)'}}, just cos I love playing with new features as they’re implemented. And also Nightly’s UI just looks stunning at the moment, I have to say.</p>
+<p>Although I like to take advantage of being able to develop in the newest browsers with the latest implementations of features and standards I still think about backwards compatibility and graceful degradation throughout the development process, as well as testing in legacy browsers where needed.</p>
+
+<h2>Who really cares?</h2>
+
+<p><em>We do.</em></p>
+<p>So I’ve been thinking and it’s an interesting idea that it’s never clients or users who actually realise that your website or webapp may be different or gracefully degrading in older browsers, always us who notice the quirks and differences between how they look or function.</p>
+<p>We as developers are sometime still clinging to this idea that we should achieve cross browser perfection, that all websites should look exactly the same in every browser, IE7-11 and all modern browsers included. Hint: {{link '[it’s ok if](http://dowebsitesneedtolookexactlythesameineverybrowser.com/)'}} {{link '[they don’t](http://dowebsitesneedtobeexperiencedexactlythesameineverybrowser.com/)'}}.</p>
+<h2>Do your research</h2>
+<p>Now, I’m not advocating dropping support without any research of course, that just doesn’t make any sense. So have a look at this:</p>
+
+<h3>Browser stats worldwide</h3>
+<figure>
+  <img src="http://daniel.furzeface.com/themes/furzeface_v2/img/placeholder.png" data-src="http://static1.furzeface.com/img/blog/41/year_stats_worldwide.png" alt=""/>
+  <figcaption>
+    Yearly browser usage stats worldwide <small>Source: {{link '[http://www.netmarketshare.com/](http://www.netmarketshare.com/)'}}</small>
+  </figcaption>
+</figure>
+
+<p>In this graph of browser usage world wide in the last year you can clearly see the copious amount of Internet Explorer users, including a high amount of IE7 users - due to many many factors that I won’t go into here and you probably already know</p>
+
+<h3>Work apps usage in the last year</h3>
+<figure>
+  <img src="http://daniel.furzeface.com/themes/furzeface_v2/img/placeholder.png" data-src="http://static1.furzeface.com/img/blog/41/year_stats_work.png" alt="" />
+  <figcaption>Yearly browser usage stats of one of our work apps.</figcaption>
+</figure>
+
+<p>In the stats for our flagship webapp at work you can clearly see that we can not drop any legacy support just yet more than a third of our overall audience use IE7 :( so we have no choice but to spend time on making our webapps compatible with legacy browsers and making them degrade gracefully - we make money off this so it’s worth the time for us.</p>
+
+<h3>My site usage in the last year</h3>
+<figure>
+  <img src="http://daniel.furzeface.com/themes/furzeface_v2/img/placeholder.png" data-src="http://static1.furzeface.com/img/blog/41/year_stats_me.png" alt="" />
+  <figcaption>Yearly browser usage stats of my personal site.</figcaption>
+</figure>
+
+<p>In the browser stats for my personal site as you can see, the percentage of Internet Explorer users is infinitesimal compared to the abundance of modern browser users - it doesn’t even have it’s own section on the chart...c’mon.</p>
+<p>2% of my visitors over the last year have used IE and about a third of them use LT IE9 - what I consider to be legacy browsers.</p>
+<p>I expect this is due to my audience being primarily tech savvy and also due to the huge rise in mobile browsing on phones and tablets.</p>
+<p>So it’s all about your own audience and scenario, right.</p>
+<h2>Main issues these days:</h2>
+
+<h3>Essentials</h3>
+<p>These things I consider fairly essential to support if you’re planning on catering to legacy browser users. Usage of flexbox, box-sizing and rem units could really impact the usability of a site if fallbacks are not provided.</p>
+<p>I use quite a lot of SVGs in my projects as it’s fairly well supported and just looks so nice on high resolution displays! However it could affect the accessibility of a site if no fallback images are provided.</p>
+
+<ul>
+  <li>{{link '[Flexbox](http://www.w3.org/TR/css-flexbox-1/#overview)'}}</li>
+  <li>{{link '[Box-sizing](http://css-tricks.com/box-sizing/)'}}</li>
+  <li>{{link '[Rem Units](http://www.w3.org/TR/css3-values/#rem-unit)'}}</li>
+  <li>{{link '[SVG](http://www.w3.org/TR/SVG/)'}}</li>
+  <li>Inline SVG</li>
+</ul>
+
+<small>Refer to {{link '[Can I Use](http://caniuse.com)'}} for current support on all the things!</small>
+
+<h3>Non-essentials</h3>
+<p>These are some progressive techniques that aesthetically enhance modern user interfaces, and ones that I don’t find essential to a user experience - just fancy stuff then really.</p>
+
+<ul>
+  <li>{{link '[Animations](http://css-tricks.com/almanac/properties/a/animation/)'}}</li>
+  <li>{{link '[Border radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)'}}</li>
+  <li>{{link '[Box shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)'}}</li>
+  <li>{{link '[Transitions](http://css-tricks.com/almanac/properties/t/transition/)'}}</li>
+  <li>{{link '[Data-uri](http://css-tricks.com/data-uris/)'}} for svg background images {{#note 1}}{{/note}}</li>
+</ul>
+
+<small>Refer to {{link '[Can I Use](http://caniuse.com)'}} for current support on all the things!</small>
+
+<p>{{#note_ref 1}}{{/note_ref}} I use data uris in my stylesheets for the patterned backgrounds you see on the banners and body. This is another example of giving a progressive enhanced aesthetic experience to those using modern browsers, and falling back to a plain background colour if data uris are not supported - which I believe is IE7 and lower...now we’re getting ancient!</p>
+
+<h2>Essential Fallbacks</h2>
+<p>Some aspects of modern web development however, have to be sensibly catered for…some quick wins are listed below and I won’t go into too much detail other than to point you in the right direction if you’re looking to support IE8 and lower.</p>
+
+<ul>
+  <li>{{link '[HTML 5 Shiv](https://github.com/aFarkas/html5shiv)'}}</li>
+  <li>{{link '[Modernizr](http://modernizr.com) - ALWAYS make a custom build by the way'}}</li>
+  <li>{{link '[RemPx](http://davidwalsh.name/rem-px-browser-function-sass)'}}</li>
+</ul>
 {{/content}}
 
 
 {{#content "post-tldr"}}
+<p>I've fully dropped support for IE8 and below due to having a negligible number of visitors using these browsers in the last year.</p>
+<p>Due to this, I've been able to use relative units for font and layout sizing, use SVGs for images and background textures, and upgrade to jQuery 2.0 - which has dropped support for legacy browsers also.</p>
+<p>The above shows my reasons for the browser compatibility decisions I made and documents how I <em>learned to stop worrying and dropped legacy browser support</em>.</p>
+<p>I urge you to rigorously assess your own situation and learn to stop worrying too!</p>
 
+<h2>Some additional resources</h2>
+<ul>
+  <li>{{link '[Can I Use](http://caniuse.com)'}} - browser support for many many features</li>
+  <li>{{link '[Hardboiled Web Design](http://hardboiledwebdesign.com)'}} - quite an amazing book on progressive enhancement and gracefully degrading websites</li>
+</ul>
 {{/content}}
 
 {{/extend}}
