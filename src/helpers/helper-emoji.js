@@ -19,6 +19,7 @@
     * // returns <span class="emoji">:grimacing:</span>
     * Handlebars.helpers.emoji(grimacing);
     * @returns {string} html
+    * @see {@link https://github.com/linyows/jquery-emoji}
     * @see {@link http://www.emoji-cheat-sheet.com}
     */
     var html = [];

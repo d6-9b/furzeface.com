@@ -319,6 +319,9 @@ module.exports = function(grunt) {
       styles: [
         '<%= config.dist %>/<%= config.distStyles %>'
       ],
+      docs: [
+        '<%= config.dist %>/<%= config.distDocs %>'
+      ],
       everything: [
         '<%= config.dist %>'
       ]
@@ -639,6 +642,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build_docs', [
     'todo',
+    'clean:docs',
     'jsdoc',
     'sassdoc'
   ]);
