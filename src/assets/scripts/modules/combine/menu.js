@@ -3,20 +3,20 @@
  * @version 1.0.0
  * @author {@link http://github.com/furzeface Daniel Furze}
  */
-var bb = bb ? bb : {};
+var ff = ff ? ff : {};
 (function ($) {
-	$.extend(bb,{
+	$.extend(ff,{
     /**
     * Menu methods.
     * @namespace Menu
     */
 		menu: {
-			bb: null,
+			ff: null,
 			$handle: null,
 			menuInClass: 'menu-in',
-			setGlobal: function (bb) {
+			setGlobal: function (ff) {
 				var self = this;
-				self.bb = bb;
+				self.ff = ff;
 			},
       /**
       * Initialises menu namespaced methods
@@ -29,7 +29,7 @@ var bb = bb ? bb : {};
 				self.$handle = $('.action-menu');
 				self.$handle.on('click.menu', function (event) {
 					event.preventDefault();
-					if (self.bb.settings.$html.hasClass(self.menuInClass)) {
+					if (self.ff.settings.$html.hasClass(self.menuInClass)) {
 						self.closeMenu(event);
 					} else {
 						self.openMenu(event);
@@ -44,7 +44,7 @@ var bb = bb ? bb : {};
 			openMenu: function () {
 				var self = this;
 
-				self.bb.settings.$html.addClass(self.menuInClass).removeClass(self.bb.search.searchInClass);
+				self.ff.settings.$html.addClass(self.menuInClass).removeClass(self.ff.search.searchInClass);
 			},
       /**
       * Removes CSS class from <html>, closing menu.
@@ -54,14 +54,14 @@ var bb = bb ? bb : {};
 			closeMenu: function () {
 				var self = this;
 
-				self.bb.settings.$html.removeClass(self.menuInClass);
+				self.ff.settings.$html.removeClass(self.menuInClass);
 			}
 		}
 	});
-	$.subscribe('setGlobal', function (event, bb) {
-		bb.menu.setGlobal(bb);
+	$.subscribe('setGlobal', function (event, ff) {
+		ff.menu.setGlobal(ff);
 	});
 	$.subscribe('pageReady', function () {
-		bb.menu.init();
+		ff.menu.init();
 	});
 }(jQuery));

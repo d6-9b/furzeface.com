@@ -3,19 +3,19 @@
  * @version 1.0.0
  * @author {@link http://github.com/furzeface Daniel Furze}
  */
-var bb = bb ? bb : {};
+var ff = ff ? ff : {};
 (function ($) {
-	$.extend(bb, {
+	$.extend(ff, {
     /**
     * Utility methods.
     * @namespace Utilities
     */
     utilities: {
-      bb: null,
+      ff: null,
       setGlobal: function () {
         var self = this;
 
-        self.bb = bb;
+        self.ff = ff;
       },
       /**
       * Gets parameters from a query string.
@@ -44,7 +44,7 @@ var bb = bb ? bb : {};
       setUrlParams: function () {
         var self = this;
 
-        self.bb.settings.urlParams = self.getUrlParams(window.location.search);
+        self.ff.settings.urlParams = self.getUrlParams(window.location.search);
       },
       /**
       * Safer and enhanced console.log()
@@ -87,7 +87,7 @@ var bb = bb ? bb : {};
       }
     }
 	});
-  $.subscribe('setGlobal', function (event, bb) {
-    bb.utilities.setGlobal(bb);
+  $.subscribe('setGlobal', function (event, ff) {
+    ff.utilities.setGlobal(ff);
   });
 }(jQuery));

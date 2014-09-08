@@ -1,3 +1,3 @@
 (function() {
-	var init = (bb !== undefined) ? bb.pageReady() : null;
+	var init = (ff !== undefined) ? ff.pageReady() : null;
 }());

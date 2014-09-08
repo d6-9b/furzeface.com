@@ -3,22 +3,22 @@
  * @version 1.0.0
  * @author {@link http://github.com/furzeface Daniel Furze}
  */
- var bb = bb ? bb : {};
+ var ff = ff ? ff : {};
  (function ($) {
-  $.extend(bb, {
+  $.extend(ff, {
     /**
      * Site global related methods.
      * @namespace Global
      */
      global: {
-      bb: null,
+      ff: null,
       $images: $('img'),
       $gists: $('[data-gist]'),
       $emoji:  $('.emoji'),
-      setGlobal: function (bb) {
+      setGlobal: function (ff) {
         var self = this;
 
-        self.bb = bb;
+        self.ff = ff;
       },
       /**
       * Initialises Global module.
@@ -28,7 +28,6 @@
       init: function () {
         var self = this;
 
-        self.bindEvents();
         self.appendGists();
         self.setEmojis();
         // self.syntaxHighlight();
@@ -56,7 +55,7 @@
             success: function (data) {
               if (data && data.div) {
                 if (!$('link[href="' + data.stylesheet + '"]').length) {
-                  self.bb.settings.$head.append('<link rel="stylesheet" href="' + data.stylesheet + '"' + ' />');
+                  self.ff.settings.$head.append('<link rel="stylesheet" href="' + data.stylesheet + '"' + ' />');
                 }
                 $element.html(data.div);
               }
@@ -102,10 +101,10 @@
       }
     }
   });
-  $.subscribe('setGlobal', function (event, bb) {
-    bb.global.setGlobal(bb);
+  $.subscribe('setGlobal', function (event, ff) {
+    ff.global.setGlobal(ff);
   });
   $.subscribe('pageReady', function () {
-    bb.global.init();
+    ff.global.init();
   });
 }(jQuery));

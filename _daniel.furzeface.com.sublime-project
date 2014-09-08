@@ -5,11 +5,12 @@
       "path": ".",
         "folder_exclude_patterns": [
         ".sass-cache",
-        // "components",
+        "src/assets/components",
         "node_modules"
       ],
       "file_exclude_patterns": [
         //"*.css",
+        "dist/docs/**/*",
         "*.sublime-workspace"
       ]
     }

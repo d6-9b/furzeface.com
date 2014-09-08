@@ -1,6 +1,6 @@
-var bb = bb ? bb : {};
+var ff = ff ? ff : {};
 (function ($) {
-	$.extend(bb, {
+	$.extend(ff, {
 		settings: {
 			// Cache some common jQuery objects
 			$window: $(window),

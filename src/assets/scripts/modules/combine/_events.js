@@ -1,6 +1,6 @@
-var bb = bb ? bb : {};
+var ff = ff ? ff : {};
 (function ($) {
-	$.extend(bb, {
+	$.extend(ff, {
 		setGlobal: function () {
 			var self = this;
 			$.publish('setGlobal', self);
