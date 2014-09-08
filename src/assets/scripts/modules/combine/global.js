@@ -13,8 +13,11 @@
      global: {
       bb: null,
       $images: $('img'),
+      $gists: $('[data-gist]'),
+      $emoji:  $('.emoji'),
       setGlobal: function (bb) {
         var self = this;
+
         self.bb = bb;
       },
       /**
@@ -22,26 +25,14 @@
       * @function init
       * @memberof Global
       */
-      init : function () {
+      init: function () {
         var self = this;
 
         self.bindEvents();
-        self.appendGist();
-        // self.syntaxHighlight();]
+        self.appendGists();
+        self.setEmojis();
+        // self.syntaxHighlight();
         self.lazyImages();
-      },
-      /**
-      * Binds global module events.
-      * @function bindEvents
-      * @memberof Global
-      */
-      bindEvents: function () {
-        var self = this;
-        self.$emoji = $('.emoji');
-
-        self.$emoji.each(function(i, d){
-          $(d).emoji();
-        });
       },
       /**
       * Appends GitHub gists after pageReady.
@@ -49,8 +40,10 @@
       * @memberof Global
       * @see {@link https://www.chrispoulter.com/blog/post/loading-gists-asynchronously}
       */
-      appendGist: function () {
-        $('[data-gist]').each(function () {
+      appendGists: function () {
+        var self = this;
+
+        self.$gists.each(function () {
           var $element = $(this),
           id = $element.attr('data-gist');
 
@@ -63,7 +56,7 @@
             success: function (data) {
               if (data && data.div) {
                 if (!$('link[href="' + data.stylesheet + '"]').length) {
-                  $('head').append('<link rel="stylesheet" href="' + data.stylesheet + '"' + ' />');
+                  self.bb.settings.$head.append('<link rel="stylesheet" href="' + data.stylesheet + '"' + ' />');
                 }
                 $element.html(data.div);
               }
@@ -72,6 +65,19 @@
               $element.html('<p>Gist Load Failed</p>');
             }
           });
+        });
+      },
+      /**
+      * Sets emoji images in post content.
+      * @function setEmojis
+      * @memberof Global
+      * @see {@link http://www.emoji-cheat-sheet.com}
+      */
+      setEmojis: function () {
+        var self = this;
+
+        self.$emoji.each(function(i, d){
+          $(d).emoji();
         });
       },
       /**
