@@ -78,6 +78,15 @@ hr {
   padding: 0;
 }
 
+ol,
+ul {
+
+}
+
+li {
+  margin-bottom: px-to-rem(5px);
+}
+
 sup,
 sub {
   a {
