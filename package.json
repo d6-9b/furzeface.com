@@ -58,6 +58,6 @@
   },
   "scripts": {
     "test": "grunt assemble",
-    "postinstall": "bower install && grunt setup"
+    "postinstall": "bower install"
   }
 }
