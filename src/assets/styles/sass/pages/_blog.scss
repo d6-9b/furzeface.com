@@ -7,18 +7,22 @@
  .post-content {
   @extend %inner;
 
-  blockquote {
-    font-style: italic;
-    margin: px-to-rem(50px) 0;
+  h2 {
+    border-bottom: 1px solid $brand-grey--light;
   }
 
   blockquote {
     @extend %col--10-of-12;
     @extend %push--1;
+
+    font-style: italic;
+    margin-top: px-to-rem(50px);
+    margin-bottom: px-to-rem(50px);
   }
 
-  h2 {
-    border-bottom: 1px solid $brand-grey--light;
+  .summary {
+    // <blockquote>
+    text-align: center;
   }
 
   .pullquote {
@@ -34,6 +38,16 @@
       line-height: 0.1em;
       margin-right: 0.25em;
       vertical-align: -0.4em;
+    }
+  }
+
+  figure {
+    clear: both;
+
+    img {
+      @extend %centered;
+
+      display: block;
     }
   }
 }
@@ -53,12 +67,5 @@
   hr {
     @extend %col--10-of-12;
     @extend %push--1;
-  }
-}
-
-figure {
-  figcaption {
-    font-style: italic;
-    text-align: center;
   }
 }

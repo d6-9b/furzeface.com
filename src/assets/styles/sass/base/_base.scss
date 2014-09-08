@@ -84,3 +84,10 @@ sub {
     text-decoration: none;
   }
 }
+
+figure {
+  figcaption {
+    font-style: italic;
+    text-align: center;
+  }
+}
