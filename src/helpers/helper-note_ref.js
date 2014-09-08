@@ -20,14 +20,14 @@
     * Handlebars.helpers.note(1);
     * @returns {string} note
     */
-    var note = [];
+    var html = [];
 
-    note.push('<sup>');
-    note.push('<span id="note-' + index + '">');
-    note.push('<a href="#note-' + index + '-ref">^</a>');
-    note.push('</span>');
-    note.push('</sup>');
+    html.push('<sup>');
+    html.push('<span id="note-' + index + '">');
+    html.push('<a href="#note-' + index + '-ref">^</a>');
+    html.push('</span>');
+    html.push('</sup>');
 
-    return note.join('');
+    return html.join('');
   });
 };
