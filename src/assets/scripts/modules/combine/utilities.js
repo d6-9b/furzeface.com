@@ -3,9 +3,9 @@
  * @version 1.0.0
  * @author {@link http://github.com/furzeface Daniel Furze}
  */
-var ff = ff ? ff : {};
-(function ($) {
-	$.extend(ff, {
+ var ff = ff ? ff : {};
+ (function ($) {
+   $.extend(ff, {
     /**
     * Utility methods.
     * @namespace Utilities
@@ -52,9 +52,14 @@ var ff = ff ? ff : {};
       * @memberof Utilities
       * @param {string} content
       */
-      log: function (content) {
+      log: function (content, style) {
         if (typeof(console) !== 'undefined') {
-          console.log(content);
+          if(style){
+            console.log('%c' + content, style);
+          }
+          else{
+            console.log(content);
+          }
         }
       },
       /**
@@ -86,8 +91,8 @@ var ff = ff ? ff : {};
         }
       }
     }
-	});
-  $.subscribe('setGlobal', function (event, ff) {
-    ff.utilities.setGlobal(ff);
   });
+$.subscribe('setGlobal', function (event, ff) {
+  ff.utilities.setGlobal(ff);
+});
 }(jQuery));
