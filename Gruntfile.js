@@ -24,12 +24,6 @@ module.exports = function(grunt) {
       banner: '/* <%= pkg.name %> :: Latest build: <%= grunt.template.today(\'dd/mm/yyyy, h:MM:ss TT\') %> */\n'
     },
     config: {
-      aws: {
-        //credentials: grunt.file.readJSON('.aws.json'),
-        bucket: 'daniel.furzeface.com',
-        bucketStatic: 'furzeface-cdn',
-        region: 'eu-west-1' // Ireland
-      },
       // Component settings
       bower: '<%= bowerrc.directory %>',
       // Src settings
@@ -519,7 +513,7 @@ module.exports = function(grunt) {
     },
 
 
-    // Deployment tasks
+    // Production tasks
     sitemap: {
       options: {
         changefreq: 'weekly',
@@ -577,28 +571,6 @@ module.exports = function(grunt) {
             host: '<%= pkg.homepage %>'
           }
         ]
-      }
-    },
-
-    s3: {
-      options: {
-        accessKeyId: '<%= config.aws.credentials.accessKeyId %>',
-        secretAccessKey: '<%= config.aws.credentials.secretAccessKey %>',
-        region: '<%= config.aws.region %>'
-      },
-      site: {
-        options: {
-          bucket: '<%= config.aws.bucket %>'
-        },
-        cwd: 'dist/',
-        src: '**/*'
-      },
-      static: {
-        options: {
-          bucket: '<%= config.aws.bucketStatic %>'
-        },
-        cwd: 'static', // @todo: targets for static assets
-        src: '**'
       }
     }
 
@@ -683,8 +655,6 @@ module.exports = function(grunt) {
 
   // Deploy task.
   grunt.registerTask('deploy', [
-    'build_production',
-    /*'s3:site',
-    's3:static'*/
+    'build_production'
   ]);
 };
