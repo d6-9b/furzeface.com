@@ -606,6 +606,11 @@ module.exports = function(grunt) {
     'sassdoc'
   ]);
 
+  grunt.registerTask('build_docs_production', [
+    'jsdoc',
+    'sassdoc'
+  ]);
+
 
   // Task aliases.
   grunt.registerTask('build_dev', [
@@ -616,10 +621,23 @@ module.exports = function(grunt) {
     'modernizr'
   ]);
 
+  grunt.registerTask('build_dev_production', [
+    'assemble',
+    'build_images',
+    'jshint',
+    'concat',
+    'copy:scripts'
+    'sass',
+    'autoprefixer',
+    'cmq',
+    'copy:styles'
+    'modernizr'
+  ]);
+
   grunt.registerTask('build_production', [
     // build tasks
-    'build_docs',
-    'build_dev',
+    'build_docs_production',
+    'build_dev_production',
     // production tasks
     'cssmin',
     'uglify',
