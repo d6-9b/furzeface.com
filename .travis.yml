@@ -23,14 +23,14 @@ deploy:
     on:
       branch: master
       repo: furzeface/daniel.furzeface.com
-  - provider: s3
-    access_key_id: AKIAI4XHMTMN5OUCMOUQ
-    secret_access_key:
-      secure: c6u0LDM3e8wg5Hxdihzh5q3f1WUiPsCEUuTNmIH6LvxNl1lTQcXEzVuiUz4I1HnPZq/KSR+VhfyIavI4ub85X70ecomJC4uhSeDsoJ5xyVVH155sf00yTls94+88hMV00QLHlaT6aMHm6nFbX89czTmBKMKiZh81RBv6+ewS/1o=
-    bucket: furzeface-cdn
-    skip_cleanup: true
-    region: eu-west-1
-    local-dir: dist/_assets
-    on:
-      branch: master
-      repo: furzeface/daniel.furzeface.com
+  # - provider: s3
+  #   access_key_id: AKIAI4XHMTMN5OUCMOUQ
+  #   secret_access_key:
+  #     secure: c6u0LDM3e8wg5Hxdihzh5q3f1WUiPsCEUuTNmIH6LvxNl1lTQcXEzVuiUz4I1HnPZq/KSR+VhfyIavI4ub85X70ecomJC4uhSeDsoJ5xyVVH155sf00yTls94+88hMV00QLHlaT6aMHm6nFbX89czTmBKMKiZh81RBv6+ewS/1o=
+  #   bucket: furzeface-cdn
+  #   skip_cleanup: true
+  #   region: eu-west-1
+  #   local-dir: dist/_assets
+  #   on:
+  #     branch: master
+  #     repo: furzeface/daniel.furzeface.com
