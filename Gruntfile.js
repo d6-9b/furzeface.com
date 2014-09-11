@@ -630,7 +630,7 @@ module.exports = function(grunt) {
     'sass',
     'autoprefixer',
     'cmq',
-    'copy:styles'
+    'copy:styles',
     'modernizr'
   ]);
 
