@@ -8,14 +8,19 @@
 
 ## TODO
 
+## .travis.yml
+
+-  **todo** `(line 22)` : exclude _assets
+
 ## Gruntfile.js
 
 -  **todo** `(line 11)` : Use grunt-newer
--  **todo** `(line 124)` : Reimplement this
--  **todo** `(line 532)` : excludes
--  **todo** `(line 605)` : targets for static assets
+-  **todo** `(line 119)` : Reimplement this
+-  **todo** `(line 464)`  exclude these
+-  **todo** `(line 511)` : excludes
+-  **todo** `(line 599)` : put back in when emojis excluded
 
 
 * * *
 
-Last generated: Sun Sep 07 2014 10:26:16 by [grunt-todo](https://github.com/leny/grunt-todo).
+Last generated: Thu Sep 11 2014 20:48:51 by [grunt-todo](https://github.com/leny/grunt-todo).

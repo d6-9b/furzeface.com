@@ -116,7 +116,8 @@ module.exports = function(grunt) {
           usePackage: true
       },
       all: [
-        // '<%= config.src %>/**/*.{hbs,html,js,scss,txt}', // @todo: Reimplement this
+        // '<%= config.src %>/**/*.{hbs,html,js,scss,txt}', // @todo: Reimplement TODO task on these files
+        '.travis.yml',
         'Gruntfile.js'
       ]
     },
@@ -638,7 +639,7 @@ module.exports = function(grunt) {
     // build tasks
     'build_docs_production',
     'build_dev_production',
-    // production tasks
+    // production build tasks
     'cssmin',
     'uglify',
     'htmlmin',
@@ -646,6 +647,7 @@ module.exports = function(grunt) {
     'sitemap',
     'clean:production'
   ]);
+
 
   // Default task.
   grunt.registerTask('default', [
