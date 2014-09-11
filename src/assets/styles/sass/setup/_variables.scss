@@ -1,188 +1,264 @@
-/**
+ /**
  * Variables
- * @author Daniel Furze
  *
+ * Common variables used for reuse and setup.
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
 
 /**
  * Overrides variable in components/normalize-scss/normalize.scss for IE 6/7 support.
  * @type Bool (false)
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $legacy_browser_support: false !default;
-
-/**
- * Base
- */
 
  /**
  * Sets default body background color.
  * @type String (#F9F9F9)
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $body-bg: #F9F9F9 !default;
 
  /**
  * Sets default body text color.
  * @type String (#262626)
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ *
+ * @too implement $body-color: contrast($body-bg) again.
  */
  $body-color: #262626 !default;
 
-//$body-color: contrast($body-bg); //@TODO implement this again.
-
  /**
  * Sets default font size.
+ *
  * @type String
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $base-font-size: 16px;
 
  /**
- * Sets default sans-serif font.
+ * Sets default sans-serif font, uses TypeKit fonts.
+ *
+ * @link https://typekit.com/fonts
+ *
  * @type String
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $font-family-sans-serif: 'Proxima Nova', Helvetica, Arial, sans-serif;
 
 /**
- * Sets default serif font.
+ * Sets default serif font, uses TypeKit fonts.
+ *
+ * @link https://typekit.com/fonts
+ *
  * @type String
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $font-family-serif: 'adriane', Georgia, serif;
 
-/**
+ /**
  * Sets default mono font.
+ *
+ * @link http://www.sitepoint.com/eight-definitive-font-stacks-2
+ *
  * @type String
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $font-family-mono: Consolas, 'Lucida Console', 'Lucida Sans Typewriter', 'Liberation Mono', 'Courier New', Courier, monospace; // Adapted from [http://www.sitepoint.com/eight-definitive-font-stacks-2].
 
 /**
  * Sets default base font.
  * @type String
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $font-family-base: $font-family-sans-serif;
-/**
- * Sizing
- */
 
  /**
  * Sets default global margin.
  * @type Number (1.5rem)
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $global-margin: 1.5rem !default;
 
  /**
  * Sets default global padding.
  * @type Number (1.5rem)
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $global-padding: 1.5rem !default;
-
-/**
- * Grid
- */
 
  /**
  * Sets default number of grid columns.
  * @type Number (12)
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $grid-cols: 12 !default;
 
  /**
  * Sets default padding for grid columns.
  * @type Number ($global-padding)
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $grid-col-gutters: $global-padding !default;
 
  /**
  * Sets default breakpoint for grid columns.
  * @type Number (M)
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $grid-col-breakpoint: M !default;
 
  /**
  * Configures whether or not to create CSS selectors for columns or silent placeholders.
  * @type Bool (true)
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
- $grid-include-selectors: true !default;
-
-/**
- * Colors
- */
+ $grid-include-selectors: false;
 
  /**
  * Brand color white.
  * @type String
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $brand-white: #FFF;
 
  /**
  * Brand color grey.
  * @type String
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $brand-grey: #C9C9C9;
 
  /**
+ * Brand color grey (darker).
+ * @type String (darken($color-grey, 10%))
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+ $brand-grey--dark: darken($brand-grey, 10%);
+
+/**
  * Brand color grey (lighter).
  * @type String (lighten($color-grey, 10%))
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $brand-grey--light: lighten($brand-grey, 10%);
 
  /**
- * Brand color grey (darker).
- * @type String (darken($color-grey, 10%))
- */
- $brand-grey--dark: darken($brand-grey, 10%);
-
- /**
  * Brand color black.
  * @type String
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $brand-black: #000;
 
-  /**
+ /**
  * Brand color blue.
  * @type String
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $brand-blue: #2A2C9F;
 
  /**
  * Brand color black (lighter).
  * @type String (lighten($color-black, 10%))
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $brand-black--light: lighten($brand-black, 10%);
-
-/**
- * Media Queries
- */
 
  /**
  * Extra small breakpoint
  * @type Number
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $breakpoint-extra-small: 20em;
 
  /**
  * Small breakpoint
  * @type Number
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $breakpoint-small: 30em;
 
  /**
  * Medium breakpoint
  * @type Number
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $breakpoint-medium: 50em;
 
  /**
  * Extra medium breakpoint
  * @type Number
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $breakpoint-extra-medium: 65em;
 
  /**
  * Large breakpoint
  * @type Number
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $breakpoint-large: 80em;
 
  /**
  * Extra large breakpoint
  * @type Number
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
  */
  $breakpoint-extra-large: 100em;
+
