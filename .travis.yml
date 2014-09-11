@@ -19,7 +19,6 @@ deploy:
     endpoint: http://daniel.furzeface.com.s3-website-eu-west-1.amazonaws.com/
     region: eu-west-1
     local-dir: dist
-      exclude: _assets
     # acl: !ruby/string:HighLine::String |-
     #   cHJpdmF0ZQ==
     on:
