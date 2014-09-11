@@ -626,7 +626,7 @@ module.exports = function(grunt) {
     'build_images',
     'jshint',
     'concat',
-    'copy:scripts'
+    'copy:scripts',
     'sass',
     'autoprefixer',
     'cmq',
