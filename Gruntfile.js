@@ -645,7 +645,6 @@ module.exports = function(grunt) {
 
   // Deploy task.
   grunt.registerTask('deploy', [
-    'clean:everything',
     'build_production'
   ]);
 };
