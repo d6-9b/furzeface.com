@@ -5,7 +5,10 @@
  */
 
  .site-header {
-  padding: $global-padding 0;
+  @extend %col--10-of-12;
+  @extend %push--1;
+
+  padding: $global-padding;
 }
 
 .site-header__logo {
