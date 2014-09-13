@@ -569,7 +569,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('build_styles', [
-    'newer:sass',
+    'sass',
     'newer:autoprefixer',
     'newer:cmq'
   ]);
