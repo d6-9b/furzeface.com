@@ -88,7 +88,7 @@
  *
  * @group base
  *
- * @since 1.0.0
+ * @since 1.1.0
  * @author Daniel Furze
  */
  p {
@@ -103,7 +103,7 @@
  *
  * @group base
  *
- * @since 1.0.0
+ * @since 1.1.0
  * @author Daniel Furze
  */
  sup,
@@ -144,7 +144,7 @@ sub {
  *
  * @group base
  *
- * @since 1.0.0
+ * @since 1.1.0
  * @author Daniel Furze
  */
  code {
@@ -167,7 +167,7 @@ sub {
  *
  * @group base
  *
- * @since 1.0.0
+ * @since 1.1.0
  * @author Daniel Furze
  */
  figure {
@@ -176,7 +176,10 @@ sub {
   }
 
   figcaption {
-    font-style: italic;
+    font-family: $font-family-sans-serif;
+    font-size: smaller;
+    font-variant: small-caps;
+    text-transform: lowercase;
     text-align: center;
   }
 }
@@ -201,7 +204,7 @@ sub {
  *
  * @group base
  *
- * @since 1.0.0
+ * @since 1.1.0
  * @author Daniel Furze
  */
  hr {
@@ -219,7 +222,7 @@ sub {
  *
  * @group base
  *
- * @since 1.0.0
+ * @since 1.1.0
  * @author Daniel Furze
  *
  * @todo Implement list styles.
@@ -234,7 +237,7 @@ sub {
  *
  * @group base
  *
- * @since 1.0.0
+ * @since 1.1.0
  * @author Daniel Furze
  *
  * @todo Implement list item styles.
