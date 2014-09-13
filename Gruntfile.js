@@ -8,8 +8,6 @@ module.exports = function(grunt) {
   'use strict';
   /* jshint camelcase: false */
 
-  // @todo: Use grunt-newer
-
   // Reads package.json and dynamically loads all Grunt tasks
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies', pattern: ['assemble', 'grunt-*']});
 
@@ -283,15 +281,6 @@ module.exports = function(grunt) {
       ],
       production: [
         '<%= config.dist %>/<%= config.distAssets %>/<%= config.distStyles %>/<%= config.mainCss %>.map'
-      ],
-      html: [
-        '<%= config.dist %>/*.html'
-      ],
-      scripts: [
-        '<%= config.dist %>/<%= config.distAssets %>/<%= config.distScripts %>'
-      ],
-      styles: [
-        '<%= config.dist %>/<%= config.distAssets %>/<%= config.distStyles %>'
       ],
       docs: [
         '<%= config.dist %>/<%= config.distDocs %>'
@@ -569,28 +558,25 @@ module.exports = function(grunt) {
 
   // Build tasks.
   grunt.registerTask('build_html', [
-    'clean:html',
     'assemble'
   ]);
 
   grunt.registerTask('build_scripts', [
-    'clean:scripts',
-    'jshint',
-    'concat:jquery',
-    'concat:scripts',
+    'newer:jshint',
+    'newer:concat:jquery',
+    'newer:concat:scripts',
     'copy:scripts'
   ]);
 
   grunt.registerTask('build_styles', [
-    'clean:styles',
-    'sass',
-    'autoprefixer',
-    'cmq'
+    'newer:sass',
+    'newer:autoprefixer',
+    'newer:cmq'
   ]);
 
   grunt.registerTask('build_images', [
-    // 'responsive_images',
-    'imagemin',
+    // 'responsive_images', @todo: Add resp img task back in
+    'newer:imagemin',
     'copy:images'
   ]);
 
