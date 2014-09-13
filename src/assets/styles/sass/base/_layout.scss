@@ -12,3 +12,8 @@
   padding-left: $global-margin;
   padding-right: $global-margin;
 }
+
+.inner {
+  @extend %col--10-of-12;
+  @extend %push--1;
+}

@@ -219,6 +219,7 @@ sub {
 /**
  * Lists.
  * Default styles.
+ * A list after a paragraph needs no padding.
  *
  * @group base
  *
@@ -229,6 +230,9 @@ sub {
  */
  ol,
  ul {
+  p + & {
+    padding-left: px-to-rem(20px);
+  }
  }
 
 /**

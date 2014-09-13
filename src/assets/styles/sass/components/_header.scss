@@ -8,11 +8,17 @@
  */
 
  .site-header {
-  @extend %col--10-of-12;
-  @extend %push--1;
-
-  background: $brand-blue;
+  color: $brand-blue;
   padding: $global-padding;
+
+  a {
+    color: $brand-blue;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 /**
@@ -23,7 +29,7 @@
  * @since 1.0.0
  * @author Daniel Furze
  */
-.site-header__logo {
+ .site-header__logo {
   margin: 0;
 }
 
@@ -35,6 +41,5 @@
  * @since 1.0.0
  * @author Daniel Furze
  */
-.site-header__link {
-
-}
+ .site-header__link {
+ }
