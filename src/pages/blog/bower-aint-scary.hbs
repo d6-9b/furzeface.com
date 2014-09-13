@@ -58,7 +58,7 @@ Another in the "Front end ain’t scary" series, this post introduces Bower and 
   </li>
 </ol>
 
-<p>{{#note_ref 2}}{{/note_ref}}Remember in the last step to pass the <code class="inline">--save</code> or <code class="inline">--save-dev</code> flag to save it in your <code class="inline">bower.json</code>, and your project.</p>
+<small>{{#note_ref 2}}{{/note_ref}}Remember in the last step to pass the <code class="inline">--save</code> or <code class="inline">--save-dev</code> flag to save it in your <code class="inline">bower.json</code> and your project.</small>
 
 <h2>Now what?</h2>
 <p>Now you have a <code class="inline">bower.json</code> file in the root of your project that looks something a little like this:</p>
@@ -106,11 +106,11 @@ Another in the "Front end ain’t scary" series, this post introduces Bower and 
 <p>I tend to leave the rest of the attributes as default in my <code class="inline">.bowerrc</code> but you can check out the <a href="http://bower.io/docs/config" rel="external">.bowerrc documentation</a> for more info.</p>
 
 <h3>Quick tip:</h3>
-<small>I usually just hit something like this in command line{{#note 3}}{{/note}} on my Mac:
+<p>I usually just hit something like this in command line{{#note 3}}{{/note}} on my Mac:</p>
 <code>
   $ echo {\"directory\": \"site\/components\"} | python -m json.tool > .bowerrc
 </code>
-{{#note_ref 3}}{{/note_ref}}See, command line is <a href="http://daniel.furzeface.com/blog/command-line-aint-scary">mega quick</a>!</small>
+<small>{{#note_ref 3}}{{/note_ref}}See, command line is <a href="http://daniel.furzeface.com/blog/command-line-aint-scary">mega quick</a>!</small>
 
 <h2>Way to go!</h2>
 <p>See, you’ve just initialised Bower and started using it straight away to manage your front end dependencies!</p>
