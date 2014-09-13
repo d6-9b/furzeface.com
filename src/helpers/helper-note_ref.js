@@ -16,15 +16,24 @@
     * @memberof Handlebars.helpers
     * @param {string} index - note number
     * @example
-    * // returns <sup><span id="note-1"><a href="#note-1-ref">^</a></span></sup>
-    * Handlebars.helpers.note(1);
+    * // returns <sup><span id="note-3"><a href="#note-3-ref">***</a></span></sup>
+    * Handlebars.helpers.note(3);
+    * @example
+    * // returns <sup><span id="note-5"><a href="#note-5-ref">*****</a></span></sup>
+    * Handlebars.helpers.note(5);
     * @returns {string} note
     */
     var html = [];
 
     html.push('<sup>');
     html.push('<span id="note-' + index + '">');
-    html.push('<a href="#note-' + index + '-ref">^</a>');
+    html.push('<a href="#note-' + index + '-ref">');
+
+    for (var i = 1; i <= index; i++) {
+      html.push('*');
+    }
+
+    html.push('</a>');
     html.push('</span>');
     html.push('</sup>');
 

@@ -18,12 +18,21 @@
     * @example
     * // returns <sup><a href="#note-1" id="note-1-ref">*</a></sup>
     * Handlebars.helpers.note(1);
+    * @example
+    * // returns <sup><a href="#note-2" id="note-2-ref">**</a></sup>
+    * Handlebars.helpers.note(2);
     * @returns {string} html
     */
     var html = [];
 
     html.push('<sup>');
-    html.push('<a href="#note-' + index + '" id="note-' + index + '-ref">*</a>');
+    html.push('<a href="#note-' + index + '" id="note-' + index + '-ref">');
+
+    for (var i = 1; i <= index; i++) {
+      html.push('*');
+    }
+
+    html.push('</a>');
     html.push('</sup>');
 
     return html.join('');
