@@ -108,9 +108,20 @@
  */
  sup,
  sub {
+  font-size: 100%;
+
   a {
+    color: $brand-blue;
     text-decoration: none;
   }
+}
+
+sup {
+  top: -.25rem;
+}
+
+sub {
+  bottom: -.25rem;
 }
 
 /**

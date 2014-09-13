@@ -9,7 +9,7 @@ bannerImage: 1440x785.gif
 {{#extend "layout-post"}}
 
 {{#content "post-summary"}}
-Another in the "Front end ain’t scary" series, this post introduces Bower, and discusses its uses.
+Another in the "Front end ain’t scary" series, this post introduces Bower and discusses its uses.
 {{/content}}
 
 
@@ -33,30 +33,32 @@ Another in the "Front end ain’t scary" series, this post introduces Bower, and
 <p>So you need just a few commands to get using Bower.</p>
 <ol>
   <li>
-    <p>Install with <a href="http://nodejs.org" rel="external">Node</a>:</p>
+    <p>Install with <a href="http://nodejs.org" rel="external">NodeJS</a>:</p>
     <code>
       $ npm install bower -g
     </code>
   </li>
 
   <li>
-    <p>Initialise Bower in your project and create a <code class="inline">bower.json</code> file:</p>
+    <p>Create and enter a directory for your project:</p>
     <code>
-      $ mkdir yourProject && cd yourProject && bower init
+      $ mkdir yourProject && cd yourProject
+    </code>
+  </li>
+
+  <li><p>Initialise Bower in your project then complete the steps that you are asked to do to create your <code class="inline">bower.json</code> file:</p>
+    <code>
+      $ bower init
     </code>
   </li>
 
   <li>
-    <p>Then complete the steps that <code class="inline">$ bower init</code> asks you to do to kick off your project.</p>
-  </li>
-
-  <li>
-    <p>Finally, install and save your first package:</p>
+    <p>Finally, install and save{{#note 2}}{{/note}} your first package:</p>
     <code>$ bower install sassface --save-dev</code>
   </li>
 </ol>
 
-<p>Remember in the last step to pass the <code class="inline">--save</code> or <code class="inline">--save-dev</code> flag to save it in your <code class="inline">bower.json</code>, and your project.</p>
+<p>{{#note_ref 2}}{{/note_ref}}Remember in the last step to pass the <code class="inline">--save</code> or <code class="inline">--save-dev</code> flag to save it in your <code class="inline">bower.json</code>, and your project.</p>
 
 <h2>Now what?</h2>
 <p>Now you have a <code class="inline">bower.json</code> file in the root of your project that looks something a little like this:</p>
@@ -104,11 +106,11 @@ Another in the "Front end ain’t scary" series, this post introduces Bower, and
 <p>I tend to leave the rest of the attributes as default in my <code class="inline">.bowerrc</code> but you can check out the <a href="http://bower.io/docs/config" rel="external">.bowerrc documentation</a> for more info.</p>
 
 <h3>Quick tip:</h3>
-<small>I usually just hit something like this in command line{{#note 2}}{{/note}} on my Mac:
+<small>I usually just hit something like this in command line{{#note 3}}{{/note}} on my Mac:
 <code>
   $ echo {\"directory\": \"site\/components\"} | python -m json.tool > .bowerrc
 </code>
-{{#note_ref 2}}{{/note_ref}}See, command line is <a href="http://daniel.furzeface.com/blog/command-line-aint-scary">mega quick</a>!</small>
+{{#note_ref 3}}{{/note_ref}}See, command line is <a href="http://daniel.furzeface.com/blog/command-line-aint-scary">mega quick</a>!</small>
 
 <h2>Way to go!</h2>
 <p>See, you’ve just initialised Bower and started using it straight away to manage your front end dependencies!</p>
