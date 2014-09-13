@@ -9,20 +9,20 @@ bannerImage: 1440x785.gif
 {{#extend "layout-post"}}
 
 {{#content "post-summary"}}
-Another reference for myself so I don’t have to trawl my memory banks <small>(and the internet)</small> every time I set up a new project.
+Another reference for myself so I don't have to trawl my memory banks <small>(and the internet)</small> every time I set up a new project.
 {{/content}}
 
 
 {{#content "post-content"}}
-<small>Disclaimer - this is written from a Mac user’s perspective, I suck at Windows command line so it probably won’t be the same for Windows.</small>
+<small>Disclaimer - this is written from a Mac user's perspective, I suck at Windows command line so it probably won't be the same for Windows.</small>
 
 <h2>Getting going</h2>
-<p>When I start little personal projects or experiments, I tend to keep the source on <a href="https://github.com/furzeface" title="My GitHub page">GitHub</a> as a way to collaborate and share code with others. This also keeps me on my toes as I have to commit code I don’t mind people seeing and it makes me keep my code bases up to date.</p>
-<p>However there are always times when the code needs to be kept private - all freelance work and a couple of collaborative projects I’m contributing to under <abbr title="Non-Disclosure Agreements">NDAs</abbr>.</p>
+<p>When I start little personal projects or experiments, I tend to keep the source on <a href="https://github.com/furzeface" title="My GitHub page">GitHub</a> as a way to collaborate and share code with others. This also keeps me on my toes as I have to commit code I don't mind people seeing and it makes me keep my code bases up to date.</p>
+<p>However there are always times when the code needs to be kept private - all freelance work and a couple of collaborative projects I'm contributing to under <abbr title="Non-Disclosure Agreements">NDAs</abbr>.</p>
 <p>In these cases I use a VPS provided by <a href="https://ginernet.com/vps-ssd.php?language=English">Ginernet</a> for €6 or 7 a month to store my code repos on.</p>
 
 <h2 id="step:one">Step one</h2>
-<p>Open Terminal - <small>or <a href="http://www.iterm2.com">iTerm2</a> if you’re a hipster {{emoji 'sunglasses'}}</small> - and SSH onto your server {{#note 1}}{{/note}}. Or wherever.</p>
+<p>Open Terminal - <small>or <a href="http://www.iterm2.com">iTerm2</a> if you're a hipster {{emoji 'sunglasses'}}</small> - and SSH onto your server {{#note 1}}{{/note}}. Or wherever.</p>
 <code>$ ssh dan@empire.furzeface.com</code>
 
 <p>Make a directory for your project and go into it.</p>
@@ -31,7 +31,7 @@ Another reference for myself so I don’t have to trawl my memory banks <small>(
 <p>Initialise git in that directory.</p>
 <code>$ git init</code>
 
-<small>{{#note_ref 1}}{{/note_ref}} <a href="http://tristanashley.com/setup-ssh">Tristan’s article</a> is good if you’ve not set up SSH keys before.</small>
+<small>{{#note_ref 1}}{{/note_ref}} <a href="http://tristanashley.com/setup-ssh">Tristan's article</a> is good if you've not set up SSH keys before.</small>
 
 <h2 id="step:two">Step two</h2>
 <p>On your machine, make a directory for the project and go to it.</p>
@@ -49,8 +49,8 @@ Another reference for myself so I don’t have to trawl my memory banks <small>(
 <code>$ git push -u origin master</code>
 
 <h2 id="step:two-and-a-bit">Step-two-and-a-bit</h2>
-<p><del>When</del> If it doesn’t work and seems to be throwing a permissions error, get back onto the remote server and check the user and group permissions for the directory you just created. </p>
-<p>If the right permissions aren’t set, <code class="inline">chown</code> the directory as needed.</p>
+<p><del>When</del> If it doesn't work and seems to be throwing a permissions error, get back onto the remote server and check the user and group permissions for the directory you just created. </p>
+<p>If the right permissions aren't set, <code class="inline">chown</code> the directory as needed.</p>
 <p>I always forget this and pull my hair out for a bit. {{emoji 'grimacing'}}</p>
 
 <h2 id="step:three">Step three</h2>

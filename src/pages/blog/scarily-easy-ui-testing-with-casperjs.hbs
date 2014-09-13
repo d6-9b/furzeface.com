@@ -21,7 +21,7 @@ The following is a guest post by <span class="vcard author"><span class="title">
 
 <h2>It's not <em>THAT</em> scary&hellip;</h2>
 <p>In the realm of application testing, User Interface Testing is the younger brother and the somewhat neglected member of the family who seems forever in the shadow of its bigger brother, Unit Testing.</p>
-<p>Both provide benefits to an application’s health by testing it with the expected usage and behaviour. With Unit testing different aspects of of an application that fit into the puzzle of the whole application itself, UI testing programmatically runs through the user facing aspect of a website / application and tests the behaviour as if a real person were using it.</p>
+<p>Both provide benefits to an application's health by testing it with the expected usage and behaviour. With Unit testing different aspects of of an application that fit into the puzzle of the whole application itself, UI testing programmatically runs through the user facing aspect of a website / application and tests the behaviour as if a real person were using it.</p>
 
 <p>This testing environment is possible using a headless browser and a test runner that sits on top of this - replacing the GUI negotiation with direct orders telling browser what it should do programmatically. At the moment there are two main{{#note 1}}{{/note}} headless options, <a href="http://phantomjs.org">PhantomJS</a> for Webkit and <a href="http://slimerjs.org">SlimerJS</a> for Gecko. Yup, that JS means these tools run on Node and help avoid confusion between PhantomC#. <a href="http://casperjs.org">CasperJS</a> is the second component which brings common testing paradigms such as asserts into battle, with CasperJS being compatible with both headless solutions. This post aims at giving a light introduction on UI testing with CasperJS.</p>
 <small>{{#note_ref 1}}{{/note_ref}}A third option in the form of <a href="http://triflejs.org">TrifleJS</a> provides a headless trident offering. This does however require, as probably expected, require a windows environment to run. At the time of writing CasperJS does not allow to be used with TrifleJS</small>
@@ -32,20 +32,20 @@ The following is a guest post by <span class="vcard author"><span class="title">
 <code>brew install slimerjs</code>
 <p>A similar one line installs Casper (using npm though homebrew installation is also available)</p>
 <code>npm install -g casperjs</code>
-<p>With these steps down, we’re ready to test, yay!</p>
+<p>With these steps down, we're ready to test, yay!</p>
 
-<h2>Let’s rock!</h2>
+<h2>Let's rock!</h2>
 <p>With boring installation formalities over it's time to run some tests. CasperJS runs in the console behind the <code class="inline">'casperjs [options] [filename]'</code> operative with testing requiring <code class="inline">'casperjs test [filename]'</code>.</p>
 
 <h2>Enough talk! Time for some codez</h2>
 
 <div data-gist="c54c7c625f56c9c583d6"></div>
 
-<p>From the top the <code class="inline">casper begin()</code> method is called, with a callback invoked when Casper is ready to go (and the test object passed into it). This example then uses the <code class="inline">.start()</code> call to define the first step - opening a page, checking the page is actually there (doesn’t 404, 500 etc), the URL is root (login page for instance) and that the title is correct and as expected.</p>
+<p>From the top the <code class="inline">casper begin()</code> method is called, with a callback invoked when Casper is ready to go (and the test object passed into it). This example then uses the <code class="inline">.start()</code> call to define the first step - opening a page, checking the page is actually there (doesn't 404, 500 etc), the URL is root (login page for instance) and that the title is correct and as expected.</p>
 <p>After this, using the <code class="inline">.then()</code> call, test data is filled into the login form (navigated to using a CSS selector) where it is submitted and the resultant URL is tested.</p>
 <p>Each 'chunk' of code handles individual aspects the that result in the full test. Casper requires that the first function call is <code class="inline">.start()</code> with each subsequent part of the test using the <code class="inline">.then()</code> function (extended functions such as <code class="inline">.thenOpen()</code> and <code class="inline">.thenClick()</code> are also available). </p>
 
-<p>With casper using <abbr title="Behaviour Driven Development">BDD</abbr> qualities a test flow can be seen - defining the test for casper to run (with it’s local namespace, test in this example being passed into the main function) and defining each step to be executed in order using the <code class="inline">.then()</code> function.</p>
+<p>With casper using <abbr title="Behaviour Driven Development">BDD</abbr> qualities a test flow can be seen - defining the test for casper to run (with it's local namespace, test in this example being passed into the main function) and defining each step to be executed in order using the <code class="inline">.then()</code> function.</p>
 <p>The test then requires the <code class="inline">.done()</code> to be the last call to signify to casper that all of the test have been defined - without this the test would hang and never be completed.</p>
 <p>The code above is defined into micro steps with callbacks being the body of the test.</p>
 <figure>
@@ -55,8 +55,8 @@ The following is a guest post by <span class="vcard author"><span class="title">
 
 <h2>Tip of the iceberg</h2>
 <p>The casper API allows you to programmatically click areas of the page or assert values with known expected values and also fill in forms and submit them. In the example provided the assert function is used to check HTTP status code, title and URI are used.</p>
-<p>This would then be run in the console via ‘casperjs test you-dont-scare-me-ghost.js’ (assuming the filename was called you-dont-scare-me-ghost.js) - where casper will run each test outputting results to the console.</p>
-<p>That’s it! This was a simple example, but the casper <a href="http://docs.casperjs.org/en/latest/">Casper documentation</a> offers many API hooks allowing for versatile testing of a application’s UI.</p>
+<p>This would then be run in the console via ‘casperjs test you-dont-scare-me-ghost.js' (assuming the filename was called you-dont-scare-me-ghost.js) - where casper will run each test outputting results to the console.</p>
+<p>That's it! This was a simple example, but the casper <a href="http://docs.casperjs.org/en/latest/">Casper documentation</a> offers many API hooks allowing for versatile testing of a application's UI.</p>
 
 {{/content}}
 
