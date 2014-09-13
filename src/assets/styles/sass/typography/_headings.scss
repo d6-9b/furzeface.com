@@ -5,61 +5,80 @@
  * as well as defining CSS classes for said sizes to style according to size using a semantically correct element,
  * and placeholders if the sizing itself needs to be extended silently.
  *
- * Depends on setup/variables.
- *
- * Contents:
- *    =Placeholders
- *    =Base Elements And Heading Classes
+ * @since 1.0.0
+ * @author Daniel Furze
  */
 
-//=Placeholders
-// So they can be extended silently on to any element.
-
+/**
+ * Heading base placeholder to be extended silently on to any element.
+ *
+ * Set font-weight to normal so <strong> can be used within headings.
+ * Using [text-rendering: optimizeLegibility] only on headings as if used globally this could impact performance
+ *
+ * @link https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
 %heading-base {
-  font-weight: normal; //Set to normal so <strong> can be used within headings
-  //margin-top: 0;
+  font-weight: normal;
   text-rendering: optimizeLegibility;
-  //Using [text-rendering: optimizeLegibility] only on headings as if used globally this could impact performance
-  //See also [https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering]
 }
 
-
+/**
+ * Individual heading placeholders to be extended silently on to any element.
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
 %heading--mega {
-  @extend %heading-base;
   @include font-size(60px);
+
+  @extend %heading-base;
 }
 
 %heading--alpha {
-  @extend %heading-base;
   @include font-size(40px);
+
+  @extend %heading-base;
 }
 
 %heading--beta {
-  @extend %heading-base;
   @include font-size(36px);
+
+  @extend %heading-base;
 }
 
 %heading--gamma {
-  @extend %heading-base;
   @include font-size(32px);
+
+  @extend %heading-base;
 }
 
 %heading--delta {
-  @extend %heading-base;
   @include font-size(28px);
+
+  @extend %heading-base;
 }
 
 %heading--epsilon {
-  @extend %heading-base;
   @include font-size(24px);
+
+  @extend %heading-base;
 }
 
 %heading--zeta {
-  @extend %heading-base;
   @include font-size(20px);
+
+  @extend %heading-base;
 }
 
-// Base Elements And Heading Classes
+/**
+ * Attaching styles to base elements And heading selectors.
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
 .heading--mega {
   @extend %heading--mega;
 }

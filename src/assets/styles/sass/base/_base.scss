@@ -1,18 +1,39 @@
 /**
  * Base
  *
+ * The base styles.
+ * Styles added to basic selectors go here.
+ *
+ * @since 1.0.0
  * @author Daniel Furze
  */
 
+/**
+ * Box sizing.
+ * Set to correct box model, where possible.
+ *
+ * @group base
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
  *,
  *::before,
  *::after {
   box-sizing: border-box;
 }
 
-//=Basic
-html {
-  font-size: 65%; // Use for rem measurements
+/**
+ * Html.
+ * Font size initially 65% - use for rem measurements.
+ *
+ * @group base
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+ html {
+  font-size: 65%;
 
   @include MQ(S) {
     font-size: 85%;
@@ -33,25 +54,89 @@ html {
   @include selection();
 }
 
-body {
+/**
+ * Body.
+ * Background color, text color, font smoothing, text adjust
+ * @group base
+ *
+ * @link http://www.456bereastreet.com/archive/201011/beware_of_-webkit-text-size-adjustnone
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ *
+ * @todo Implement contrasted body-bg and color
+ * @todo Set webkit-font-smoothing dynamically based on body-bg and color
+ */
+ body {
   background: $body-bg;
   color: $body-color;
+  // @include contrasted($body-bg); // Does body background-color and color.
+
   font-family: $font-family-serif;
-  // @include contrasted($body-bg); //Does body background-color and color. //@TODO this
-  -webkit-font-smoothing: subpixel-antialiased; //For use with dark text on light backgrounds //@TODO set this dynamically based on body background & color
-  // -webkit-font-smoothing: antialiased; //Uncomment for use with light text on dark backgrounds.
+
+  -webkit-font-smoothing: subpixel-antialiased; // For use with dark text on light backgrounds
+  // -webkit-font-smoothing: antialiased; // Uncomment for use with light text on dark backgrounds.
 
   text-size-adjust: 100%;
   // Opts out of browsers *fixing* text size zooming for non mobile ready sites on mobile devices.
   // If you're not building a responsive or mobile first site you won't need this CSS property. But you should be.
-  // Careful, don't use 'none' for this property - see [http://www.456bereastreet.com/archive/201011/beware_of_-webkit-text-size-adjustnone].
 }
 
-label {
-  cursor: pointer; // Cos labels should be used semantically and attached to inputs!
+/**
+ * Paragraph.
+ * Removes bottom margin on last paragraph in a container.
+ *
+ * @group base
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+ p {
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
-code {
+/**
+ * Superscript and subscript.
+ * Default styles.
+ *
+ * @group base
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+ sup,
+ sub {
+  a {
+    text-decoration: none;
+  }
+}
+
+/**
+ * Label.
+ * Cursor pointer, as labels should be used semantically and attached to inputs, therefore be clickable.
+ *
+ * @group base
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+ label {
+  cursor: pointer;
+}
+
+/**
+ * Code.
+ *
+ * @link http://www.sitepoint.com/eight-definitive-font-stacks-2
+ *
+ * @group base
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+ code {
   background: rgb(240, 240, 240);
   display: block;
   font-family: $font-family-mono;
@@ -64,12 +149,51 @@ code {
   }
 }
 
-img {
+/**
+ * Figure, figure caption
+ * Default styles.
+ * If figure has an images and figcaption, add margin in between.
+ *
+ * @group base
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+ figure {
+  img + figcaption {
+    margin-top: $global-margin / 2;
+  }
+
+  figcaption {
+    font-style: italic;
+    text-align: center;
+  }
+}
+
+/**
+ * Image.
+ * Max width 100%, height auto for scalable images.
+ *
+ * @group base
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+ img {
   height: auto;
   max-width: 100%;
 }
 
-hr {
+/**
+ * Horizontal rule.
+ * Default styles.
+ *
+ * @group base
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+ hr {
   background: $brand-grey;
   border: 0;
   display: block;
@@ -78,25 +202,31 @@ hr {
   padding: 0;
 }
 
-ol,
-ul {
+/**
+ * Lists.
+ * Default styles.
+ *
+ * @group base
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ *
+ * @todo Implement list styles.
+ */
+ ol,
+ ul {
+ }
 
-}
-
-li {
-  margin-bottom: px-to-rem(5px);
-}
-
-sup,
-sub {
-  a {
-    text-decoration: none;
-  }
-}
-
-figure {
-  figcaption {
-    font-style: italic;
-    text-align: center;
-  }
-}
+/**
+ * Lists.
+ * Default styles.
+ *
+ * @group base
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ *
+ * @todo Implement list item styles.
+ */
+ li {
+ }
