@@ -46,7 +46,7 @@
           var $element = $(this),
           id = $element.attr('data-gist');
 
-          $element.html('<p>Loading Gist...</p>');
+          $element.html('<p>Loading Gist&hellip;</p>');
 
           $.ajax({
             url: 'https://gist.github.com/' + id + '.json',
