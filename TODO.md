@@ -15,12 +15,10 @@
 ## Gruntfile.js
 
 -  **todo** `(line 11)` : Use grunt-newer
--  **todo** `(line 119)` : Reimplement this
--  **todo** `(line 464)`  exclude these
--  **todo** `(line 511)` : excludes
--  **todo** `(line 599)` : put back in when emojis excluded
+-  **todo** `(line 119)` : Reimplement TODO task on these files
+-  **todo** `(line 506)` : excludes
 
 
 * * *
 
-Last generated: Thu Sep 11 2014 20:48:51 by [grunt-todo](https://github.com/leny/grunt-todo).
+Last generated: Sat Sep 13 2014 17:36:56 by [grunt-todo](https://github.com/leny/grunt-todo).

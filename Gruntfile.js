@@ -116,7 +116,7 @@ module.exports = function(grunt) {
           usePackage: true
       },
       all: [
-        // '<%= config.src %>/**/*.{hbs,html,js,scss,txt}', // @todo: Reimplement TODO task on these files
+        // '<%= config.src %>/**/*.{hbs,html,js,scss,txt}', // @todo: Reimplement grunt-todo on these files
         '.travis.yml',
         'Gruntfile.js'
       ]
@@ -265,16 +265,6 @@ module.exports = function(grunt) {
           }
         ]
       },
-      styles: {
-        files: [
-          {
-            expand: true,
-            cwd: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/',
-            src: ['*.css'],
-            dest: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distStyles %>/'
-          }
-        ]
-      },
       sassface: {
         files: [
           {
@@ -397,8 +387,13 @@ module.exports = function(grunt) {
 
       scripts: {
         src: [
+          // plugins
           '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/plugins/combine/*.js',
+          // from Bower components
+          '<%= config.bower %>/emojify.js/emojify.js',
+          // combined scripts
           '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/modules/combine/*.js',
+          // initialise all modules afterwards
           '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/_init.js'
         ],
         dest: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distScripts %>/scripts.js'
@@ -461,7 +456,7 @@ module.exports = function(grunt) {
             cwd: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcImages %>/',
             src: [
               '**/*.{gif,jpg,jpeg,png}',
-              '!emojis' // @todo exclude these
+              '!emojis/*.png'
             ],
             dest: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distImages %>/'
           }
@@ -508,7 +503,7 @@ module.exports = function(grunt) {
       options: {
         changefreq: 'weekly',
         pattern: '**/*.html'
-        // @todo: excludes
+        // @todo: Can you exclude files from grunt-sitemap?
       },
       site: {
         siteRoot: '<%= config.dist %>/'
@@ -590,24 +585,18 @@ module.exports = function(grunt) {
     'clean:styles',
     'sass',
     'autoprefixer',
-    'cmq',
-    'copy:styles'
+    'cmq'
   ]);
 
   grunt.registerTask('build_images', [
     // 'responsive_images',
-    //'imagemin', // @todo: put back in when emojis excluded
+    'imagemin',
     'copy:images'
   ]);
 
   grunt.registerTask('build_docs', [
     'todo',
     'clean:docs',
-    'jsdoc',
-    'sassdoc'
-  ]);
-
-  grunt.registerTask('build_docs_production', [
     'jsdoc',
     'sassdoc'
   ]);
@@ -622,23 +611,11 @@ module.exports = function(grunt) {
     'modernizr'
   ]);
 
-  grunt.registerTask('build_dev_production', [
-    'assemble',
-    'build_images',
-    'jshint',
-    'concat',
-    'copy:scripts',
-    'sass',
-    'autoprefixer',
-    'cmq',
-    'copy:styles',
-    'modernizr'
-  ]);
 
   grunt.registerTask('build_production', [
     // build tasks
-    'build_docs_production',
-    'build_dev_production',
+    'build_docs',
+    'build_dev',
     // production build tasks
     'cssmin',
     'uglify',

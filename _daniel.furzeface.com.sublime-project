@@ -9,7 +9,7 @@
         "node_modules"
       ],
       "file_exclude_patterns": [
-        //"*.css",
+        "*.css",
         "dist/docs/**/*",
         "*.sublime-workspace"
       ]
