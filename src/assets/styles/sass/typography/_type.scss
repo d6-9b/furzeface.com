@@ -1,16 +1,20 @@
-/**
+ /**
  * Type
  *
- * Other type sizing.
+ * Additional type sizing.
  * Defines CSS classes to add to elements for font sizing,
- * as well as placeholders if the sizing itself needs to be extended silently.
+ * and placeholders if the sizing itself needs to be extended silently.
  *
- * Depends on setup/variables.
+ * @since 1.0.0
+ * @author Daniel Furze
  */
 
-// Placeholders
-// So they can be extended silently on to any element.
-
+/**
+ * Individual type placeholders to be extended silently on to any element.
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
 %type--eta {
   @include font-size($base-font-size);
 }
@@ -19,7 +23,12 @@
  @include font-size(12px);
 }
 
-// Sizing Classes
+/**
+ * Attaching styles to base elements and element selectors.
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
 p,
 .type--eta {
   @extend %type--eta;
@@ -28,4 +37,20 @@ p,
 small,
 .type--theta {
   @extend %type--theta;
+}
+
+/**
+ * Paragraph with list/preformatted code.
+ *
+ * Removes margin between paragraph and ordered/unordered lists when they're placed together.
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+p {
+  + ul,
+  + ol,
+  + pre {
+    margin-top: 0;
+  }
 }

@@ -1,6 +1,9 @@
-/**
+ /**
  * Header
  *
+ * Site header.
+ *
+ * @since 1.0.0
  * @author Daniel Furze
  */
 
@@ -8,14 +11,30 @@
   @extend %col--10-of-12;
   @extend %push--1;
 
+  background: $brand-blue;
   padding: $global-padding;
 }
 
+/**
+ * Site header logo
+ *
+ * <h1>
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
 .site-header__logo {
-  // <h1>
   margin: 0;
 }
 
+/**
+ * Site header link
+ *
+ * <a>
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
 .site-header__link {
 
 }
