@@ -14,11 +14,12 @@
 
 ## Gruntfile.js
 
--  **todo** `(line 117)` : Reimplement grunt-todo on these files
--  **todo** `(line 495)` : Can you exclude files from grunt-sitemap?
--  **todo** `(line 578)` : Add resp img task back in
+-  **todo** `(line 50)` : Get the URL string working
+-  **todo** `(line 120)` : Reimplement grunt-todo on these files
+-  **todo** `(line 500)` : Can you exclude files from grunt-sitemap?
+-  **todo** `(line 583)` : Add resp img task back in
 
 
 * * *
 
-Last generated: Sat Sep 13 2014 17:45:27 by [grunt-todo](https://github.com/leny/grunt-todo).
+Last generated: Sat Sep 13 2014 19:42:51 by [grunt-todo](https://github.com/leny/grunt-todo).

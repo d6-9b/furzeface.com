@@ -44,7 +44,10 @@ module.exports = function(grunt) {
       distSassDocs: 'sassdocs',
       mainCss: 'main.css',
       // Misc settings
-      helpers: 'helpers'
+      helpers: 'helpers',
+      // Static assets
+      assetsUrl: (grunt.option('production')) ? 'static1.furzeface.com' : '<%= config.distAssets %>'
+      // @todo: Get the URL string working
     },
 
     // Watchers
@@ -179,7 +182,7 @@ module.exports = function(grunt) {
     // Build tasks
     assemble: {
       options: {
-        assets: '<%= config.dist %>/<%= config.distAssets %>',
+        assets: '<%= config.assetsUrl %>',
         copyrightYear: '2014',
         data: [
           '<%= config.src %>/data/*.{json,yml}',
@@ -188,13 +191,15 @@ module.exports = function(grunt) {
         flatten: false,
         helpers: [
           '<%= config.src %>/<%= config.helpers %>/helper-*.js'
-        ],        images: '<%= config.distImages %>',
+        ],
+        images: '<%= config.distImages %>',
         layout: false,
         mainCss: '<%= config.mainCss %>',
         partials: [
           '<%= config.src %>/partials/**/*.hbs',
           '<%= config.src %>/layouts/**/*.hbs'
         ],
+        production: '<%= grunt.option(\'production\')%>',
         styles: '<%= config.distStyles %>',
         scripts: '<%= config.distScripts %>',
         temp: '<%= config.distTemp %>',
