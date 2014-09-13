@@ -9,8 +9,8 @@
   @extend %col--6-of-12;
   @extend %push--3;
 
-  margin-left: $global-margin;
-  margin-right: $global-margin;
+  padding-left: $global-margin;
+  padding-right: $global-margin;
 }
 
 .site-header,
