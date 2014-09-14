@@ -1,25 +1,42 @@
 ---
 pageClass: page-post
-title: ...
-category: ...
-pubDate: ...
+title: Styling GitHub Gists
+category: Tips
+pubDate: 12th Dec, 2013
 bannerImage: 1440x785.gif
 ---
 
 {{#extend "layout-post"}}
 
 {{#content "post-summary"}}
-
+A snippet that removes the default GitHub stylesheets and allows you to restyle a Gist.
 {{/content}}
 
 
 {{#content "post-content"}}
+<p>Previously I wrote a post about <a href="http://daniel.furzeface.com/blog/do-away-with-specific-media-queries">Media Queries</a> which utilised <a href="https://gist.github.com/furzeface" rel="external">GitHub Gists</a> for the code samples.</p>
 
+<p>I love using Gists for code samples, they look great and it's good to get your little snippets online and sharable with others - they are automatically versioned so you can directly clone or fork them, dead easy.</p>
+<p>However I found that on a mobile device, they aren't really scalable and on my blog, they look pretty dreadful! Something like this:</p>
+<figure>
+  <img src="http://static.furzeface.com/img/blog/25/dreadful_gist_styles.png" alt="Dreadful looking GitHub Gists on my blog" />
+  <figcaption>A screenshot of a GitHub Gist on my blog, on a mobile device.</figcaption>
+</figure>
+
+<p>Now you can't really control the styles very well without hacking and overriding their CSS - it's very specific - so I wrote a little bit of script that will remove the embedded stylesheet ready for you to restyle Gist elements however you desire.</p>
+
+<h2>The JavaScript</h2>
+<div data-gist="7934044"></div>
+
+<h2>Adding styles back on</h2>
+<p>Here's <a href="https://gist.github.com/furzeface/7933675" rel="external">a list of CSS selectors for basic styles</a> that you can now adapt and change - probably not an exhaustive list obviously but a start!</p>
+<p>For now I've keep the basic colours and layout, but added some media queries around the Gist to display it a little nicer for mobile devices. Go on, resize the screen - I know you want to...</p>
+<p>I think it'd be cool to style them quite extensively at some point, I imagine styling them like one of the iTerm themes I use could be pretty nice in the right context.</p>
 {{/content}}
 
 
 {{#content "post-tldr"}}
-
+<p><a href="https://gist.github.com/furzeface">GitHub Gists</a> are great, and here's a way to remove the default styling injected and restyle them to your heart's content!</p>
 {{/content}}
 
 {{/extend}}

@@ -1,25 +1,52 @@
 ---
 pageClass: page-post
-title: ...
-category: ...
-pubDate: ...
+title: Snippet - text overflow ellipsis
+category: Tips
+pubDate: 29th Oct, 2013
 bannerImage: 1440x785.gif
 ---
 
 {{#extend "layout-post"}}
 
 {{#content "post-summary"}}
-
+A snippet to provide the ellipsis when an element isn't long enough for its content&hellip;.
 {{/content}}
 
 
 {{#content "post-content"}}
+<h2>&hellip;</h2>
+<p>Yeah so I'm ALWAYS forgetting how to do this, and end up trawling through code to find where I've done it before and copy pasting. So I'm basically writing this for myself to have a centralised copy paste place.</p>
 
+<h2>Example</h2>
+<ul class="ellipsis-me">
+  <li>Daniel Furze</li>
+  <li class="ellipsis">Mc Testerson Longname IV</li>
+</ul>
+
+<div data-gist="7696869"></div>
+
+<h2>Make sure&hellip;</h2>
+<ul>
+  <li>The element (or containing wrapper) is of fixed width</li>
+  <li>The element is displayed as a block</li>
+</ul>
+
+<style>
+.ellipsis-me{
+  width: 200px;
+}
+.ellipsis{
+  line-height: 110%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+</style>
 {{/content}}
 
 
 {{#content "post-tldr"}}
-
+<p>Copy and paste the above css to hide overflowing text and display with an ellipsis&hellip;&hellip;&hellip;&hellip;</p>
 {{/content}}
 
 {{/extend}}

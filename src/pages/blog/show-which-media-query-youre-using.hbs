@@ -1,25 +1,50 @@
 ---
 pageClass: page-post
-title: ...
-category: ...
-pubDate: ...
+title: Show which media query you're using
+category: Tips
+pubDate: 14th Jun, 2013
 bannerImage: 1440x785.gif
 ---
 
 {{#extend "layout-post"}}
 
 {{#content "post-summary"}}
-
+A quick tip to show on screen which media query you're developing against.
 {{/content}}
 
 
 {{#content "post-content"}}
+<h2>Quick Tip</h2>
+<p>When developing and testing sites built for desktop and mobile I use Adobe's Edge Inspect to view my local dev environment on multiple devices.</p>
 
+<p>On a project that we're developing with work at the moment we're using media queries to modify layout and style based on the screen width and the pixel ratio the devices have – and the more media queries we use the more confusing it's becoming to quickly add/remove styles in the appropriate media queries as we go!</p>
+
+<p>So as a quick little tip to help me see which query a device is using I added an element on the page and in each media query, added a string via the content attribute.</p>
+
+<h2>The Codez</h2>
+<p>Firstly add an empty div for this in your HTML:</p>
+<pre class="html"><code>
+  &lt;div class="query"&gt;&lt;/div&gt;
+</code></pre>
+<small>You could also just add it as an <code class="inline">:after</code> element on the body or something if you wanted.</small>
+
+<p>Now the CSS:</p>
+<div data-gist="7696931"></div>
+
+Wherein [ ]  you should write <code class="inline">@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (-webkit-min-device-pixel-ratio:2)</code> and so on&hellip;
+
+<figure>
+  <img src="http://static.furzeface.com/img/blog/3/media_queries_guide.png" alt="" />
+  <figcaption>A screenshot of my blog with the media query guide in place on DEMO environment.</figcaption>
+</figure>
 {{/content}}
 
 
 {{#content "post-tldr"}}
-
+<ul>
+  <li>Add an element at the top of your page</li>
+  <li>Use CSS content to add a string describing your media queries into element:after so you can see what you're working with!</li>
+</ul>
 {{/content}}
 
 {{/extend}}

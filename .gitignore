@@ -9,7 +9,7 @@ tmp
 .sass-cache
 *.sublime-workspace
 
-# Don’t commit dependencies!
+# Don't commit dependencies!
 node_modules
 src/assets/components
 
