@@ -15,7 +15,7 @@
  * @since 1.0.0
  * @author Daniel Furze
  */
-%type--eta {
+ %type--eta {
   @include font-size($base-font-size);
 }
 
@@ -29,8 +29,8 @@
  * @since 1.0.0
  * @author Daniel Furze
  */
-p,
-.type--eta {
+ p,
+ .type--eta {
   @extend %type--eta;
 }
 
@@ -44,13 +44,32 @@ small,
  *
  * Removes margin between paragraph and ordered/unordered lists when they're placed together.
  *
- * @since 1.0.0
+ * @since 1.1.0
  * @author Daniel Furze
  */
-p {
+ p {
   + ul,
   + ol,
   + pre {
     margin-top: 0;
+  }
+}
+
+/**
+ * Abbreviation
+ *
+ * Sets abbreviations to sans serif, small caps and gives interactivity state when they have a title.
+ *
+ * @since 1.1.0
+ * @author Daniel Furze
+ */
+ abbr {
+  font-family: $font-family-sans-serif;
+  font-variant: small-caps;
+  text-transform: lowercase;
+
+  &[title] {
+    border-bottom: 1px dotted;
+    cursor: pointer;
   }
 }
