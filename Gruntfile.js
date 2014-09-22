@@ -603,7 +603,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build_fonts', [
     'copy:fonts'
-  ])
+  ]);
 
   grunt.registerTask('build_docs', [
     'todo',
