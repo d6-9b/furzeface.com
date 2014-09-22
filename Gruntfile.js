@@ -251,6 +251,17 @@ module.exports = function(grunt) {
     },
 
     copy: {
+      fonts: {
+        files: [
+        {
+          expand: true,
+          cwd: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcFonts %>',
+          src: [
+              '**/*'
+            ],
+          dest: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distFonts %>/'
+        }]
+      },
       images: {
         files: [
           {
@@ -589,6 +600,10 @@ module.exports = function(grunt) {
     'newer:imagemin',
     'copy:images'
   ]);
+
+  grunt.registerTask('build_fonts', [
+    'copy:fonts'
+  ])
 
   grunt.registerTask('build_docs', [
     'todo',
