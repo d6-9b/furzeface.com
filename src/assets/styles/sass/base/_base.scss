@@ -83,6 +83,29 @@
 }
 
 /**
+ * Link.
+ *
+ * @group base
+ *
+ * @since 1.1.0
+ * @author Daniel Furze
+ */
+ a {
+  color: $link-color;
+
+  p &,
+  small & {
+    font-weight: 700;
+  }
+
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/**
  * Paragraph.
  * Removes bottom margin on last paragraph in a container.
  *
@@ -233,7 +256,7 @@ sub {
   p + & {
     padding-left: px-to-rem(20px);
   }
- }
+}
 
 /**
  * Lists.
