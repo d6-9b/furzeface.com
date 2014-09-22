@@ -44,10 +44,7 @@ module.exports = function(grunt) {
       distSassDocs: 'sassdocs',
       mainCss: 'main.css',
       // Misc settings
-      helpers: 'helpers',
-      // Static assets
-      assetsUrl: (grunt.option('production')) ? 'static1.furzeface.com' : '<%= config.distAssets %>'
-      // @todo: Get the URL string working
+      helpers: 'helpers'
     },
 
     // Watchers
@@ -182,7 +179,15 @@ module.exports = function(grunt) {
     // Build tasks
     assemble: {
       options: {
-        assets: '<%= config.assetsUrl %>',
+        assets: '_assets',
+        assetsUrl: function () {
+          if (grunt.option('production')) {
+            // Production flag set on CI deploy task
+            return 'http://static1.furzeface.com';
+          } else {
+            return '_assets';
+          }
+        },
         copyrightYear: '2014',
         data: [
           '<%= config.src %>/data/*.{json,yml}',
