@@ -1,19 +1,39 @@
 /**
  * Layout
  *
+ * Base layout styles.
+ *
+ * @since 1.1.0
  * @author Daniel Furze
  */
 
-// Silent placeholder to extend
+/**
+ * Inner
+ *
+ * Silent placeholder to extend
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
 %inner {
   @extend %col--6-of-12;
   @extend %push--3;
 
-  padding-left: $global-margin;
-  padding-right: $global-margin;
+  padding-left: $global-padding;
+  padding-right: $global-padding;
 }
 
+/**
+ * Inner
+ *
+ * CSS selector
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
 .inner {
   @extend %col--10-of-12;
   @extend %push--1;
+  @extend %clearfix;
+
 }

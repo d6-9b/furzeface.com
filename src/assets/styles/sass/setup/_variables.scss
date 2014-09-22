@@ -200,6 +200,15 @@
  $brand-blue: #2A2C9F;
 
  /**
+ * Link color.
+ * @type String
+ *
+ * @since 1.1.0
+ * @author Daniel Furze
+ */
+ $link-color: $brand-blue;
+
+ /**
  * Brand color black (lighter).
  * @type String (lighten($color-black, 10%))
  *
@@ -261,4 +270,7 @@
  * @author Daniel Furze
  */
  $breakpoint-extra-large: 100em;
+
+
+ $header-height: 4.5rem;
 

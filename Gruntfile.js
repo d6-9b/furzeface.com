@@ -179,16 +179,16 @@ module.exports = function(grunt) {
     // Build tasks
     assemble: {
       options: {
-        assets: '_assets',
+        // assets: '_assets',
         assetsUrl: function () {
           if (grunt.option('production')) {
             // Production flag set on CI deploy task
             return 'http://static1.furzeface.com';
           } else {
-            return '_assets';
+            return 'http://localhost:8008/_assets';
           }
         },
-        copyrightYear: '2014',
+        copyrightYear: '<%= grunt.template.today(\'yyyy\') %>',
         data: [
           '<%= config.src %>/data/*.{json,yml}',
           'package.json',
@@ -208,7 +208,7 @@ module.exports = function(grunt) {
         styles: '<%= config.distStyles %>',
         scripts: '<%= config.distScripts %>',
         temp: '<%= config.distTemp %>',
-        timestamp: '<%= grunt.template.today("mmm dS yyyy, h:MMtt Z") %>'
+        timestamp: '<%= grunt.template.today(\'mmm dS yyyy, h:MMtt Z\') %>'
       },
       pages: {
         files: [{
@@ -251,6 +251,17 @@ module.exports = function(grunt) {
     },
 
     copy: {
+      fonts: {
+        files: [
+        {
+          expand: true,
+          cwd: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcFonts %>',
+          src: [
+              '**/*'
+            ],
+          dest: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distFonts %>/'
+        }]
+      },
       images: {
         files: [
           {
@@ -590,6 +601,10 @@ module.exports = function(grunt) {
     'copy:images'
   ]);
 
+  grunt.registerTask('build_fonts', [
+    'copy:fonts'
+  ]);
+
   grunt.registerTask('build_docs', [
     'todo',
     'clean:docs',
@@ -604,6 +619,7 @@ module.exports = function(grunt) {
     'build_images',
     'build_scripts',
     'build_styles',
+    'build_fonts',
     'modernizr'
   ]);
 

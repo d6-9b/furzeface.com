@@ -8,11 +8,18 @@
  */
 
  .site-header {
-  color: $brand-blue;
+  background: $brand-blue;
+  color: $brand-white;
+  height: $header-height;
   padding: $global-padding;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9;
 
   a {
-    color: $brand-blue;
+    color: inherit;
     text-decoration: none;
 
     &:hover {

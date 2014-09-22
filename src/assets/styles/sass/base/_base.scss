@@ -71,15 +71,53 @@
   background: $body-bg;
   color: $body-color;
   // @include contrasted($body-bg); // Does body background-color and color.
-
   font-family: $font-family-serif;
-
   -webkit-font-smoothing: subpixel-antialiased; // For use with dark text on light backgrounds
   // -webkit-font-smoothing: antialiased; // Uncomment for use with light text on dark backgrounds.
-
+  padding-top: $header-height;
   text-size-adjust: 100%;
   // Opts out of browsers *fixing* text size zooming for non mobile ready sites on mobile devices.
   // If you're not building a responsive or mobile first site you won't need this CSS property. But you should be.
+}
+
+/**
+ * Link.
+ *
+ * @group base
+ *
+ * @since 1.1.0
+ * @author Daniel Furze
+ */
+ a {
+  color: $link-color;
+
+  p &,
+  small & {
+    font-weight: 700;
+  }
+
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+
+  &[rel='external'] {
+    margin-right: .75em;
+    position: relative;
+
+    &::after {
+      @extend %icon-font;
+
+      color: $brand-grey--dark;
+      content: '\e600';
+      font-size: .75em;
+      position: absolute;
+      top: -.75em;
+      right: -1em;
+    }
+  }
 }
 
 /**
@@ -233,7 +271,7 @@ sub {
   p + & {
     padding-left: px-to-rem(20px);
   }
- }
+}
 
 /**
  * Lists.
