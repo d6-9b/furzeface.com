@@ -185,10 +185,10 @@ module.exports = function(grunt) {
             // Production flag set on CI deploy task
             return 'http://static1.furzeface.com';
           } else {
-            return '_assets';
+            return 'http://localhost:8008/_assets';
           }
         },
-        copyrightYear: '2014',
+        copyrightYear: '<%= grunt.template.today(\'yyyy\') %>',
         data: [
           '<%= config.src %>/data/*.{json,yml}',
           'package.json',
@@ -208,7 +208,7 @@ module.exports = function(grunt) {
         styles: '<%= config.distStyles %>',
         scripts: '<%= config.distScripts %>',
         temp: '<%= config.distTemp %>',
-        timestamp: '<%= grunt.template.today("mmm dS yyyy, h:MMtt Z") %>'
+        timestamp: '<%= grunt.template.today(\'mmm dS yyyy, h:MMtt Z\') %>'
       },
       pages: {
         files: [{
