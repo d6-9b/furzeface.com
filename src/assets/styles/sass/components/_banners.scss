@@ -26,15 +26,21 @@
 }
 
 .banner__meta {
-  @include vertical-align();
+  // @include vertical-align();
 
+  background: rgba(0, 0, 0, .35);
   color: $brand-white;
+  padding: $global-padding;
   text-align: center;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .5);
 
   a {
     color: $brand-white;
   }
+}
+
+.banner__title {
+  margin-top: 0; // temp
 }
 
 .published {
