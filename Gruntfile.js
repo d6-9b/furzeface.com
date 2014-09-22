@@ -619,6 +619,7 @@ module.exports = function(grunt) {
     'build_images',
     'build_scripts',
     'build_styles',
+    'build_fonts',
     'modernizr'
   ]);
 
