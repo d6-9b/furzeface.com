@@ -179,7 +179,7 @@ module.exports = function(grunt) {
     // Build tasks
     assemble: {
       options: {
-        assets: '_assets',
+        // assets: '_assets',
         assetsUrl: function () {
           if (grunt.option('production')) {
             // Production flag set on CI deploy task

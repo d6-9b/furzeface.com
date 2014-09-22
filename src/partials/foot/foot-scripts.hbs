@@ -7,7 +7,7 @@ published: false
 {{!-- jQuery hosted on Google CDN, using 2.1.1 now so no legacy IE support --}}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 {{!-- Check for jQuery from Google CDN, with fallback to local if not available --}}
-<script>window.jQuery || document.write('<script src="{{assets}}/{{scripts}}/jquery.js"><\/script>');</script>
+<script>window.jQuery || document.write('<script src="{{assetsUrl}}/{{scripts}}/jquery.js"><\/script>');</script>
 
 {{!-- Combined site scripts --}}
-<script src="{{assets}}/{{scripts}}/scripts.js"></script>
+<script src="{{assetsUrl}}/{{scripts}}/scripts.js"></script>
