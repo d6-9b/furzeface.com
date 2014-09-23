@@ -57,6 +57,6 @@
   },
   "scripts": {
     "postinstall": "bower install",
-    "test": "grunt deploy"
+    "test": "grunt deploy --production"
   }
 }
