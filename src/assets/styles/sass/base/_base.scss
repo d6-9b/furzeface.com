@@ -74,7 +74,7 @@
   font-family: $font-family-serif;
   -webkit-font-smoothing: subpixel-antialiased; // For use with dark text on light backgrounds
   // -webkit-font-smoothing: antialiased; // Uncomment for use with light text on dark backgrounds.
-  padding-top: $header-height;
+  // padding-top: $header-height;
   text-size-adjust: 100%;
   // Opts out of browsers *fixing* text size zooming for non mobile ready sites on mobile devices.
   // If you're not building a responsive or mobile first site you won't need this CSS property. But you should be.
