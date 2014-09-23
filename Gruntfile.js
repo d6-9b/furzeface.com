@@ -80,8 +80,7 @@ module.exports = function(grunt) {
           '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcImages %>/**/*.{png,jpg,gif}'
         ],
         tasks: [
-          // 'responsive_images',
-          'imagemin'
+          'build_images_dev'
         ],
         options: {
           spawn: false
@@ -595,9 +594,12 @@ module.exports = function(grunt) {
     'newer:cmq'
   ]);
 
-  grunt.registerTask('build_images', [
+  grunt.registerTask('build_images_dev', [
     // 'responsive_images', @todo: Add resp img task back in
-    'newer:imagemin',
+    'newer:imagemin'
+  ]);
+
+  grunt.registerTask('build_images', [
     'copy:images'
   ]);
 
