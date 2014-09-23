@@ -116,6 +116,10 @@
       position: absolute;
       top: -.75em;
       right: -1em;
+
+      li & {
+        top: -.25em;
+      }
     }
   }
 }
@@ -130,6 +134,11 @@
  * @author Daniel Furze
  */
  p {
+  &.todo {
+    background: #F0EE97;
+    font-style: italic;
+  }
+
   &:last-of-type {
     margin-bottom: 0;
   }

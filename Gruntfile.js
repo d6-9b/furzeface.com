@@ -113,7 +113,8 @@ module.exports = function(grunt) {
           usePackage: true
       },
       all: [
-        // '<%= config.src %>/**/*.{hbs,html,js,scss,txt}', // @todo: Reimplement grunt-todo on these files
+        // '<%= config.src %>/**/*.{js,scss}', // @todo: Reimplement grunt-todo on these files
+        '<%= config.src %>/**/*.{hbs,html,txt}',
         '.travis.yml',
         'Gruntfile.js'
       ]
