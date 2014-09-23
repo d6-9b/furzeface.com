@@ -596,7 +596,8 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build_images_dev', [
     // 'responsive_images', @todo: Add resp img task back in
-    'newer:imagemin'
+    'newer:imagemin',
+    'copy:images'
   ]);
 
   grunt.registerTask('build_images', [
