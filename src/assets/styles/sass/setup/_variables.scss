@@ -199,6 +199,15 @@
  */
  $brand-blue: #2A2C9F;
 
+/**
+ * Brand color blue (lighter).
+ * @type String
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+ $brand-blue--light: lighten($brand-blue, 25);
+
  /**
  * Link color.
  * @type String
