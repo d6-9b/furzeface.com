@@ -47,20 +47,27 @@ Another post in the "Ain't Scary" series, this post introduces Yeoman, the "Web'
 
 <p class="todo">@todo: this</p>
 
-<p>Yeoman conventions dictate that your npm package (when it gets published) follows the naming convention of <code class="inline">generator-yourGenerator</code>.
-Next what I do is set up additional project meta files to be copied over when you use the generator - these have to reside in the <code class="inline">/app</code> directory.</p>
+<h3>Naming conventions</h3>
+<p>Yeoman conventions dictate that your npm package (when it gets published) follows the naming convention of <code class="inline">generator-yourGenerator</code>.</p>
+
+<h3>Setting up your templates</h3>
+<p>Next what I do is set up additional project meta files to be copied over when you use the generator - these have to reside in the <code class="inline">/app</code> directory.</p>
 
 <p>I'll start with a <code class="inline">.gitignore</code>, <code class="inline">.editorconfig</code>, <code class="inline">yourProject.sublime-project</code> file along with a <code class="inline">README.md</code> for the project and optionally (more on optionally later) a <code class="inline">.travis.yml</code> config for the CI build process.</p>
 
+<h4 class="heading--epsilon">A sample <code class="inline">bower.json</code></h4>
+
 <p>Furthermore I'll create a base set of dependencies with a <code class="inline">bower.json</code> and <code class="inline">.bowerrc</code> files. <small>(See <a href="http://daniel.furzeface.com/blog/bower-aint-scary" rel="archives">my post on Bower</a> for a nice intro to this).</small></p>
+<div data-gist="ed4cabb01069a9410375"></div>
 
-<p class="todo">@todo: [code]</p>
 
-
+<h4 class="heading--epsilon">A sample <code class="inline">Gruntfile.js</code></h4>
 <p>Lastly in the set up stage I'll add in a sample <code class="inline">Gruntfile.js</code> from one of my other projects, stripped back to a more generic reusable implementation.</p>
 
+{{!-- <div data-gist="ed4cabb01069a9410375"></div> --}}
 <p class="todo">@todo: [gist of Gruntfile]</p>
 
+<h3>Copying over your templates</h3>
 <p class="todo">@todo: [section on index.js and copying over templates - this.src.copy]</p>
 
 <h2>Scaffolding</h2>
