@@ -1,0 +1,21 @@
+/**
+ * Backgrounds
+ *
+ * @since 1.3.0
+ * @author Daniel Furze
+ */
+
+/**
+ * @mixin rgba-bg
+ *
+ * Mixin to return rgba background based on hex colour and opacity level.
+ * Provides fallback background-color for older browsers.
+ *
+ * @since 1.3.0
+ * @author Daniel Furze
+ */
+ @mixin rgba-bg($colour, $alpha){
+ 	$alphaColour: hsla(hue($colour), saturation($colour), lightness($colour), $alpha);
+ 	background-color: $colour;
+ 	background-color: $alphaColour;
+ }
