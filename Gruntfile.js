@@ -354,7 +354,7 @@ module.exports = function(grunt) {
       }
     },
 
-    cmq: {
+    combine_mq: {
       main: {
         expand: true,
         cwd: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distStyles %>/',
@@ -592,7 +592,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build_styles', [
     'sass',
     'newer:autoprefixer',
-    'newer:cmq'
+    'newer:combine_mq'
   ]);
 
   grunt.registerTask('build_images_dev', [
