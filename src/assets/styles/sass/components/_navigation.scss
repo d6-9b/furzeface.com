@@ -18,18 +18,53 @@
 
 .navigation-site__item {
   display: inline;
-}
-
-.navigation-site__link {
-  @extend %link-unstyled;
-
-  display: inline-block;
-  margin-right: $global-margin;
-  padding: $global-padding / 2;
-  text-transform: uppercase;
-  font-weight: lighter;
 
   &:last-of-type {
+   a {
     margin-right: 0;
   }
+}
+}
+
+/**
+ * Navigation link
+ *
+ * See http://tympanus.net/codrops/2013/08/06/creative-link-effects
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+.navigation-site__link {
+  display: inline-block;
+  font-weight: lighter;
+  height: 1em;
+  margin-right: $global-margin;
+  overflow: hidden;
+  padding: 0 $global-padding / 2;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    span {
+      transform: translateY(-100%);
+    }
+  }
+
+  span {
+   display: inline-block;
+   position: relative;
+   transition: transform 0.3s;
+
+   &::before {
+     content: attr(data-hover);
+     font-weight: normal;
+     position: absolute;
+     top: 100%;
+     transform: translate3d(0,0,0);
+   }
+ }
 }
