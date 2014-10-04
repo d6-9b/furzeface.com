@@ -11,8 +11,9 @@ pageClass: page-blog
   {{#each posts}}
   <li class="articles-list__item">
     <a href="{{slug}}" class="articles-list__link">
-      <h1 class="">{{title}}</h1>
+      <h1>{{title}}</h1>
       <p>{{summary}}</p>
+      <time datetime="{{pubDate}}" pubdate="{{pubDate}}" class="updated published">{{pubDate}}</time>
     </a>
   </li>
   {{/each}}

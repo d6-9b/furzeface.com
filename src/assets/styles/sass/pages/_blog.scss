@@ -79,6 +79,11 @@
   p {
     color: $body-color;
   }
+
+  .published {
+    // <time>
+    color: $brand-grey--dark;
+  }
 }
 
 .post-footer {
