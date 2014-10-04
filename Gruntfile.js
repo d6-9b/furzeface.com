@@ -32,6 +32,7 @@ module.exports = function(grunt) {
       srcScripts: 'scripts',
       srcImages: 'images',
       srcFonts: 'fonts',
+      mainSass: 'danielfurzeface.scss',
       // Dist settings
       dist: 'dist',
       distAssets: '_assets',
@@ -51,7 +52,7 @@ module.exports = function(grunt) {
     watch: {
       html: {
         files: [
-          '<%= config.src %>/{data,pages,partials,layouts}/**/*.{hbs,yml,json}'
+          '<%= config.src %>/{data,pages,partials,layouts,helpers}/**/*.{hbs,js,json,yml}'
         ],
         tasks: [
           'build_html'
@@ -335,7 +336,7 @@ module.exports = function(grunt) {
           style: 'expanded'
         },
         files: {
-          '<%= config.dist %>/<%= config.distAssets %>/<%= config.distStyles %>/<%= config.mainCss %>': '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/<%= config.srcSass %>/sassface.scss'
+          '<%= config.dist %>/<%= config.distAssets %>/<%= config.distStyles %>/<%= config.mainCss %>': '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/<%= config.srcSass %>/<%= config.mainSass %>'
         }
       }
     },
