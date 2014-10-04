@@ -8,20 +8,11 @@
 
 ## TODO
 
-## src/pages/_index.hbs
-
--  **todo** `(line 10)`  --}}
-
-## src/pages/about.hbs
-
--  **todo** `(line 10)`  --}}
-
 ## src/pages/blog/yeoman-aint-scary.hbs
 
 -  **todo** `(line 48)` : this</p>
--  **todo** `(line 57)` : [code]</p>
--  **todo** `(line 62)` : [gist of Gruntfile]</p>
--  **todo** `(line 64)` : [section on index.js and copying over templates - this.src.copy]</p>
+-  **todo** `(line 68)` : [gist of Gruntfile]</p>
+-  **todo** `(line 71)` : [section on index.js and copying over templates - this.src.copy]</p>
 
 ## src/pages/docs.hbs
 
@@ -43,11 +34,11 @@
 
 ## Gruntfile.js
 
--  **todo** `(line 116)` : Reimplement grunt-todo on these files
--  **todo** `(line 516)` : Can you exclude files from grunt-sitemap?
--  **todo** `(line 599)` : Add resp img task back in
+-  **todo** `(line 117)` : Reimplement grunt-todo on these files
+-  **todo** `(line 517)` : Can you exclude files from grunt-sitemap?
+-  **todo** `(line 600)` : Add resp img task back in
 
 
 * * *
 
-Last generated: Tue Sep 23 2014 20:07:38 by [grunt-todo](https://github.com/leny/grunt-todo).
+Last generated: Sat Oct 04 2014 16:46:58 by [grunt-todo](https://github.com/leny/grunt-todo).

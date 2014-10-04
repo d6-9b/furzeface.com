@@ -104,25 +104,26 @@
   }
 
 
-  &[rel='external'] {
-    margin-right: .75em;
-    position: relative;
+  // &[rel='external'] {
+  //   margin-right: .75em;
+  //   position: relative;
 
-    &::after {
-      @extend %icon-font;
+  //   &::after {
+  //     @extend %icon-font;
 
-      color: $brand-grey--dark;
-      content: '\e600';
-      font-size: .75em;
-      position: absolute;
-      top: -.75em;
-      right: -1em;
+  //     color: $brand-grey--dark;
+  //     content: '\e600';
+  //     font-size: .75em;
+  //     position: absolute;
+  //     top: -.75em;
+  //     right: -1em;
 
-      li & {
-        top: -.25em;
-      }
-    }
-  }
+  //     li & {
+  //       top: -.25em;
+  //     }
+  //   }
+  // }
+  // @todo: Reimplement rel external icon
 }
 
 /**

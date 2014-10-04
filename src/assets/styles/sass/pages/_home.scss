@@ -12,10 +12,6 @@
   }
 }
 
-.avatar {
-  @include diamond(250px);
-}
-
 .desk {
   // <svg>
   display: block;
