@@ -187,6 +187,7 @@ module.exports = function(grunt) {
             return 'http://static1.furzeface.com';
           } else {
             return 'http://localhost:8008/_assets';
+            // return 'http://daniel.furzeface.com/_assets';
           }
         },
         copyrightYear: '<%= grunt.template.today(\'yyyy\') %>',

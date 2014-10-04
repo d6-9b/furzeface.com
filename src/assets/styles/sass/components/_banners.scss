@@ -26,7 +26,7 @@
 }
 
 .banner__meta {
-  @include rgba-bg($brand-blue, .7);
+  background: $brand-blue;
   color: $brand-white;
   padding: ($global-padding * 2) $global-padding;
   text-align: center;
