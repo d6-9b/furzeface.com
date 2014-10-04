@@ -1,0 +1,20 @@
+/**
+ * About
+ *
+ * @author Daniel Furze
+ */
+
+ .avatar {
+  @include diamond(12rem);
+
+  margin: 4rem auto;
+}
+
+.page-about__name {
+  color: $brand-blue;
+}
+
+.page-about__name,
+.page-about__job {
+  text-align: center;
+}
