@@ -16,9 +16,9 @@
  * @author Daniel Furze
  */
  .site-header {
-  background: $brand-blue;
-  color: $brand-white;
-  height: $header-height;
+  background: $body-bg;
+  // border-bottom: 2px solid;
+  color: $brand-blue;
   padding: $global-padding;
 
   a {

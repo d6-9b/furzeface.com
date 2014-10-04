@@ -51,7 +51,7 @@
     font-size: 125%;
   }
 
-  @include selection();
+  @include selection($brand-blue, $brand-white);
 }
 
 /**
@@ -99,6 +99,7 @@
   text-decoration: none;
 
   &:hover {
+    color: lighten($link-color, 10);
     text-decoration: underline;
   }
 

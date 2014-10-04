@@ -38,6 +38,10 @@
 
 .banner__title {
   margin-top: 0; // temp
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .published {
