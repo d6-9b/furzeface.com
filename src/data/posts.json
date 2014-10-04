@@ -1,16 +1,16 @@
 [
   {
+    "title": "Bower ain’t scary",
+    "slug": "bower-aint-scary",
+    "pubDate": "25th Sept, 2014",
+    "summary": "Another in the “Front end ain’t scary” series, this post introduces Bower and discusses its uses."
+  },
+  {
     "title": "Generating Pugpig XML Feeds With Grunt",
     "slug": "http://blog.building-blocks.com/technical-tips/generating-pugpig-xml-feeds-with-grunt",
     "pubDate": "24th Sept, 2014",
     "summary": "A post I wrote for the Building Blocks blog on generating the XML feeds required by Pugpig to publish a digital publication.",
     "external": true
-  },
-  {
-    "title": "Bower ain’t scary",
-    "slug": "bower-aint-scary",
-    "pubDate": "23rd Sept, 2014",
-    "summary": "Another in the “Front end ain’t scary” series, this post introduces Bower and discusses its uses."
   },
   {
     "title": "Git ain’t scary",
