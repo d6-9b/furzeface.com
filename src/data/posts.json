@@ -1,54 +1,62 @@
 [
   {
-    "title": "Yeoman ain't scary",
-    "slug": "yeoman-aint-scary"
+    "title": "Yeoman ain’t scary",
+    "slug": "yeoman-aint-scary",
+    "summary": "Another post in the “Ain’t Scary” series, this post introduces Yeoman, the “Web’s Scaffolding Tool for Modern Webapps” and gives an example of a basic generator setup."
   },
   {
-    "title": "Bower ain't scary",
-    "slug": "bower-aint-scary"
+    "title": "Bower ain’t scary",
+    "slug": "bower-aint-scary",
+    "summary": "Another in the “Front end ain’t scary” series, this post introduces Bower and discusses its uses."
   },
   {
-    "title": "Git ain't scary",
-    "slug": "git-aint-scary"
+    "title": "Git ain’t scary",
+    "slug": "git-aint-scary",
+    "summary": "Another article in “Ain’t Scary”, where I’ll write little tips to get started with Git via the command line."
   },
   {
-    "title": "Command line ain't scary",
-    "slug": "command-line-aint-scary"
+    "title": "Command line ain’t scary",
+    "slug": "command-line-aint-scary",
+    "summary": "This article is part of a new series I’ll write entitled Ain’t Scary, where I’ll write little tips to get you going on things that I’ve just discovered little tips to get me going on."
   },
   {
     "title": "Bash profile shortcuts",
-    "slug": "bash-profile-shortcuts"
+    "slug": "bash-profile-shortcuts",
+    "summary": "I wrote this Gist a while ago and it came in handy last week when I was showing a colleague some handy shortcuts to add to his .bash_profile - so here it is."
   },
   {
     "title": "Getting a git repository going",
-    "slug": "getting-a-git-repository-going"
+    "slug": "getting-a-git-repository-going",
+    "summary": "Another reference for myself so I don’t have to trawl my memory banks (and the internet) every time I set up a new project."
   },
   {
     "title": "The UX five-second rules",
-    "slug": "the-ux-five-second-rules"
+    "slug": "the-ux-five-second-rules",
+    "summary": "My review for the O’Reilly Bloggers review program on The UX Five-Second Rules by Paul Doncaster."
   },
   {
     "title": "My Sass media query mixin",
-    "slug": "my-sass-media-query-mixin"
+    "slug": "my-sass-media-query-mixin",
+    "summary": "A gist of my Sass media query mixin. I keep forgetting to upload and share snippets of CSS/Sass with people who ask, so here it is!"
   },
   {
     "title": "Dribbble Invites",
-    "slug": "dribbble-invites"
+    "slug": "dribbble-invites",
+    "summary": "I have the pleasure of inviting two new people to join the Dribbble community!"
   },
   {
     "title": "Speaking JavaScript by Dr Axel Rauschmayer",
-    "slug": "speaking-javascript-by-dr-axel-rauschmayer"
+    "slug": "speaking-javascript-by-dr-axel-rauschmayer",
+    "summary": "My Review for the O’Reilly Blogger Review Program."
   },
   {
     "title": "On Compatibility",
-    "slug": "on-compatibility"
+    "slug": "on-compatibility",
+    "summary": "On Compatibility or: How I Learned to Stop Worrying and Dropped Legacy Browser Support."
   },
   {
     "title": "No mouse mornings",
-    "slug": "no-mouse-mornings"
-  },
-  {
-    "title": "Scarily easy UI testing with CasperJS",
-    "slug": "scarily-easy-ui-testing-with-casperjs"
+    "slug": "no-mouse-mornings",
+    "summary": "Today we had a “No Mouse Morning” at work. Well we tried, I think I’m the only one who kept it up anyway!"
   }
 ]

@@ -10,7 +10,10 @@ pageClass: page-blog
 <ul class="articles-list">
   {{#each posts}}
   <li class="articles-list__item">
-    <a href="{{slug}}">{{title}}</a>
+    <a href="{{slug}}" class="articles-list__link">
+      <h1 class="">{{title}}</h1>
+      <p>{{summary}}</p>
+    </a>
   </li>
   {{/each}}
 </ul>

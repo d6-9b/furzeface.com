@@ -57,9 +57,29 @@
 }
 
 .articles-list__item {
-  padding: $global-padding / 2 0;
+  border-bottom: 1px solid $brand-grey--light;
 }
 
+.articles-list__link {
+  display: block;
+  padding: $global-padding / 2;
+
+  &:hover {
+    text-decoration: none;
+
+    h1 {
+      text-decoration: underline;
+    }
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  p {
+    color: $body-color;
+  }
+}
 
 .post-footer {
   margin-bottom: px-to-rem(50px);

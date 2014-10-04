@@ -1,0 +1,25 @@
+/**
+ * Home
+ *
+ * @author Daniel Furze
+ */
+
+ .page-home {
+  // Namespaced page overrides
+  .page-content {
+    // <article>
+    text-align: center;
+  }
+}
+
+.avatar {
+  @include diamond(250px);
+}
+
+.desk {
+  // <svg>
+  display: block;
+  height: 100%;
+  margin: $global-margin auto;
+  max-width: 100%;
+}

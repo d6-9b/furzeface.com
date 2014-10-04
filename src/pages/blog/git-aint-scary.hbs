@@ -10,40 +10,40 @@ category: Tutorials
 {{#extend "layout-post"}}
 
 {{#content "post-summary"}}
-Another article in "Ain't Scary", where I'll write little tips to get started with Git via the command line.
+Another article in “Ain’t Scary”, where I’ll write little tips to get started with Git via the command line.
 {{/content}}
 
 
 {{#content "post-content"}}
-<p>For those who haven't used <a href="http://git-scm.com" rel="external">Git</a> before, it's a pretty awesome tool used for version control, sharing and collaborating code with others.</p>
+<p>For those who haven’t used <a href="http://git-scm.com" rel="external">Git</a> before, it’s a pretty awesome tool used for version control, sharing and collaborating code with others.</p>
 
 <figure>
   <img src="{{assetsUrl}}/{{images}}/blog/git_logo.png" alt="The Git logo" />
 </figure>
 
-<p>But, that's not why we're here.</p>
-<p>Git ain't that scary! I used to be pretty scared of using the command line to interact with git repositories, and as you may have seen from my last post - <a href="http://daniel.furzeface.com/blog/command-line-aint-scary" rel="archives">Command line ain't scary</a> - I'm pretty into it now.</p>
-<p>So here's a basic guide to the commands to start using Git via the CLi and a few tips too.</p>
+<p>But, that's not why we’re here.</p>
+<p>Git ain’t that scary! I used to be pretty scared of using the command line to interact with git repositories, and as you may have seen from my last post - <a href="http://daniel.furzeface.com/blog/command-line-aint-scary" rel="archives">Command line ain’t scary</a> - I’m pretty into it now.</p>
+<p>So here’s a basic guide to the commands to start using Git via the CLi and a few tips too.</p>
 
 <h2>Prerequisites</h2>
 <p>All you need to do is <a href="http://git-scm.com/download" rel="external">download git</a>. Go!</p>
 
 <h2>Cloning and Pulling</h2>
-<p>The first thing you need to do is clone an existing repository, something like this, for example:</p>
+<p>The first thing you need to do is clone an existing repository - something like this, for example:</p>
 <code>
   $ git clone https://github.com/furzeface/SassFace
 </code>
 <p>Easy! Who needs that GUI now?</p>
 
-<p>When others have committed code to the repository and you need to grab their changes - pulling their changes down is necessary:</p>
+<p>When others have committed code to the repository and you need to grab their amends, pulling their changes down is necessary:</p>
 <code>$ git pull</code>
 <p>or:</p>
 <code>$ git pull origin <em>develop</em></code>
 <p>If you're on a branch named <em>develop</em>, for example.</p>
 
 <h2>Branching</h2>
-<p>When developing it's usually best practise to create a branch to work on, so that code conflicts are minimised and deployment of new features is managed more easily.</p>
-<p>Branching ain't scary - simply hit:</p>
+<p>When developing it’s usually best practise to create a branch to work on, so that code conflicts are minimised and deployment of new features is managed more easily.</p>
+<p>Branching ain’t scary - simply hit:</p>
 <code>$ git branch <em>feature</em></code>
 <p>To create the branch and:</p>
 <code>$ git checkout <em>feature</em></code>
@@ -62,7 +62,7 @@ Another article in "Ain't Scary", where I'll write little tips to get started wi
 <p>&hellip;</p>
 
 <h2>Committing and pushing</h2>
-<p>Now you've made your changes you have to stage them for committing:</p>
+<p>Now you’ve made your changes you have to stage them for committing:</p>
 <code>$ git add <em>filename.html</em></code>
 <p>or:</p>
 <code>$ git add -a</code>
@@ -84,13 +84,13 @@ Another article in "Ain't Scary", where I'll write little tips to get started wi
   </code>
 </pre>
 
-<p>Of course you don't need to stick to these or any format at all even, but I find it useful to have a standard to vaguely follow myself.</p>
+<p>Of course you don’t need to stick to these or any format at all even, but I find it useful to have a standard to vaguely follow myself.</p>
 
 <h2>Merges and conflicts</h2>
 <p>Now merges are a pretty easy concept to grasp, even via the command line but when it comes to conflicts it gets a little scary. Conflicts happen when you and another collaborator have modified the same file.</p>
 <p>Git is usually pretty clever at resolving these situations by itself but on the occasion that the same lines of the code have been changed there will be a conflict.</p>
-<p>If you're still using a Git client by this point such as the one of the <a href="https://mac.github.com/" rel="external">GitHub</a> <a href="https://windows.github.com/" rel="external">clients</a> or <a href="http://www.sourcetreeapp.com/" rel="external">SourceTree</a> that's fine, but you should probably stop reading this post. {{emoji 'stuck_out_tongue'}}</p>
-<p>If however you'd like to resolve conflicts the manual way - it's not that bad!</p>
+<p>If you’re still using a Git client by this point such as the one of the <a href="https://mac.github.com/" rel="external">GitHub</a> <a href="https://windows.github.com/" rel="external">clients</a> or <a href="http://www.sourcetreeapp.com/" rel="external">SourceTree</a> that’s fine, but you should probably go back to the top and start this post again. {{emoji 'stuck_out_tongue'}}</p>
+<p>If however you’d like to resolve conflicts the manual way - it's not that bad!</p>
 
 <code>
   $ git merge develop
@@ -117,7 +117,7 @@ Another article in "Ain't Scary", where I'll write little tips to get started wi
 
 <p>Where <code class="inline">HEAD</code> is the head of the branch on your machine and the hash is the commit being pulled down and conflicted with.</p>
 <p>So all you have to do is go into the particular file, pick which block you want to keep and remove the other along with the conflict markers. Then commit the fix!</p>
-<p>It may be a little slower than using a GUI or <a href="http://www.sourcegear.com/diffmerge/" rel="external">merge tool</a> at first, but it's dead easy and you'll get faster with practise.</p>
+<p>It may be a little slower than using a GUI or <a href="http://www.sourcegear.com/diffmerge/" rel="external">merge tool</a> at first, but it’s dead easy and you'll get faster with practise.</p>
 
 <h2>Cherry-picking</h2>
 <p>Cherry picking is essentially merging individual commits between branches.</p>
@@ -128,7 +128,7 @@ Another article in "Ain't Scary", where I'll write little tips to get started wi
 </blockquote>
 
 <p>I used to be scared of cherry-picking as back when I was using visual GUIs for Git source control it was easy, but moving to using the command line it became a strange concept at first, not having anything to see and know what exactly I was cherry-picking across branches.</p>
-<p>You'll need a hash from a git commit in a different branch and the easiest way to get one is to hit <code class="inline">$ git log</code> - more on that in the next section.</p>
+<p>You’ll need a hash from a git commit in a different branch and the easiest way to get one is to hit <code class="inline">$ git log</code> - more on that in the next section.</p>
 <p>Once you have one simply enter the following command to merge the specific changes from that commit into your branch:</p>
 
 <code>
@@ -138,7 +138,7 @@ Another article in "Ain't Scary", where I'll write little tips to get started wi
 <p>And there you have it, cherry picked! {{emoji 'raised_hand'}}</p>
 
 <h2>Git log</h2>
-<p>As mentioned before, Git log is the easiest way to see a record of what's been going on in a project.</p>
+<p>As mentioned before, Git log is the easiest way to see a record of what’s been going on in a project.</p>
 <code>$ git log</code>
 <p>Simply logs out the commits in order of most recent along with the commit messages.</p>
 <p>However, I often use:</p>
@@ -150,8 +150,8 @@ Another article in "Ain't Scary", where I'll write little tips to get started wi
   <figcaption>Ooh pretty graphs!</figcaption>
 </figure>
 
-<p>So that's pretty much all you need to be up to scratch with using the command line to interact with Git repositories.</p>
-<p>And none it of should scare you now, except maybe those horrible conflicts - but you'll be fine!</p>
+<p>So that’s pretty much all you need to be up to scratch with using the command line to interact with Git repositories.</p>
+<p>And none it of should scare you now, except maybe those horrible conflicts - but you’ll be fine!</p>
 
 <p>Now go forth and Git!</p>
 
@@ -191,9 +191,9 @@ Another article in "Ain't Scary", where I'll write little tips to get started wi
 
 
 {{#content "post-tldr"}}
-<p>Git ain't really that scary, see?</p>
+<p>Git ain’t really that scary, see?</p>
 <p>Try it without a GUI for a while using my tips and let me know how you get on.</p>
-<p>Look out for a future post on Git Flow, ‘cos right now I still find this concept a little bit scary! {{emoji 'see_no_evil'}} </p>
+<p>Look out for a future post on Git Flow, ‘cos right now I still find this concept a little scary! {{emoji 'see_no_evil'}} </p>
 {{/content}}
 
 {{/extend}}

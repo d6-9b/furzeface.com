@@ -26,9 +26,9 @@
 }
 
 .banner__meta {
-  background: $brand-blue--light;
+  @include rgba-bg($brand-blue, .7);
   color: $brand-white;
-  padding: $global-padding;
+  padding: ($global-padding * 2) $global-padding;
   text-align: center;
 
   a {
@@ -38,6 +38,10 @@
 
 .banner__title {
   margin-top: 0; // temp
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .published {
