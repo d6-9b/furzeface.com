@@ -1,25 +1,48 @@
 ---
 pageClass: page-post
 title: Implementing Google Analytics custom event trackers
-category: ...
-pubDate: ...
-published: false
+category: Analytics
+pubDate: 9th Jan, 2014
 ---
 
 {{#extend "layout-post"}}
 
 {{#content "post-summary"}}
-
+A quick tip to help get the most out of user behaviour tracking with Google Analytics.
 {{/content}}
 
 
 {{#content "post-content"}}
+<h2>Tracking Custom Events</h2>
+<p>Right so I’ve been doing tons of work with <a href="www.google.com/analytics/">Google Analytics</a> lately, implementing custom event trackers to get the most out of user behaviour tracking.</p>
+<p>I couldn’t find an easy guide to start implementing the custom trackers anywhere so I thought I’d write a few snippets here to get you going.</p>
+<p>I’ll to assume at this point that you’ve installed and have been using the Google Analytics tracking code in your site. If not, go and do it right now! <a href="https://support.google.com/analytics/answer/1008080?hl=en&utm_medium=et&utm_campaign=en_us&utm_source=SetupChecklist">Here’s how</a>.</p>
+<h2>The gist of it</h2>
+<p>To implement the custom trackers I wrapped <code class="inline">ga( )</code> in another method with a quick check to ensure the Google Analytics code has been initialised, and only return if it has. This is so that on the local and demo environments it doesn’t throw an error and prevent execution of what else you actually want the event listener to do.</p>
 
+<div data-gist="8338247"></div>
+
+<h2>Simples</h2>
+<p>So now all you need to do is call <code class="inline">analytics_custom_event_tracker( )</code> passing in the name to track, the event (click, change etc) and a label - you’ll see where that comes in shortly.</p>
+
+<h2>Monitoring events</h2>
+<p>To see how these events are doing head to <a href="www.google.com/analytics/">Google Analytics</a> and go to <strong>Behaviour - Events - Overview</strong>.</p>
+<figure>
+  <img src="http://static.furzeface.com/img/blog/31/ga_menu_events_overview.png" alt="A screenshot of the Google Analytics menu - events overview"/>
+  <figcaption>Google Analytics menu - events overview</figcaption>
+</figure>
+
+<p>Head to the overview and you’re all set up to track in depth custom events, using the name and label you set earlier on.</p>
+<figure>
+  <img src="http://static.furzeface.com/img/blog/31/ga_events_overview.png" alt="A screenshot of the Google Analytics events overview"/>
+  <figcaption>Google Analytics events overview</figcaption>
+</figure>
 {{/content}}
 
 
 {{#content "post-tldr"}}
-
+<p>Take the above code snippet and use it to track custom events in <a href="www.google.com/analytics/">Google Analytics</a>.</p>
+<p>Let me know what you use them for, there could be some interesting uses out there!</p>
 {{/content}}
 
 {{/extend}}
