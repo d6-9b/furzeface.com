@@ -33,7 +33,7 @@
 
         self.minsToRead();
         self.appendGists();
-        self.bookmarkHeadings();
+        self.headingsPermalink();
       },
       /**
       * Sets minutes to read on blog posts.
@@ -89,11 +89,11 @@
         });
       },
       /**
-      * Appends permalink/bookmark link to headings on a blog post.
-      * @function bookmarkHeadings
+      * Appends permalink to headings on a blog post.
+      * @function headingsPermalink
       * @memberof Blog
       */
-      bookmarkHeadings: function () {
+      headingsPermalink: function () {
         var self = this;
 
         // Loop headings on blog post.
@@ -110,7 +110,7 @@
           }
 
           // Create and append permalink to heading.
-          permalink = '<a href="#' + id + '" class="icon-internal copy-to-clipboard"></a>';
+          permalink = '<a href="#' + id + '" class="icon-internal permalink"></a>';
           heading.append(permalink);
         });
       }
