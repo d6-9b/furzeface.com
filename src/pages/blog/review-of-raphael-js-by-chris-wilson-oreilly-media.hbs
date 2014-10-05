@@ -1,26 +1,81 @@
 ---
 pageClass: page-post
 title: Review of Raphaël JS
-category: ...
-pubDate: ...
-bannerImage: 1440x785.gif
-published: false
+category: Reviews
+pubDate: 3rd Jan, 2014
 ---
 
 {{#extend "layout-post"}}
 
 {{#content "post-summary"}}
-
+I was given a copy of <a href="http://shop.oreilly.com/product/0636920029601.do" target="_blank">Raphaël JS by Chris Wilson</a> to review for the <a href="http://www.oreillynet.com/oreilly/bloggers/" target="_blank">O’Reilly Reader Review Program</a>.
 {{/content}}
 
 
 {{#content "post-content"}}
+<figure>
+  <img src="http://static.furzeface.com/img/blog/30/raphael_js_thumb.png" alt="Raphaël JS book cover"/>
+  <figcaption>Raphaël JS: Graphics and Visualization on the Web</figcaption>
+</figure>
+<h2>Reviewing for O'Reilly</h2>
+<p>As soon as I saw <em>Raphaël JS</em> I knew I wanted to read and review it as I came across the library a couple of years ago, back in my old job and even at that time the library was already well implemented with many features.</p>
+<p>Although this was the case, I was immediately curious to see how an <strong>entire book</strong> could be written on what I remember to be a small graphics manipulation library and couldn't wait to have a proper play with it (now my JavaScript skillz have improved vastly since then, too!)</p>
+<blockquote class="pullquote"><a href="http://raphaeljs.com/" target="_blank">Raphaël</a> is a small JavaScript library that should simplify your work with vector graphics on the web.</blockquote>
+<h2>Demos</h2>
+<p>Throughout the book there are many hands-on demos to complete and I've uploaded my attempts to <a href="http://labs.furzeface.com/RaphaelJS/" target="_blank">Furzeface Labs</a> so be sure to check out what I did there.</p>
 
+<p>Chris launches into the book in his humorous and down to earth writing tone straight away in the preface, explaining what the book will be about and easing the reader into what's to be expected from Raphaël JS.</p>
+<p>The first chapter, <strong>Why Raphaël is Great</strong> explains just that and gives the reader a chance immediately to start coding and creating a <a href="http://labs.furzeface.com/RaphaelJS/ChapterOne" target="_blank">proverbial "Hello, World!"</a> after about 10 lines!</p>
+<p>The author then goes on to explain a little more in detail about what the library is, offering uses and even alternatives, but coming back to why Raphaël is the one for us, with enticing promises of what's to come.</p>
+<p>The second chapter goes on to show in smaller steps how to implement the library into your website and reiterates the first chapter's activity, "<em>in case, like the author, you never read the introduction</em>" - an example of Chris's easygoing style, injecting fun into the book as every tech author should!</p>
+<figure>
+  <a href="http://labs.furzeface.com/RaphaelJS/ChapterOne" target="_blank"><img src="http://static.furzeface.com/img/blog/30/chapter_1.jpg" alt="Raphaël JS - chapter 1 demo"/></a>
+  <figcaption>Chapter 1 - Hello, Raphaël!</figcaption>
+</figure>
+<p>After an extensive second chapter that definitely had already satisfied my curiosity as to how a book could be written on the subject, I felt like I was really getting to grips with the basics of drawing with Raphaël and after completing the demos I actually couldn't wait to race on and learn more.</p>
+<p>Chris's style of writing again amused me and contributed to my keenness in wanting to read on.</p>
+<p>I then learned about attaching events and creating sets of objects, the author going into detail that initially may seem quite verbose but all is always revealed with case studies and more hands-on demos, allowing the reader to get a real experience of using the library and a sense of achievement when a demo is coded up and actually works!</p>
+<p>Don't worry - Chris doesn't go into <strong>too much</strong> detail:</p>
+<blockquote class="pullquote">For more discussion of the deep philosophical underpinnings of Raphaël, you'll have to wait for the sequel to this book.</blockquote>
+<h2>Let's get animated!</h2>
+<p>After an introduction to paths, shapes and curves <a href="http://labs.furzeface.com/RaphaelJS/ChapterFour" target="_blank">(see my curves here)</a>, the reader is taught about animations and easing - I love Chris’s analogy for easing, relating it to our typical car journey in order to explain it to the novice reader.</p>
+<p>The interactive demos in this section really got into the nitty gritty of what you can do with this library and I was thrilled to have built something with it that I was proud of, simply by following Chris's simple steps.</p>
+<figure>
+  <a href="http://labs.furzeface.com/RaphaelJS/ChapterFive#chapter-5-part-2" target="_blank"><img src="http://static.furzeface.com/img/blog/30/chapter_5.jpg" alt="Raphaël JS - chapter 4 demo"/></a>
+  <figcaption>Chapter 5 - Bouncy animations!</figcaption>
+</figure>
+<p>I have to admit that I missed out a couple of the demos here, but only because I'm lazy. A full set of code to accompany the book is hosted here on <a href="http://jsfiddle.net/user/raphaeljs/fiddles/" target="_blank">JSFiddle</a>.</p>
+<h2>Data Visualisation</h2>
+<p>Now, this is what I'd really wanted to get into and had some ideas about what to use it for - data visualisation with Raphaël.</p>
+<p>In the 6th Chapter we learn how to use <a href="http://readysetraphael.com/" target="_blank">Ready Set Raphaël</a> to import an SVG and turn in into a Raphaël malleable object in order to manipulate it with another JavaScript object of real world data.</p>
+<p>After completing the <a href="http://labs.furzeface.com/RaphaelJS/ChapterSix" target="_blank">US states map demo</a>, dynamically populated with a dataset of unemployment rates, I went on to create my own SVG map of Europe using Ready Set Raphaël and this <a href="http://commons.wikimedia.org/wiki/File:Blank_map_of_Europe.svg" target="_blank">Wikimedia Commons SVG map</a>, feeding it a dataset of places that I've visited.</p>
+<p>I hope to extend this to make the map interactive in the near future, with users able to click on countries to get info and colour the places they want to go.</p>
+<p>More SVG manipulation with our old friend, Beethoven:</p>
+<figure>
+  <a href="http://labs.furzeface.com/RaphaelJS/ChapterSix#chapter-6-part-3" target="_blank"><img src="http://static.furzeface.com/img/blog/30/chapter_6.jpg" alt="Raphaël JS - chapter 6 demo"/></a>
+  <figcaption>Chapter 6 - Draw over, Beethoven!</figcaption>
+</figure>
+<h2>Further Adventures</h2>
+<p>Now Chris tells of more advanced animations and shows in depth how to extend Raphaël - definitely going beyond what I would've first expected from this book (a welcome surprise of course) and I quote:</p>
+<blockquote class="pullquote">RaphaëlJS takes a strong stance against that sort of unadventurous attitute.</blockquote>
+<p>- I think he was talking about me...</p>
+<p>The final chapter, titled <strong>Mobile, Global Variables, and Other Things That Hurt Less Than You Think</strong> delves a little deeper into said scary things and leaves the reader wanting to learn more and I for one will be doing my own research now.</p>
+<p>I think Chris Wilson writes well in this book and gives a great introduction to Raphaël JS. He speaks to the reader in such a way that makes them feel at ease and teaches with great capability from the very first <em>hello-world-drawing-a-circle</em> activity to advanced methods of implementing this library.</p>
+<p>I'd recommend this book as a good read for anyone wanting to learn about Raphaël or even just SVG manipulation or data visualisation in general as it gives good tips on how to logically draw up these images and display the given data, and provides a few laughs along the way.</p>
+
+<h2>Finger Painting?</h2>
+<p>I'll end with a quote from the man himself, Chris Wilson:</p>
+<blockquote class="pullquote">Raphaël makes drawing on the page easy, but not so easy that you don’t still get a little paint on your fingers</blockquote>
+<p>I definitely think this rings true and I'm going to finish my Raphaël experiments and hopefully use the library within a project at my workplace.</p>
+<p>I've already got some great ideas for Raphaël!</p>
 {{/content}}
 
 
 {{#content "post-tldr"}}
-
+<p>Raphaël JS is a small JavaScript library that enables you to easily build and manipulate graphics on the web.</p>
+<p>Chris Wilson's super fun, hands-on, well-written guide is the best introduction to the library that I can recommend.</p>
+<p>Check out my demos on <a href="http://labs.furzeface.com/RaphaelJS/" target="_blank">Furzeface Labs</a> - <a href="http://labs.furzeface.com/RaphaelJS/ChapterSix" target="_blank">Chapter 6</a> and <a href="http://labs.furzeface.com/RaphaelJS/ChapterSeven" target="_blank">Chapter 7</a> are my favourite!</p>
+<p>Check out <a href="http://raphaeljs.com/" target="_blank">Raphaël JS</a> for yourself and the book is available to buy from <a href="http://shop.oreilly.com/product/0636920029601.do" target="_blank">O'Reilly</a> now.</p>
 {{/content}}
 
 {{/extend}}
