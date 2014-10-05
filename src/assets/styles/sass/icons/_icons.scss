@@ -18,6 +18,7 @@
 
 %icon-font {
   font-family: 'furzeface';
+  font-size: 1em;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -27,7 +28,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-newtab {
+.icon-external {
   &::before {
     @extend %icon-font;
 
@@ -40,5 +41,13 @@
     @extend %icon-font;
 
     content: '\e601';
+  }
+}
+
+.icon-internal {
+  &::after {
+    @extend %icon-font;
+
+    content: '\e602';
   }
 }

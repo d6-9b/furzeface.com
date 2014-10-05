@@ -18,6 +18,18 @@
         self.ff = ff;
       },
       /**
+      * Returns a slugified string from a string
+      * @function slugify
+      * @memberof Utilities
+      * @param {string} content
+      * @returns {string} slug
+      */
+      slugify: function (content) {
+        var slug = content.toLowerCase().replace(/[^\w ]+/g,'').replace(/ +/g,'-');
+
+        return slug;
+      },
+      /**
       * Gets parameters from a query string.
       * @function getUrlParams
       * @memberof Utilities

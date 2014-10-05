@@ -13,7 +13,6 @@
      global: {
       ff: null,
       $images: $('img'),
-      $gists: $('[data-gist]'),
       $emoji:  $('.emoji'),
       originalFontSize: parseFloat(ff.settings.$html.css('font-size')),
       resizeCount: 0,

@@ -28,9 +28,12 @@
 
         self.$minsToRead = $('#mins_to_read');
         self.$gists = $('[data-gist]');
+        // Using .find() is quicker than child CSS selectors y’know
+        self.$blogHeadings = $('.post-content').find('h2, h3');
 
         self.minsToRead();
         self.appendGists();
+        self.bookmarkHeadings();
       },
       /**
       * Sets minutes to read on blog posts.
@@ -55,7 +58,7 @@
       /**
       * Appends GitHub gists after pageReady.
       * @function appendGist
-      * @memberof Global
+      * @memberof Blog
       * @see {@link https://www.chrispoulter.com/blog/post/loading-gists-asynchronously}
       */
       appendGists: function () {
@@ -83,6 +86,32 @@
               $element.html('<p>Gist Load Failed</p>');
             }
           });
+        });
+      },
+      /**
+      * Appends permalink/bookmark link to headings on a blog post.
+      * @function bookmarkHeadings
+      * @memberof Blog
+      */
+      bookmarkHeadings: function () {
+        var self = this;
+
+        // Loop headings on blog post.
+        $.each(self.$blogHeadings, function () {
+          var heading = $(this),
+          id = heading.attr('id'),
+          text = heading.text(),
+          permalink;
+
+          // If there isn't already an id, create one from content.
+          if(!id) {
+            id = self.ff.utilities.slugify(text);
+            heading.attr('id', id);
+          }
+
+          // Create and append permalink to heading.
+          permalink = '<a href="#' + id + '" class="icon-internal copy-to-clipboard"></a>';
+          heading.append(permalink);
         });
       }
     }
