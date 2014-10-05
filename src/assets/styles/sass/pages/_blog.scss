@@ -88,6 +88,23 @@
   }
 }
 
+.mins-to-read {
+  // <small>
+  &::after {
+    margin-left: .25em;
+  }
+}
+
+.copy-to-clipboard {
+  color: $brand-grey--dark;
+  font-size: .75em;
+  margin-left: .25em;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .post-footer {
   margin-bottom: px-to-rem(50px);
 
