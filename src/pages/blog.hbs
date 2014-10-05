@@ -10,11 +10,11 @@ pageClass: page-blog
 <ul class="articles-list">
   {{#each posts}}
   <li class="articles-list__item">
-    <a href="{{slug}}" class="articles-list__link" {{#if external}}rel="external"{{/if}}>
-      <h1>{{title}}</h1>
-      <p>{{summary}}</p>
-      <time datetime="{{pubDate}}" pubdate="{{pubDate}}" class="updated published">{{pubDate}}</time>
-    </a>
+    <h1>
+      <a href="{{slug}}" class="articles-list__link" {{#if external}}rel="external"{{/if}}>{{title}}</a>
+    </h1>
+    <p>{{summary}}</p>
+    <time datetime="{{pubDate}}" pubdate="{{pubDate}}" class="updated published">{{pubDate}}</time>
   </li>
   {{/each}}
 </ul>

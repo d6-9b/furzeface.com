@@ -56,35 +56,27 @@
 
 .articles-list {
   @extend %list-unstyled;
-}
-
-.articles-list__item {
-  border-bottom: 1px solid $brand-grey--light;
-}
-
-.articles-list__link {
-  display: block;
-  padding: $global-padding / 2;
-
-  &:hover {
-    text-decoration: none;
-
-    h1 {
-      text-decoration: underline;
-    }
-  }
-
-  h1 {
-    margin: 0;
-  }
-
-  p {
-    color: $body-color;
-  }
 
   .published {
     // <time>
     color: $brand-grey--dark;
+  }
+}
+
+.articles-list__item {
+  border-bottom: 1px solid $brand-grey--light;
+  padding: $global-padding / 2;
+}
+
+.articles-list__link {
+  display: block;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  h1 {
+    margin: 0;
   }
 }
 

@@ -105,22 +105,13 @@
   }
 
   &[rel='external'] {
-    margin-right: 1em;
-    position: relative;
-
     &::after {
       @extend %icon-font;
 
       color: $brand-grey--dark;
       content: '\e600';
+      display: inline;
       font-size: .75em;
-      position: absolute;
-      top: -.5em;
-      right: -1em;
-
-      li & {
-        top: -.25em;
-      }
     }
   }
 }
