@@ -593,8 +593,8 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build_styles', [
     'sass',
-    'newer:autoprefixer',
-    'newer:combine_mq'
+    'newer:autoprefixer'/*,
+    'newer:combine_mq'*/
   ]);
 
   grunt.registerTask('build_images_dev', [
