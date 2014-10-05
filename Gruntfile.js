@@ -318,7 +318,9 @@ module.exports = function(grunt) {
     htmlmin: {
       dist: {
         options: {
-          collapseWhitespace: true
+          caseSensitive: true,
+          collapseWhitespace: true,
+          keepClosingSlash: true
         },
         expand: true,
         cwd: '<%= config.dist %>',
