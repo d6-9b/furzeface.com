@@ -1,26 +1,51 @@
 ---
 pageClass: page-post
 title: Playing with the devicelight api
-category: ...
-pubDate: ...
-bannerImage: 1440x785.gif
-published: false
+category: Work
+pubDate: 19th Dec, 2013
 ---
 
 {{#extend "layout-post"}}
 
 {{#content "post-summary"}}
-
+Playing about with the devicelight api - currently only supported in Firefox 22.0+, Mac OS X.
 {{/content}}
 
 
 {{#content "post-content"}}
-
+<h2>Let there be light!</h2>
+<p>I had a little play with the <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceLightEvent" target="_blank">devicelight api</a> last night.</p>
+<p>As you imagine, this relatively new api obtains the amount of light from the surrounding atmosphere of your device and returns a <a href="http://en.wikipedia.org/wiki/Lux" target="_blank">lux level</a> for you to play with.</p>
+<p>Here I just added a <em>devicelight</em> event listener to the window of my experiment and switch CSS theme based on if it's light or dark!</p>
+<h2>Current support</h2>
+<p>Support for this api is scarce at the moment:</p>
+<blockquote class="pullquote" cite="https://developer.mozilla.org/en-US/docs/Web/API/DeviceLightEvent">The devicelight event is implemented and preference enabled by default in Firefox Mobile for Android (15.0) and in Firefox OS (B2G). Starting with Gecko 22.0 (Firefox 22.0 / Thunderbird 22.0 / SeaMonkey 2.19) a desktop implementation for Mac OS X is also available. Support for Windows 7 is in progress.</blockquote>
+<p>But I think it could be a useful feature and hopefully it'll be more widely supported in the near future.</p>
+<h2>My Demo:</h2>
+<figure><a href="http://labs.furzeface.com/LetThereBeLight/" target="_blank">
+  <img src="http://static.furzeface.com/img/blog/27/let_there_be_light.png" alt="Furzeface Labs - Let There Be Light"/></a>
+  <figcaption>Let There Be Light!</figcaption>
+</figure>
+<p>Be sure to check it out in <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> and turn your light on and off to see it in action. Or just cover your device camera, to avoid looking like a mad man turning your light on and off and on and off...</p>
+<small>Tip: try it in quite a bright environment to see the sun, cover up your light detection to see the moon!</small>
+<h2>Practical uses</h2>
+<p>So I know my demo is a bit gimmicky but when the devicelight api is more widely supported I'm going to try and switch an entire website theme based on the light a user is viewing it in.</p>
+<p>Perhaps a bit more subtly though - for instance toning down the brighter colours on a web page to aid readability and also to avoid screen burn for those high res screens you've all got!</p>
+<p>If you have any ideas of use for this kind of thing let me know, grab the <a href="https://github.com/furzeface/LetThereBeLight" target="_blank">source code on GitHub</a> and have a little go if you like.</p>
 {{/content}}
 
 
 {{#content "post-tldr"}}
-
+<ul>
+  <li>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceLightEvent" target="_blank">devicelight api</a> is pretty cool</li>
+  <li><a href="http://labs.furzeface.com/LetThereBeLight/" target="_blank">Check out what I did with it</a></li>
+  <li>Source on <a href="https://github.com/furzeface/LetThereBeLight" target="_blank">GitHub</a> if you want to play around</li>
+</ul>
+<figure>
+  <iframe width="560" height="315" src="//www.youtube.com/embed/ARMW07C7-Ik?rel=0" frameborder="0" allowfullscreen style="margin:0 auto;"></iframe>
+  <figcaption>Here's a little clip if you can't access the demo yet</figcaption>
+</figure>
+<p>Thanks to <a href="http://tristanashley.com" target="_blank">The Tristanator</a> for putting me on to this idea after I mentioned how excited I was about the potential of <a href="http://dev.w3.org/csswg/mediaqueries4/#luminosity" target="_blank">Luminosity Media Queries</a> the other day!</p>
 {{/content}}
 
 {{/extend}}
