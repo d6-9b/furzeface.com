@@ -1,9 +1,7 @@
 ---
 pageClass: page-post
-title: Git ain't scary
-bannerImage: 1440x785.gif
+title: Git ain’t scary
 pubDate: 13th Sept, 2014
-timestamp: 1420805703
 category: Tutorials
 ---
 
@@ -21,7 +19,7 @@ Another article in “Ain’t Scary”, where I’ll write little tips to get st
   <img src="{{assetsUrl}}/{{images}}/blog/git_logo.png" alt="The Git logo" />
 </figure>
 
-<p>But, that's not why we’re here.</p>
+<p>But that’s not why we’re here.</p>
 <p>Git ain’t that scary! I used to be pretty scared of using the command line to interact with git repositories, and as you may have seen from my last post - <a href="http://daniel.furzeface.com/blog/command-line-aint-scary" rel="archives">Command line ain’t scary</a> - I’m pretty into it now.</p>
 <p>So here’s a basic guide to the commands to start using Git via the CLi and a few tips too.</p>
 
@@ -39,7 +37,7 @@ Another article in “Ain’t Scary”, where I’ll write little tips to get st
 <code>$ git pull</code>
 <p>or:</p>
 <code>$ git pull origin <em>develop</em></code>
-<p>If you're on a branch named <em>develop</em>, for example.</p>
+<p>If you’re on a branch named <em>develop</em>, for example.</p>
 
 <h2>Branching</h2>
 <p>When developing it’s usually best practise to create a branch to work on, so that code conflicts are minimised and deployment of new features is managed more easily.</p>
@@ -55,7 +53,7 @@ Another article in “Ain’t Scary”, where I’ll write little tips to get st
 <code>$ git push origin --delete <em>feature</em></code>
 <p>To delete the remote branch at the same time.</p>
 
-<p>Now do some coding...I'll wait.</p>
+<p>Now do some coding...I’ll wait.</p>
 
 <p>&hellip;</p>
 <p>&hellip;</p>
@@ -90,7 +88,7 @@ Another article in “Ain’t Scary”, where I’ll write little tips to get st
 <p>Now merges are a pretty easy concept to grasp, even via the command line but when it comes to conflicts it gets a little scary. Conflicts happen when you and another collaborator have modified the same file.</p>
 <p>Git is usually pretty clever at resolving these situations by itself but on the occasion that the same lines of the code have been changed there will be a conflict.</p>
 <p>If you’re still using a Git client by this point such as the one of the <a href="https://mac.github.com/" rel="external">GitHub</a> <a href="https://windows.github.com/" rel="external">clients</a> or <a href="http://www.sourcetreeapp.com/" rel="external">SourceTree</a> that’s fine, but you should probably go back to the top and start this post again. {{emoji 'stuck_out_tongue'}}</p>
-<p>If however you’d like to resolve conflicts the manual way - it's not that bad!</p>
+<p>If however you’d like to resolve conflicts the manual way - it’s not that bad!</p>
 
 <code>
   $ git merge develop
@@ -117,11 +115,11 @@ Another article in “Ain’t Scary”, where I’ll write little tips to get st
 
 <p>Where <code class="inline">HEAD</code> is the head of the branch on your machine and the hash is the commit being pulled down and conflicted with.</p>
 <p>So all you have to do is go into the particular file, pick which block you want to keep and remove the other along with the conflict markers. Then commit the fix!</p>
-<p>It may be a little slower than using a GUI or <a href="http://www.sourcegear.com/diffmerge/" rel="external">merge tool</a> at first, but it’s dead easy and you'll get faster with practise.</p>
+<p>It may be a little slower than using a GUI or <a href="http://www.sourcegear.com/diffmerge/" rel="external">merge tool</a> at first, but it’s dead easy and you’ll get faster with practise.</p>
 
 <h2>Cherry-picking</h2>
 <p>Cherry picking is essentially merging individual commits between branches.</p>
-<p>For example I might want to merge part of another person's contributions into my master branch but not all of them, or I may want to merge a hotfix from a develop branch into master to deploy, but not the entire codebase which could include some features that aren't ready for deployment.</p>
+<p>For example I might want to merge part of another person’s contributions into my master branch but not all of them, or I may want to merge a hotfix from a develop branch into master to deploy, but not the entire codebase which could include some features that aren’t ready for deployment.</p>
 
 <blockquote class="pullquote">
   There you have it, cherry picked!
@@ -143,7 +141,7 @@ Another article in “Ain’t Scary”, where I’ll write little tips to get st
 <p>Simply logs out the commits in order of most recent along with the commit messages.</p>
 <p>However, I often use:</p>
 <code>$ git log --graph --all</code>
-<p>To show a nice graph of all branches and their commits with extra details. <small>I also have an alias - a shortcut - for this as well which I've shared below{{#note 1}}{{/note}}.</small></p>
+<p>To show a nice graph of all branches and their commits with extra details. <small>I also have an alias - a shortcut - for this as well which I’ve shared below{{#note 1}}{{/note}}.</small></p>
 
 <figure>
   <img src="{{assetsUrl}}/{{images}}/blog/pretty_graphs.jpg" alt="Terminal window showing Git log graph" />

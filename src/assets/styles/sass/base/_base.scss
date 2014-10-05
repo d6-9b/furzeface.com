@@ -92,7 +92,8 @@
   color: $link-color;
 
   p &,
-  small & {
+  small &,
+  li & {
     font-weight: 700;
   }
 

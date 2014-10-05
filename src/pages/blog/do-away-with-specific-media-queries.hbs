@@ -1,26 +1,59 @@
 ---
 pageClass: page-post
 title: Do away with specific media queries
-category: ...
-pubDate: ...
-bannerImage: 1440x785.gif
-published: false
+category: Tips
+pubDate: 11th Dec, 2013
 ---
 
 {{#extend "layout-post"}}
 
 {{#content "post-summary"}}
-
+A couple of little insights on media queries that I’ve learned whilst building a new site.
 {{/content}}
 
 
 {{#content "post-content"}}
+<p>I’ve been doing a ton of responsive website building recently and I wanted to share a little awesome tip with you.</p>
+<p>When writing media queries, most of us go for a similar standard set of media queries to the ones defined by <a href="http://css-tricks.com/snippets/css/media-queries-for-standard-devices/" rel="external">Chris Coyier here</a>.</p>
 
+<h3>Something like this:</h3>
+<div data-gist="7920138"></div>
+
+<p>And I’m sick of the sight of them! These media queries seem to only target popular smart phone and tablet devices and they are far too rigid for my liking - I find myself having to compromise on layout and style when using them most of the time.</p>
+
+<blockquote class="pullquote">
+  Lose the specific, popular device width media queries - I’m looking at you, 320x480px!
+</blockquote>
+
+<p>It’s not right to assume that users will only be viewing on these sizes as people fail to consider the user who has many windows open on a huge desktop screen, as I do at work - what if one window is actually 785px wide and another is 485x383px?</p>
+<p>Your layout may break if you’re only targeting the popular device widths.</p>
+
+<h2>Begone, specificity</h2>
+<p>Another tip related to this is to use <code class="inline">em</code> or <code class="inline"><a href="http://www.w3.org/TR/css3-values/#font-relative-lengths" rel="external">rem</a></code> based media queries to ensure that when a user zooms in or manually resizes the font-size of your site, it doesn’t break for them either.</p>
+<p>It also helps to define your media query widths in variables if using SASS or LESS, to avoid rewriting them or going off the rails and tweaking them for every element.</p>
+
+<h2>Small, Medium, Medium Rare...?</h2>
+<p>I had trouble naming some of my variables....how does <code class="inline">$medium-rare</code> sound?</p>
+<blockquote class="twitter-tweet" lang="en"><p>Ermm what would you name a breakpoint in between medium and large??? <a href="http://t.co/Lw9OFqLgiH">pic.twitter.com/Lw9OFqLgiH</a></p>— Daniel Furze (@furzeface) <a href="https://twitter.com/furzeface/statuses/410869366658326528">December 11, 2013</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<h3>New, improved</h3>
+<p>Here’s my new, improved media queries and an usage example:</p>
+<div data-gist="7920210"></div>
+
+<h2>No screen size left behind!</h2>
+<p>I’ve started building sites for mobile first properly now, from the ground up. The media queries I now use rely on mostly min-widths, not max-width and this ensures that even the smallest screens get a decent layout.</p>
+<p>An invaluable tool for testing this kind of thing - your site in every screen size possible - is <a href="http://bradfrostweb.com/demo/ish/?url=http%3A%2F%2Fdaniel.furzeface.com#hay" rel="external">'Ish' by Brad Frost</a>. I just had this open for around 2 hours testing a new build I’ve just started working on. Have a play. Two words - <strong>“Disco Mode”</strong>.</p>
 {{/content}}
 
 
 {{#content "post-tldr"}}
-
+<ul>
+  <li>Use non-specific, <code class="inline">em</code> or <code class="inline">rem</code> based media queries</li>
+  <li>Lose the specific, popular device width media queries - I’m looking at you, 320x480px</li>
+  <li>Use <a href="http://bradfrostweb.com/demo/ish/" rel="external">'Ish'</a> to test on, cos it’s ace!</li>
+</ul>
+<p>There’s more to be said on this - I’m learning a lot on this new project by starting to build 100% mobile first - so I expect I’ll be writing more little tips!</p>
 {{/content}}
 
 {{/extend}}

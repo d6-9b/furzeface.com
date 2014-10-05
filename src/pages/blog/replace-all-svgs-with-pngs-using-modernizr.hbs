@@ -3,8 +3,6 @@ pageClass: page-post
 title: Replace all svgs with pngs using Modernizr
 category: Tips
 pubDate: 28th Nov, 2013
-bannerImage: 1440x785.gif
-published: false
 ---
 
 {{#extend "layout-post"}}
@@ -16,11 +14,11 @@ A snippet to replace svg with png on your site, using Modernizr.
 
 {{#content "post-content"}}
 <h2>SVG, I choose you!</h2>
-<p>So I've just added a bunch of svg logos to my <del>work page</del> and I wanted to provide fallback for legacy browsers not supporting svg (I'm looking at you, IE8! And you a bit, older Android browsers!)</p>
+<p>So I’ve just added a bunch of svg logos to my <del>work page</del> and I wanted to provide fallback for legacy browsers not supporting svg (I’m looking at you, IE8! And you a bit, older Android browsers!)</p>
 
-<small>It's worth noting that I don't make a huge effort to support IE8 for this site, but it can't hurt to give 'em this little treat.</small>
+<small>It’s worth noting that I don’t make a huge effort to support IE8 for this site, but it can’t hurt to give ‘em this little treat.</small>
 
-<p>Most of the snippets I found online were a bit flaky - some didn't work at all, some split on the <code class="inline">.</code> to get the image extension but didn't account for a full domain name - (I use static.furzeface.com to serve images) so it'd just return 'static' instead of say 'jpg' or 'svg'. But the idea was there.</p>
+<p>Most of the snippets I found online were a bit flaky - some didn’t work at all, some split on the <code class="inline">.</code> to get the image extension but didn’t account for a full domain name - (I use static.furzeface.com to serve images) so it’d just return 'static' instead of say 'jpg' or 'svg'. But the idea was there.</p>
 
 <h2>So I wrote this:</h2>
 <div data-gist="7697041"></div>
@@ -28,8 +26,10 @@ A snippet to replace svg with png on your site, using Modernizr.
 
 
 {{#content "post-tldr"}}
-<p>I wrote a snippet to switch svgs out to pngs for non supportive brosers from ancient times.</p>
-<p>Please steal it and use it, we've still got to serve something to the legacy browsers!</p>
+<ul>
+  <li>I wrote a snippet to switch svgs out to pngs for non supportive browsers from ancient times.</li>
+  <li>Please steal it and use it, we’ve still got to serve something to the legacy browsers!</li>
+</ul>
 {{/content}}
 
 {{/extend}}

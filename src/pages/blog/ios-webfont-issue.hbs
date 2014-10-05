@@ -1,26 +1,54 @@
 ---
 pageClass: page-post
 title: iOS webfont issue
-category: ...
-pubDate: ...
-bannerImage: 1440x785.gif
-published: false
+category: Tips
+pubDate: 11th Jun, 2013
 ---
 
 {{#extend "layout-post"}}
 
 {{#content "post-summary"}}
-
+Here’s a quick little snippet that might be useful if you’re developing a site for mobile
 {{/content}}
 
 
 {{#content "post-content"}}
+<p>If you’re developing for or just testing on Apple devices this iOS webfont issue may arise.</p>
+<p>I came across this whilst implementing the headers for the big sections on my home page.</p>
 
+<figure>
+  <img src="http://static.furzeface.com/img/blog/2/ios_webfont_issue_before.png" alt="" />
+  <figcaption>A screenshot of daniel.furzeface.com before a iOS webfont issue had been fixed.</figcaption>
+</figure>
+
+<h2>As you can see&hellip;</h2>
+<p>The webfont doesn’t render properly in iOS browsers, (tested in Chrome, Safari).</p>
+
+<p>It was tricky to diagnose but eventually after testing different scenarios and doing research online I finally found an answer, which I can reiterate here – I don’t claim to have originally found this solution – but it’s pretty simple anyway.</p>
+
+<p>Basically the situation that this happens in takes place when you’re trying to use a custom webfont on iOS for a website and using it in a header <code class="inline">h1, h2, h3</code> etc&hellip; element or any other emboldened element <code class="inline">b, strong</code> etc&hellip;.</p>
+<p>If you declare the custom webfont and don’t have an actual bold version of the font, iOS attempts to correct this by 'faux bolding' your text – doubling up and offsetting the text. </p>
+<p>As you saw above, it looks terrible!</p>
+
+<h2>This can be rectified&hellip;</h2>
+<p>By specifying for the elements you need to use these fonts in to always be <code class="inline">font-weight:normal;</code></p>
+
+<p>Side note: using a correct bold version of the webfont would obviously avoid this, however in my situation I used two separate <code class="inline">@font-face</code>’s for a light and bold version.</p>
+
+<figure>
+  <img src="http://static.furzeface.com/img/blog/2/ios_webfont_issue_after.png" alt="" />
+  <figcaption>A screenshot of furzeface.com after webfont iOS issue had been fixed.</figcaption>
+</figure>
+
+<p>Voila!</p>
 {{/content}}
 
 
 {{#content "post-tldr"}}
-
+<ul>
+  <li>If your webfont looks terrible on iOS when used for headers, set the font-weight to normal in your CSS</li>
+  <li>Try and use actual bold versions of the font in your <code class="inline">@font-face</code> rules anyway</li>
+</ul>
 {{/content}}
 
 {{/extend}}

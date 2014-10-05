@@ -1,0 +1,34 @@
+---
+title: iOS7 me or what I did whilst waiting for the build
+---
+
+{{#extend "layout-page"}}
+
+{{#content "page-content"}}
+<link href="http://static.furzeface.com/css/ios-seven-me.css" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<p>&nbsp;</p>
+<section id="js-icon-wrapper" class="box">
+  <i id="js-icon" class="icon-fighter-jet"></i>
+</section>
+<button id="ios7-me">iOS7 me!</button>
+<p>*This only works in webkit right now, plus it's only a bit of fun.</p>
+<p>*I actually quite like the new iOS preview.</p>
+
+<script>
+$('#ios7-me').click(function () {
+  var top_colour = '#' + Math.floor(Math.random() * 16777215).toString(16);
+  var bottom_colour = '#' + Math.floor(Math.random() * 16777215).toString(16);
+  $('#js-icon-wrapper').css({background: '-webkit-linear-gradient(' + top_colour + ',' + bottom_colour + ')'});
+  var icon_classes = ['adjust', 'anchor', 'archive', 'asterisk', 'ban-circle', 'bar-chart', 'barcode', 'beaker', 'beer', 'bell', 'bell-alt', 'bolt', 'book', 'bookmark', 'bookmark-empty', 'briefcase', 'bug', 'building', 'bullhorn', 'bullseye', 'calendar', 'calendar-empty', 'camera', 'camera-retro', 'certificate', 'circle', 'circle-blank', 'cloud', 'cloud-download', 'cloud-upload', 'code', 'code-fork', 'coffee', 'cog', 'cogs', 'collapse', 'collapse-alt', 'collapse-top', 'comment', 'comment-alt', 'comments', 'comments-alt', 'compass', 'credit-card', 'crop', 'dashboard', 'desktop', 'download', 'download-alt', 'edit', 'edit-sign', 'ellipsis-horizontal', 'ellipsis-vertical', 'envelope', 'envelope-alt', 'eraser', 'exchange', 'exclamation', 'exclamation-sign', 'expand', 'expand-alt', 'external-link', 'external-link-sign', 'eye-close', 'eye-open', 'facetime-video', 'female', 'fighter-jet', 'film', 'fire', 'flag', 'folder-close', 'folder-open', 'food', 'frown', 'gamepad', 'gear', 'gears', 'gift', 'glass', 'globe', 'group', 'hdd', 'headphones', 'heart', 'heart-empty', 'home', 'inbox', 'info', 'info-sign', 'key', 'keyboard', 'laptop', 'leaf', 'legal', 'lemon', 'level-down', 'level-up', 'lightbulb', 'location-arrow', 'lock', 'magic', 'magnet', 'mail-forward', 'mail-reply', 'mail-reply-all', 'male', 'map-marker', 'meh', 'microphone', 'microphone-off', 'minus', 'minus-sign', 'minus-sign-alt', 'mobile-phone', 'money', 'moon', 'move', 'music', 'off', 'ok', 'ok-circle', 'ok-sign', 'pencil', 'phone', 'phone- sign', 'picture', 'plane', 'plus', 'plus-sign', 'power-off', 'print', 'pushpin', 'puzzle-piece', 'qrcode', 'question', 'question-sign', 'random', 'refresh', 'remove', 'retweet', 'road', 'rocket', 'rss', 'search', 'share', 'shield', 'shopping-cart', 'sign-blank', 'signal', 'signin', 'signout', 'smile', 'star', 'star-empty', 'subscript', 'suitcase', 'sun', 'superscript', 'tablet', 'tag', 'tags', 'tasks', 'terminal', 'thumbs-down', 'thumbs-up', 'ticket', 'time', 'tint', 'trash', 'trophy', 'unlock', 'upload', 'user', 'warning-sign', 'wrench', 'adn', 'android', 'apple', 'bitbucket', 'bitbucket-sign', 'bitcoin', 'btc', 'css3', 'dribbble', 'dropbox', 'facebook', 'facebook-sign', 'flickr', 'foursquare', 'github', 'github-alt', 'github-sign', 'gittip', 'google-plus', 'google-plus-sign', 'html5', 'instagram', 'linkedin', 'linkedin-sign', 'linux', 'maxcdn', 'pinterest', 'pinterest-sign', 'renren', 'skype', 'stackexchange', 'trello', 'tumblr', 'tumblr-sign', 'twitter', 'twitter-sign', 'vk', 'weibo', 'windows', 'xing', 'xing-sign', 'youtube', 'youtube-play', 'youtube-sign'];
+  $('#js-icon').removeClass().addClass('icon-' + icon_classes[Math.floor(Math.random() * icon_classes.length)]);
+});
+</script>
+
+{{!-- @todo: move over to labs.furzeface.com --}}
+
+{{/content}}
+
+{{/extend}}
