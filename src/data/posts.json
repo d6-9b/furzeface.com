@@ -1,5 +1,11 @@
 [
   {
+    "title": "Dammit!",
+    "slug": "dammit",
+    "pubDate": "5th Oct 2014",
+    "summary": "A little Node package I wrote to print out a random curse when something goes wrong!"
+  },
+  {
     "title": "Bower ain’t scary",
     "slug": "bower-aint-scary",
     "pubDate": "25th Sept, 2014",

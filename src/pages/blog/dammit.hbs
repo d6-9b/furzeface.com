@@ -1,0 +1,88 @@
+---
+pageClass: page-post
+title: Dammit!
+pubDate: 4th Jul, 2014
+category: Work
+---
+
+{{#extend "layout-post"}}
+
+{{#content "post-summary"}}
+A little Node package I wrote to print out a random curse when something goes wrong!
+{{/content}}
+
+
+{{#content "post-content"}}
+<p>A friend of mine introduced me to Sindre Sorhus’ <a href="https://github.com/sindresorhus/superb" rel="external">Superb</a> Node package a little while ago so I took the concept, turned it on its head and created a small Node package that returns a random, funny curse phrase to your console or app - with the idea that it could be used for when a task goes disastrously wrong.</p>
+
+<h2>Dammit!</h2>
+<strong>/ˈdamɪt/</strong>
+<p><em>exclamation</em> informal</p>
+<p>Used to express anger or frustration.</p>
+
+<h2>Installation</h2>
+<p>Installation couldn’t be easier - as with the majority of Node packages, simply enter:</p>
+<code>
+  $ npm install dammit --save-dev
+</code>
+<small>Remember to pass the <code class="inline">--save</code>  or <code class="inline">--save-dev</code> flag to save it in your package.json and your project.</small>
+
+<h2>Usage</h2>
+<p>There are currently two modes you can use <em>dammit</em> in - Safe and <abbr title="Not Safe For Work">NSFW</abbr> modes. As you can imagine, I’d recommend using Safe mode for your projects as NSFW mode was pretty much just introduced for <a href="http://andyblackledge.co.uk" rel="external">Mr. Andy Blackledge’s</a> dirty mouth {{emoji 'stuck_out_tongue_closed_eyes'}}. </p>
+<p>To use it within a Node package or Grunt/Gulp task do the following:</p>
+<pre>
+  <code>
+    var dammit = require('dammit');
+
+    dammit({'NSFW': false}); // Logs a safe one
+    dammit({'NSFW': true}); // Logs a naughty one
+  </code>
+</pre>
+<p>And that's it!</p>
+
+<h2>In the wild</h2>
+<p>Here’s an example paraphrased from our <code class="inline"><a href="https://www.npmjs.org/package/combine-mq" rel="external">combine-mq</a></code> package:</p>
+<pre>
+  <code>
+    // Read file in
+    fs.readFile(options.src, 'utf8', function(err, fileContents) {
+      if (err) {
+        // Write error messages
+        console.log(chalk.red(dammit({
+          NSFW: false
+        })));
+        console.log(chalk.red('(Could not open file: "' + self.src + '")'));
+        // Exit out
+        process.exit(1);
+      }
+    });
+  </code>
+</pre>
+<p>In this instance, if the file input to <code class="inline">combine-mq</code> doesn’t exist, error out and display a <code class="inline">dammit</code> phrase to the console.</p>
+
+<h2>Via the CLi</h2>
+<p>Alternatively you can have a play via the command line by installing <a href="#installation">as above</a> and entering either</p>
+<code>
+  $ dammit
+</code>
+<p>Or</p>
+<code>
+  $ dammit NSFW
+</code>
+<p>Which may or may not give you:</p>
+<figure>
+  <img src="{{assetsUrl}}/{{images}}/blog/dammit.jpg" alt="A screenshot of the console with Dammit in action." />
+  <figcaption>Dammit!</figcaption>
+</figure>
+{{/content}}
+
+
+{{#content "post-tldr"}}
+<p>I wrote a little Node package to return a random curse phrase - for use within other Node/Grunt/Gulp etc. tasks.</p>
+<p>Download <a href="https://www.npmjs.org/package/dammit" rel="external">Dammit!</a> From the NPM registry or just enter:</p>
+<code>$ npm install dammit</code>
+<p>&hellip;and away you go!</p>
+<p>Contribute to the <code class="inline">curses.json</code> file by forking the <a href="https://github.com/furzeface/dammit" rel="external">GitHub repo</a>.</p>
+{{/content}}
+
+{{/extend}}
