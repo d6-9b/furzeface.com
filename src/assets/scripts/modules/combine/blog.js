@@ -13,7 +13,6 @@
      blog: {
       ff: null,
       $postContent: null,
-      $minsToRead: $('#mins_to_read'),
       setGlobal: function (ff) {
         var self = this;
 
@@ -27,7 +26,11 @@
       init: function () {
         var self = this;
 
+        self.$minsToRead = $('#mins_to_read');
+        self.$gists = $('[data-gist]');
+
         self.minsToRead();
+        self.appendGists();
       },
       /**
       * Sets minutes to read on blog posts.
@@ -48,13 +51,46 @@
 
         // Populate element in banner
         self.$minsToRead.text(minsToRead + ' min read');
+      },
+      /**
+      * Appends GitHub gists after pageReady.
+      * @function appendGist
+      * @memberof Global
+      * @see {@link https://www.chrispoulter.com/blog/post/loading-gists-asynchronously}
+      */
+      appendGists: function () {
+        var self = this;
+
+        self.$gists.each(function () {
+          var $element = $(this),
+          id = $element.attr('data-gist');
+
+          $element.html('<p>Loading Gist&hellip;</p>');
+
+          $.ajax({
+            url: 'https://gist.github.com/' + id + '.json',
+            dataType: 'jsonp',
+            cache: true,
+            success: function (data) {
+              if (data && data.div) {
+                if (!$('link[href="' + data.stylesheet + '"]').length) {
+                  self.ff.settings.$head.append('<link rel="stylesheet" href="' + data.stylesheet + '"' + ' />');
+                }
+                $element.html(data.div);
+              }
+            },
+            error: function () {
+              $element.html('<p>Gist Load Failed</p>');
+            }
+          });
+        });
       }
     }
   });
-  $.subscribe('setGlobal', function (event, ff) {
-    ff.blog.setGlobal(ff);
-  });
-  $.subscribe('pageReady', function () {
-    ff.blog.init();
-  });
+$.subscribe('setGlobal', function (event, ff) {
+  ff.blog.setGlobal(ff);
+});
+$.subscribe('pageReady', function () {
+  ff.blog.init();
+});
 }(jQuery));

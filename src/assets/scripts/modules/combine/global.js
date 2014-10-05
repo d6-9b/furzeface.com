@@ -32,7 +32,6 @@
 
         self.bindEvents();
 
-        self.appendGists();
         self.setEmojis();
         // self.syntaxHighlight();
         self.lazyImages();
@@ -51,39 +50,6 @@
           e.preventDefault();
 
           self.enlargeText();
-        });
-      },
-      /**
-      * Appends GitHub gists after pageReady.
-      * @function appendGist
-      * @memberof Global
-      * @see {@link https://www.chrispoulter.com/blog/post/loading-gists-asynchronously}
-      */
-      appendGists: function () {
-        var self = this;
-
-        self.$gists.each(function () {
-          var $element = $(this),
-          id = $element.attr('data-gist');
-
-          $element.html('<p>Loading Gist&hellip;</p>');
-
-          $.ajax({
-            url: 'https://gist.github.com/' + id + '.json',
-            dataType: 'jsonp',
-            cache: true,
-            success: function (data) {
-              if (data && data.div) {
-                if (!$('link[href="' + data.stylesheet + '"]').length) {
-                  self.ff.settings.$head.append('<link rel="stylesheet" href="' + data.stylesheet + '"' + ' />');
-                }
-                $element.html(data.div);
-              }
-            },
-            error: function () {
-              $element.html('<p>Gist Load Failed</p>');
-            }
-          });
         });
       },
       /**
