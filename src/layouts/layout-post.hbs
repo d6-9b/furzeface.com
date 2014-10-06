@@ -9,13 +9,11 @@ title: Layout Post
 
 {{>banner}}
 
-<main id="main" class="main" role="main">
+<main id="main" class="main main--post" role="main">
 
-  {{body}}
+  <article id="{{slugify title}}" class="post">
 
-  <article id="{{slugify title}}" class="post-content">
-
-    {{#if_block "post-summary"}}
+    {{#if_block "post__summary"}}
     <blockquote class="summary">
       {{#block "post-summary"}}{{/block}}
     </blockquote>
@@ -26,7 +24,7 @@ title: Layout Post
     {{/if_block}}
 
     {{#if_block "post-tldr"}}
-    <footer class="post-footer">
+    <footer class="post__footer">
       <h3 id="TLDR">TL;DR</h3>
       {{#block "post-tldr"}}{{/block}}
 
@@ -37,6 +35,16 @@ title: Layout Post
     {{>comments}}
 
   </article>
+
+  <aside class="post__sidebar">
+    <h1>sidebar</h1>
+    <h2>all</h2>
+    <h3>of</h3>
+    <h4>the</h4>
+    <h5>things</h5>
+    <h6>!</h6>
+    <p>{{emoji 'hushed'}}</p>
+  </aside>
 
 </main>
 

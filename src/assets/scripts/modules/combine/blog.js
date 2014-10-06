@@ -28,8 +28,8 @@
 
         self.$minsToRead = $('#mins_to_read');
         self.$gists = $('[data-gist]');
-        // Using .find() is quicker than child CSS selectors y’know
-        self.$blogHeadings = $('.post-content').find('h2, h3');
+        self.$postContent = $('.post');
+        self.$blogHeadings = self.$postContent.find('h2, h3'); // Using .find() is quicker than child CSS selectors y’know!
 
         self.minsToRead();
         self.appendGists();
@@ -43,7 +43,6 @@
       */
       minsToRead: function () {
         var self = this;
-        self.$postContent = $('.post-content');
 
         // Average WPM from Wikipedia
         var wordsPerMinute = 180,

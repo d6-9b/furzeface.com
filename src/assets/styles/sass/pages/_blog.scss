@@ -4,10 +4,51 @@
  * @author Daniel Furze
  */
 
- .post-content {
+// Blog homepage
+.articles-list {
+  @extend %list-unstyled;
+
+  .published {
+    // <time>
+    color: $brand-grey--dark;
+  }
+}
+
+.articles-list__item {
+  border-bottom: 1px solid $brand-grey--light;
+  padding: $global-padding / 2;
+}
+
+.articles-list__link {
+  display: block;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
+
+// Blog post
+.main--post {
+  // <main>
   @extend %inner;
 
+}
+
+.post {
+  // <article>
+  @extend %col--8-of-12;
+
+  @include MQ(M) {
+    float: left;
+  }
+
   hyphens: auto;
+  padding-left: $global-padding;
+  padding-right: $global-padding;
 
   h2 {
     border-bottom: 1px solid $brand-grey--light;
@@ -54,32 +95,6 @@
   }
 }
 
-.articles-list {
-  @extend %list-unstyled;
-
-  .published {
-    // <time>
-    color: $brand-grey--dark;
-  }
-}
-
-.articles-list__item {
-  border-bottom: 1px solid $brand-grey--light;
-  padding: $global-padding / 2;
-}
-
-.articles-list__link {
-  display: block;
-
-  &:hover {
-    text-decoration: underline;
-  }
-
-  h1 {
-    margin: 0;
-  }
-}
-
 .mins-to-read {
   // <small>
   &::after {
@@ -97,11 +112,24 @@
   }
 }
 
-.post-footer {
+.post__footer {
   margin-bottom: px-to-rem(50px);
 
   hr {
     @extend %col--10-of-12;
     @extend %push--1;
   }
+}
+
+.post__sidebar {
+  // <aside>
+
+  @extend %col--4-of-12;
+
+  @include MQ(M) {
+    float:right;
+  }
+
+  padding-left: $global-padding;
+  padding-right: $global-padding;
 }
