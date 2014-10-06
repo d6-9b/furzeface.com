@@ -4,19 +4,16 @@ title: Layout Post
 
 {{#extend "master"}}
 
-{{!-- Main Content --}}
 {{#content "master-body"}}
 
 {{>banner}}
 
-<main id="main" class="main" role="main">
+<main id="main" class="main main--post" role="main">
 
-  {{body}}
-
-  <article id="{{slugify title}}" class="post-content">
+  <article id="{{slugify title}}" class="post">
 
     {{#if_block "post-summary"}}
-    <blockquote class="summary">
+    <blockquote class="post__summary">
       {{#block "post-summary"}}{{/block}}
     </blockquote>
     {{/if_block}}
@@ -26,7 +23,7 @@ title: Layout Post
     {{/if_block}}
 
     {{#if_block "post-tldr"}}
-    <footer class="post-footer">
+    <footer class="post__footer">
       <h3 id="TLDR">TL;DR</h3>
       {{#block "post-tldr"}}{{/block}}
 
@@ -37,6 +34,10 @@ title: Layout Post
     {{>comments}}
 
   </article>
+
+  <aside class="post__sidebar">
+    {{>sidebar}}
+  </aside>
 
 </main>
 

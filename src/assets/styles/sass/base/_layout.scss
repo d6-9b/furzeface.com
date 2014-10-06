@@ -15,7 +15,24 @@
  * @since 1.0.0
  * @author Daniel Furze
  */
-%inner {
+ %inner {
+  @extend %col--10-of-12;
+  @extend %push--1;
+  @extend %clearfix;
+
+  padding-left: $global-padding;
+  padding-right: $global-padding;
+}
+
+/**
+ * Inner small
+ *
+ * Silent placeholder to extend
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+ %inner--small {
   @extend %col--6-of-12;
   @extend %push--3;
 
@@ -32,8 +49,5 @@
  * @author Daniel Furze
  */
 .inner {
-  @extend %col--10-of-12;
-  @extend %push--1;
-  @extend %clearfix;
-
+  @extend %inner;
 }
