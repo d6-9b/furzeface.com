@@ -5,9 +5,8 @@
  */
 
  .site-footer {
-  @extend %col--10-of-12;
-  @extend %push--1;
-
+  background: $brand-grey--light;
+  margin-top: $global-margin;
   padding: $global-padding;
 }
 
