@@ -6,8 +6,12 @@
 
  .page-home {
   // Namespaced page overrides
-  .page-content {
-    // <article>
+  .main {
+    // <main>
+    background: $brand-blue;
+    color: $brand-white;
+    padding-top: $global-padding;
+    padding-bottom: $global-padding;
     text-align: center;
   }
 }

@@ -6,8 +6,13 @@
 
  .site-footer {
   background: $brand-grey--light;
-  margin-top: $global-margin;
+  margin-top: $global-margin * 2;
   padding: $global-padding;
+
+  .page-home & {
+    background: none;
+    margin-top: 0;
+  }
 }
 
 .site-footer__colophon {
