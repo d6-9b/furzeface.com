@@ -63,11 +63,6 @@
     margin-bottom: px-to-rem(50px);
   }
 
-  .summary {
-    // <blockquote>
-    text-align: center;
-  }
-
   .pullquote {
     // <blockquote>
     color: $brand-blue;
@@ -93,6 +88,11 @@
       display: block;
     }
   }
+}
+
+.post__summary {
+  // <blockquote>
+  text-align: center;
 }
 
 .mins-to-read {

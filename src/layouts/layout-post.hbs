@@ -4,7 +4,6 @@ title: Layout Post
 
 {{#extend "master"}}
 
-{{!-- Main Content --}}
 {{#content "master-body"}}
 
 {{>banner}}
@@ -13,8 +12,8 @@ title: Layout Post
 
   <article id="{{slugify title}}" class="post">
 
-    {{#if_block "post__summary"}}
-    <blockquote class="summary">
+    {{#if_block "post-summary"}}
+    <blockquote class="post__summary">
       {{#block "post-summary"}}{{/block}}
     </blockquote>
     {{/if_block}}
@@ -37,13 +36,7 @@ title: Layout Post
   </article>
 
   <aside class="post__sidebar">
-    <h1>sidebar</h1>
-    <h2>all</h2>
-    <h3>of</h3>
-    <h4>the</h4>
-    <h5>things</h5>
-    <h6>!</h6>
-    <p>{{emoji 'hushed'}}</p>
+    {{>sidebar}}
   </aside>
 
 </main>
