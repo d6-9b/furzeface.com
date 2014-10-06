@@ -34,8 +34,8 @@ A little Node package I wrote to print out a random curse when something goes wr
   <code>
     var dammit = require('dammit');
 
-    dammit({'NSFW': false}); // Logs a safe one
-    dammit({'NSFW': true}); // Logs a naughty one
+    console.log(dammit({'NSFW': false})); // Logs a safe one
+    console.log(dammit({'NSFW': true})); // Logs a naughty one
   </code>
 </pre>
 <p>And that's it!</p>
@@ -79,10 +79,17 @@ A little Node package I wrote to print out a random curse when something goes wr
 
 {{#content "post-tldr"}}
 <p>I wrote a little Node package to return a random curse phrase - for use within other Node/Grunt/Gulp etc. tasks.</p>
+
+<figure>
+  <a href="https://nodei.co/npm/dammit">
+    <img src="https://nodei.co/npm/dammit.png?downloads=true&downloadRank=true&stars=true" />
+  </a>
+</figure>
+
 <p>Download <a href="https://www.npmjs.org/package/dammit" rel="external">Dammit!</a> From the NPM registry or just enter:</p>
 <code>$ npm install dammit</code>
 <p>&hellip;and away you go!</p>
-<p>Contribute to the <code class="inline">curses.json</code> file by forking the <a href="https://github.com/furzeface/dammit" rel="external">GitHub repo</a>.</p>
+<p>Contribute to the <code class="inline"><a href="https://github.com/furzeface/dammit/blob/master/src/curses.json" rel="external">curses.json</a></code> file by forking the <a href="https://github.com/furzeface/dammit" rel="external">GitHub repo</a>.</p>
 {{/content}}
 
 {{/extend}}
