@@ -14,6 +14,11 @@
 .navigation-site__list {
   @extend %list-unstyled;
 
+  font-size: .75rem;
+
+  @include MQ(S) {
+    font-size: 1rem;
+  }
 }
 
 .navigation-site__item {
@@ -34,7 +39,7 @@
  * @since 1.0.0
  * @author Daniel Furze
  */
-.navigation-site__link {
+ .navigation-site__link {
   display: inline-block;
   font-weight: lighter;
   height: 1em;
