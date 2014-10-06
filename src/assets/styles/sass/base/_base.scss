@@ -33,15 +33,7 @@
  * @author Daniel Furze
  */
  html {
-  font-size: 65%;
-
-  @include MQ(S) {
-    font-size: 85%;
-  }
-
-  @include MQ(M) {
-    font-size: 100%;
-  }
+  // font-size: 100%;
 
   @include MQ(L) {
     font-size: 120%;
@@ -75,7 +67,7 @@
   -webkit-font-smoothing: subpixel-antialiased; // For use with dark text on light backgrounds
   // -webkit-font-smoothing: antialiased; // Uncomment for use with light text on dark backgrounds.
   // padding-top: $header-height;
-  text-size-adjust: 100%;
+  // text-size-adjust: 100%;
   // Opts out of browsers *fixing* text size zooming for non mobile ready sites on mobile devices.
   // If you're not building a responsive or mobile first site you won't need this CSS property. But you should be.
 }
@@ -190,6 +182,7 @@ sub {
   background: rgb(240, 240, 240);
   display: block;
   font-family: $font-family-mono;
+  font-size: .85rem;
   margin: .25rem 0;
   padding: $global-padding $global-padding / 2;
   word-break: break-word;
