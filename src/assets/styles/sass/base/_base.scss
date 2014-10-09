@@ -96,14 +96,26 @@
     text-decoration: underline;
   }
 
-  &[rel='external'] {
+  &[rel='external'],
+  &[href^='mailto:'] {
     &::after {
       @extend %icon-font;
 
       color: $brand-grey--dark;
-      content: '\e600';
       display: inline;
       font-size: .75em;
+    }
+  }
+
+  &[rel='external'] {
+    // External icon
+    content: '\e600';
+  }
+
+  &[href^='mailto:'] {
+    &::after {
+      // Email icon
+      content: '\e603';
     }
   }
 }
