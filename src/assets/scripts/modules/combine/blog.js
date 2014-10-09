@@ -109,7 +109,7 @@
           }
 
           // Create and append permalink to heading.
-          permalink = '<a href="#' + id + '" class="icon-internal permalink"></a>';
+          permalink = '<a href="#' + id + '" class="icon-internal permalink" title="Permalink for this section"></a>';
           heading.append(permalink);
         });
       }
