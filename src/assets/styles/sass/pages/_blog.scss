@@ -46,7 +46,8 @@
     float: left;
   }
 
-  hyphens: auto;
+  // hyphens: auto;
+  hyphens: manual;
   padding-left: $global-padding;
   padding-right: $global-padding;
 
