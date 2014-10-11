@@ -109,7 +109,9 @@
 
   &[rel='external'] {
     // External icon
-    content: '\e600';
+    &::after {
+      content: '\e600';
+    }
   }
 
   &[href^='mailto:'] {

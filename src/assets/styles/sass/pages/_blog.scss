@@ -105,15 +105,15 @@
     @extend %push--1;
 
     font-style: italic;
-    margin-top: px-to-rem(50px);
-    margin-bottom: px-to-rem(50px);
+    margin-top: $global-margin * 2;
+    margin-bottom: $global-margin * 2;
   }
 
   .pullquote {
     // <blockquote>
     color: $brand-blue;
     display: block;
-    padding: px-to-rem(10px);
+    padding: $global-padding/2;
 
     &::before {
       color: $brand-grey;
@@ -164,21 +164,6 @@
   margin-bottom: $global-margin;
 }
 
-.post__share {
-  // <div>
-  > a {
-    &::after {
-      @extend %icon-font;
-
-      // External icon
-      content: '\e600';
-      display: inline;
-      font-size: .75em;
-      margin-left: .5em;
-    }
-  }
-}
-
 .post__sidebar {
   // <aside>
 
@@ -188,6 +173,13 @@
     float:right;
   }
 
-  padding-left: $global-padding;
-  padding-right: $global-padding;
+  padding: ($global-padding * 2) $global-padding;
+}
+
+.post__sidebar__heading {
+  // <h1>
+
+  margin: 0;
+
+  @extend %heading--epsilon;
 }
