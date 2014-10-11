@@ -5,6 +5,56 @@
  */
 
 // Blog homepage
+.banner--blog {
+  background: url('../images/banner/desk_above_alt_small.jpg');
+  background-attachment: scroll;
+  background-position: left center;
+  background-size: cover;
+  min-height: 15rem;
+  position: relative;
+
+  @include MQ(S) {
+    background-image: url('../images/banner/desk_above_alt_large.jpg');
+    background-position: center center;
+  }
+
+  @include MQ(L) {
+    background-attachment: fixed;
+    background-image: url('../images/banner/desk_above_alt_huge.jpg');
+  }
+}
+
+
+.banner--small {
+  height: 60%;
+}
+
+.banner__overlay {
+  @include rgba-bg($brand-blue, .75);
+
+  color: $brand-white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+
+  > h1 {
+    @include vertical-align();
+
+    margin: 0;
+  }
+}
+
+// @include MQ(S) {
+//   display: none;
+// }
+
+// @include MQ(M) {
+
+// }
+
 .articles-list {
   @extend %list-unstyled;
 
