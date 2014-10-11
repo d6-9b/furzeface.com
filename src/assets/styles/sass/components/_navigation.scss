@@ -43,12 +43,15 @@
   display: inline-block;
   font-weight: lighter;
   height: 1em;
-  margin-right: $global-margin;
   overflow: hidden;
   padding: 0 $global-padding / 2;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
+
+  @include MQ(S) {
+    margin-right: $global-margin;
+  }
 
   &:hover,
   &:focus {

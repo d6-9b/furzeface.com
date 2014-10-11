@@ -101,15 +101,17 @@
   }
 
   blockquote {
-    @extend %col--10-of-12;
-    @extend %push--1;
+      @extend %col--10-of-12;
+      @extend %push--1;
 
-    font-style: italic;
-    margin-top: $global-margin * 2;
-    margin-bottom: $global-margin * 2;
-  }
+      margin: 0;
 
-  .pullquote {
+      font-style: italic;
+      margin-top: $global-margin * 2;
+      margin-bottom: $global-margin * 2;
+    }
+
+    .pullquote {
     // <blockquote>
     color: $brand-blue;
     display: block;
