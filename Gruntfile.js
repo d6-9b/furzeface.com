@@ -206,6 +206,9 @@ module.exports = function(grunt) {
           '<%= config.src %>/partials/**/*.hbs',
           '<%= config.src %>/layouts/**/*.hbs'
         ],
+        plugins: [
+          'assemble-related-pages'
+        ],
         production: '<%= grunt.option(\'production\')%>',
         styles: '<%= config.distStyles %>',
         scripts: '<%= config.distScripts %>',

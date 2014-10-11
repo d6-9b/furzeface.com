@@ -1,0 +1,14 @@
+---
+component: related-posts
+---
+
+<h1 class="post__sidebar__heading">Like this post?</h1>
+<p>You should read:</p>
+
+<ul>
+  {{#each page.related}}
+  <li>
+    <a href="{{relative ../page.dest this.dest}}">{{this.data.title}}</a>
+  </li>
+  {{/each}}
+</ul>
