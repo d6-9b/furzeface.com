@@ -51,3 +51,19 @@
     content: '\e602';
   }
 }
+
+.icon-email {
+  &::after {
+    @extend %icon-font;
+
+    content: '\e603';
+  }
+}
+
+.icon-settings {
+  &::after {
+    @extend %icon-font;
+
+    content: '\e604';
+  }
+}
