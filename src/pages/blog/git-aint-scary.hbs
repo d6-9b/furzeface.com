@@ -70,19 +70,21 @@ Another article in “Ain’t Scary”, where I’ll write little tips to get st
 <code>$ git commit -m "Supply your commit message here"</code>
 <p>The <code class="inline">-m</code> flag signifies a message that you have to supply.</p>
 
-<h3>A side note on commit messages:</h3>
-<p>In my open source projects and code that I have collaborators on I tend to loosely follow the style of commit message guidelines set out by Google for <a href="https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit" rel="external">contributing to Angular</a>.</p>
-<p>Shortly, these go in the format:</p>
+<aside>
+  <h3>A side note on commit messages:</h3>
+  <p>In my open source projects and code that I have collaborators on I tend to loosely follow the style of commit message guidelines set out by Google for <a href="https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit" rel="external">contributing to Angular</a>.</p>
+  <p>Shortly, these go in the format:</p>
 
-<pre>
-  <code>
-    &lt;type&gt;(&lt;scope&gt;): &lt;Subject&gt;
-    &lt;body&gt;
-    &lt;footer&gt;
-  </code>
-</pre>
+  <pre>
+    <code>
+      &lt;type&gt;(&lt;scope&gt;): &lt;Subject&gt;
+      &lt;body&gt;
+      &lt;footer&gt;
+    </code>
+  </pre>
 
-<p>Of course you don’t need to stick to these or any format at all even, but I find it useful to have a standard to vaguely follow myself.</p>
+  <p>Of course you don’t need to stick to these or any format at all even, but I find it useful to have a standard to vaguely follow myself.</p>
+</aside>
 
 <h2>Merges and conflicts</h2>
 <p>Now merges are a pretty easy concept to grasp, even via the command line but when it comes to conflicts it gets a little scary. Conflicts happen when you and another collaborator have modified the same file.</p>
@@ -106,9 +108,9 @@ Another article in “Ain’t Scary”, where I’ll write little tips to get st
 <pre>
   <code>
     &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-    git-aint-scary 1
+    git ain’t scary
     =======
-    git-aint-scary 2
+    git is scary!
     &gt;&gt;&gt;&gt;&gt;&gt;&gt; 436cf9e
   </code>
 </pre>
@@ -120,11 +122,6 @@ Another article in “Ain’t Scary”, where I’ll write little tips to get st
 <h2>Cherry-picking</h2>
 <p>Cherry picking is essentially merging individual commits between branches.</p>
 <p>For example I might want to merge part of another person’s contributions into my master branch but not all of them, or I may want to merge a hotfix from a develop branch into master to deploy, but not the entire codebase which could include some features that aren’t ready for deployment.</p>
-
-<blockquote class="pullquote">
-  There you have it, cherry picked!
-</blockquote>
-
 <p>I used to be scared of cherry-picking as back when I was using visual GUIs for Git source control it was easy, but moving to using the command line it became a strange concept at first, not having anything to see and know what exactly I was cherry-picking across branches.</p>
 <p>You’ll need a hash from a git commit in a different branch and the easiest way to get one is to hit <code class="inline">$ git log</code> - more on that in the next section.</p>
 <p>Once you have one simply enter the following command to merge the specific changes from that commit into your branch:</p>
