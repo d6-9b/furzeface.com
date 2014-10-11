@@ -5,6 +5,47 @@
  */
 
 // Blog homepage
+.banner--blog {
+  background: url('../images/banner/desk_above_alt_small.jpg');
+  background-attachment: scroll;
+  background-position: left center;
+  background-size: cover;
+  min-height: 15rem;
+  position: relative;
+
+  @include MQ(S) {
+    background-image: url('../images/banner/desk_above_alt_large.jpg');
+    background-position: center center;
+  }
+
+  @include MQ(L) {
+    background-attachment: fixed;
+    background-image: url('../images/banner/desk_above_alt_huge.jpg');
+  }
+}
+
+.banner--small {
+  height: 60%;
+}
+
+.banner__overlay {
+  @include rgba-bg($brand-blue, .75);
+
+  color: $brand-white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+
+  > h1 {
+    @include vertical-align();
+
+    margin: 0;
+  }
+}
+
 .articles-list {
   @extend %list-unstyled;
 
@@ -64,15 +105,15 @@
     @extend %push--1;
 
     font-style: italic;
-    margin-top: px-to-rem(50px);
-    margin-bottom: px-to-rem(50px);
+    margin-top: $global-margin * 2;
+    margin-bottom: $global-margin * 2;
   }
 
   .pullquote {
     // <blockquote>
     color: $brand-blue;
     display: block;
-    padding: px-to-rem(10px);
+    padding: $global-padding/2;
 
     &::before {
       color: $brand-grey;
@@ -108,6 +149,7 @@
 }
 
 .permalink {
+  // <a>
   color: $brand-grey--dark;
   font-size: .75em;
   margin-left: .25em;
@@ -118,12 +160,8 @@
 }
 
 .post__footer {
-  margin-bottom: px-to-rem(50px);
-
-  hr {
-    @extend %col--10-of-12;
-    @extend %push--1;
-  }
+  // <footer>
+  margin-bottom: $global-margin;
 }
 
 .post__sidebar {
@@ -135,6 +173,13 @@
     float:right;
   }
 
-  padding-left: $global-padding;
-  padding-right: $global-padding;
+  padding: ($global-padding * 2) $global-padding;
+}
+
+.post__sidebar__heading {
+  // <h1>
+
+  margin: 0;
+
+  @extend %heading--epsilon;
 }

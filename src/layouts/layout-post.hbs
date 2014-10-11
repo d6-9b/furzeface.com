@@ -8,6 +8,7 @@ title: Layout Post
 
 {{>banner}}
 
+{{#if_block "post-content"}}
 <main id="main" class="main main--post" role="main">
 
   <article id="{{slugify title}}" class="post">
@@ -18,20 +19,22 @@ title: Layout Post
     </blockquote>
     {{/if_block}}
 
-    {{#if_block "post-content"}}
     {{#block "post-content"}}{{/block}}
-    {{/if_block}}
 
-    {{#if_block "post-tldr"}}
     <footer class="post__footer">
+      {{#if_block "post-tldr"}}
       <h3 id="TLDR">TL;DR</h3>
       {{#block "post-tldr"}}{{/block}}
+      {{/if_block}}
 
       <hr />
-    </footer>
-    {{/if_block}}
 
-    {{>comments}}
+      {{>share}}
+
+      <hr />
+
+      {{>comments}}
+    </footer>
 
   </article>
 
@@ -40,6 +43,7 @@ title: Layout Post
   </aside>
 
 </main>
+{{/if_block}}
 
 {{/content}}
 

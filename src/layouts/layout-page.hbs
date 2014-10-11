@@ -6,17 +6,19 @@ title: Layout Page
 
 {{#content "master-body"}}
 
+{{#if_block "page-header"}}
+{{#block "page-header"}}{{/block}}
+{{/if_block}}
+
+{{#if_block "page-content"}}
 <main id="main" class="main" role="main">
 
   <article id="{{slugify title}}" class="page-content">
-
-    {{#if_block "page-content"}}
-      {{#block "page-content"}}{{/block}}
-    {{/if_block}}
-
+    {{#block "page-content"}}{{/block}}
   </article>
 
 </main>
+{{/if_block}}
 
 {{/content}}
 
