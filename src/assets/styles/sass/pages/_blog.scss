@@ -24,7 +24,6 @@
   }
 }
 
-
 .banner--small {
   height: 60%;
 }
@@ -46,14 +45,6 @@
     margin: 0;
   }
 }
-
-// @include MQ(S) {
-//   display: none;
-// }
-
-// @include MQ(M) {
-
-// }
 
 .articles-list {
   @extend %list-unstyled;
@@ -158,6 +149,7 @@
 }
 
 .permalink {
+  // <a>
   color: $brand-grey--dark;
   font-size: .75em;
   margin-left: .25em;
@@ -168,11 +160,22 @@
 }
 
 .post__footer {
-  margin-bottom: px-to-rem(50px);
+  // <footer>
+  margin-bottom: $global-margin;
+}
 
-  hr {
-    @extend %col--10-of-12;
-    @extend %push--1;
+.post__share {
+  // <div>
+  > a {
+    &::after {
+      @extend %icon-font;
+
+      // External icon
+      content: '\e600';
+      display: inline;
+      font-size: .75em;
+      margin-left: .5em;
+    }
   }
 }
 

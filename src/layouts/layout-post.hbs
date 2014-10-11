@@ -21,16 +21,20 @@ title: Layout Post
 
     {{#block "post-content"}}{{/block}}
 
-    {{#if_block "post-tldr"}}
     <footer class="post__footer">
+      {{#if_block "post-tldr"}}
       <h3 id="TLDR">TL;DR</h3>
       {{#block "post-tldr"}}{{/block}}
+      {{/if_block}}
 
       <hr />
-    </footer>
-    {{/if_block}}
 
-    {{>comments}}
+      {{>share-this}}
+
+      <hr />
+
+      {{>comments}}
+    </footer>
 
   </article>
 

@@ -12,7 +12,7 @@
   border: 0;
   border-bottom: 2px solid $dark_background_color;
   border-radius: 2px;
-  color: $brand-white; //@TODO contrast this
+  color: $brand-white;
   cursor: pointer;
   display: inline-block;
   font-size: .75rem;
@@ -28,7 +28,7 @@
   &:focus, {
     background: $dark_background_color;
     border-bottom-color: darken($dark_background_color, 10);
-    color: $brand-white; //@TODO contrast this
+    color: $brand-white;
     transform: translate(0, -0.15rem);
   }
 }
