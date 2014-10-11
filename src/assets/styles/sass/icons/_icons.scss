@@ -26,10 +26,14 @@
   text-transform: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &::after {
+    margin-left: .1em;
+  }
 }
 
 .icon-external {
-  &::before {
+  &::after {
     @extend %icon-font;
 
     content: '\e600';
