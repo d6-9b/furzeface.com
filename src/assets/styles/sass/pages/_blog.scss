@@ -176,10 +176,13 @@
   padding: ($global-padding * 2) $global-padding;
 }
 
-.post__sidebar__heading {
+
+.post__sidebar__heading,
+.post__sidebar h4 {
   // <h1>
-
-  margin: 0;
-
   @extend %heading--epsilon;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
 }
