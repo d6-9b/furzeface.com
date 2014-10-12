@@ -30,6 +30,41 @@
         return slug;
       },
       /**
+      * Locks <html> from scrolling when an overlay is open.
+      * @function lockScroll
+      * @memberof Utilities
+      */
+      lockScroll: function () {
+        var self = this;
+        self.unlockScroll();
+        self.storedScrollPosition = ff.settings.$window.scrollTop();
+
+        self.lockTimeout = setTimeout( function () {
+          // add lock class
+          ff.settings.$html.addClass('scroll-locked');
+          ff.settings.$body.css({
+            'top': self.storedScrollPosition * -1
+          });
+
+          clearTimeout(self.lockTimeout);
+        }, 10);
+      },
+      /**
+      * Unlocks <html> for scrolling after an overlay has closed.
+      * @function unlockScroll
+      * @memberof Utilities
+      */
+      unlockScroll: function () {
+        var self = this;
+        self.ff.settings.$html.removeClass('scroll-locked');
+        ff.settings.$body.removeAttr('style');
+
+        if (self.storedScrollPosition) {
+          ff.settings.$htmlbody.scrollTop(self.storedScrollPosition);
+          self.storedScrollPosition = null;
+        }
+      },
+      /**
       * Gets parameters from a query string.
       * @function getUrlParams
       * @memberof Utilities

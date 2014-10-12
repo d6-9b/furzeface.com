@@ -295,3 +295,16 @@ sub {
  */
  li {
  }
+
+/**
+ * Lock scroll.
+ *
+ * @group base
+ *
+ * @since 1.1.0
+ * @author Daniel Furze
+ */
+ .scroll-locked {
+  // <html>
+  overflow: hidden;
+}

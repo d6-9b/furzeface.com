@@ -29,7 +29,7 @@
 }
 
 .banner__overlay {
-  @include rgba-bg($brand-blue, .75);
+  @include rgba-bg();
 
   color: $brand-white;
   position: absolute;
