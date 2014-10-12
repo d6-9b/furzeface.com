@@ -56,7 +56,7 @@
       setUrlParams: function () {
         var self = this;
 
-        self.ff.settings.urlParams = self.getUrlParams(window.location.search);
+        self.ff.settings.urlParams = self.getUrlParams();
       },
       /**
       * Safer and enhanced console.log()
