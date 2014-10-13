@@ -2,8 +2,7 @@
 pageClass: page-post
 title: Yeoman ain’t scary
 category: Tutorials
-pubDate: 12th Oct, 2014
-published: false
+pubDate: 14th Oct, 2014
 tags:
 - front-end-aint-scary
 - yeoman
@@ -18,12 +17,12 @@ Another post in the “Ain’t Scary” series, this post introduces Yeoman, the
 
 {{#content "post-content"}}
 <h2>Yo man!</h2>
-<p>I was first introduced to <a href="http://yeoman.io" rel="external">Yeoman</a> by <a href="http://addyosmani.com/" rel="external">Mr. Addy Osmani</a> at London JS conf last year in his <a href="http://webcomponents2014.appspot.com" rel="external">Web Components Can Do That?!</a> talk.</p>
+<p>I was first introduced to <a href="http://yeoman.io" rel="external">Yeoman</a> by <a href="http://addyosmani.com/" rel="external">Mr. Addy Osmani</a> at London JS Conf last year in his <a href="http://webcomponents2014.appspot.com" rel="external">Web Components Can Do That?!</a> talk.</p>
 <p>As I looked further into Yeoman, I could see the use cases and trying it out with generators for <a href="https://github.com/h5bp/generator-h5bp" rel="external">HTML5 Boilerplate</a> and <a href="https://github.com/yeoman/generator-angular" rel="external">Angular</a> were pretty cool.</p>
 
 <figure>
   <img src="{{assetsUrl}}/{{images}}/blog/yeoman.png" alt="Yeoman logo" />
-  <figcaption>Yeoman's a friendly guy.</figcaption>
+  <figcaption>Yeoman’s a friendly guy.</figcaption>
 </figure>
 
 <p>It seemed quite daunting - <strong>scary</strong>, if you will, to write my own generator to scaffold a basic project but I gave it a good go again recently and picked up some tips along the way to share.</p>
@@ -46,43 +45,128 @@ Another post in the “Ain’t Scary” series, this post introduces Yeoman, the
   <figcaption>Yo Dawg, I heard you like generators</figcaption>
 </figure>
 
-<p>You’ll then be asked a series of questions and will end up with a basic directory structure - something like this:</p>
+<p>You’ll then be asked a series of questions to kick off your generator setup and will end up with a basic directory structure and a few files - something like this:</p>
 
-<p class="todo">@todo: this</p>
+<pre>
+  <code>
+- app
+  - index.js
+- templates
+  - _package.json
+- test
+  - test-app.js
+- package.json
+- README.md
+  </code>
+</pre>
 
-<h3>Naming conventions</h3>
-<p>Yeoman conventions dictate that your npm package (when it gets published) follows the naming convention of <code class="inline">generator-yourGenerator</code>.</p>
+<aside>
+  <h3>Naming conventions</h3>
+  <p>Yeoman conventions dictate that your npm package (when it gets published) follows the naming convention of <code class="inline">generator-yourGenerator</code>, so pick a nice unique name when setting yours up.</p>
+</aside>
+
+<hr>
 
 <h3>Setting up your templates</h3>
 <p>Next what I do is set up additional project meta files to be copied over when you use the generator - these have to reside in the <code class="inline">/app</code> directory.</p>
 
-<p>I'll start with a <code class="inline">.gitignore</code>, <code class="inline">.editorconfig</code>, <code class="inline">yourProject.sublime-project</code> file along with a <code class="inline">README.md</code> for the project and optionally (more on optionally later) a <code class="inline">.travis.yml</code> config for the CI build process.</p>
+<p>I’ll start with a <code class="inline">.gitignore</code>, <code class="inline">.editorconfig</code>, <code class="inline">yourProject.sublime-project</code> file along with a <code class="inline">README.md</code> for the project and optionally (more on <em>optionally</em> later) a <code class="inline">.travis.yml</code> config for the CI build process.</p>
 
-<h4 class="heading--epsilon">A sample <code class="inline">bower.json</code></h4>
+<p>Next up I’ll give my generator some buddys - Grunt and <a href="/blog/bower-aint-scary" title="Read my post for a short introduction to Bower" rel="archives">Bower</a> play pretty nicely with Yeoman!</p>
 
-<p>Furthermore I'll create a base set of dependencies with a <code class="inline">bower.json</code> and <code class="inline">.bowerrc</code> files. <small>(See <a href="http://daniel.furzeface.com/blog/bower-aint-scary" rel="archives">my post on Bower</a> for a nice intro to this).</small></p>
+<h3>A sample <code class="inline">bower.json</code></h3>
+<p>Furthermore I’ll create a base set of dependencies with a <code class="inline">bower.json</code> file.</p>
 <div data-gist="ed4cabb01069a9410375"></div>
+<p class="tip">See <a href="http://daniel.furzeface.com/blog/bower-aint-scary" title="Read my post for a short introduction to Bower" rel="archives">my post on Bower</a> for a nice intro to this kinda thing.</p>
 
+<h3>A sample <code class="inline">Gruntfile.js</code></h3>
+<p>Lastly in the setup stage I’ll add in a sample <code class="inline">Gruntfile.js</code> from one of my other projects, stripped back to a more generic reusable implementation.</p>
+<div data-gist="fb5c12caa05e3ffe15a2"></div>
 
-<h4 class="heading--epsilon">A sample <code class="inline">Gruntfile.js</code></h4>
-<p>Lastly in the set up stage I'll add in a sample <code class="inline">Gruntfile.js</code> from one of my other projects, stripped back to a more generic reusable implementation.</p>
+<h3>Copying your templates</h3>
+<p>The first bit of real Yeoman magic is to copy over your template files.</p>
+<p>If you’ve used the <em>generator-generator</em> you’ll have an <code class="inline">index.js</code> in which you’ll find two functions named <code class="inline">writing.app()</code> or <code class="inline">writing.projectfiles()</code> where you can use <code class="inline">this.src.copy()</code> to copy over the files you added to <code class="inline">templates</code> and <code class="inline">this.dest.mkdir()</code> to create directories for them to reside in.</p>
 
-{{!-- <div data-gist="ed4cabb01069a9410375"></div> --}}
-<p class="todo">@todo: [gist of Gruntfile]</p>
+<pre>
+  <code>
+writing: {
+  app: function () {
+    this.dest.mkdir('app');
+    this.dest.mkdir('app/templates');
 
-<h3>Copying over your templates</h3>
-<p class="todo">@todo: [section on index.js and copying over templates - this.src.copy]</p>
+    this.src.copy('_package.json', 'package.json');
+    this.src.copy('_bower.json', 'bower.json');
+  },
+
+  projectfiles: function () {
+    this.src.copy('editorconfig', '.editorconfig');
+    this.src.copy('jshintrc', '.jshintrc');
+  }
+}
+</code>
+</pre>
 
 <h2>Scaffolding</h2>
-<p>Now the real fun begins!</p>
-<p>You’ll notice Lo-Dash style delimiters in the templates. These are to be used when running the generator to allow a user to pass options via the command line and scaffold the files with the input. This is where the true power of the Yeoman generator happens!
-</p>
+<p>Now the real fun begins! {{emoji 'guardsman'}}</p>
+<p>You’ll notice Lo-Dash style delimiters in the templates <code class="inline">&lt;%= %&gt;</code>. These are to be used when running the generator to allow a user to pass options via the command line and scaffold the files with the input. This is where the true power of the Yeoman generator happens!</p>
+<p class="tip"><strong>Tip: </strong> In your Gruntfile you may alraedy be using <code class="inline">&lt;%= %&gt;</code> style delimeters to utilise a config object for tasks. You can either use <a href="http://gruntjs.com/api/grunt.template#grunt.template.setdelimiters" rel="external"> <code class="inline">grunt.template.setdelimiters()</code></a> to change these or for a quicker solution, escape them in the file to be scaffolded like so: <code class="inline">&lt;%%= &hellip; %&gt;</code>.</p>
+<p>Still in your <code class="inline">index.js</code> you’ll see a function called <code class="inline">prompting</code>.</p>
+<p>In here you write command line prompts for someone using your generator <small>(probably you)</small> to respond to, dictating the scaffolding and setup of the project.</p>
+<p>When these questions are asked the responses are passed through to your generator and are accessible in the templates, for use with those Lo-Dash delimeters we saw before.</p>
+<p>Here’s a couple of examples of what I use these prompts for:</p>
+<ul>
+  <li>What’s your project name? &rarr; scaffold <code class="inline">README.md</code> with project name</li>
+  <li>Do you need jQuery? &rarr; <em>scaffold <code class="inline">bower.json</code> with jQuery</em></li>
+  <li>Where would you like Bower components installed to? &rarr; scaffold <code class="inline">.bowerrc</code> with destination</li>
+  <li>Will you have a Travis CI build? &rarr; add <code class="inline">.travis.yml</code> copy to your <code class="inline">index.js</code></li>
+</ul>
+
+<h2>Voila</h2>
+<p>And there you have your first basic Yeoman generator!</p>
+
+<p>To test it out:</p>
+<ol>
+  <li>Link your generator locally:
+    <code>
+      $ npm link
+    </code>
+  </li>
+
+  <li>Create and enter a new directory:
+    <code>
+      $ cd ~/Desktop/ && mkdir yourProject && cd yourProject
+    </code>
+  </li>
+  <li>Fire away!
+    <code>
+      $ yo generatorName
+    </code>
+  </li>
+</ol>
+
+<h2>Publishing your generator</h2>
+<p>The last step is to publish your generator when you’ve scaffolded a few more files and directories.</p>
+
+<h3>Prerequisites</h3>
+<p>All you need, if you’ve not set up an NPM user on your machine is to do so by entering the following command and following the instructions:</p>
+<code>
+  $ npm adduser
+</code>
+
+<p>When done, publish it:</p>
+<code>
+  $ npm publish
+</code>
+
+<p>Simple as that! <strong>And it wasn’t that scary</strong>, right? {{emoji 'shipit'}}</p>
 
 {{/content}}
 
 
 {{#content "post-tldr"}}
-
+<p>Follow these simple instructions to create your first <a href="http://yeoman.io" rel="external">Yeoman generator</a> and scaffold a simple project.</p>
+<p>See an example of one of my generators, <a href="https://github.com/furzeface/generator-furzeface" rel="external"><code class="inline">generator-furzeface</code></a> on GitHub.</p>
+<p>For more short introductions to the latest front end technologies, follow the “Ain’t Scary” series on <a href="/blog" rel="archives">my blog</a>.</p>
 {{/content}}
 
 {{/extend}}
