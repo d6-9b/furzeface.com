@@ -20,8 +20,13 @@
   @extend %push--1;
   @extend %clearfix;
 
-  padding-left: $global-padding;
-  padding-right: $global-padding;
+  padding-right: $global-padding / 2;
+  padding-left: $global-padding / 2;
+
+  @include MQ(S) {
+    padding-right: $global-padding;
+    padding-left: $global-padding;
+  }
 }
 
 /**
@@ -36,8 +41,13 @@
   @extend %col--6-of-12;
   @extend %push--3;
 
-  padding-left: $global-padding;
-  padding-right: $global-padding;
+  padding-left: $global-padding / 2;
+  padding-right: $global-padding / 2;
+
+  @include MQ(S) {
+    padding-left: $global-padding;
+    padding-right: $global-padding;
+  }
 }
 
 /**
@@ -48,6 +58,6 @@
  * @since 1.0.0
  * @author Daniel Furze
  */
-.inner {
+ .inner {
   @extend %inner;
 }
