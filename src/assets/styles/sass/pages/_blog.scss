@@ -77,6 +77,11 @@
 }
 
 // Blog post
+.main--post {
+  // <main>
+  @extend %inner;
+}
+
 .post {
   // <article>
   @extend %col--8-of-12;
