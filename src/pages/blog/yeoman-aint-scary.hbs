@@ -2,7 +2,7 @@
 pageClass: page-post
 title: Yeoman ain’t scary
 category: Tutorials
-pubDate: 14th Oct, 2014
+pubDate: 13th Oct, 2014
 published: true
 tags:
 - front-end-aint-scary
@@ -77,7 +77,7 @@ Another post in the “Ain’t Scary” series, this post introduces Yeoman, the
 <h3>A sample <code class="inline">bower.json</code></h3>
 <p>Furthermore I’ll create a base set of dependencies with a <code class="inline">bower.json</code> file.</p>
 <div data-gist="ed4cabb01069a9410375"></div>
-<p class="tip">See <a href="http://daniel.furzeface.com/blog/bower-aint-scary" title="Read my post for a short introduction to Bower" rel="archives">my post on Bower</a> for a nice intro to this kinda thing.</p>
+<aside class="tip">See <a href="http://daniel.furzeface.com/blog/bower-aint-scary" title="Read my post for a short introduction to Bower" rel="archives">my post on Bower</a> for a nice intro to this kinda thing.</aside>
 
 <h3>A sample <code class="inline">Gruntfile.js</code></h3>
 <p>Lastly in the setup stage I’ll add in a sample <code class="inline">Gruntfile.js</code> from one of my other projects, stripped back to a more generic reusable implementation.</p>
@@ -109,7 +109,7 @@ writing: {
 <h2>Scaffolding</h2>
 <p>Now the real fun begins! {{emoji 'guardsman'}}</p>
 <p>You’ll notice Lo-Dash style delimiters in the templates <code class="inline">&lt;%= %&gt;</code>. These are to be used when running the generator to allow a user to pass options via the command line and scaffold the files with the input. This is where the true power of the Yeoman generator happens!</p>
-<p class="tip"><strong>Tip: </strong> In your Gruntfile you may alraedy be using <code class="inline">&lt;%= %&gt;</code> style delimeters to utilise a config object for tasks. You can either use <a href="http://gruntjs.com/api/grunt.template#grunt.template.setdelimiters" rel="external"> <code class="inline">grunt.template.setdelimiters()</code></a> to change these or for a quicker solution, escape them in the file to be scaffolded like so: <code class="inline">&lt;%%= &hellip; %&gt;</code>.</p>
+<aside class="tip"><strong>Tip: </strong> In your Gruntfile you may alraedy be using <code class="inline">&lt;%= %&gt;</code> style delimeters to utilise a config object for tasks. You can either use <a href="http://gruntjs.com/api/grunt.template#grunt.template.setdelimiters" rel="external"> <code class="inline">grunt.template.setdelimiters()</code></a> to change these or for a quicker solution, escape them in the file to be scaffolded like so: <code class="inline">&lt;%%= &hellip; %&gt;</code>.</aside>
 <p>Still in your <code class="inline">index.js</code> you’ll see a function called <code class="inline">prompting</code>.</p>
 <p>In here you write command line prompts for someone using your generator <small>(probably you)</small> to respond to, dictating the scaffolding and setup of the project.</p>
 <p>When these questions are asked the responses are passed through to your generator and are accessible in the templates, for use with those Lo-Dash delimeters we saw before.</p>
@@ -159,7 +159,6 @@ writing: {
 </code>
 
 <p>Simple as that! <strong>And it wasn’t that scary</strong>, right? {{emoji 'shipit'}}</p>
-
 {{/content}}
 
 
