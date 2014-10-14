@@ -77,12 +77,6 @@
 }
 
 // Blog post
-.main--post {
-  // <main>
-  @extend %inner;
-
-}
-
 .post {
   // <article>
   @extend %col--8-of-12;
@@ -93,25 +87,23 @@
 
   // hyphens: auto;
   hyphens: manual;
-  padding-left: $global-padding;
-  padding-right: $global-padding;
 
   h2 {
     border-bottom: 1px solid $brand-grey--light;
   }
 
   blockquote {
-      @extend %col--10-of-12;
-      @extend %push--1;
+    @extend %col--10-of-12;
+    @extend %push--1;
 
-      margin: 0;
+    margin: 0;
 
-      font-style: italic;
-      margin-top: $global-margin * 2;
-      margin-bottom: $global-margin * 2;
-    }
+    font-style: italic;
+    margin-top: $global-margin * 2;
+    margin-bottom: $global-margin * 2;
+  }
 
-    .pullquote {
+  .pullquote {
     // <blockquote>
     color: $brand-blue;
     display: block;
@@ -175,7 +167,16 @@
     float:right;
   }
 
-  padding: ($global-padding * 2) $global-padding;
+  padding-top: $global-padding * 2;
+  padding-right: $global-padding / 2;
+  padding-bottom: $global-padding * 2;
+  padding-left: $global-padding / 2;
+
+  @include MQ(S) {
+    padding-right: $global-padding;
+    padding-left: $global-padding;
+  }
+
 }
 
 .post__sidebar__heading,
