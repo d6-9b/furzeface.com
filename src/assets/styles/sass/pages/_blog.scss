@@ -178,7 +178,6 @@
   padding: ($global-padding * 2) $global-padding;
 }
 
-
 .post__sidebar__heading,
 .post__sidebar h4 {
   // <h1>
@@ -187,4 +186,11 @@
   &:first-of-type {
     margin-top: 0;
   }
+}
+
+.tip {
+  // <aside>
+  font-style: italic;
+  padding: 0 $global-padding;
+  margin: $global-margin 0;
 }
