@@ -12,7 +12,7 @@
     */
     menu: {
      ff: null,
-     $toggleMenu: null,
+     fadeDuration: 100,
      menuInClass: 'menu-in',
      setGlobal: function (ff) {
       var self = this;
@@ -26,6 +26,10 @@
     init: function () {
       var self = this;
 
+      self.$openMenu = $('#menu-open');
+      self.$closeMenu = $('#menu-close');
+      self.$menuOverlay = $('#menu-overlay');
+
       self.bindEvents();
     },
     /**
@@ -36,16 +40,16 @@
     bindEvents: function () {
       var self = this;
 
-      self.$toggleMenu = $('.toggle-menu');
-
-      self.$toggleMenu.on('click.menu', function (e) {
+      self.$openMenu.on('click', function (e) {
         e.preventDefault();
 
-        if (self.ff.settings.$html.hasClass(self.menuInClass)) {
-          self.closeMenu();
-        } else {
-          self.openMenu();
-        }
+        self.openMenu();
+      });
+
+      self.$closeMenu.on('click', function (e) {
+        e.preventDefault();
+
+        self.closeMenu();
       });
     },
     /**
@@ -56,7 +60,8 @@
     openMenu: function () {
       var self = this;
 
-      self.ff.settings.$html.addClass(self.menuInClass).removeClass(self.ff.search.searchInClass);
+      self.$menuOverlay.fadeIn(self.fadeDuration);
+      self.ff.utilities.lockScroll();
     },
     /**
     * Removes CSS class from <html>, closing menu.
@@ -66,7 +71,8 @@
     closeMenu: function () {
       var self = this;
 
-      self.ff.settings.$html.removeClass(self.menuInClass);
+      self.$menuOverlay.fadeOut(self.fadeDuration);
+      self.ff.utilities.unlockScroll();
     }
   }
 });

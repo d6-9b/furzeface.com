@@ -16,3 +16,20 @@ published: false
     {{/each}}
   </ul>
 </nav>
+
+<nav id="menu-overlay" class="menu-overlay">
+  <button id="menu-close" class="menu-close icon-menu-close">{{!-- icon --}}</button>
+
+  <ul class="menu-site__list">
+    {{!-- Loops navigation data source --}}
+    {{#each navigation}}
+    <li class="menu-site__item">
+      <a href="{{url}}" class="menu-site__link {{#if class}}{{class}}{{/if}}">
+        {{title}}
+      </a>
+    </li>
+    {{/each}}
+  </ul>
+</nav>
+
+<button id="menu-open" class="menu-open icon-menu-open">{{!-- icon --}}</button>

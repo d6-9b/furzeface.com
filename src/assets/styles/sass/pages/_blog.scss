@@ -29,7 +29,7 @@
 }
 
 .banner__overlay {
-  @include rgba-bg($brand-blue, .75);
+  @include rgba-bg();
 
   color: $brand-white;
   position: absolute;
@@ -80,7 +80,6 @@
 .main--post {
   // <main>
   @extend %inner;
-
 }
 
 .post {
@@ -93,8 +92,6 @@
 
   // hyphens: auto;
   hyphens: manual;
-  padding-left: $global-padding;
-  padding-right: $global-padding;
 
   h2 {
     border-bottom: 1px solid $brand-grey--light;
@@ -103,6 +100,8 @@
   blockquote {
     @extend %col--10-of-12;
     @extend %push--1;
+
+    margin: 0;
 
     font-style: italic;
     margin-top: $global-margin * 2;
@@ -173,7 +172,16 @@
     float:right;
   }
 
-  padding: ($global-padding * 2) $global-padding;
+  padding-top: $global-padding * 2;
+  padding-right: $global-padding / 2;
+  padding-bottom: $global-padding * 2;
+  padding-left: $global-padding / 2;
+
+  @include MQ(S) {
+    padding-right: $global-padding;
+    padding-left: $global-padding;
+  }
+
 }
 
 .post__sidebar__heading,

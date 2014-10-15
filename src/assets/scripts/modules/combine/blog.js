@@ -12,7 +12,6 @@
      */
      blog: {
       ff: null,
-      $postContent: null,
       setGlobal: function (ff) {
         var self = this;
 
@@ -28,7 +27,7 @@
 
         self.$minsToRead = $('#mins_to_read');
         self.$gists = $('[data-gist]');
-        self.$postContent = $('.post');
+        self.$postContent = $('#post');
         self.$blogHeadings = self.$postContent.find('h2, h3'); // Using .find() is quicker than child CSS selectors y’know!
 
         self.minsToRead();
@@ -63,6 +62,11 @@
       appendGists: function () {
         var self = this;
 
+        // Don't want to do it if no Gists
+        if (!self.$gists.length) {
+          return false;
+        }
+
         self.$gists.each(function () {
           var $element = $(this),
           id = $element.attr('data-gist');
@@ -95,20 +99,25 @@
       headingsPermalink: function () {
         var self = this;
 
-        // Loop headings on blog post.
+        // Don't want to do it if no headings
+        if (!self.$blogHeadings.length) {
+          return false;
+        }
+
+        // Loop headings on blog post
         $.each(self.$blogHeadings, function () {
           var heading = $(this),
           id = heading.attr('id'),
           text = heading.text(),
           permalink;
 
-          // If there isn't already an id, create one from content.
+          // If there isn't already an id, create one from content
           if(!id) {
             id = self.ff.utilities.slugify(text);
             heading.attr('id', id);
           }
 
-          // Create and append permalink to heading.
+          // Create and append permalink to heading
           permalink = '<a href="#' + id + '" class="icon-internal permalink" title="Permalink for this section"></a>';
           heading.append(permalink);
         });
@@ -119,6 +128,9 @@ $.subscribe('setGlobal', function (event, ff) {
   ff.blog.setGlobal(ff);
 });
 $.subscribe('pageReady', function () {
-  ff.blog.init();
+  // Initialise on blog posts
+  if (ff.settings.$body.hasClass('page-post')) {
+    ff.blog.init();
+  }
 });
 }(jQuery));

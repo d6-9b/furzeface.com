@@ -71,3 +71,19 @@
     content: '\e604';
   }
 }
+
+.icon-menu-open {
+  &::after {
+    @extend %icon-font;
+
+    content: '\e605';
+  }
+}
+
+.icon-menu-close {
+  &::after {
+    @extend %icon-font;
+
+    content: '\e606';
+  }
+}

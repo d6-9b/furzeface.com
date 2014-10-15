@@ -1,0 +1,52 @@
+---
+pageClass: page-post
+title: Grunt ain’t scary
+category: Tutorials
+pubDate: 43th NEVER, 4102
+tags:
+- front-end-aint-scary
+- grunt
+---
+
+{{#extend "layout-post"}}
+
+{{#content "post-summary"}}
+<p>Further lessons in overcoming the learning curve on new front end technologies, this post focuses on Grunt - the JavaScript task runner.</p>
+{{/content}}
+
+
+{{#content "post-content"}}
+<h2>Before Grunt</h2>
+<p>Before I started using <a href="http://gruntjs.com" rel="external">Grunt</a> for personal projects my only real experience of a build process was using NAnt on a build server to concatenate and minify files for production deploys - using all unminified seperate CSS and JavaScript files locally with no real front end build.</p>
+<p>Retrospectively this was a little messy and didn’t allow us too much control over what our build process was doing.</p>
+<p>Enter Grunt&hellip;</p>
+
+<h2>Grunt is&hellip;</h2>
+<p>A task runner, helping you automate the repetitive tasks in a front end build process - which in my opinion leads to vastly reduced human error and speeds up workflow.</p>
+<p>It can be used for a myriad of tasks, with over 3,638{{#note 1}}{{/note}} plugins currently written for it.</p>
+<small>{{#note_ref 1}}{{/note_ref}} <a href="http://gruntjs.com/plugins" rel="external">correct</a> at the time of writing.</small>
+
+<h2>Prerequisites</h2>
+<ol>
+  <li><a href="http://nodejs.org" rel="external">NodeJS</a>. That is all.</li>
+</ol>
+
+<h2>Let’s get started</h2>
+<p>First, install Grunt and the Grunt command line tools globally.</p>
+<code>
+  $ npm install grunt grunt-cli -g
+</code>
+
+<p>Next create a directory for your project and enter it.</p>
+<code>
+  $ mkdir test && cd test
+</code>
+
+{{/content}}
+
+
+{{#content "post-tldr"}}
+<p>Stuff and ting</p>
+{{/content}}
+
+{{/extend}}

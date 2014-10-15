@@ -3,9 +3,9 @@ pageClass: page-post
 title: Yeoman ain’t scary
 category: Tutorials
 pubDate: 13th Oct, 2014
-published: true
 tags:
 - front-end-aint-scary
+- yeoman
 ---
 
 {{#extend "layout-post"}}
@@ -21,7 +21,7 @@ Another post in the “Ain’t Scary” series, this post introduces Yeoman, the
 <p>As I looked further into Yeoman, I could see the use cases and trying it out with generators for <a href="https://github.com/h5bp/generator-h5bp" rel="external">HTML5 Boilerplate</a> and <a href="https://github.com/yeoman/generator-angular" rel="external">Angular</a> were pretty cool.</p>
 
 <figure>
-  <img src="{{assetsUrl}}/{{images}}/blog/yeoman.png" alt="Yeoman logo" />
+  <img src="{{assetsUrl}}/{{images}}/placeholder.png" data-src="{{assetsUrl}}/{{images}}/blog/yeoman.png" alt="Yeoman logo" />
   <figcaption>Yeoman’s a friendly guy.</figcaption>
 </figure>
 
@@ -41,7 +41,7 @@ Another post in the “Ain’t Scary” series, this post introduces Yeoman, the
 </code>
 
 <figure>
-  <img src="{{assetsUrl}}/{{images}}/blog/yo_dawg_generators.jpg" alt="Yo Dawg, I heard you like generators meme">
+  <img src="{{assetsUrl}}/{{images}}/placeholder.png" data-src="{{assetsUrl}}/{{images}}/blog/yo_dawg_generators.jpg" alt="Yo Dawg, I heard you like generators meme">
   <figcaption>Yo Dawg, I heard you like generators</figcaption>
 </figure>
 
@@ -109,8 +109,8 @@ writing: {
 <h2>Scaffolding</h2>
 <p>Now the real fun begins! {{emoji 'guardsman'}}</p>
 <p>You’ll notice Lo-Dash style delimiters in the templates <code class="inline">&lt;%= %&gt;</code>. These are to be used when running the generator to allow a user to pass options via the command line and scaffold the files with the input. This is where the true power of the Yeoman generator happens!</p>
-<aside class="tip"><strong>Tip: </strong> In your Gruntfile you may alraedy be using <code class="inline">&lt;%= %&gt;</code> style delimeters to utilise a config object for tasks. You can either use <a href="http://gruntjs.com/api/grunt.template#grunt.template.setdelimiters" rel="external"> <code class="inline">grunt.template.setdelimiters()</code></a> to change these or for a quicker solution, escape them in the file to be scaffolded like so: <code class="inline">&lt;%%= &hellip; %&gt;</code>.</aside>
-<p>Still in your <code class="inline">index.js</code> you’ll see a function called <code class="inline">prompting</code>.</p>
+<aside class="tip"><strong>Tip: </strong> In your Gruntfile you may already be using <code class="inline">&lt;%= %&gt;</code> style delimeters to utilise a config object for tasks. You can either use <a href="http://gruntjs.com/api/grunt.template#grunt.template.setdelimiters" rel="external"> <code class="inline">grunt.template.setdelimiters()</code></a> to change these or for a quicker solution, escape them in the file to be scaffolded like so: <code class="inline">&lt;%%= &hellip; %&gt;</code>.</aside>
+<p>Still in your <code class="inline">index.js</code> you’ll see a function called <code class="inline">prompting()</code>.</p>
 <p>In here you write command line prompts for someone using your generator <small>(probably you)</small> to respond to, dictating the scaffolding and setup of the project.</p>
 <p>When these questions are asked the responses are passed through to your generator and are accessible in the templates, for use with those Lo-Dash delimeters we saw before.</p>
 <p>Here’s a couple of examples of what I use these prompts for:</p>
