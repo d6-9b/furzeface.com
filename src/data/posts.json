@@ -1,11 +1,5 @@
 [
   {
-    "title": "Grunt ain’t scary",
-    "slug": "grunt-aint-scary",
-    "pubDate": "43th NEVER 4102",
-    "summary": "Further lessons in overcoming the learning curve on new front end technologies, this post focuses on Grunt - the JavaScript task runner."
-  },
-  {
     "title": "Combine media queries with Gulp",
     "slug": "gulp-combine-media-queries",
     "pubDate": "14th Oct 2014",
