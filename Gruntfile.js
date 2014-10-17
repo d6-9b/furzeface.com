@@ -518,11 +518,19 @@ module.exports = function(grunt) {
     // Production tasks
     sitemap: {
       options: {
-        changefreq: 'weekly',
-        pattern: '**/*.html'
-        // @todo: Can you exclude files from grunt-sitemap?
+        changefreq: 'weekly'
       },
       site: {
+         files: [
+          {
+            expand: true,
+            cwd: '<%= config.dist %>/',
+            src: [
+              '**/*.html',
+              '!docs/**/*.html'
+            ]
+          }
+        ],
         siteRoot: '<%= config.dist %>/'
       }
     },
