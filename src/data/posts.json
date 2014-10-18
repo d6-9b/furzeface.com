@@ -3,7 +3,7 @@
     "title": "BEM up your variables",
     "slug": "BEM-up-your-variables",
     "pubDate": "18th Oct 2014",
-    "summary": "BEM up your variables."
+    "summary": "Taking the concept of BEM - Block, Element, Modifier - and applying it to help with Sass variables in my framework."
   },
   {
     "title": "Combine media queries with Gulp",
