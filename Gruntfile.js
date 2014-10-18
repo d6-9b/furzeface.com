@@ -516,24 +516,28 @@ module.exports = function(grunt) {
 
 
     // Production tasks
-    sitemap: {
-      options: {
-        changefreq: 'weekly'
-      },
+    xml_sitemap: {
       site: {
-         files: [
-          {
-            expand: true,
-            cwd: '<%= config.dist %>/',
-            src: [
-              '**/*.html',
-              '!docs/**/*.html'
-            ]
-          }
-        ],
-        siteRoot: '<%= config.dist %>/'
+        options: {
+          changefreq: 'weekly',
+          dest: '<%= config.dist %>/',
+          fileName: 'sitemap',
+          siteRoot: 'http://daniel.furzeface.com/',
+          priority: '0.5'
+        },
+        files: [
+        {
+          expand: true,
+          cwd: '<%= config.dist %>/',
+          src: [
+          '**/*.html',
+          '!docs/**/*.html'
+          ]
+        }
+        ]
       }
     },
+
 
     humans_txt: {
       options: {
@@ -652,7 +656,7 @@ module.exports = function(grunt) {
     'uglify',
     'htmlmin',
     'humans_txt',
-    'sitemap',
+    'xml_sitemap',
     'clean:production'
   ]);
 
