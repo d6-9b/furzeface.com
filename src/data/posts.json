@@ -1,5 +1,11 @@
 [
   {
+    "title": "BEM up your variables",
+    "slug": "BEM-up-your-variables",
+    "pubDate": "18th Oct 2014",
+    "summary": "BEM up your variables."
+  },
+  {
     "title": "Combine media queries with Gulp",
     "slug": "gulp-combine-media-queries",
     "pubDate": "14th Oct 2014",
