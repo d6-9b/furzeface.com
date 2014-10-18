@@ -1,9 +1,9 @@
 ---
 pageClass: page-post
-title: BEM-up-your-variables
+title: BEM up your variables
 pubDate: 18th Oct, 2014
 category: Work
-published: false
+published: true
 tags:
 - sass
 ---
@@ -11,19 +11,59 @@ tags:
 {{#extend "layout-post"}}
 
 {{#content "post-summary"}}
-BEM up your variables
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos impedit dolor eligendi, excepturi nulla necessitatibus inventore labore blanditiis. Obcaecati ex recusandae incidunt reiciendis vel expedita rerum itaque, impedit. Fugiat, itaque.
+Taking the concept of BEM - Block, Element, Modifier - and applying it to help with Sass variables in my framework.
 {{/content}}
 
 
 {{#content "post-content"}}
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem fugit quas, rerum unde sapiente nobis saepe eveniet animi veniam soluta, repellendus quam corporis doloribus similique aspernatur laudantium facilis deleniti nostrum!</p>
-<code>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur illo sint repudiandae dolores. Alias rerum cum porro ipsum repellendus placeat impedit, neque sequi quo vero id autem voluptate, aspernatur, molestias?</code>
+<p>This came about after a friend of mine had a little look through <a href="{{package.repository.url}}" rel="external">my code</a> whilst helping me with a CSS bug. <a href="http://tristanashley.com" rel="external">Tristan</a> noticed that I took the concept of <abbr title="Block, Element, Modifer">BEM</abbr> a little further by naming my variables with modifiers.</p>
+
+<h2>BEM - an overview</h2>
+<p>Harry Roberts gives a great in-depth <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/" rel="external">overview of BEM</a> but in summary the syntax is as follows:</p>
+<pre>
+  <code>
+    .block { }
+    .block__element { }
+    .block--modifier { }
+  </code>
+</pre>
+<p>Where <code class="inline">.block</code> is the main component, a selector denoted with <code class="inline">__</code> is a child component related to the parent, and a selector denoted with <code class="inline">--</code> is a modification of the element.</p>
+<p>This shows in the CSS and in markup that the elements are related without the CSS having to be overqualified/nested as much - creating cleaner, more reusable selectors.</p>
+<p>A <small>(somewhat{{emoji 'christmas_tree'}})</small> practical example:</p>
+<pre>
+  <code>
+    .site-logo { } /* A standard logo component */
+    .site-logo__link { } /* The link with a logo component */
+    .site-logo--christmas { } /* A modified, special edition logo component */
+  </code>
+</pre>
+
+<h2>An example in Sass variables:</h2>
+<p>Here I define the blue you’ll see around the site as <code class="inline">#2A2C9F</code> and in order to use lighter and darker shades I use the Sass functions <code class="inline">lighten()</code> and <code class="inline">darken()</code>.</p>
+
+<pre>
+  <code>
+   $brand-blue: #2A2C9F;
+   $brand-blue--light: lighten($brand-blue, 10);
+   $brand-blue--dark: darken($brand-blue, 10);
+ </code>
+</pre>
+
+<p>I do this to achieve a level of consistency between shades and so that the color value will only need to be changed in a single place if required.</p>
+<p>The advantage of naming them in this way is that I now know of the dependency chain - one of the prominent features of BEM - and I can quickly see other colors will be affected if I change the main brand color.</p>
+<p>This is of course a small example but the beauty of this idea is that it can easily scale to much bigger projects and teams.</p>
+<p>It may be overdoing it a little but it definitely helps me out when maintaining my styles, and I use it a fair bit in the <a href="https://github.com/furzeface/sassface" rel="external">Sass framework</a> I’m in the midst of building.</p>
 {{/content}}
 
 
 {{#content "post-tldr"}}
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, officia blanditiis, esse distinctio rerum ullam voluptas unde quibusdam architecto quo explicabo non laborum labore facere natus nam nulla numquam maiores?</p>
+<p>A tip to help with naming Sass color variables and keeping consistent conventions throughout your code, using the <abbr title="Block, Element, Modifer">BEM</abbr> methodology.</p>
+<p>Resources:</p>
+<ul>
+  <li><a href="http://bem.info/" rel="external">BEM</a></li>
+  <li><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method" rel="external">Sass lighten function</a></li>
+  <li><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method" rel="external">Sass darken function</a></li>
+</ul>
 {{/content}}
 
 {{/extend}}
