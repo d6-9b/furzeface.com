@@ -32,9 +32,9 @@ Taking the concept of BEM - Block, Element, Modifier - and applying it to help w
 <p>A <small>(somewhat{{emoji 'christmas_tree'}})</small> practical example:</p>
 <pre>
   <code>
-    .site-logo { } /* A standard logo component */
-    .site-logo__link { } /* The link with a logo component */
-    .site-logo--christmas { } /* A modified, special edition logo component */
+    .site-logo { } /* Standard logo */
+    .site-logo__link { } /* Link in the logo */
+    .site-logo--christmas { } /* Special edition logo */
   </code>
 </pre>
 
@@ -50,7 +50,13 @@ Taking the concept of BEM - Block, Element, Modifier - and applying it to help w
  </code>
 </pre>
 
-<p>The advantage of naming them in this way is that I now know of the dependency chain - one of the prominent features of BEM - and I can quickly see other colors will be affected if I change the main brand color.</p>
+<p>Advantages of naming them in this way are:</p>
+<ul>
+  <li>I now know of the dependency chain - one of the prominent features of BEM</li>
+  <li>I can quickly see that other colors will be affected if I change the main brand color</li>
+  <li>I know not to modify that color further down in my stylesheets, breaking brand guidelines that may be in place</li>
+</ul>
+
 <p>This is of course a small example but the beauty of this idea is that it can easily scale to much bigger projects and teams.</p>
 <p>It may be overdoing it a little but it definitely helps me out when maintaining my styles, and I use it a fair bit in the <a href="https://github.com/furzeface/sassface" rel="external">Sass framework</a> I’m in the midst of building.</p>
 {{/content}}
