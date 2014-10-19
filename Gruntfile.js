@@ -45,6 +45,7 @@ module.exports = function(grunt) {
       distSassDocs: 'sassdocs',
       mainCss: 'main.css',
       // Misc settings
+      gruntfile: 'Gruntfile.js',
       helpers: 'helpers'
     },
 
@@ -304,17 +305,17 @@ module.exports = function(grunt) {
     clean: {
       // Clean SassFace component after setup
       sassface: [
-      '<%%= config.bower %>/sassface'
+      '<%= config.bower %>/sassface'
       ],
       // Cleans artifacts
       production: [
       '<%= config.dist %>/<%= config.distAssets %>/<%= config.distStyles %>/<%= config.mainCss %>.map'
       ],
       docs: [
-      '<%%= config.dist %>/<%%= config.distDocs %>'
+      '<%= config.dist %>/<%= config.distDocs %>'
       ],
       everything: [
-      '<%%= config.dist %>'
+      '<%= config.dist %>'
       ]
     },
 

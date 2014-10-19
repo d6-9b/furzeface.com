@@ -35,10 +35,10 @@
 
 ## Gruntfile.js
 
--  **todo** `(line 117)` : Reimplement grunt-todo on these files
--  **todo** `(line 618)` : Add resp img task back in
+-  **todo** `(line 118)` : Reimplement grunt-todo on these files
+-  **todo** `(line 622)` : Add resp img task back in
 
 
 * * *
 
-Last generated: Sat Oct 18 2014 11:08:49 by [grunt-todo](https://github.com/leny/grunt-todo).
+Last generated: Sun Oct 19 2014 20:37:03 by [grunt-todo](https://github.com/leny/grunt-todo).
