@@ -150,11 +150,25 @@
 .permalink {
   // <a>
   color: $brand-grey--dark;
+  display: none;
   font-size: .75em;
+  line-height: 1;
   margin-left: .25em;
 
   &:hover {
     text-decoration: none;
+  }
+
+  h2:hover &,
+  h3:hover & {
+    // Show when hovering the parent heading
+    display: inline-block;
+  }
+
+  .touch & {
+    // Class added to <html> by Modernizr
+    // Show for touch screens - without the ability to hover
+    display: inline-block;
   }
 }
 

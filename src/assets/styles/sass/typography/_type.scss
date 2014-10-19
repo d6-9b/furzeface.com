@@ -74,8 +74,8 @@ small,
   }
 
   .touch & {
-    // <html>
-
+    // Class added to <html> by Modernizr
+    // Show for touch screens - without the ability to hover
     &::after {
      border-bottom: none;
      content: '(' attr(title) ')';
