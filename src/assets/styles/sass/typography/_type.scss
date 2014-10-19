@@ -72,4 +72,15 @@ small,
     border-bottom: 1px dotted;
     cursor: pointer;
   }
+
+  .touch & {
+    // <html>
+
+    &::after {
+     border-bottom: none;
+     content: '(' attr(title) ')';
+     font-size: .75em;
+     padding-left: .5em;
+   }
+ }
 }
