@@ -49,14 +49,14 @@ Another post in the “Ain’t Scary” series, this post introduces Yeoman, the
 
 <pre>
   <code>
-- app
-  - index.js
-- templates
-  - _package.json
-- test
-  - test-app.js
-- package.json
-- README.md
+    - app
+    - index.js
+    - templates
+    - _package.json
+    - test
+    - test-app.js
+    - package.json
+    - README.md
   </code>
 </pre>
 
@@ -89,8 +89,8 @@ Another post in the “Ain’t Scary” series, this post introduces Yeoman, the
 
 <pre>
   <code>
-writing: {
-  app: function () {
+    writing: {
+    app: function () {
     this.dest.mkdir('app');
     this.dest.mkdir('app/templates');
 
@@ -99,9 +99,9 @@ writing: {
   },
 
   projectfiles: function () {
-    this.src.copy('editorconfig', '.editorconfig');
-    this.src.copy('jshintrc', '.jshintrc');
-  }
+  this.src.copy('editorconfig', '.editorconfig');
+  this.src.copy('jshintrc', '.jshintrc');
+}
 }
 </code>
 </pre>
@@ -159,6 +159,9 @@ writing: {
 </code>
 
 <p>Simple as that! <strong>And it wasn’t that scary</strong>, right? {{emoji 'shipit'}}</p>
+<figure>
+  <img src="{{assetsUrl}}/{{images}}/blog/yo_generator_furzeface.jpg" alt="A screenshot of my Yeoman generator in action" />
+</figure>
 {{/content}}
 
 
