@@ -117,7 +117,7 @@ module.exports = function(grunt) {
         // '<%= config.src %>/**/*.{js,scss}', // @todo: Reimplement grunt-todo on these files
         '<%= config.src %>/**/*.{hbs,html,txt}',
         '.travis.yml',
-        'Gruntfile.js'
+        '<%= config.gruntfile %>'
       ]
     },
 
@@ -302,17 +302,19 @@ module.exports = function(grunt) {
     },
 
     clean: {
+      // Clean SassFace component after setup
       sassface: [
-        '<%= config.bower %>/sassface'
+      '<%%= config.bower %>/sassface'
       ],
+      // Cleans artifacts
       production: [
-        '<%= config.dist %>/<%= config.distAssets %>/<%= config.distStyles %>/<%= config.mainCss %>.map'
+      '<%= config.dist %>/<%= config.distAssets %>/<%= config.distStyles %>/<%= config.mainCss %>.map'
       ],
       docs: [
-        '<%= config.dist %>/<%= config.distDocs %>'
+      '<%%= config.dist %>/<%%= config.distDocs %>'
       ],
       everything: [
-        '<%= config.dist %>'
+      '<%%= config.dist %>'
       ]
     },
 
@@ -390,7 +392,7 @@ module.exports = function(grunt) {
       },
       all: [
         '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/modules/**/*.js',
-        'Gruntfile.js'
+        '<%= config.gruntfile %>'
       ]
     },
 
@@ -602,17 +604,17 @@ module.exports = function(grunt) {
     'assemble'
   ]);
 
+  grunt.registerTask('build_styles', [
+    'sass',
+    'newer:autoprefixer'/*,
+    'newer:combine_mq'*/
+  ]);
+
   grunt.registerTask('build_scripts', [
     'newer:jshint',
     'newer:concat:jquery',
     'newer:concat:scripts',
     'copy:scripts'
-  ]);
-
-  grunt.registerTask('build_styles', [
-    'sass',
-    'newer:autoprefixer'/*,
-    'newer:combine_mq'*/
   ]);
 
   grunt.registerTask('build_images_dev', [
