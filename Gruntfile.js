@@ -11,7 +11,7 @@ module.exports = function(grunt) {
   // Reads package.json and dynamically loads all Grunt tasks
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies', pattern: ['assemble', 'grunt-*']});
 
-  // Time all the things
+  // Time all of the things
   require('time-grunt')(grunt);
 
   // Go!
@@ -51,6 +51,14 @@ module.exports = function(grunt) {
 
     // Watchers
     watch: {
+      gruntfile: {
+        files: [
+          '<%= config.gruntfile %>'
+        ],
+        tasks: [
+          'jshint:gruntfile'
+        ]
+      },
       html: {
         files: [
           '<%= config.src %>/{data,pages,partials,layouts,helpers}/**/*.{hbs,js,json,yml}'
@@ -392,7 +400,9 @@ module.exports = function(grunt) {
         reporter: require('jshint-stylish')
       },
       all: [
-        '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/modules/**/*.js',
+        '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/modules/**/*.js'
+      ],
+      gruntfile: [
         '<%= config.gruntfile %>'
       ]
     },
