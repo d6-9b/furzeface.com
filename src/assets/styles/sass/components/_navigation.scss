@@ -100,7 +100,7 @@
 }
 
 .menu-overlay {
-  @include rgba-bg($brand-blue, .9);
+  @include rgba-bg($brand-color, .9);
 
   display: none;
   overflow: scroll;

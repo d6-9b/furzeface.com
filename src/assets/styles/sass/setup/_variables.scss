@@ -200,13 +200,49 @@
  $brand-blue: #2A2C9F;
 
 /**
- * Brand color blue (lighter).
+ * Brand color green.
  * @type String
  *
  * @since 1.0.0
  * @author Daniel Furze
  */
- $brand-blue--light: lighten($brand-blue, 25);
+ $brand-green: #1FA11F;
+
+/**
+ * Brand color red.
+ * @type String
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+ $brand-red: #A11F00;
+
+ /**
+ * Main brand color alias.
+ * @type String
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+ $brand-color: $brand-blue;
+
+/**
+ * Main brand color (light).
+ * @type String
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+ $brand-color--light: lighten($brand-color, 25);
+
+ /**
+ * Main brand color (dark).
+ * @type String
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+ $brand-color--dark: darken($brand-color, 25);
 
  /**
  * Link color.
@@ -215,7 +251,7 @@
  * @since 1.1.0
  * @author Daniel Furze
  */
- $link-color: $brand-blue;
+ $link-color: $brand-color;
 
  /**
  * Brand color black (lighter).
@@ -285,7 +321,7 @@
 
  $alpha-level: .75;
 
- // Social Media Brand Colours
+ // Social media brand colors
  $color-twitter-blue: #00ACED;
  $color-dribbble-pink: #EA4C89;
  $color-googleplus-red: #DD4B39;

@@ -43,7 +43,7 @@
     font-size: 125%;
   }
 
-  @include selection($brand-blue, $brand-white);
+  @include selection($brand-color, $brand-white);
 }
 
 /**
@@ -156,7 +156,7 @@
   font-size: 100%;
 
   a {
-    color: $brand-blue;
+    color: $brand-color;
     text-decoration: none;
   }
 }

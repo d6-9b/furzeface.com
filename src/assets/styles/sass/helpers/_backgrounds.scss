@@ -14,7 +14,7 @@
  * @since 1.3.0
  * @author Daniel Furze
  */
- @mixin rgba-bg($colour:$brand-blue, $alpha: $alpha-level) {
+ @mixin rgba-bg($colour:$brand-color, $alpha: $alpha-level) {
  	$alphaColour: hsla(hue($colour), saturation($colour), lightness($colour), $alpha);
  	background-color: $colour;
  	background-color: $alphaColour;
