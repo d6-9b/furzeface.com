@@ -101,13 +101,13 @@
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-      '<%= config.dist %>/{,*/}*.html',
-    '<%= config.dist %>/<%= config.distAssets %>/{,*/}*.css',
-  '<%= config.dist %>/<%= config.distAssets %>/{,*/}*.js',
-'<%= config.dist %>/<%= config.distAssets %>/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-]
-}
-},
+        '<%= config.dist %>/**/*.html',
+        '<%= config.dist %>/<%= config.distAssets %>/**/*.css',
+        '<%= config.dist %>/<%= config.distAssets %>/**/*.js',
+        '<%= config.dist %>/<%= config.distAssets %>/**/*.{png,jpg,jpeg,gif,webp,svg}'
+        ]
+      }
+    },
 
     // Project tasks
     todo: {
@@ -123,7 +123,6 @@
         usePackage: true
       },
       all: [
-        // '<%= config.src %>/**/*.{js,scss}', // @todo: Reimplement grunt-todo on these files
         '<%= config.src %>/**/*.{hbs,html,txt}',
         '.travis.yml',
         '<%= config.gruntfile %>'
@@ -193,10 +192,11 @@
         assetsUrl: function () {
           if (grunt.option('production')) {
             // Production flag set on CI deploy task
-            return 'http://static1.furzeface.com';
+            return 'http://daniel.furzeface.com/_assets';
+            // return 'http://static1.furzeface.com';
           } else {
-            return 'http://localhost:8008/_assets';
-            // return 'http://daniel.furzeface.com/_assets';
+            // return '../../_assets';
+            return 'http://daniel.furzeface.com/_assets';
           }
         },
         copyrightYear: '<%= grunt.template.today(\'yyyy\') %>',
@@ -678,7 +678,7 @@
 
   grunt.registerTask('build_production', [
     // build tasks
-    'build_docs',
+    // 'build_docs',
     'build_dev',
     // production build tasks
     'cssmin',
