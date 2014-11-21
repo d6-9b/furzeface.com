@@ -9,29 +9,18 @@ before_install:
 - npm install -g grunt-cli
 before_script:
 - bower install
-    # @todo Redo AWS deploy with furzeface.com bucket
-# deploy:
-#   provider: s3
-#   access_key_id: AKIAI4XHMTMN5OUCMOUQ
-#   secret_access_key:
-#     secure: c6u0LDM3e8wg5Hxdihzh5q3f1WUiPsCEUuTNmIH6LvxNl1lTQcXEzVuiUz4I1HnPZq/KSR+VhfyIavI4ub85X70ecomJC4uhSeDsoJ5xyVVH155sf00yTls94+88hMV00QLHlaT6aMHm6nFbX89czTmBKMKiZh81RBv6+ewS/1o=
-#   bucket: furzeface.com
-#   skip_cleanup: true
-#   endpoint: http://furzeface.com.s3-website-eu-west-1.amazonaws.com/
-#   region: eu-west-1
-#   # @todo Exclude _assets
-#   local-dir: dist
-#   on:
-#     branch: master
-#     repo: furzeface/furzeface.com
-  # - provider: s3
-  #   access_key_id: AKIAI4XHMTMN5OUCMOUQ
-  #   secret_access_key:
-  #     secure: c6u0LDM3e8wg5Hxdihzh5q3f1WUiPsCEUuTNmIH6LvxNl1lTQcXEzVuiUz4I1HnPZq/KSR+VhfyIavI4ub85X70ecomJC4uhSeDsoJ5xyVVH155sf00yTls94+88hMV00QLHlaT6aMHm6nFbX89czTmBKMKiZh81RBv6+ewS/1o=
-  #   bucket: furzeface-cdn
-  #   skip_cleanup: true
-  #   region: eu-west-1
-  #   local-dir: dist/_assets
-  #   on:
-  #     branch: master
-  #     repo: furzeface/daniel.furzeface.com
+deploy:
+  provider: s3
+  access_key_id: AKIAI3CX3YB3KYLZ5S3A
+  secret_access_key:
+    secure: PzgcgVQ8N86K2I2zLz2PieS6CiPXOCeybh77ilevN2knHLb8UYzXFvut+UNw5/Fi8wLaul8oBLoJth2ozr9YebtpNJguOU8ldYFThj/Acgjd9HaFoux+w+KUHp3MFcRfYblP5pAVMaYFbxeOpjd2plQ6jHE4rA6w//i1/UBBoXs=
+  bucket: furzeface.com
+  skip_cleanup: true
+  endpoint: http://furzeface.com.s3-website-eu-west-1.amazonaws.com/
+  region: eu-west-1
+  local-dir: dist
+  # acl: !ruby/string:HighLine::String |-
+  #   cHVibGljX3JlYWQ=
+  on:
+    branch: master
+    repo: furzeface/furzeface.com

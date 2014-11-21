@@ -21,24 +21,20 @@
 -  **todo** `(line 22)` : proper pubdate --}}
 -  **todo** `(line 23)` : category link? --}}
 
-## src/partials/foot/foot-scripts.hbs
-
--  **todo** `(line 16)` : add tracking code on build of production site --}}
-
 ## src/partials/header/header.hbs
 
 -  **todo** `(line 8)` : implement text resizer button when design is done --}}
 
 ## .travis.yml
 
--  **todo** `(line 22)` : exclude _assets
+-  **todo** `(line 12)`  Redo AWS deploy with furzeface.com bucket
+-  **todo** `(line 22)`  Exclude _assets
 
 ## Gruntfile.js
 
--  **todo** `(line 126)` : Reimplement grunt-todo on these files
--  **todo** `(line 648)` : Add resp img task back in
+-  **todo** `(line 647)` : Add resp img task back in
 
 
 * * *
 
-Last generated: Fri Nov 14 2014 07:22:10 by [grunt-todo](https://github.com/leny/grunt-todo).
+Last generated: Fri Nov 21 2014 11:13:38 by [grunt-todo](https://github.com/leny/grunt-todo).
