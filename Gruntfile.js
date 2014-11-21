@@ -172,7 +172,6 @@
         port: 8008,
         livereload: 35730,
         useAvailablePort: true,
-        // change this to '0.0.0.0' to access the server from outside
         hostname: 'localhost'
       },
       livereload: {
@@ -188,15 +187,14 @@
     // Build tasks
     assemble: {
       options: {
-        // assets: '_assets',
         assetsUrl: function () {
+          // Production flag set on CI deploy task
           if (grunt.option('production')) {
-            // Production flag set on CI deploy task
             return 'http://daniel.furzeface.com/_assets';
-            // return 'http://static1.furzeface.com';
           } else {
-            // return '../../_assets';
-            return 'http://daniel.furzeface.com/_assets';
+            return 'http://localhost:8008/_assets';
+            // @todo Return dynamically built local URL for assetsUrl
+            // return 'http://<%= connect.options.hostname %>:<%= connect.options.port %>/_assets';
           }
         },
         copyrightYear: '<%= grunt.template.today(\'yyyy\') %>',
@@ -698,7 +696,7 @@
   // Local server task.
   grunt.registerTask('server', [
     'clean:everything',
-    'build_docs',
+    // 'build_docs',
     'build_dev',
     'connect:livereload',
     'watch'
