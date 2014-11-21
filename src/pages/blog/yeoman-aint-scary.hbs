@@ -90,19 +90,19 @@ Another post in the “Ain’t Scary” series, this post introduces Yeoman, the
 <pre>
   <code>
     writing: {
-    app: function () {
-    this.dest.mkdir('app');
-    this.dest.mkdir('app/templates');
+      app: function () {
+        this.dest.mkdir('app');
+        this.dest.mkdir('app/templates');
 
-    this.src.copy('_package.json', 'package.json');
-    this.src.copy('_bower.json', 'bower.json');
-  },
+        this.src.copy('_package.json', 'package.json');
+        this.src.copy('_bower.json', 'bower.json');
+      },
 
-  projectfiles: function () {
-  this.src.copy('editorconfig', '.editorconfig');
-  this.src.copy('jshintrc', '.jshintrc');
-}
-}
+      projectfiles: function () {
+        this.src.copy('editorconfig', '.editorconfig');
+        this.src.copy('jshintrc', '.jshintrc');
+      }
+    }
 </code>
 </pre>
 
@@ -134,7 +134,7 @@ Another post in the “Ain’t Scary” series, this post introduces Yeoman, the
 
   <li>Create and enter a new directory:
     <code>
-      $ cd ~/Desktop/ && mkdir yourProject && cd yourProject
+      $ cd ~/Desktop/ &amp;&amp; mkdir yourProject &amp;&amp; cd yourProject
     </code>
   </li>
   <li>Fire away!
