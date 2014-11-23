@@ -693,6 +693,10 @@
     'server'
     ]);
 
+  grunt.registerTask('serve', [
+    'server'
+    ]);
+
   // Local server task.
   grunt.registerTask('server', [
     'clean:everything',
