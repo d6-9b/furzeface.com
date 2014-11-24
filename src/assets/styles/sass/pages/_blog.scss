@@ -142,6 +142,8 @@
 
 .mins-to-read {
   // <small>
+  display: none; // Shown after being populated via JavaScript
+
   &::after {
     margin-left: .25em;
   }
