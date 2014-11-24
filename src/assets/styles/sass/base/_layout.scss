@@ -61,3 +61,15 @@
  .inner {
   @extend %inner;
 }
+
+/**
+ * Group
+ *
+ * CSS selector, extends clearfix placeholder
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+.group {
+  @extend %clearfix;
+}
