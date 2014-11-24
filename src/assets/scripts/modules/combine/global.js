@@ -63,6 +63,8 @@
         self.$emoji.each(function(i, d){
           $(d).emoji();
         });
+
+        $('.emoji').show();
       },
       /**
       * Initialises syntax highlighting plugin.
