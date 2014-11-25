@@ -2,8 +2,7 @@
 pageClass: page-post
 title: Grunt ain’t scary
 category: Tutorials
-pubDate: 43th NEVER, 4102
-published: false
+pubDate: 2nd Nov, 2014
 tags:
 - front-end-aint-scary
 - grunt
@@ -17,13 +16,18 @@ tags:
 
 
 {{#content "post-content"}}
-<h2>Before Grunt</h2>
+<h2>BG: <em>Before Grunt</em></h2>
 <p>Before I started using <a href="http://gruntjs.com" rel="external">Grunt</a> for personal projects my only real experience of a build process was using NAnt on a build server to concatenate and minify files for production deploys - using all unminified seperate CSS and JavaScript files locally with no real front end build.</p>
 <p>Retrospectively this was a little messy and didn’t allow us too much control over what our build process was doing.</p>
-<p>Enter Grunt&hellip;</p>
+<p>Enter the <a href="http://gruntjs.com" rel="external">Grunt</a>&hellip;</p>
+
+<figure>
+  <img src="{{assetsUrl}}/images/blog/grunt_logo.svg" alt="Grunt JS Logo">
+  <figcaption>Grunt does look a bit scary to be fair&hellip;</figcaption>
+</figure>
 
 <h2>Grunt is&hellip;</h2>
-<p>A task runner, helping you automate the repetitive tasks in a front end build process - which in my opinion leads to vastly reduced human error and speeds up workflow.</p>
+<p>A task runner, helping you automate the repetitive tasks in a front end build process - which in my opinion leads to vastly reduced human error and greatly speeds up workflow.</p>
 <p>It can be used for a myriad of tasks, with over 3,638{{#note 1}}{{/note}} plugins currently written for it.</p>
 <small>{{#note_ref 1}}{{/note_ref}} <a href="http://gruntjs.com/plugins" rel="external">correct</a> at the time of writing.</small>
 
@@ -32,22 +36,154 @@ tags:
   <li><a href="http://nodejs.org" rel="external">NodeJS</a>. That is all.</li>
 </ol>
 
-<h2>Let’s get started</h2>
+<h2>Let’s get set up</h2>
 <p>First, install Grunt and the Grunt command line tools globally.</p>
 <code>
-  $ npm install grunt grunt-cli -g
+  $ npm i grunt grunt-cli -g
 </code>
+
+<aside class="tip"><strong>Note: </strong> the <code class="inline">i</code> command is short for <code class="inline">install</code> and the <code class="inline">-g</code> flag installs the Node package globally on your machine.</aside>
 
 <p>Next create a directory for your project and enter it.</p>
 <code>
   $ mkdir test &amp;&amp; cd test
 </code>
 
+<aside class="tip"><strong>Tip: </strong> see my <a href="/blog/bash-profile-shortcuts" rel="archives">Bash profile</a> post for a nice shortcut for this command.</aside>
+
+<p>Next enter <code class="inline">$ npm init</code> if your project doesn’t already have a <code class="inline">package.json</code> file and follow the instructions to set it all up.</p>
+
+<h2>Installing Grunt plugins</h2>
+<p>To install your first plugin (let’s choose <code class="inline">cssmin</code>), enter the following command:</p>
+<code>
+  $ npm install <a href="https://github.com/gruntjs/grunt-contrib-cssmin" rel="external">grunt-contrib-cssmin</a> -D
+</code>
+
+<aside class="tip"><strong>Note: </strong> the <code class="inline">-D</code> flag saves the Grunt plugin to your <code class="inline">devDependencies</code>. The <code class="inline">-S</code> flag also saves the Grunt plugin to your <code class="inline">dependencies</code>.</aside>
+
+<h2>Setting up the task</h2>
+<p>You’ll need a <code class="inline">Gruntfile.js</code> in which you should have as a minimum:</p>
+<pre>
+  <code>
+    module.exports = function(grunt) {
+      grunt.initConfig({
+
+        // Task configuration goes here
+
+      });
+
+
+      grunt.registerTask('default', [
+
+        // Tasks registered here
+
+      ]);
+    };
+  </code>
+</pre>
+
+<p>In the <code class="inline">grunt.initConfig({ });</code> goes your task configuration objects. An example for the task we installed earlier <code class="inline">grunt-contrib-cssmin</code> is as follows:</p>
+
+<pre>
+  <code>
+    cssmin: {
+      options: {
+        banner: 'Latest build: &lt;%= grunt.template.today(\'dd/mm/yyyy') %&gt;'
+      },
+      main: {
+        src: 'src/assets/styles/main.css',
+        dest: 'dist/assets/styles/main.min.css'
+      }
+    },
+</code>
+</pre>
+<p>This task for example takes in a banner as an option to add to the top of your minified CSS file, takes <code class="inline">main.css</code> as input and outputs the minified file to your <code class="inline">/dist</code> folder.</p>
+
+<h3>Further plugins</h3>
+<p>The <code class="inline">README</code> documents in the majority of Grunt plugins give straightforward examples of the config object required per task, so I’ll leave you to your own devices to scour the <a href="http://gruntjs.com/plugins" rel="external">plethora of Grunt plugins</a> available and add some to your <code class="inline">Gruntfile.js</code>.</p>
+<p>Here’s a few of my favourite, essential Grunt plugins:</p>
+<ul>
+  <li><a href="https://github.com/gruntjs/grunt-contrib-cssmin" rel="external">grunt-contrib-cssmin</a></li>
+  <li><a href="https://github.com/gruntjs/grunt-contrib-sass" rel="external">grunt-contrib-sass</a></li>
+  <li><a href="https://github.com/nDmitry/grunt-autoprefixer" rel="external">grunt-autoprefixer</a></li>
+  <li><a href="https://github.com/gruntjs/grunt-contrib-concat" rel="external">grunt-contrib-concat</a></li>
+  <li><a href="https://github.com/gruntjs/grunt-contrib-uglify" rel="external">grunt-contrib-uglify</a></li>
+  <li><a href="https://github.com/gruntjs/grunt-contrib-htmlmin" rel="external">grunt-contrib-htmlmin</a></li>
+  <li><a href="https://github.com/gruntjs/grunt-contrib-clean" rel="external">grunt-contrib-clean</a></li>
+  <li><a href="https://github.com/gruntjs/grunt-contrib-copy" rel="external">grunt-contrib-copy</a></li>
+  <li><a href="https://github.com/sindresorhus/time-grunt" rel="external">time-grunt</a></li>
+  <li><a href="https://github.com/sindresorhus/load-grunt-tasks" rel="external">load-grunt-tasks</a></li>
+
+</ul>
+<p>Be sure to come back for some advanced tips!</p>
+
+<h2>Expert mode!</h2>
+<h3>1. Reusable configuration objects</h3>
+<p>And now for some more advanced tips to optimise and tidy up your Gruntfile.</p>
+<p>To enable reuse of file locations, keeping them consistent throughout your Gruntfile and avoiding redundant repetition, add a config object as follows:</p>
+<pre>
+  <code>
+  config: {
+    // Src settings
+    src: 'src',
+    srcAssets: 'assets',
+    // Dist settings
+    dist: 'dist',
+    distAssets: '_assets',
+  },
+</code>
+</pre>
+
+<p>And you can then refer to this in your tasks by using Lo-Dash style delimeters like this:</p>
+<pre>
+  <code>
+    src: '&lt;%= config.src&gt;',
+    dest '&lt;%= config.dist&gt;'
+  </code>
+</pre>
+<p>So if you ever need to change the location it now only needs to be updated in one place!</p>
+
+<h3>2. Reading in external files</h3>
+<p>You can also read external files such as your <code class="inline">.bowerrc</code>, <code class="inline">bower.json</code> or <code class="inline">package.json</code> to use information about your project in your tasks.</p>
+<pre>
+  <code>
+    pkg: grunt.file.readJSON('package.json'),
+    bowerrc: grunt.file.readJSON('.bowerrc'),
+
+    // And use as follows:
+    config: {
+      bowerDirectory: '&lt;%= bowerrc.directory %&gt;',
+      packageJson: '&lt;%= pkg %&gt;'
+    },
+  </code>
+</pre>
+
+<h3>3. Banners</h3>
+<p>A great way to add dynamically generated content to your distribution files is by the use of a banner. Many plugins such as the aforementioned CSSMin allow banners to be added to the top of produced files.</p>
+<p>An example of this could be to prepend the build time to your minified CSS file:</p>
+<pre>
+  <code>
+    // In the config
+    meta: {
+      banner: '/* &lt;%= pkg.name %&gt; :: Latest build: &lt;%= grunt.template.today(\'dd/mm/yyyy, h:MM:ss TT\') %&gt; */\n'
+    },
+
+    // In the task
+    cssmin: {
+      options: {
+        banner: '&lt;%= meta.banner %&gt;'
+      },
+    }
+  </code>
+</pre>
 {{/content}}
 
 
 {{#content "post-tldr"}}
-<p class="todo">@TODO: Finish Grunt Ain’t Scary post</p>
+<p>This post served as a short but sweet introduction to <a href="http://gruntjs.com">Grunt</a>, the JavaScript task runner.</p>
+<p>Grunt is a powerful tool that I’ve only briefly touched on in this blog, but I’ll be adding more advanced tips in a future post.</p>
+<p><strong>Bonus: </strong>Here’s a link to <a href="https://github.com/furzeface/daniel.furzeface.com/blob/master/Gruntfile.js" rel="external">my Gruntfile</a> for reference - its pretty beasty, so take a long look!</p>
+
 {{/content}}
 
 {{/extend}}

@@ -1,5 +1,11 @@
 [
   {
+    "title": "Grunt ain’t scary",
+    "slug": "grunt-aint-scary",
+    "pubDate": "2nd Nov 2014",
+    "summary": "Moving on to Grunt, the next post in the “Front end ain’t scary” series introduces the popular JavaScript task runner."
+  },
+  {
     "title": "BEM up your variables",
     "slug": "BEM-up-your-variables",
     "pubDate": "18th Oct 2014",
