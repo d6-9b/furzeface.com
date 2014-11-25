@@ -3,7 +3,7 @@
  *
  * Base layout styles.
  *
- * @since 1.1.0
+ * @since 1.0.0
  * @author Daniel Furze
  */
 
@@ -60,4 +60,16 @@
  */
  .inner {
   @extend %inner;
+}
+
+/**
+ * Group
+ *
+ * CSS selector, extends clearfix placeholder
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+.group {
+  @extend %clearfix;
 }

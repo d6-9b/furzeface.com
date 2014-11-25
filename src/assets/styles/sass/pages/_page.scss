@@ -12,6 +12,11 @@
   text-align: center;
 }
 
+.emoji {
+  display: none;
+}
+
 span.emoji {
+  // Has to be this qualified as the JS plugin wraps a div and span with the .emoji selector.
   vertical-align: .1rem;
 }

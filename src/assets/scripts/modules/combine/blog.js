@@ -51,7 +51,7 @@
         minsToRead = Math.round(postText / wordsPerMinute);
 
         // Populate element in banner
-        self.$minsToRead.text(minsToRead + ' min read');
+        self.$minsToRead.text(minsToRead + ' min read').show();
       },
       /**
       * Appends GitHub gists after pageReady.
