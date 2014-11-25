@@ -1,6 +1,7 @@
 ---
-title: Blog
+title: Blog - Page 3
 pageClass: page-blog
+published: false
 ---
 
 {{#extend "layout-page"}}
@@ -18,7 +19,7 @@ pageClass: page-blog
 {{#content "page-content"}}
 
 <ul class="articles-list">
-  {{#each posts.page1}}
+  {{#each posts.page2}}
   <li class="articles-list__item">
     <h1>
       <a href="{{slug}}" class="articles-list__link" {{#if external}}rel="external"{{/if}}>{{title}}</a>
@@ -31,7 +32,7 @@ pageClass: page-blog
 
 <nav class="articles-pagination">
   <ul class="list-unstyled">
-    <li class="next"><a href="/blog/2">Next &rarr;</a> </li>
+    <li class="prev"><a href="/blog/2">&larr; Prev</a></li>
   </ul>
 </nav>
 

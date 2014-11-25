@@ -76,6 +76,25 @@
   }
 }
 
+.articles-pagination {
+  @extend %clearfix;
+
+  padding: $global-padding;
+
+  li {
+    width: 50%;
+
+    &.prev {
+      float: left;
+    }
+
+    &.next {
+      float: right;
+      text-align: right;
+    }
+  }
+}
+
 // Blog post
 .main--post {
   // <main>

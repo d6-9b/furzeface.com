@@ -1,4 +1,5 @@
-[
+{
+  "page1": [
   {
     "title": "Grunt ain’t scary",
     "slug": "grunt-aint-scary",
@@ -59,7 +60,9 @@
     "slug": "bash-profile-shortcuts",
     "pubDate": "4th Jul, 2014",
     "summary": "I wrote this Gist a while ago and it came in handy last week when I was showing a colleague some handy shortcuts to add to his .bash_profile - so here it is."
-  },
+  }
+  ],
+  "page2": [
   {
     "title": "Getting a git repository going",
     "slug": "getting-a-git-repository-going",
@@ -103,3 +106,4 @@
     "summary": "Today we had a “No Mouse Morning” at work. Well we tried, I think I’m the only one who kept it up anyway!"
   }
 ]
+}
