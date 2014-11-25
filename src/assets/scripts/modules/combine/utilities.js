@@ -11,12 +11,6 @@
     * @namespace Utilities
     */
     utilities: {
-      ff: null,
-      setGlobal: function () {
-        var self = this;
-
-        self.ff = ff;
-      },
       /**
       * Returns a slugified string from a string
       * @function slugify
@@ -136,10 +130,26 @@
         } else {
           return '';
         }
+      },
+      /**
+      * Switches out SVG images to their PNG equivalent.
+      * @function svgToPng
+      * @memberof Utilities
+      * @returns {string}
+      */
+      svgToPng: function () {
+        if (!Modernizr.svg) {
+          var $svgs = $('img[src*="svg"]');
+
+          if (!$svgs.length) {
+            return false;
+          }
+
+          $svgs.attr('src', function () {
+            return $(this).attr('src').replace('.svg', '.png');
+          });
+        }
       }
     }
   });
-$.subscribe('setGlobal', function (event, ff) {
-  ff.utilities.setGlobal(ff);
-});
 }(jQuery));

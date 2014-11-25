@@ -11,16 +11,10 @@
      * @namespace Global
      */
      global: {
-      ff: null,
       $images: $('img'),
       $emoji:  $('.emoji'),
       originalFontSize: parseFloat(ff.settings.$html.css('font-size')),
       resizeCount: 0,
-      setGlobal: function (ff) {
-        var self = this;
-
-        self.ff = ff;
-      },
       /**
       * Initialises Global module.
       * @function init
@@ -34,6 +28,8 @@
         self.setEmojis();
         // self.syntaxHighlight();
         self.lazyImages();
+
+        ff.utilities.svgToPng();
       },
       /**
       * Binds Global module events.
@@ -110,9 +106,6 @@
       }
     }
   });
-$.subscribe('setGlobal', function (event, ff) {
-  ff.global.setGlobal(ff);
-});
 $.subscribe('pageReady', function () {
   ff.global.init();
 });
