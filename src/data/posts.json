@@ -60,15 +60,15 @@
     "slug": "command-line-aint-scary",
     "pubDate": "3rd Aug, 2014",
     "summary": "This article is part of a new series I’ll write entitled Ain’t Scary, where I’ll write little tips to get you going on things that I’ve just discovered little tips to get me going on."
-  }
-  ],
-  "page2": [
+  },
   {
     "title": "Bash profile shortcuts",
     "slug": "bash-profile-shortcuts",
     "pubDate": "4th Jul, 2014",
     "summary": "I wrote this Gist a while ago and it came in handy last week when I was showing a colleague some handy shortcuts to add to his .bash_profile - so here it is."
-  },
+  }
+  ],
+  "page2": [
   {
     "title": "Getting a git repository going",
     "slug": "getting-a-git-repository-going",
@@ -110,6 +110,56 @@
     "slug": "no-mouse-mornings",
     "pubDate": "3rd Apr, 2014",
     "summary": "Today we had a “No Mouse Morning” at work. Well we tried, I think I’m the only one who kept it up anyway!"
+  },
+  {
+    "title": "Scarily easy UI testing with CasperJS",
+    "slug": "scarily-easy-ui-testing-with-casperjs",
+    "pubDate": "25th Mar, 2014",
+    "summary": "The following is a guest post by Mr Tristan Ashley, on automated UI testing with CasperJS."
+  },
+  {
+    "title": "Review of a web for everyone",
+    "slug": "review-of-a-web-for-everyone",
+    "pubDate": "11th Mar, 2014",
+    "summary": "Back on to a tech book for my next O’Reilly blogger program review, I chose “A Web for Everyone: Designing Accessible User Experiences” by Sarah Horton &amp; Whitney Quesenbery."
+  },
+  {
+    "title": "London JS Conf 2014 roundup",
+    "slug": "london-js-conf-2014-roundup",
+    "pubDate": "17th Feb, 2014",
+    "summary": "A round up of the speakers at LondonJSConf 2014 along with links to their presentations."
+  },
+  {
+    "title": "Review of Idea to Invention by Patricia Nolan-Brown",
+    "slug": "review-of-idea-to-invention-by-patricia-nolan-brown",
+    "pubDate": "2nd Feb, 2014",
+    "summary": "Delving into a non-technical subject this time, the latest book I received from O’Reilly as part of the was “Idea to Invention” by Patricia Nolan-Brown."
+  },
+  {
+    "title": "Review of Learning from jQuery",
+    "slug": "review-of-learning-from-jquery-by-callum-macrae-oreilly-media",
+    "pubDate": "27th Jan, 2014",
+    "summary": "I was given a copy of Learning from jQuery by Callum Macrae</a> to review for the O’Reilly Reader Review Program."
+  }
+],
+"page3": [
+  {
+    "title": "My Google Analytics dashboard",
+    "slug": "my-google-analytics-dashboard",
+    "pubDate": "15th Jan, 2014",
+    "summary": "Sharing my Google Analytics custom dashboard with the world."
+  },
+  {
+    "title": "Implementing Google Analytics custom event trackers",
+    "slug": "implementing-google-analytics-custom-event-trackers",
+    "pubDate": "9th Jan, 2014",
+    "summary": "A quick tip to help get the most out of user behaviour tracking with Google Analytics."
+  },
+  {
+    "title": "Review of Raphaël JS",
+    "slug": "review-of-raphael-js-by-chris-wilson-oreilly-media",
+    "pubDate": "3rd Jan, 2014",
+    "summary": "I was given a copy of Raphaël JS by Chris Wilson to review for the O’Reilly Reader Review Program."
   }
 ]
 }

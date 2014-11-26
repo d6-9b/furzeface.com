@@ -1,7 +1,6 @@
 ---
 title: Blog - Page 3
 pageClass: page-blog
-published: false
 ---
 
 {{#extend "layout-page"}}
@@ -19,7 +18,7 @@ published: false
 {{#content "page-content"}}
 
 <ul class="articles-list">
-  {{#each posts.page2}}
+  {{#each posts.page3}}
   <li class="articles-list__item">
     <h1>
       <a href="{{slug}}" class="articles-list__link" {{#if external}}rel="external"{{/if}}>{{title}}</a>
