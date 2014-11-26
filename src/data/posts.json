@@ -1,6 +1,12 @@
 {
   "page1": [
   {
+    "title": "Don’t be an imposter",
+    "slug": "dont-be-an-imposter",
+    "pubDate": "5th Nov 2014",
+    "summary": "Inspired by Geek Mental Help Week, I wanted to sum up my thoughts on Imposter Syndrome and on trying to overcome it on a daily basis."
+  },
+  {
     "title": "Grunt ain’t scary",
     "slug": "grunt-aint-scary",
     "pubDate": "2nd Nov 2014",
@@ -54,15 +60,15 @@
     "slug": "command-line-aint-scary",
     "pubDate": "3rd Aug, 2014",
     "summary": "This article is part of a new series I’ll write entitled Ain’t Scary, where I’ll write little tips to get you going on things that I’ve just discovered little tips to get me going on."
-  },
+  }
+  ],
+  "page2": [
   {
     "title": "Bash profile shortcuts",
     "slug": "bash-profile-shortcuts",
     "pubDate": "4th Jul, 2014",
     "summary": "I wrote this Gist a while ago and it came in handy last week when I was showing a colleague some handy shortcuts to add to his .bash_profile - so here it is."
-  }
-  ],
-  "page2": [
+  },
   {
     "title": "Getting a git repository going",
     "slug": "getting-a-git-repository-going",
