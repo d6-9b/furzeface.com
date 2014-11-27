@@ -1,0 +1,44 @@
+---
+title: Toolkit
+pageClass: page-toolkit
+tags:
+- tools
+- front end
+---
+
+{{#extend "layout-page"}}
+
+{{#content "page-content"}}
+
+<h2>About this site</h2>
+<h3>Toolkit &amp; colophon</h3>
+<p>This site is hand coded in <a href="http://www.sublimetext.com/2" rel="external">Sublime Text 2</a>, developed using <a href="http://github.com" rel="external">GitHub</a>, <a href="http://bower.io" rel="external">Bower</a>, <a href="http://gruntjs.com" rel="external">Grunt</a>, <a href="http://assemble.io" rel="external">Assemble</a>, <a href="https://github.com/furzeface/sassface" rel="external">SassFace</a> and <a href="http://typekit.com" rel="external">Typekit</a>.</p>
+
+<p>It is built and deployed with <a href="http://travis-ci.org" rel="external">Travis CI</a> and hosted with <a href="http://" rel="external">Amazon Web Services</a>.</p>
+
+<p>For more info on the typefaces used see my <a href="https://typekit.com/colophons/ejo4unf" rel="external">Typekit colophon page</a>.</p>
+
+<h3>All of the badges&hellip;</h3>
+<p>The source code for this site is completely minified, uglified and everything for deployment <small>(bits make bytes)</small> but the entire codebase is hosted on <a href="{{package.repository.url}}" rel="external">GitHub</a> for anyone to have a poke around and play - so feel free to have a look, even <a href="{{package.repository.url}}/issues" rel="external">open issues</a> or submit <a href="{{package.repository.url}}/pulls" rel="external">pull requests</a> if you spot a problem!</p>
+
+<p>
+  <a href="https://travis-ci.org/furzeface/daniel.furzeface.com">
+    <img src="https://travis-ci.org/furzeface/daniel.furzeface.com.svg?branch=master" alt="Travis build status badge" />
+  </a>
+  <a href="https://david-dm.org/furzeface/daniel.furzeface.com#info=devDependencies">
+    <img src="https://david-dm.org/furzeface/daniel.furzeface.com/dev-status.svg" alt="devDependency status" />
+  </a>
+  <a href="https://badge.waffle.io/furzeface/daniel.furzeface.com">
+    <img src="https://badge.waffle.io/furzeface/daniel.furzeface.com.svg" alt="Waffle board badge" />
+  </a>
+  <a href="http://gruntjs.com">
+    <img src="https://cdn.gruntjs.com/builtwith.png" alt="Built with Grunt badge">
+  </a>
+  <a href="http://shields.io">
+    <img src="http://img.shields.io/badge/100%-awesome!-FF69B4.svg" alt="Awesome level badge" />
+  </a>
+</p>
+
+{{/content}}
+
+{{/extend}}
