@@ -126,12 +126,18 @@ Another article in “Ain’t Scary”, where I’ll write little tips to get st
 <h2>Cherry-picking</h2>
 <p>Cherry picking is essentially merging individual commits between branches.</p>
 <p>For example I might want to merge part of another person’s contributions into my master branch but not all of them, or I may want to merge a hotfix from a develop branch into master to deploy, but not the entire codebase which could include some features that aren’t ready for deployment.</p>
-<p>I used to be scared of cherry-picking as back when I was using visual GUIs for Git source control it was easy, but moving to using the command line it became a strange concept at first, not having anything to see and know what exactly I was cherry-picking across branches.</p>
-<p>You’ll need a hash from a git commit in a different branch and the easiest way to get one is to hit <code class="inline">$ git log</code> - more on that in the next section.</p>
+<p>I used to be apprehensive of cherry-picking as back when I was using visual GUIs for Git source control it was easy, but moving to using the command line it became a strange concept at first, not having anything to see and know what exactly I was cherry-picking across branches.</p>
+<p>You’ll need a hash <small>(use the short or long versions)</small> from a git commit in a different branch and the easiest way to get one is to hit <code class="inline">$ git log</code> - more on that in the next section.</p>
 <p>Once you have one simply enter the following command to merge the specific changes from that commit into your branch:</p>
 
 <code>
   $ git cherry-pick 436cf9e
+</code>
+
+<p>To cherry pick multiple commits into your branch do so as follows:</p>
+
+<code>
+  $ git cherry-pick 436cf9e 6bac935
 </code>
 
 <p>And there you have it, cherry picked! {{emoji 'raised_hand'}}</p>

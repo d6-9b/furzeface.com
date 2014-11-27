@@ -129,20 +129,6 @@
         ]
       },
 
-      devUpdate: {
-        force: {
-          options: {
-            updateType: 'force',
-            reportUpdated: false,
-            semver: false,
-            packages: {
-              devDependencies: true,
-              dependencies: true
-            },
-            packageJson: './package.json'
-          }
-        }
-      },
 
       jsdoc: {
         all: {
