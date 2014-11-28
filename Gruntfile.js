@@ -611,7 +611,7 @@
 
   // Build tasks.
   grunt.registerTask('build_html', [
-    'assemble'
+    'newer:assemble'
     ]);
 
   grunt.registerTask('build_styles', [
@@ -676,20 +676,20 @@
 
   // Default task.
   grunt.registerTask('default', [
-    'server'
+    'serve'
     ]);
 
   grunt.registerTask('serve', [
-    'server'
-    ]);
-
-  // Local server task.
-  grunt.registerTask('server', [
-    'clean:everything',
+ 'clean:everything',
     // 'build_docs',
     'build_dev',
     'connect:livereload',
     'watch'
+    ]);
+
+  // Local server task.
+  grunt.registerTask('server', [
+   'serve'
     ]);
 
   // Deploy task.
