@@ -62,7 +62,7 @@ The final (for now) in the “Front End Ain’t Scary” series of posts, this i
 </code>
 
 <h3 id="the-basics">The basics</h3>
-<p>In your <code class="inline">.travis.yml</code> you'll first need the language to build your project in - for this example we’ll do JavaScript via NodeJS (the only kind I’ve really used as of yet). So add the language along with the version of NodeJS{{#note 1}}{{/note}} to use to your config file:</p>
+<p>In your <code class="inline">.travis.yml</code> you'll first need the language to build your project in - for this example we’ll do JavaScript via NodeJS (the only kind I’ve really used as of yet). So add the language along with the version{{#note 1}}{{/note}} to your config file:</p>
 <small>{{#note_ref 1}}{{/note_ref}}See the <a href="http://docs.travis-ci.com/user/languages/javascript-with-nodejs/#Provided-Node.js-Versions" rel="external">Travis docs</a> for more detail on supported versions.</small>
 <pre>
   <code>
@@ -118,21 +118,22 @@ The final (for now) in the “Front End Ain’t Scary” series of posts, this i
     - npm install -g grunt-cli
   </code>
 </pre>
-<p>Then Grunt can go about its business, calling whichever tasks you’ve set up in your <code class="inline">Gruntfile.js</code>.</p>
+<p>Then Grunt can go about its business, calling <code class="inline">build_production</code> and whichever tasks you’ve set up in your <code class="inline">Gruntfile.js</code>.</p>
 
 <a href="http://furzeface.com/blog/grunt-aint-scary" class="promo" rel="archives">
   <aside>See my post on Grunt for a nice intro to that kinda thing.</aside>
 </a>
 
+<p>You can use Grunt to build your application, perform code quality checks and run tests, giving you peace of mind in that you’ll receive notification when a build fails and why.</p>
+
 <h2>Putting it all together</h2>
-<p>The final <code class="inline">.travis.yml</code> configuration file should look a little something like this:</p>
+<p>The <code class="inline">.travis.yml</code> configuration file should now look a little something like this:</p>
 <pre>
   <code>
     language: node_js
     node_js:
     - '0.10'
     before_install:
-    - gem install sass
     - npm install -g bower
     - npm install -g grunt-cli
     before_script:
@@ -144,12 +145,26 @@ The final (for now) in the “Front End Ain’t Scary” series of posts, this i
 
 <small>{{#note_ref 2}}{{/note_ref}} Here I’ve used the <code class="inline">script</code> hook to keep all of the commands in the same configuration file but this is achieving the same as in <a href="#the-basics"><em>The basics</em></a> above.</small>
 
+<h2>Further configuration</h2>
+<p>I use Travis to automatically deploy to an Amazon S3 bucket on a successful build, and run a broken links check after that deploy. Full deployment is out of scope for this introduction but will be covered in another post.</p>
+<p>Some additional hooks available to use with Travis are</p>
+<ul>
+  <li><code class="inline">after_script</code> to be ran after the <code class="inline">script</code> task</li>
+  <li><code class="inline">after_success</code> for after a successful build</li>
+  <li><code class="inline">after_failure</code> for after a failed build</li>
+  <li><code class="inline">before_deploy</code> for before a deployment</li>
+  <li><code class="inline">deploy</code> to kick off a deployment task</li>
+  <li><code class="inline">after_deploy</code> for after a deployment task</li>
+</ul>
+
+<p>See my full <code class="inline">.travis.yml</code> file <a href="https://github.com/furzeface/daniel.furzeface.com/blob/master/.travis.yml" rel="external">on GitHub</a>.</p>
 
 {{/content}}
 
 
 {{#content "post-tldr"}}
-<p class="todo">@todo Write Travis ain’t scary post TLDR</p>
+<p>An introduction to using <a href="https://travis-ci.org" rel="external">Travis CI</a>, this post covers starting to use a build process and using it to install Bower components and run Grunt tasks to ensure quality in a project.</p>
+<p>See some examples of <a href"https://travis-ci.org/furzeface/daniel.furzeface.com/builds" rel="external">my builds here</a>.</p>
 
 <small>Image credits:
   <ul>
