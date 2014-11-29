@@ -2,8 +2,6 @@ language: node_js
 node_js:
 - '0.10'
 before_install:
-- currentfolder=${PWD##*/}
-- if [ "$currentfolder" != 'daniel.furzeface.com' ]; then cd .. && eval "mv $currentfolder daniel.furzeface.com" && cd daniel.furzeface.com; fi
 - gem install sass
 - npm install -g bower
 - npm install -g grunt-cli
@@ -19,7 +17,8 @@ deploy:
   endpoint: http://furzeface.com.s3-website-eu-west-1.amazonaws.com/
   region: eu-west-1
   local-dir: dist
-  # @todo Exclude _assets
   on:
     branch: master
     repo: furzeface/daniel.furzeface.com
+after_success:
+  - grunt post_deploy
