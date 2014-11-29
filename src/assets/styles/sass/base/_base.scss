@@ -194,6 +194,8 @@ sub {
  */
  code {
   background: rgb(240, 240, 240);
+  border: 1px solid $brand-grey--dark;
+  border-radius: 2px;
   display: block;
   font-family: $font-family-mono;
   font-size: .75rem;
@@ -203,7 +205,7 @@ sub {
 
   &.inline {
     display: inline;
-    padding: 2px;
+    padding: 2px 4px;
   }
 }
 
