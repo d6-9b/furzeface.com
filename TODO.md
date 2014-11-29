@@ -8,6 +8,10 @@
 
 ## TODO
 
+## src/pages/blog/travis-aint-scary.hbs
+
+-  **todo** `(line 90)`  Write Travis ain’t scary post TLDR</p>
+
 ## src/pages/docs.hbs
 
 -  **todo** `(line 10)`  --}}
@@ -18,8 +22,8 @@
 
 ## src/partials/blog/banner.hbs
 
--  **todo** `(line 22)` : proper pubdate --}}
--  **todo** `(line 23)` : category link? --}}
+-  **todo** `(line 29)` : proper pubdate --}}
+-  **todo** `(line 30)` : category link? --}}
 
 ## src/partials/header/header.hbs
 
@@ -27,14 +31,14 @@
 
 ## .travis.yml
 
--  **todo** `(line 12)`  Redo AWS deploy with furzeface.com bucket
 -  **todo** `(line 22)`  Exclude _assets
 
 ## Gruntfile.js
 
--  **todo** `(line 647)` : Add resp img task back in
+-  **todo** `(line 182)`  Return dynamically built local URL for assetsUrl
+-  **todo** `(line 631)` : Add resp img task back in
 
 
 * * *
 
-Last generated: Fri Nov 21 2014 11:13:38 by [grunt-todo](https://github.com/leny/grunt-todo).
+Last generated: Sat Nov 29 2014 11:54:54 by [grunt-todo](https://github.com/leny/grunt-todo).
