@@ -35,6 +35,6 @@
     html.push('</a>');
     html.push('</sup>');
 
-    return html.join('');
+    return new Handlebars.SafeString(html.join(''));
   });
 };

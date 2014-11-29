@@ -32,7 +32,7 @@
  * @since 1.0.0
  * @author Daniel Furze
  *
- * @too implement $body-color: contrast($body-bg) again.
+ * @todo implement $body-color: contrast($body-bg) again.
  */
  $body-color: #262626 !default;
 
@@ -191,6 +191,15 @@
  $brand-black: #000;
 
  /**
+ * Brand color black (lighter).
+ * @type String (lighten($color-black, 10%))
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+ $brand-black--light: lighten($brand-black, 10%);
+
+ /**
  * Brand color blue.
  * @type String
  *
@@ -254,13 +263,13 @@
  $link-color: $brand-color;
 
  /**
- * Brand color black (lighter).
- * @type String (lighten($color-black, 10%))
+ * Highlight color.
+ * @type String
  *
- * @since 1.0.0
+ * @since 1.1.0
  * @author Daniel Furze
  */
- $brand-black--light: lighten($brand-black, 10%);
+ $highlight-color: #F0EE97;
 
  /**
  * Extra small breakpoint
