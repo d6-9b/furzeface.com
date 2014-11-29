@@ -20,6 +20,7 @@ The final (for now) in the “Front End Ain’t Scary” series of posts, this i
 {{#content "post-content"}}
 <h2>Open source your build</h2>
 <p><a href="http://travis-ci.org" rel="external">Travis CI</a> is free for open source projects and a great way to get started with continuous integration if you’ve not yet reaped the immense benefits it has to offer your workflow.</p>
+<p>This post will introduce using Travis to build your NodeJS projects.</p>
 
 <figure>
   <img src="{{assetsUrl}}/{{images}}/blog/travis_logo.png" alt="Travis CI logo" />
@@ -47,20 +48,20 @@ The final (for now) in the “Front End Ain’t Scary” series of posts, this i
 <p>The code gets written by a developer <small>(me)</small>, commited to GitHub, checked out by Travis and deployed to an AWS S3 bucket by the same.</p>
 <p>The beauty of this is that I can code, commit to a <code class="inline">feature</code> or <code class="inline">develop</code> branch and once a dev build has passed, merge into my <code class="inline">master</code> or <code class="inline">release</code> branch to start the magic.</p>
 
-<h2>Making the magic happen&hellip;</h2>
-<h3>Signing up</h3>
+<h2>Signing up</h2>
 <p>Signing up for a Travis account is free, and easy. Just head to <a href="http://travis-ci.org" rel="external">travis-ci.org</a>, log in with your GitHub account, sync your projects before hitting that big old <strong>ON</strong> switch on the repository for your project.</p>
 <figure>
   <img src="{{assetsUrl}}/{{images}}/blog/travis_sync_screenshot.png" alt="A screenshot of the Travis 'sync projects' dashboard.">
   <figcaption>Hit that big ol' ON switch</figcaption>
 </figure>
 
-<h3>Setting up</h3>
+<h2>Setting up</h2>
 <p>In your project you’ll need to create a configuration file to be be picked up by Travis and place this is the root of your project.</p>
 <code>
   $ cd yourProject &amp;&amp; touch .travis.yml
 </code>
 
+<h3 id="the-basics">The basics</h3>
 <p>In your <code class="inline">.travis.yml</code> you'll first need the language to build your project in - for this example we’ll do JavaScript via NodeJS (the only kind I’ve really used as of yet). So add the language along with the version of NodeJS{{#note 1}}{{/note}} to use to your config file:</p>
 <small>{{#note_ref 1}}{{/note_ref}}See the <a href="http://docs.travis-ci.com/user/languages/javascript-with-nodejs/#Provided-Node.js-Versions" rel="external">Travis docs</a> for more detail on supported versions.</small>
 <pre>
@@ -70,16 +71,78 @@ The final (for now) in the “Front End Ain’t Scary” series of posts, this i
     - '0.10'
   </code>
 </pre>
-<p>You’ve now set up your first project to build! Now to give Travis a build task to run all you have to do in add a <code class="inline">script</code> object to your <code class="inline">package.json</code> - giving a command to be run on the CI server&hellip;</p>
+<p>Now to give Travis a build task to run the easiest way is to use the <code class="inline">script</code> object to your <code class="inline">package.json</code> and give it a command to be run on the CI server:</p>
 <pre>
   <code>
     script: {
-      test: "grunt deploy"
+     test: "grunt build_production"
     }
+</code>
+</pre>
+<p>&hellip;for example.</p>
+<small>This is the equivalent of running <code class="inline">npm test</code> on the command line - if you want to check what it’s doing before trying it out on the build.</small>
+<p>Commit and push to the repository and Travis will pick up the script command from <code class="inline">package.json</code> and execute it all on his own.</p>
+
+<h3>Installing Bower components</h3>
+<p>In my build process I install components from <a href="http://bower.io" rel="external">Bower</a> before starting to run Grunt tasks.</p>
+<p>To use Bower to retrieve your dependencies it first needs to be installed globally on the virtual machine that CI server is running on which can be achieved using the <code class="inline">before_install</code> hook:</p>
+
+<pre>
+  <code>
+    before_install:
+    - npm install -g bower
   </code>
 </pre>
-<p>&hellip;for example. This is the equivalent of running <code class="inline">npm test</code> on the command line - if you want to check what it’s doing before trying it out on the build.</p>
-<p>Commit and push to the repo and Travis will pick up the script command from <code class="inline">package.json</code> and execute it all on his own.</p>
+
+<p>Now the Bower npm module is installed you are able to hook into it with Travis’ <code class="inline">before_script</code> hook as follows:</p>
+
+<pre>
+  <code>
+    before_script:
+    - bower install
+  </code>
+</pre>
+
+<p>Now your virtual environment has the components you need. {{emoji '+1'}}</p>
+
+<a href="http://furzeface.com/blog/bower-aint-scary" class="promo" rel="archives">
+  <aside>See my post on Bower for a nice intro to this kinda thing.</aside>
+</a>
+
+<h3>Running Grunt tasks</h3>
+<p>In my build <code class="inline">grunt build_production</code> is ran which in this case kicks off Grunt compiling and minifying my HTML, CSS, JavaScript and images as well as creating a <a href="/humans.txt">humans.txt</a>, <a href="/robots.txt">robots.txt</a> and an <a href="/sitemap.xml">XML sitemap</a>.</p>
+<p>To run the Grunt tasks on the server <code class="inline">grunt-cli</code> also needs to be installed:</p>
+<pre>
+  <code>
+    before_install:
+    - npm install -g grunt-cli
+  </code>
+</pre>
+<p>Then Grunt can go about its business, calling whichever tasks you’ve set up in your <code class="inline">Gruntfile.js</code>.</p>
+
+<a href="http://furzeface.com/blog/grunt-aint-scary" class="promo" rel="archives">
+  <aside>See my post on Grunt for a nice intro to that kinda thing.</aside>
+</a>
+
+<h2>Putting it all together</h2>
+<p>The final <code class="inline">.travis.yml</code> configuration file should look a little something like this:</p>
+<pre>
+  <code>
+    language: node_js
+    node_js:
+    - '0.10'
+    before_install:
+    - gem install sass
+    - npm install -g bower
+    - npm install -g grunt-cli
+    before_script:
+    - bower install
+    script: {{#note 2}}{{/note}}
+    - grunt build_production
+  </code>
+</pre>
+
+<small>{{#note_ref 2}}{{/note_ref}} Here I’ve used the <code class="inline">script</code> hook to keep all of the commands in the same configuration file but this is achieving the same as in <a href="#the-basics"><em>The basics</em></a> above.</small>
 
 
 {{/content}}
