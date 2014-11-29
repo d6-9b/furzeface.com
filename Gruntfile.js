@@ -688,6 +688,7 @@
     'uglify',
     'htmlmin',
     'humans_txt',
+    'robotstxt,',
     'xml_sitemap',
     'clean:production'
     ]);
