@@ -20,7 +20,7 @@
   },
   {
     "title": "Combine media queries with Gulp",
-    "slug": "gulp-combine-media-queries",
+    "slug": "combine-media-queries-with-gulp",
     "pubDate": "14th Oct 2014",
     "summary": "I wrote my first Gulp plugin, a light wrapper for our node-combine-mq task."
   },
