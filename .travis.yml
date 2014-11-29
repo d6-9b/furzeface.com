@@ -7,6 +7,8 @@ before_install:
 - npm install -g grunt-cli
 before_script:
 - bower install
+script:
+- grunt deploy --production
 deploy:
   provider: s3
   access_key_id: AKIAI3CX3YB3KYLZ5S3A
