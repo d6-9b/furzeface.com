@@ -4,16 +4,12 @@
  * @author Daniel Furze
  */
 
- .page-home {
-  // Namespaced page overrides
-  .main {
-    // <main>
-    background: $brand-color;
-    color: $brand-white;
-    padding-top: $global-padding;
-    padding-bottom: $global-padding;
-    text-align: center;
-  }
+.page-home__hero {
+  background: $brand-color;
+  color: $brand-white;
+  padding-top: $global-padding;
+  padding-bottom: $global-padding;
+  text-align: center;
 }
 
 .nickname {
