@@ -1,12 +1,6 @@
 {
   "page1": [
   {
-    "title": "Travis ain’t scary",
-    "slug": "travis-aint-scary",
-    "pubDate": "27th Nov 2014",
-    "summary": "The final (for now) in the “Front End Ain’t Scary” series of posts, this introduces Travis CI, the continuous integration service."
-  },
-  {
     "title": "Don’t be an imposter",
     "slug": "dont-be-an-imposter",
     "pubDate": "5th Nov 2014",
