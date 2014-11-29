@@ -123,34 +123,34 @@
         usePackage: true
       },
       all: [
-        '<%= config.src %>/**/*.{hbs,html,txt}',
-        '.travis.yml',
-        '<%= config.gruntfile %>'
-        ]
-      },
+      '<%= config.src %>/**/*.{hbs,html,txt}',
+      '.travis.yml',
+      '<%= config.gruntfile %>'
+      ]
+    },
 
 
-      jsdoc: {
-        all: {
-          src: [
-          'Gruntfile.js',
-          '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/modules/combine/*.js',
-          '<%= config.src %>/<%= config.helpers %>/helper-*.js'
-          ],
-          options: {
-            destination: '<%= config.dist %>/<%= config.distDocs %>/<%= config.distJsDocs %>',
-            template: 'node_modules/grunt-jsdoc/node_modules/ink-docstrap/template',
-            configure: '.jsdoc.conf.json'
-          }
+    jsdoc: {
+      all: {
+        src: [
+        'Gruntfile.js',
+        '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/modules/combine/*.js',
+        '<%= config.src %>/<%= config.helpers %>/helper-*.js'
+        ],
+        options: {
+          destination: '<%= config.dist %>/<%= config.distDocs %>/<%= config.distJsDocs %>',
+          template: 'node_modules/grunt-jsdoc/node_modules/ink-docstrap/template',
+          configure: '.jsdoc.conf.json'
         }
-      },
+      }
+    },
 
-      sassdoc: {
-        main: {
-          src: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/<%= config.srcSass %>/',
-          dest: '<%= config.dist %>/<%= config.distDocs %>/<%= config.distSassDocs %>'
-        }
-      },
+    sassdoc: {
+      main: {
+        src: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/<%= config.srcSass %>/',
+        dest: '<%= config.dist %>/<%= config.distDocs %>/<%= config.distSassDocs %>'
+      }
+    },
 
     // Local server task
     connect: {
@@ -599,6 +599,26 @@
         }
         ]
       }
+    },
+
+    // Post deploy tasks
+    checkPages: {
+      deploy: {
+        options: {
+          pageUrls: [
+          'http://furzeface.com',
+          'http://furzeface.com/about',
+          'http://furzeface.com/blog',
+          'http://furzeface.com/blog/2',
+          'http://furzeface.com/blog/3',
+          'http://furzeface.com/toolkit'
+          ],
+          checkLinks: true,
+          onlySameDomainLinks: true,
+          noLocalLinks: true,
+          linksToIgnore: []
+        }
+      }
     }
 
   });
@@ -659,7 +679,6 @@
     'modernizr'
     ]);
 
-
   grunt.registerTask('build_production', [
     // build tasks
     // 'build_docs',
@@ -673,27 +692,26 @@
     'clean:production'
     ]);
 
-
   // Default task.
   grunt.registerTask('default', [
     'serve'
     ]);
 
   grunt.registerTask('serve', [
- 'clean:everything',
+   'clean:everything',
     // 'build_docs',
     'build_dev',
     'connect:livereload',
     'watch'
     ]);
 
-  // Local server task.
-  grunt.registerTask('server', [
-   'serve'
-    ]);
-
   // Deploy task.
   grunt.registerTask('deploy', [
     'build_production'
+    ]);
+
+  // Post deploy task.
+  grunt.registerTask('post_deploy', [
+    'checkPages'
     ]);
 };
