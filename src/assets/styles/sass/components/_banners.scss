@@ -9,30 +9,28 @@
 }
 
 .banner__image-wrap {
-  &::after {
-    background: $brand-color;
-    content: '';
-    opacity: .75;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-}
-
-.banner__image {
-  display: block;
+  position: absolute;
 }
 
 .banner__meta {
-  background: $brand-color;
+  @include rgba-bg($brand-color, .9);
+
   color: $brand-white;
   padding: ($global-padding * 2) $global-padding;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   text-align: center;
 
   a {
     color: $brand-white;
+  }
+
+  .banner--solid & {
+    background: $brand-color;
+    position: static;
   }
 }
 

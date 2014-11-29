@@ -2,31 +2,31 @@
 component: banner
 ---
 
-<header class="banner banner--post">
-  {{!-- <div class="banner__image-wrap">
-    {{#if bannerImage}}
-    <img src="{{assetsUrl}}/{{images}}/{{bannerImage}}" alt="{{title}}" class="banner__image" />
-    {{/if}}
-  </div> --}}
+{{#if bannerImage}}
+  <header class="banner banner--blog banner--small" style="background-image: url('{{assetsUrl}}/{{images}}/banner/{{bannerImage}}');">
+  {{else}}
+  <header class="banner banner--solid">
+{{/if}}
 
-  <div class="banner__meta">
-    <h1 class="banner__title"><a href="#TLDR" title="TL;DR? - Skip to the end." class="tldr">{{title}}</a></h1>
+    <div class="banner__meta">
+      <h1 class="banner__title"><a href="#TLDR" title="TL;DR? - Skip to the end." class="tldr">{{title}}</a></h1>
 
-    {{#if pubDate}}
-    <p class="eta">
-      Posted on <time datetime="{{pubDate}}" pubdate="{{pubDate}}" class="updated published">{{pubDate}}</time>
-      {{#if category}}
-      in <em>{{category}}</em>
+      {{#if pubDate}}
+      <p class="eta">
+        Posted on <time datetime="{{pubDate}}" pubdate="{{pubDate}}" class="updated published">{{pubDate}}</time>
+        {{#if category}}
+        in <em>{{category}}</em>
+        {{/if}}
+        {{#if postAuthor}}
+        by <span class="vcard author"><span class="fn n">{{#if postAuthor}}{{postAuthor}}{{else}}{{package.author.name}}{{/if}}</span></span>.
+        {{/if}}
+      </p>
       {{/if}}
-      {{#if postAuthor}}
-      by <span class="vcard author"><span class="fn n">{{#if postAuthor}}{{postAuthor}}{{else}}{{package.author.name}}{{/if}}</span></span>.
-      {{/if}}
-    </p>
-    {{/if}}
 
-    <small id="mins_to_read" class="mins-to-read icon-stopwatch"></small>
+      <small id="mins_to_read" class="mins-to-read icon-stopwatch"></small>
 
-    {{!-- @todo: proper pubdate --}}
-    {{!-- @todo: category link? --}}
-  </div>
-</header>
+      {{!-- @todo: proper pubdate --}}
+      {{!-- @todo: category link? --}}
+
+    </div>
+  </header>
