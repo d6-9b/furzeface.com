@@ -20,5 +20,5 @@ deploy:
   on:
     branch: master
     repo: furzeface/daniel.furzeface.com
-after_success:
+after_deploy:
   - grunt post_deploy
