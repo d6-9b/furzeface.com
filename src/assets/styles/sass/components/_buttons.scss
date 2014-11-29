@@ -34,7 +34,6 @@
   padding: .5rem;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 0.1s ease-in;
   max-width: 100%;
 
   &:hover,
@@ -43,7 +42,6 @@
     border-bottom-color: darken($brand-grey--dark, 10);
     color: $brand-white;
     text-decoration: none;
-    transform: translateY(-0.1rem);
   }
 }
 
