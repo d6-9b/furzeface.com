@@ -1,0 +1,33 @@
+/**
+ * Highlights
+ *
+ * @author Daniel Furze
+ */
+
+ .highlight {
+  background: $highlight-color;
+}
+
+.todo {
+  background: $highlight-color;
+  font-style: italic;
+}
+
+.promo {
+  // <a>, <aside>
+  background: $brand-color;
+  border: 1px solid $brand-color--dark;
+  border-radius: 2px;
+  font-style: italic;
+  color: $brand-white;
+  display: block;
+  margin: $global-margin auto;
+  padding: $global-padding/2;
+  text-align: center;
+  text-decoration: none;
+  width: 80%;
+
+  &:hover {
+    color: $brand-white;
+  }
+}
