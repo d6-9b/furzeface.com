@@ -1,4 +1,4 @@
-# [daniel.furzeface.com](daniel.furzeface.com) :: v3.0.0 
+# [furzeface.com](http://furzeface.com) :: v3.0.0 
 [![Build Status][travis-image]][travis-url]
 [![devDependency Status][dev-dependency-image]][dev-dependency-url]
 [![Stories in Ready][waffle-image]][waffle-url]
@@ -6,7 +6,7 @@
 > The personal blog of Daniel Furze - Manchester, UK based front end developer.
 
 ## Release History
-- 04-10-2014 - v3.0.0 - Initial release of [daniel.furzeface.com](daniel.furzeface.com) v3
+- 04-10-2014 - v3.0.0 - Initial release of [furzeface.com](furzeface.com) v3
 
 ## License
 Copyright (c) 2014 Daniel Furze. 

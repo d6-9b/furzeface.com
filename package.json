@@ -1,5 +1,5 @@
 {
-  "name": "daniel.furzeface.com",
+  "name": "furzeface.com",
   "title": "Daniel Furze Blog",
   "description": "The personal blog of Daniel Furze, Manchester UK based front end developer.",
   "version": "3.0.0",
@@ -9,18 +9,18 @@
     "url": "https://github.com/furzeface/daniel.furzeface.com"
   },
   "issues": "https://waffle.io/furzeface/daniel.furzeface.com",
-  "homepage": "http://daniel.furzeface.com",
+  "homepage": "http://furzeface.com",
   "author": {
     "name": "Daniel Furze",
     "email": "daniel@furzeface.com",
-    "url": "http://daniel.furzeface.com"
+    "url": "http://furzeface.com"
   },
   "keywords": [
     "assemble",
+    "blog",
     "bower",
     "grunt",
-    "website",
-    "blog"
+    "website"
   ],
   "dependencies": {},
   "devDependencies": {

@@ -176,7 +176,7 @@
         assetsUrl: function () {
           // Production flag set on CI deploy task
           if (grunt.option('production')) {
-            return 'http://daniel.furzeface.com/_assets';
+            return 'http://furzeface.com/_assets';
           } else {
             return 'http://localhost:8008/_assets';
             // @todo Return dynamically built local URL for assetsUrl
@@ -535,7 +535,7 @@
           changefreq: 'weekly',
           dest: '<%= config.dist %>/',
           fileName: 'sitemap',
-          siteRoot: 'http://daniel.furzeface.com/',
+          siteRoot: 'http://furzeface.com/',
           priority: '0.5'
         },
         files: [
