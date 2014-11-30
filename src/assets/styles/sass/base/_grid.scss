@@ -15,7 +15,7 @@
 
     */
 
-@mixin grid($grid-columns: $grid-cols, $gutters: $grid-col-gutters, $breakpoint: $grid-col-breakpoint, $selectors: $grid-include-selectors) {
+    @mixin grid($grid-columns: $grid-cols, $gutters: $grid-col-gutters, $breakpoint: $grid-col-breakpoint, $selectors: $grid-include-selectors) {
 
   // Placeholder for base col styles, to be extended silently.
   %col-base {
@@ -42,6 +42,8 @@
 
       // Creates placeholders to be extended silently in Sass.
       %col--#{$i}-of-#{$grid-columns} {
+        // @extend %col-base;
+
         width: ((100% / $grid-columns) * $i);
       }
 

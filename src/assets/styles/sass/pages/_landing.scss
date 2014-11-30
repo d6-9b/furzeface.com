@@ -1,0 +1,61 @@
+/**
+ * Landing page
+ *
+ * @author Daniel Furze
+ */
+
+.page-landing {
+  // Namespaced page overrides
+  text-align: center;
+}
+
+.page-landing__header {
+  // <header>
+  margin-bottom: $global-margin;
+}
+
+.page-landing__heading {
+  // <h1>
+  font-family: $font-family-sans-serif;
+}
+
+.page-landing__logos {
+  // <div>
+  @extend %clearfix;
+
+  margin-bottom: $global-margin*2;
+}
+
+.page-landing__logo {
+  // <figure>
+  // @extend %col--4-of-12;
+  float: left;
+  margin: 0;
+  width: 33.33333%;
+
+  a {
+    display: block;
+
+    &:hover,
+    &:focus {
+      opacity: .7;
+    }
+  }
+
+  img {
+    display: block;
+    max-width: 5rem;
+  }
+
+  &:nth-of-type(3n+2) {
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  &:nth-of-type(3n) {
+    img {
+      float: right;
+    }
+  }
+}

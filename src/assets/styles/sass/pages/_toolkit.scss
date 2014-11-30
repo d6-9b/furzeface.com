@@ -1,0 +1,10 @@
+// _toolkit.scss
+.page-toolkit {
+  // Namespaced page overrides
+  h1,
+  h2,
+  h3 {
+    font-family: $font-family-sans-serif;
+    text-align: center;
+  }
+}

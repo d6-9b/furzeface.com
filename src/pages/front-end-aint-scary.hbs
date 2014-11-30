@@ -1,0 +1,70 @@
+---
+title: Front End Ain’t Scary
+pageClass: page-landing
+tags:
+- front end
+published: false
+---
+
+{{#extend "layout-page"}}
+
+{{#content "page-header"}}
+<header class="banner banner--solid">
+  <div class="banner__meta">
+    <h1 class="page-landing__heading">Front End Ain’t Scary!</h1>
+  </div>
+</header>
+{{/content}}
+
+{{#content "page-content"}}
+<header class="page-landing__header">
+  <h2 class="heading--epsilon">
+    A series introducing the latest front end tools, and tutorials on overcoming the learning curves associated with front end workflow.
+  </h2>
+</header>
+
+<div class="page-landing__logos">
+  <figure class="page-landing__logo">
+    <a href="/blog/command-line-aint-scary" rel="archives" title="Command line ain’t scary">
+      <img src="{{assetsUrl}}/{{images}}/blog/command_line.png" alt="Command line ain’t scary" />
+    </a>
+  </figure>
+
+  <figure class="page-landing__logo">
+    <a href="/blog/git-aint-scary" rel="archives" title="Git ain’t scary">
+      <img src="{{assetsUrl}}/{{images}}/blog/git_logo.png" alt="Git ain’t scary" />
+    </a>
+  </figure>
+
+  <figure class="page-landing__logo">
+    <a href="/blog/bower-aint-scary" rel="archives" title="Bower ain’t scary">
+      <img src="{{assetsUrl}}/{{images}}/blog/bower_logo.png" alt="Bower ain’t scary" />
+    </a>
+  </figure>
+</div>
+
+
+
+<div class="page-landing__logos">
+  <figure class="page-landing__logo">
+    <a href="/blog/grunt-aint-scary" rel="archives" title="Grunt ain’t scary">
+      <img src="{{assetsUrl}}/{{images}}/blog/grunt_logo.png" alt="Grunt ain’t scary" />
+    </a>
+  </figure>
+
+  <figure class="page-landing__logo">
+    <a href="/blog/yeoman-aint-scary" rel="archives" title="Yeoman ain’t scary">
+      <img src="{{assetsUrl}}/{{images}}/blog/yeoman.png" alt="Yeoman ain’t scary" />
+    </a>
+  </figure>
+
+  <figure class="page-landing__logo">
+    <a href="/blog/travis-aint-scary" rel="archives" title="Travis ain’t scary">
+      <img src="{{assetsUrl}}/{{images}}/blog/travis_logo.png" alt="Travis CI ain’t scary" />
+    </a>
+  </figure>
+</div>
+
+{{/content}}
+
+{{/extend}}
