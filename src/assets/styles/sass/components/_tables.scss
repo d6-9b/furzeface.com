@@ -1,0 +1,43 @@
+/**
+ * Tables
+ *
+ * @author Daniel Furze
+ */
+
+ table {
+  border: 1px solid $brand-grey;
+  border-radius: 2px;
+  font-size: .75em;
+  width: 100%;
+}
+
+tr {
+  border: 1px solid $brand-grey;
+
+}
+
+th {
+  border: 1px solid $brand-grey;
+
+}
+
+td {
+
+  border: 1px solid $brand-grey;
+}
+
+// For 24 PR post
+.PR__table {
+  th,
+  td {
+    padding: $global-padding/4;
+  }
+}
+.PR__table-data--project,
+.PR__table-data--contributions, {
+  width: 25%;
+}
+
+.PR__table-data--description {
+  width: 50%;
+}
