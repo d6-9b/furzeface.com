@@ -1,0 +1,62 @@
+---
+pageClass: page-post
+title: 24 Pull Requests - my contributions
+pubDate: December 1st, 2014
+category: Open Source
+tags:
+- open-source
+published: true
+---
+
+{{#extend "layout-post"}}
+
+{{#content "post-summary"}}
+24 Pull Requests is an intiative set up to help everyone get into the Christmas spirit and give back little gifts of code for 24 days in the run up to the big day.
+{{/content}}
+
+
+{{#content "post-content"}}
+
+<h2>The 24 pull requests of Christmas {{emoji 'christmas_tree'}} </h2>
+<p>Pretty much all of us use open source frameworks, libraries, plugins and code snippets on a daily basis. Whether it be GitHub repositories, NPM modules, Grunt plugins or Stack Overflow posts, we borrow and hack away at other people’s work all of the time, but I bet it’s only a small proportion of us that give back.</p>
+<p>The <a href="http://24pullrequests.com" rel="external">24 Pull Requests</a> project is a great way to give back to other people whose code you’ve been taking ideas from all year, and really gets you into the spirit of open source work. You just sign up with your GitHub account and get suggestions of projects requiring a little bit of help - that you can contribute to.</p>
+
+<h2>My 24 PRs</h2>
+<p>Here’s a brief diary of my attempt to keep it up for the whole 24 days, examples of what I contributed and a few of the things I learned during the process - most of which involve technologies or tools that I’d not have used otherwise!</p>
+
+{{!-- Being lazy, data driving it! --}}
+{{#each 24PR}}
+  {{#if project}}
+    <h3>Day {{@index}}</h3>
+
+    <table class="PR__table">
+      <tr>
+        <th>Project</th>
+        <th>What is it?</th>
+        <th>My bit</th>
+      </tr>
+      <tr class="PR__table-row">
+        <td class="PR__table-data--project"><a href="{{{github}}}">{{{project}}}</a> <em>{{{owner}}}</em></td>
+        <td class="PR__table-data--description">{{{description}}}</td>
+        <td class="PR__table-data--contributions">{{{contributions}}}</td>
+      </tr>
+    </table>
+
+    {{#if TIL}}
+      {{{TIL}}}
+    {{/if}}
+  {{/if}}
+{{/each}}
+
+<hr/>
+
+<p class="todo">@todo Add 23 more Pull Requests {{emoji 'smiley'}}</p>
+{{/content}}
+
+
+{{#content "post-tldr"}}
+<p>I’m currently trying to keep up with taking part in <a href="http://24pullrequests.com" rel="external">24 Pull Requests</a> - a project helping contribute towards to the open source community.</p>
+<p>This brief diary will catalogue my contributions throughout the month. {{emoji 'christmas_tree'}}</p>
+{{/content}}
+
+{{/extend}}
