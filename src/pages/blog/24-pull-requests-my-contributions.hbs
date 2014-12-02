@@ -26,7 +26,7 @@ published: true
 
 {{!-- Being lazy, data driving it! --}}
 {{#each 24PR}}
-  {{#if projects}}
+  {{#if projects.[0].project}}
     <h3>Day {{@index}}</h3>
 
     {{#each projects}}
@@ -37,7 +37,7 @@ published: true
           <th>My bit</th>
         </tr>
         <tr class="PR__table-row">
-          <td class="PR__table-data--project"><a href="{{{github}}}">{{{project}}}</a> <em>{{{owner}}}</em></td>
+          <td class="PR__table-data--project"><a href="{{{github}}}">{{{project}}}</a> by <em>{{{owner}}}</em></td>
           <td class="PR__table-data--description">{{{description}}}</td>
           <td class="PR__table-data--contributions">{{{contributions}}}</td>
         </tr>
@@ -51,9 +51,9 @@ published: true
   {{/if}}
 {{/each}}
 
-<hr/>
+<hr />
 
-<p class="todo">@todo Add 23 more Pull Requests {{emoji 'smiley'}}</p>
+<p class="todo">@todo Add 22 more Pull Requests {{emoji 'smiley'}}</p>
 {{/content}}
 
 
