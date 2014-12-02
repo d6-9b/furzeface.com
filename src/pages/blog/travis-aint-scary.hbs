@@ -71,10 +71,10 @@ The final (for now) in the “Front End Ain’t Scary” series of posts, this i
     - '0.10'
   </code>
 </pre>
-<p>Now to give Travis a build task to run the easiest way is to use the <code class="inline">script</code> object to your <code class="inline">package.json</code> and give it a command to be run on the CI server:</p>
+<p>Now to give Travis a build task to run the easiest way is to use the <code class="inline">scripts</code> object to your <code class="inline">package.json</code> and give it a command to be run on the CI server:</p>
 <pre>
   <code>
-    script: {
+    scripts: {
      test: "grunt build_production"
     }
 </code>
