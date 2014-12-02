@@ -26,25 +26,28 @@ published: true
 
 {{!-- Being lazy, data driving it! --}}
 {{#each 24PR}}
-  {{#if project}}
+  {{#if projects}}
     <h3>Day {{@index}}</h3>
 
-    <table class="PR__table">
-      <tr>
-        <th>Project</th>
-        <th>What is it?</th>
-        <th>My bit</th>
-      </tr>
-      <tr class="PR__table-row">
-        <td class="PR__table-data--project"><a href="{{{github}}}">{{{project}}}</a> <em>{{{owner}}}</em></td>
-        <td class="PR__table-data--description">{{{description}}}</td>
-        <td class="PR__table-data--contributions">{{{contributions}}}</td>
-      </tr>
-    </table>
+    {{#each projects}}
+      <table class="PR__table">
+        <tr>
+          <th>Project</th>
+          <th>What is it?</th>
+          <th>My bit</th>
+        </tr>
+        <tr class="PR__table-row">
+          <td class="PR__table-data--project"><a href="{{{github}}}">{{{project}}}</a> <em>{{{owner}}}</em></td>
+          <td class="PR__table-data--description">{{{description}}}</td>
+          <td class="PR__table-data--contributions">{{{contributions}}}</td>
+        </tr>
+      </table>
 
-    {{#if TIL}}
-      {{{TIL}}}
-    {{/if}}
+      {{#if TIL}}
+        {{{TIL}}}
+      {{/if}}
+    {{/each}}
+
   {{/if}}
 {{/each}}
 
