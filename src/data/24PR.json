@@ -36,6 +36,13 @@
   {
     "projects": [
       {
+        "project": "gitdown",
+        "owner": "gajus",
+        "github": "https://github.com/gajus/gitdown",
+        "description": "GitHub markdown preprocessor.",
+        "contributions": "Added a <a href=\"http://waffle.io\" rel=\"external\">waffle.io</a> badge option."
+      },
+      {
       "project": "generator-node",
       "owner": "yeoman",
       "github": "https://github.com/yeoman/generator-node",
