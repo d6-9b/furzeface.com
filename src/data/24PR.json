@@ -63,6 +63,17 @@
         "comment": "<p>A while back I submitted a PR on this project to solve one of the issues raised by the owner, but this caused the build to fail due to the Travis config having an unstable version of Node in it to run against.</p><p>Removing this will fix the build and hopefully get my first PR accepted too!</p>"
       }
     ]
+  },
+  {
+    "projects": [
+      {
+        "project": "generator-jquery-boilerplate",
+        "owner": "jquery-boilerplate",
+        "github": "https://github.com/jquery-boilerplate/generator-jquery-boilerplate",
+        "description": "Yeoman Generator for jQuery Boilerplate.",
+        "contributions": "Added yo config and updated dependencies."
+      }
+    ]
   }
 
 ]
