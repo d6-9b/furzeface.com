@@ -15,6 +15,7 @@ pageClass: page-blog
 
 <ul class="articles-list">
   {{#each posts.page1}}
+  {{#unless unpublished}}
   <li class="articles-list__item">
     <h1>
       <a href="{{slug}}" class="articles-list__link" {{#if external}}rel="external"{{/if}}>{{title}}</a>
@@ -22,6 +23,7 @@ pageClass: page-blog
     <p>{{summary}}</p>
     <time datetime="{{pubDate}}" pubdate="{{pubDate}}" class="updated published">{{pubDate}}</time>
   </li>
+  {{/unless}}
   {{/each}}
 </ul>
 
