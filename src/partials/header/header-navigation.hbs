@@ -5,7 +5,8 @@ published: false
 ---
 
 <nav id="navigation-site" class="navigation-site" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-	<ul class="navigation-site__list">
+  <h1 class="visually-hidden">Navigation</h1>
+  <ul class="navigation-site__list">
     {{!-- Loops navigation data source --}}
     {{#each navigation}}
     <li class="navigation-site__item">
@@ -17,7 +18,9 @@ published: false
   </ul>
 </nav>
 
+{{!-- @TODO: remove this duplication --}}
 <nav id="menu-overlay" class="menu-overlay">
+  <h1 class="visually-hidden">Mobile navigation</h1>
   <button id="menu-close" class="menu-close icon-menu-close">{{!-- icon --}}</button>
 
   <ul class="menu-site__list">

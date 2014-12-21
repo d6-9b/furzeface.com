@@ -3,9 +3,9 @@ component: banner
 ---
 
 {{#if bannerImage}}
-  <header class="banner banner--blog banner--small" style="background-image: url('{{assetsUrl}}/{{images}}/banner/{{bannerImage}}');">
+  <section class="banner banner--blog banner--small" style="background-image: url('{{assetsUrl}}/{{images}}/banner/{{bannerImage}}');">
   {{else}}
-  <header class="banner banner--solid">
+  <section class="banner banner--solid">
 {{/if}}
 
     <div class="banner__meta">
@@ -29,4 +29,4 @@ component: banner
       {{!-- @todo: category link? --}}
 
     </div>
-  </header>
+  </section>
