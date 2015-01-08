@@ -206,7 +206,34 @@
  * @since 1.0.0
  * @author Daniel Furze
  */
- $brand-blue: #2A2C9F;
+ $brand-blue: #03A9F4;
+
+ /**
+ * Brand color teal.
+ * @type String
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+ $brand-teal: #009688;
+
+ /**
+ * Brand color teal (light).
+ * @type String
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+ $brand-teal--light: #4DB6AC;
+
+ /**
+ * Brand color teal (dark).
+ * @type String
+ *
+ * @since 1.0.0
+ * @author Daniel Furze
+ */
+ $brand-teal--dark: #00796B;
 
 /**
  * Brand color green.
@@ -215,7 +242,7 @@
  * @since 1.0.0
  * @author Daniel Furze
  */
- $brand-green: #1FA11F;
+ $brand-green: #4CAF50;
 
 /**
  * Brand color red.
@@ -224,7 +251,7 @@
  * @since 1.0.0
  * @author Daniel Furze
  */
- $brand-red: #A11F00;
+ $brand-red: #F44336;
 
  /**
  * Main brand color alias.
@@ -233,7 +260,7 @@
  * @since 1.0.0
  * @author Daniel Furze
  */
- $brand-color: $brand-blue;
+ $brand-color: $brand-teal;
 
 /**
  * Main brand color (light).
@@ -242,7 +269,8 @@
  * @since 1.0.0
  * @author Daniel Furze
  */
- $brand-color--light: lighten($brand-color, 25);
+ // $brand-color--light: lighten($brand-color, 25);
+ $brand-color--light: $brand-teal--light;
 
  /**
  * Main brand color (dark).
@@ -251,7 +279,9 @@
  * @since 1.0.0
  * @author Daniel Furze
  */
- $brand-color--dark: darken($brand-color, 25);
+ // $brand-color--dark: darken($brand-color, 25);
+ $brand-color--dark: $brand-teal--dark;
+
 
  /**
  * Link color.
