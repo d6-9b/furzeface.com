@@ -61,6 +61,11 @@
 
   &:hover,
   &:focus {
+    .csstransforms & {
+      // <html>
+      outline: none;
+    }
+
     span {
       transform: translateY(-100%);
     }

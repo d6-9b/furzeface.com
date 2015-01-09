@@ -94,6 +94,7 @@
  */
  a {
   color: $link-color;
+  transition: color .25s ease, text-decoration .25s ease;
 
   p &,
   small &,
