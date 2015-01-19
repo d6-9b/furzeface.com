@@ -5,14 +5,16 @@ pageClass: page-home
 
 {{#extend "layout-page"}}
 {{#content "page-header"}}
-<section class="page-home__hero">
-  <header itemscope itemtype="http://schema.org/Person">
-    <h1 class="nickname" itemprop="name">Daniel Furze</h1>
-    <h2 class="heading--epsilon">Manchester, UK based front end developer.</h2>
-  </header>
+<main id="main" role="main">
+  <section class="page-home__hero">
+    <header itemscope itemtype="http://schema.org/Person">
+      <h1 class="nickname" itemprop="name">Daniel Furze</h1>
+      <h2 class="heading--epsilon">Manchester, UK based front end developer.</h2>
+    </header>
 
-  {{>desk}}
+    {{>desk}}
 
-</section>
+  </section>
+</main>
 {{/content}}
 {{/extend}}

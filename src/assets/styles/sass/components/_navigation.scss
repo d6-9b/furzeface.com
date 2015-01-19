@@ -4,12 +4,31 @@
  * @author Daniel Furze
  */
 
+ .skip-link {
+  // <a>
+  @extend %float-left;
+
+  font-family: $font-family-sans-serif;
+  position: absolute;
+  top: $global-margin;
+  left: $global-margin;
+  text-align: left;
+
+  > h1 {
+    @extend %type--eta;
+
+    line-height: 1.25;
+    margin: 0;
+  }
+ }
+
  .navigation-site {
   @extend %clearfix;
-  @extend %float-right;
 
   display: none;
   font-family: $font-family-sans-serif;
+  text-align: right;
+  width: 100%;
 
   @include MQ(M) {
     // Show if over medium sized screens

@@ -4,8 +4,12 @@ hide: true
 published: false
 ---
 
+
 <nav id="navigation-site" class="navigation-site" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-  <h1 class="visually-hidden">Navigation</h1>
+  <a href="#navigation-site" class="skip-link visually-hidden focusable"><h1>Navigation</h1></a>
+  <a href="#main" class="skip-link visually-hidden focusable">Skip to content</a>
+  <a href="#site-footer" class="skip-link visually-hidden focusable">Skip to footer</a>
+
   <ul class="navigation-site__list">
     {{!-- Loops navigation data source --}}
     {{#each navigation}}
@@ -20,7 +24,7 @@ published: false
 
 {{!-- @TODO: remove this duplication --}}
 <nav id="menu-overlay" class="menu-overlay">
-  <h1 class="visually-hidden">Mobile navigation</h1>
+<h1 class="visually-hidden">Mobile navigation</h1>
   <button id="menu-close" class="menu-close icon-menu-close">{{!-- icon --}}</button>
 
   <ul class="menu-site__list">
