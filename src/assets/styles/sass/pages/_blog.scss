@@ -50,16 +50,16 @@
   border-radius: 1px;
   display: block;
   font-family: $font-family-sans-serif;
-  transition: box-shadow .25s ease, border .25s ease, color .25s ease;
+  // transition: box-shadow .25s ease, border .25s ease, color .25s ease;
 
   &:hover,
   &:focus {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    // box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     text-decoration: none;
 
-    .boxshadow & {
-      outline: none;
-    }
+    // .boxshadow & {
+    //   outline: none;
+    // }
   }
 
   &[rel=external]::after {
