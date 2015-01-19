@@ -9,9 +9,9 @@
   @extend %float-left;
 
   font-family: $font-family-sans-serif;
-  position: absolute;
-  top: $global-margin;
-  left: $global-margin;
+  position: absolute!important; // @todo Get rid of this !important hack!
+  top: $global-margin*2;
+  left: $global-margin*2;
   text-align: left;
 
   > h1 {
@@ -20,68 +20,110 @@
     line-height: 1.25;
     margin: 0;
   }
- }
+}
 
- .navigation-site {
-  @extend %clearfix;
+.navigation__open,
+.navigation__close {
+  background: none;
+  border: 0;
+  font-size: 1.5rem;
+  padding: $global-padding;
+}
 
-  display: none;
-  font-family: $font-family-sans-serif;
-  text-align: right;
-  width: 100%;
+.navigation__open,
+.navigation__close {
+  // <button>
+  color: $brand-color;
+  float: right;
 
   @include MQ(M) {
-    // Show if over medium sized screens
+    // Hide if over medium sized screens
+    display: none;
+  }
+}
+
+.navigation__close {
+  // <button>
+  color: $brand-white;
+}
+
+.navigation-site {
+  @include rgba-bg($brand-color, .9);
+
+  display: none;
+  // overflow: scroll;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+
+  @include MQ(M) {
+    background: none;
     display: block;
+    position: static;
   }
 }
 
 .navigation-site__list {
   @extend %list-unstyled;
 
-  font-size: .75rem;
+  clear: both;
+  font-family: $font-family-sans-serif;
+  text-align: center;
 
-  @include MQ(S) {
-    font-size: 1rem;
+  @include MQ(M) {
+    text-align: right;
   }
 }
 
 .navigation-site__item {
-  display: inline;
+  margin: $global-margin;
 
-  &:last-of-type {
-    a {
-      margin-right: 0;
+  @include MQ(M) {
+    display: inline-block;
+
+    &:last-of-type {
+      a {
+        margin-right: 0;
+      }
     }
   }
 }
 
-/**
- * Navigation link
- *
- * See http://tympanus.net/codrops/2013/08/06/creative-link-effects
- *
- * @since 1.0.0
- * @author Daniel Furze
- */
- .navigation-site__link {
-  display: inline-block;
-  font-weight: lighter;
-  height: 1em;
-  overflow: hidden;
-  padding: 0 $global-padding / 2;
-  position: relative;
+.navigation-site__link {
+  @extend %heading--alpha;
+
+  color: $brand-white;
+  display: block;
+  padding: $global-padding;
   text-decoration: none;
   text-transform: uppercase;
 
-  @include MQ(S) {
-    margin-right: $global-margin;
+  &:hover {
+    color: $brand-white;
+    text-decoration: underline;
   }
 
-  &:hover,
-  &:focus {
-    .csstransforms & {
+  @include MQ(M) {
+    color: $brand-color;
+    font-size: 1.25rem;
+    font-weight: lighter;
+    overflow: hidden;
+    margin: 0;
+    padding: 0 $global-padding / 2;
+    position: relative;
+
+    @include MQ(S) {
+      margin-right: $global-margin;
+    }
+
+    &:hover,
+    &:focus {
+      .csstransforms & {
       // <html>
+      color: $brand-color;
       outline: none;
     }
 
@@ -104,62 +146,4 @@
    }
  }
 }
-
-// New overlay menu
-.menu-open,
-.menu-close {
-  background: none;
-  border: 0;
-  font-size: 1.5rem;
-}
-
-.menu-open {
-  // <button>
-  float: right;
-
-  @include MQ(M) {
-    // Hide if over medium sized screens
-    display: none;
-  }
-}
-
-.menu-overlay {
-  @include rgba-bg($brand-color, .9);
-
-  display: none;
-  overflow: scroll;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 99;
-}
-
-.menu-close {
-  // <button>
-  color: $brand-white;
-  float: right;
-  margin: $global-margin $global-margin 0 0;
-}
-
-.menu-site__list {
-  @extend %list-unstyled;
-
-  clear: both;
-  color: $brand-white;
-  font-family: $font-family-sans-serif;
-  text-align: center;
-}
-
-.menu-site__item {
-  margin: $global-margin;
-}
-
-.menu-site__link {
-  @extend %heading--alpha;
-
-  display: block;
-  padding: $global-padding;
-  text-decoration: none;
 }

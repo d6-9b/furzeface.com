@@ -4,11 +4,12 @@ hide: true
 published: false
 ---
 
-
 <nav id="navigation-site" class="navigation-site" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
   <a href="#navigation-site" class="skip-link visually-hidden focusable"><h1>Navigation</h1></a>
   <a href="#main" class="skip-link visually-hidden focusable">Skip to content</a>
   <a href="#site-footer" class="skip-link visually-hidden focusable">Skip to footer</a>
+
+  <button id="navigation__close" class="navigation__close icon-menu-close">{{!-- icon --}}</button>
 
   <ul class="navigation-site__list">
     {{!-- Loops navigation data source --}}
@@ -20,23 +21,8 @@ published: false
     </li>
     {{/each}}
   </ul>
+
+  <button id="navigation__close--bottom" class="navigation__close icon-menu-close visually-hidden focusable">{{!-- icon --}}</button>
 </nav>
 
-{{!-- @TODO: remove this duplication --}}
-<nav id="menu-overlay" class="menu-overlay">
-<h1 class="visually-hidden">Mobile navigation</h1>
-  <button id="menu-close" class="menu-close icon-menu-close">{{!-- icon --}}</button>
-
-  <ul class="menu-site__list">
-    {{!-- Loops navigation data source --}}
-    {{#each navigation}}
-    <li class="menu-site__item">
-      <a href="{{url}}" class="menu-site__link {{#if class}}{{class}}{{/if}}">
-        {{title}}
-      </a>
-    </li>
-    {{/each}}
-  </ul>
-</nav>
-
-<button id="menu-open" class="menu-open icon-menu-open">{{!-- icon --}}</button>
+<button id="navigation__open" class="navigation__open icon-menu-open">{{!-- icon --}}</button>

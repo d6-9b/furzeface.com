@@ -13,8 +13,6 @@ var ff = ff ? ff : {};
   menu: {
     // Configuration
     fadeDuration: 100,
-    // CSS class selectors
-    menuInClass: 'menu-in',
     /**
     * Initialises menu namespaced methods
     * @function init
@@ -23,9 +21,9 @@ var ff = ff ? ff : {};
     init: function () {
       var self = this;
 
-      self.$openMenu = $('#menu-open');
-      self.$closeMenu = $('#menu-close, #menu-close--bottom');
-      self.$menuOverlay = $('#menu-overlay');
+      self.$openMenu = $('#navigation__open');
+      self.$closeMenu = $('#navigation__close, #navigation__close--bottom');
+      self.$menuOverlay = $('#navigation-site');
 
       self.bindEvents();
     },
@@ -57,7 +55,8 @@ var ff = ff ? ff : {};
     openMenu: function () {
       var self = this;
 
-      self.$menuOverlay.fadeIn(self.fadeDuration).find('.menu-close').first().focus();
+      self.$menuOverlay.fadeIn(self.fadeDuration);
+      $('#navigation__close').focus();
       ff.utilities.lockScroll();
     },
     /**

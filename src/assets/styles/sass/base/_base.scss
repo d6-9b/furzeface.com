@@ -43,7 +43,7 @@
     font-size: 125%;
   }
 
-  @include selection($brand-color, $brand-white);
+  @include selection($brand-grey, $brand-white);
 }
 
 /**
