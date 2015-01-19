@@ -107,7 +107,7 @@
 
           // If there isn't already an id, create one from content
           if(!id) {
-            id = self.ff.utilities.slugify(text);
+            id = ff.utilities.slugify(text);
             heading.attr('id', id);
           }
 

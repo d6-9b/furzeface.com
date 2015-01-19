@@ -1,18 +1,20 @@
 /*
- * @file Menu module
- * @version 1.0.0
- * @author {@link http://github.com/furzeface Daniel Furze}
- */
- var ff = ff ? ff : {};
- (function ($) {
-   $.extend(ff,{
-    /**
-    * Menu methods.
-    * @namespace Menu
-    */
-    menu: {
-     fadeDuration: 100,
-     menuInClass: 'menu-in',
+* @file Menu module
+* @version 1.0.0
+* @author {@link http://github.com/furzeface Daniel Furze}
+*/
+var ff = ff ? ff : {};
+(function ($) {
+  $.extend(ff, {
+  /**
+  * Menu methods.
+  * @namespace Menu
+  */
+  menu: {
+    // Configuration
+    fadeDuration: 100,
+    // CSS class selectors
+    menuInClass: 'menu-in',
     /**
     * Initialises menu namespaced methods
     * @function init
@@ -56,7 +58,7 @@
       var self = this;
 
       self.$menuOverlay.fadeIn(self.fadeDuration).find('.menu-close').first().focus();
-      self.ff.utilities.lockScroll();
+      ff.utilities.lockScroll();
     },
     /**
     * Removes CSS class from <html>, closing menu. Focus on open menu button.
@@ -68,7 +70,7 @@
 
       self.$menuOverlay.fadeOut(self.fadeDuration);
       self.$openMenu.focus();
-      self.ff.utilities.unlockScroll();
+      ff.utilities.unlockScroll();
     }
   }
 });

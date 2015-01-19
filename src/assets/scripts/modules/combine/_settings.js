@@ -13,7 +13,14 @@ var ff = ff ? ff : {};
 			$main: $('#main'),
 			$footer: $('#footer'),
 			// Stored URL params (empty to begin with)
-			urlParams: {}
+			urlParams: {},
+      // breakpoints (match _variables.scss)
+      breakpointExtraSmall: parseInt('20em') * 16,
+      breakpointSmall: parseInt('30em') * 16,
+      breakpointMedium: parseInt('50em') * 16,
+      breakpointExtraMedium: parseInt('65em') * 16,
+      breakpointLarge: parseInt('80em') * 16,
+      breakpointExtraLarge: parseInt('100em') * 16
 		}
 	});
 }(jQuery));
