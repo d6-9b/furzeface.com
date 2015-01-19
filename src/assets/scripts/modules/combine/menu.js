@@ -27,7 +27,7 @@
       var self = this;
 
       self.$openMenu = $('#menu-open');
-      self.$closeMenu = $('#menu-close');
+      self.$closeMenu = $('#menu-close, #menu-close--bottom');
       self.$menuOverlay = $('#menu-overlay');
 
       self.bindEvents();
@@ -53,14 +53,14 @@
       });
     },
     /**
-    * Adds CSS class to <html>, opening menu.
+    * Adds CSS class to <html>, opening menu. Focuses on first menu item.
     * @function openMenu
     * @memberof Menu
     */
     openMenu: function () {
       var self = this;
 
-      self.$menuOverlay.fadeIn(self.fadeDuration);
+      self.$menuOverlay.fadeIn(self.fadeDuration).find('a').first().focus();
       self.ff.utilities.lockScroll();
     },
     /**

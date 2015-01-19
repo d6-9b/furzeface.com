@@ -94,12 +94,12 @@
           // Updates counter
           self.resizeCount = self.resizeCount + 1;
           // Calculates new font size
-          var fontSize = parseFloat(self.ff.settings.$html.css('font-size')) * 1.1;
+          var fontSize = parseFloat(ff.settings.$html.css('font-size')) * 1.1;
           // Sets new font size
-          self.ff.settings.$html.css('font-size', fontSize);
+          ff.settings.$html.css('font-size', fontSize);
         } else {
           // Else reset font size
-          self.ff.settings.$html.css('font-size', self.originalFontSize);
+          ff.settings.$html.css('font-size', self.originalFontSize);
           // And reset counter
           self.resizeCount = 1;
         }

@@ -50,7 +50,7 @@
       */
       unlockScroll: function () {
         var self = this;
-        self.ff.settings.$html.removeClass('scroll-locked');
+        ff.settings.$html.removeClass('scroll-locked');
         ff.settings.$body.removeAttr('style');
 
         if (self.storedScrollPosition) {
@@ -85,7 +85,7 @@
       setUrlParams: function () {
         var self = this;
 
-        self.ff.settings.urlParams = self.getUrlParams();
+        ff.settings.urlParams = self.getUrlParams();
       },
       /**
       * Safer and enhanced console.log()

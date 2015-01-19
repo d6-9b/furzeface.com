@@ -80,7 +80,7 @@
             success: function (data) {
               if (data && data.div) {
                 if (!$('link[href="' + data.stylesheet + '"]').length) {
-                  self.ff.settings.$head.append('<link rel="stylesheet" href="' + data.stylesheet + '"' + ' />');
+                  ff.settings.$head.append('<link rel="stylesheet" href="' + data.stylesheet + '"' + ' />');
                 }
                 $element.html(data.div);
               }
