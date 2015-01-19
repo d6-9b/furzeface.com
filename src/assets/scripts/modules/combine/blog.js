@@ -11,12 +11,6 @@
      * @namespace Blog
      */
      blog: {
-      ff: null,
-      setGlobal: function (ff) {
-        var self = this;
-
-        self.ff = ff;
-      },
       /**
       * Initialises Blog module.
       * @function init
@@ -124,9 +118,6 @@
       }
     }
   });
-$.subscribe('setGlobal', function (event, ff) {
-  ff.blog.setGlobal(ff);
-});
 $.subscribe('pageReady', function () {
   // Initialise on blog posts
   if (ff.settings.$body.hasClass('page-post')) {

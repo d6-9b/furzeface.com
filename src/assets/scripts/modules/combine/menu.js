@@ -1,4 +1,4 @@
-/**
+/*
  * @file Menu module
  * @version 1.0.0
  * @author {@link http://github.com/furzeface Daniel Furze}
@@ -11,13 +11,8 @@
     * @namespace Menu
     */
     menu: {
-     ff: null,
      fadeDuration: 100,
      menuInClass: 'menu-in',
-     setGlobal: function (ff) {
-      var self = this;
-      self.ff = ff;
-    },
     /**
     * Initialises menu namespaced methods
     * @function init
@@ -53,18 +48,18 @@
       });
     },
     /**
-    * Adds CSS class to <html>, opening menu. Focuses on first menu item.
+    * Adds CSS class to <html>, opening menu. Focuses on first close menu button.
     * @function openMenu
     * @memberof Menu
     */
     openMenu: function () {
       var self = this;
 
-      self.$menuOverlay.fadeIn(self.fadeDuration).find('a').first().focus();
+      self.$menuOverlay.fadeIn(self.fadeDuration).find('.menu-close').first().focus();
       self.ff.utilities.lockScroll();
     },
     /**
-    * Removes CSS class from <html>, closing menu.
+    * Removes CSS class from <html>, closing menu. Focus on open menu button.
     * @function closeMenu
     * @memberof Menu
     */
@@ -72,12 +67,10 @@
       var self = this;
 
       self.$menuOverlay.fadeOut(self.fadeDuration);
+      self.$openMenu.focus();
       self.ff.utilities.unlockScroll();
     }
   }
-});
-$.subscribe('setGlobal', function (event, ff) {
-  ff.menu.setGlobal(ff);
 });
 $.subscribe('pageReady', function () {
   ff.menu.init();
