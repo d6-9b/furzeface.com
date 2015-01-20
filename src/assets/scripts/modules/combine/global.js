@@ -11,10 +11,14 @@
      * @namespace Global
      */
      global: {
+      // Cached jQuery objs
       $images: $('img'),
       $emoji:  $('.emoji'),
-      originalFontSize: parseFloat(ff.settings.$html.css('font-size')),
-      resizeCount: 0,
+      $notes: $('.note'),
+      $noteRefs: $('.note-ref'),
+      // Configuration
+      // originalFontSize: parseFloat(ff.settings.$html.css('font-size')),
+      // resizeCount: 0,
       /**
       * Initialises Global module.
       * @function init
@@ -23,8 +27,9 @@
       init: function () {
         var self = this;
 
-        self.bindEvents();
+        // self.$textResizer = $('#text_resizer');
 
+        self.bindEvents();
         self.setEmojis();
         // self.syntaxHighlight();
         self.lazyImages();
@@ -39,12 +44,18 @@
       bindEvents: function () {
         var self = this;
 
-        self.$textResizer = $('#text_resizer');
+        // self.$textResizer.on('click', function (e) {
+        //   e.preventDefault();
 
-        self.$textResizer.on('click', function (e) {
-          e.preventDefault();
+        //   self.enlargeText();
+        // });
 
-          self.enlargeText();
+        self.$noteRefs.on('click', function () {
+          self.backToNote($(this));
+        });
+
+        self.$notes.on('click', function () {
+          self.focusNote($(this));
         });
       },
       /**
@@ -103,6 +114,28 @@
           // And reset counter
           self.resizeCount = 1;
         }
+      },
+      /**
+      * Note reference navigation.
+      * @function toNoteRef
+      * @memberof Global
+      */
+      focusNote: function ($note) {
+        var noteId = $note.attr('href'),
+        $noteRef = $(noteId);
+
+        $noteRef.focus();
+      },
+      /**
+      * Note navigation.
+      * @function backToNote
+      * @memberof Global
+      */
+      backToNote: function ($noteRef) {
+        var noteRefId = $noteRef.attr('id'),
+        $note = $(noteRefId);
+
+        $note.focus();
       }
     }
   });
