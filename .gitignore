@@ -5,16 +5,13 @@
 *.log
 tmp
 
+# Don’t commit dependencies! >:(
+bower_components
+node_modules
+
 # Project meta
 .sass-cache
 *.sublime-workspace
 
-# Don't commit dependencies!
-node_modules
-src/assets/components
-
 # Generated files
 dist
-
-# Secret
-.aws.json
