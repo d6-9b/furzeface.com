@@ -12,5 +12,16 @@
     "jquery": "2.1.1",
     "modernizr": "~2.8.2",
     "sassface": "~1.2.0"
+  },
+  "preen": {
+    "jquery": [
+      "dist/*.js"
+    ],
+    "modernizr": [
+      "modernizr.js"
+    ],
+    "sassface": [
+      "src/**/*.scss"
+    ]
   }
 }
