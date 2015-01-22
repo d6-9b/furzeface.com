@@ -61,5 +61,5 @@
   "scripts": {
     "postinstall": "bower install -V && grunt preen:verbose",
     "test": "grunt deploy --production"
-  },
+  }
 }
