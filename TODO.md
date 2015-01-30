@@ -19,10 +19,13 @@
 
 ## Gruntfile.js
 
--  **todo** `(line 182)`  Return dynamically built local URL for assetsUrl
--  **todo** `(line 651)` : Add resp img task back in
+-  **todo** `(line 200)`  Return dynamically built local URL for assetsUrl
+-  **todo** `(line 269)`  test out grunt-wiredep for assets
+-  **todo** `(line 270)`  test out deployment and references to bower_components
+-  **todo** `(line 271)`  test out usemin for assets
+-  **todo** `(line 673)` : Add resp img task back in
 
 
 * * *
 
-Last generated: Tue Jan 20 2015 09:13:50 by [grunt-todo](https://github.com/leny/grunt-todo).
+Last generated: Fri Jan 30 2015 09:39:23 by [grunt-todo](https://github.com/leny/grunt-todo).

@@ -129,6 +129,24 @@
       ]
     },
 
+    devUpdate: {
+      report: {
+        options: {
+          updateType: 'report'
+        }
+      },
+      prompt: {
+        options: {
+          updateType: 'prompt'
+        }
+      },
+      force: {
+        options: {
+          updateType: 'force'
+        }
+      }
+    },
+
 
     jsdoc: {
       all: {
@@ -247,6 +265,10 @@
         }]
       }
     },
+
+    // @todo test out grunt-wiredep for assets
+    // @todo test out deployment and references to bower_components
+    // @todo test out usemin for assets
 
     copy: {
       fonts: {
