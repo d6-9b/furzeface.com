@@ -1,13 +1,5 @@
 {
-  "page1": [
-  {
-    "title": "24 Pull Requests - my contributions",
-    "slug": "24-pull-requests-my-contributions",
-    "pubDate": "1st Dec 2014",
-    "summary": "An ongoing summary of my 24 pull requests, as part of this year’s 24 Pull Requests project.",
-    "unpublished": true
-  },
-  {
+  "page1": [{
     "title": "Travis ain’t scary",
     "slug": "travis-aint-scary",
     "pubDate": "27th Nov 2014",
@@ -79,10 +71,8 @@
     "slug": "bash-profile-shortcuts",
     "pubDate": "4th Jul, 2014",
     "summary": "I wrote this Gist a while ago and it came in handy last week when I was showing a colleague some handy shortcuts to add to his .bash_profile - so here it is."
-  }
-  ],
-  "page2": [
-  {
+  }],
+  "page2": [{
     "title": "Getting a git repository going",
     "slug": "getting-a-git-repository-going",
     "pubDate": "21st Jun, 2014",
@@ -153,10 +143,8 @@
     "slug": "review-of-learning-from-jquery-by-callum-macrae-oreilly-media",
     "pubDate": "27th Jan, 2014",
     "summary": "I was given a copy of Learning from jQuery by Callum Macrae to review for the O’Reilly Reader Review Program."
-  }
-],
-"page3": [
-  {
+  }],
+  "page3": [{
     "title": "My Google Analytics dashboard",
     "slug": "my-google-analytics-dashboard",
     "pubDate": "15th Jan, 2014",
@@ -173,6 +161,5 @@
     "slug": "review-of-raphael-js-by-chris-wilson-oreilly-media",
     "pubDate": "3rd Jan, 2014",
     "summary": "I was given a copy of Raphaël JS by Chris Wilson to review for the O’Reilly Reader Review Program."
-  }
-]
+  }]
 }
