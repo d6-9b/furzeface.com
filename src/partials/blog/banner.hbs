@@ -3,13 +3,13 @@ component: banner
 ---
 
 {{#if bannerImage}}
-  <section class="banner banner--blog banner--small" style="background-image: url('{{assetsUrl}}/{{images}}/banner/{{bannerImage}}');">
+  <div class="banner banner--blog banner--small" style="background-image: url('{{assetsUrl}}/{{images}}/banner/{{bannerImage}}');">
   {{else}}
-  <section class="banner banner--solid">
+  <div class="banner banner--solid">
 {{/if}}
 
     <div class="banner__meta">
-      <h1 class="banner__title"><a href="#TLDR" title="TL;DR? - Skip to the end." class="tldr">{{{title}}}</a></h1>
+      <p class="banner__title"><a href="#TLDR" title="TL;DR? - Skip to the end." class="tldr">{{{title}}}</a></p>
 
       {{#if pubDate}}
       <p class="eta">
@@ -29,4 +29,4 @@ component: banner
       {{!-- @todo: category link? --}}
 
     </div>
-  </section>
+  </div>
