@@ -1,5 +1,11 @@
 {
   "page1": [{
+    "title": "Front end is dead",
+    "slug": "front-end-is-dead",
+    "pubDate": "31st Jan 2015",
+    "summary": "Long live front end&hellip;"
+  },
+  {
     "title": "Travis ain’t scary",
     "slug": "travis-aint-scary",
     "pubDate": "27th Nov 2014",
