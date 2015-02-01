@@ -4,36 +4,74 @@ title: Front end is dead
 pubDate: 31st Jan, 2015
 category: Front End
 tags:
+- front-end-aint-scary
 - front-end
 ---
 
 {{#extend "layout-post"}}
 
 {{#content "post-summary"}}
-Stuff
+I was asked to summarise for a group of IT students what goes into a job like mine, and in doing so I realised that it’s <strong>damn near impossible</strong> to do so these days&hellip;
 {{/content}}
 
 
 {{#content "post-content"}}
 <h2>Long live front end&hellip;</h2>
 
-<p class="todo">@TODO:</p>
+<p>The nature of the web is ever-changing and building for such a dynamic, fast-paced and sometimes completely unknown environment means that we as developers constantly have to evolve and push ourselves in order to push the limits of what we do.</p>
 
+<blockquote class="pullquote">Sometimes it’s tough to narrow down and define what exactly is involved in a front end developer’s job.</blockquote>
+
+<p>Back in the day <small>(I’m getting old now)</small> my first job in the industry encompassed a bit of front end, bit of back end, database magic, copywriting, SEO - generally a bit of everything.</p>
+<p>Moving on to specialise more in front end I still did bits and bobs of back end in the form of PHP <small>(yes it is back end, in my opinion!)</small> and I still know of a few companies around that merge the boundries between roles, especially where PHP is involved and the back end team use a different technology for the bulk of their work.</p>
+<p>And don’t get me started on <em>full stack</em>&hellip;whatever that is. {{emoji 'expressionless'}}</p>
+
+<p>So sometimes it’s tough to narrow down and define what exactly is involved in a front end developer’s job.</p>
+
+
+<h2>Rise of the MV-<em>something</em></h2>
+<p>I know that sounds like a bad B-movie but what I’m trying to get across is the huge rise of client-side <abbr title="Model View Controller">MVC</abbr>/<abbr title="Model View Viewmodel">MVVM</abbr> frameworks in recent years such as <a href="https://angularjs.org" rel="external">Angular</a>, <a href="http://facebook.github.io/react" rel="external">React</a> and <a href="http://backbonejs.org" rel="external">Backbone</a>.</p>
+<p>These kind of frameworks have been pushing developers more and more to progress from the holy trinity of front end - HTML, CSS and JavaScript - and more towards large scale, data-driven applications and helping to blur the lines between front and back end development somewhat.</p>
+<p>Any digital agency or IT company worth their salt these days is going to want some experience or knowledge of these kinds of frameworks and the reasons for and benefits of using such technology.</p>
+
+<h2>Preprocessors</h2>
+<p>Another element of my job that I would’ve never imagined a couple of years ago is that I barely ever write CSS or HTML anymore!</p>
+<p>What I mean by this though is that with the introduction of CSS preprocessors like <a href="http://sass-lang.com" rel="external">Sass</a> and <a href="http://lesscss.org" rel="external">Less</a> it’s become almost the standard in any up to date workplace to use one of these tools to help speed up and maintain development of CSS.</p>
+<p>As well as these, I almost exclusively use a templating engine to write HTML - 99% of the time, it’s <a href="http://handlebarsjs.com" rel="external">Handlebars</a> or <a href="https://mustache.github.io" rel="external">Mustache</a>. Tools like this again allow speedy development and componentised, reusable templates - a big deal if you’re hoping to work for a digital agency who use a CMS to build their websites.</p>
+
+<h2 class="todo">@todo: Front end build processes</h2>
+
+
+<p>I’ve previously written a few posts on getting over the learning curves of such technologies:</p>
 <ul>
-  <li>Back in the day&hellip;</li>
-  <li>Companies the treat PHP etc as FE</li>
-  <li>Full stack WTF???</li>
-  <li>Rise of MV* stuff</li>
-  <li>Front end build process</li>
-  <li>What to learn</li>
-  <li>Links to my posts</li>
-  <li>Opportunity at BB</li>
+  <li><a href="/blog/bower-aint-scary" rel="archives">Bower ain’t scary</a></li>
+  <li><a href="/blog/grunt-aint-scary" rel="archives">Grunt ain’t scary</a></li>
+  <li><a href="/blog/yeoman-aint-scary" rel="archives">Yeoman ain’t scary</a></li>
 </ul>
+
 {{/content}}
 
 
 {{#content "post-tldr"}}
-More stuff
+<p>A great deal has changed since I’ve been a Front Ender and a lot more has probably changed even since I published this post!</p>
+<p>This post summarises a few of my thoughts on the development landscape right now and what a young would-be front end developer should be looking into whilst trying to get into the industry.</p>
+
+<h3>Useful resources</h3>
+<ul>
+  <li><a href="http://www.codecademy.com" rel="external">Codecademy</a> for decent HTML, CSS, JavaScript tutorials</li>
+  <li><a href="http://www.pluralsight.com">Pluralsight</a> for many more learning courses</li>
+  <li><a href="http://sass-lang.com" rel="external">Sass</a></li>
+  <li><a href="http://lesscss.org" rel="external">Less</a></li>
+  <li><a href="http://handlebarsjs.com" rel="external">Handlebars</a></li>
+  <li><a href="https://mustache.github.io" rel="external">Mustache</a></li>
+  <li><a href="http://bower.io" rel="external">Bower</a></li>
+  <li><a href="http://gruntjs.org" rel="external">Grunt</a></li>
+  <li><a href="http://yeoman.io" rel="external">Yeoman</a></li>
+</ul>
+
+<p>See more examples and a great guide to picking one of the 134,049,034{{#note 1}}{{/note}} JavaScript frameworks available today, see <a href="http://todomvc.com" rel="external">TodoMVC</a>.</p>
+
+<small>{{#note_ref 1}}{{/note_ref}} bit of an estimate, that.</small>
 {{/content}}
 
 {{/extend}}
