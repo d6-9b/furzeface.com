@@ -53,6 +53,7 @@
     "grunt-responsive-images": "^0.1.3",
     "grunt-robots-txt": "^0.3.0",
     "grunt-todo": "^0.4.0",
+    "grunt-wiredep": "^2.0.0",
     "grunt-xml-sitemap": "^0.2.0",
     "jshint-stylish": "1.0.0",
     "load-grunt-tasks": "^3.0.0",
@@ -60,7 +61,7 @@
   },
   "scripts": {
     "start": "grunt serve",
-    "postinstall": "bower i -V",
+    "postinstall": "bower i -V && grunt preen",
     "test": "grunt deploy --production"
   }
 }
