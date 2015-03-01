@@ -9,12 +9,10 @@
   $base-color-darker: darken($base-color-dark, 10);
 
   background: $base-color;
-  border: 1px solid $base-color-dark;
 
   &:hover,
   &:focus, {
     background: $base-color-dark;
-    border-color: $base-color-darker;
   }
 }
 
@@ -22,7 +20,6 @@
   background: $brand-grey;
   backface-visibility: hidden;
   border: 0;
-  border: 1px solid $brand-grey--dark;
   border-radius: 2px;
   color: $brand-white;
   cursor: pointer;
@@ -39,7 +36,6 @@
   &:hover,
   &:focus, {
     background: $brand-grey--dark;
-    border-bottom-color: darken($brand-grey--dark, 10);
     color: $brand-white;
     text-decoration: none;
   }
