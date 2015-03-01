@@ -267,15 +267,15 @@
     },
 
     // @todo test out grunt-wiredep for assets
-    wiredep: {
-      dist: {
-        options: {
-        },
-        src: [
-        'dist/**/*.html'
-        ]
-      }
-    },
+    // wiredep: {
+    //   dist: {
+    //     options: {
+    //     },
+    //     src: [
+    //     'dist/**/*.html'
+    //     ]
+    //   }
+    // },
     // @todo test out deployment and references to bower_components
     // @todo test out usemin for assets
 
@@ -656,8 +656,8 @@
 
   // Build tasks.
   grunt.registerTask('build_html', [
-    'assemble',
-    'wiredep'
+    'assemble'/*,
+    'wiredep'*/
     ]);
 
   grunt.registerTask('build_styles', [
