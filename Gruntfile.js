@@ -267,6 +267,15 @@
     },
 
     // @todo test out grunt-wiredep for assets
+    wiredep: {
+      dist: {
+        options: {
+        },
+        src: [
+        'dist/**/*.html'
+        ]
+      }
+    },
     // @todo test out deployment and references to bower_components
     // @todo test out usemin for assets
 
@@ -645,15 +654,10 @@
 
   });
 
-  // Setup task - called after npm install.
-  grunt.registerTask('setup', [
-    'copy:sassface',
-    'clean:sassface'
-    ]);
-
   // Build tasks.
   grunt.registerTask('build_html', [
-    'newer:assemble'
+    'assemble',
+    'wiredep'
     ]);
 
   grunt.registerTask('build_styles', [

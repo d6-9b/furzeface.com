@@ -6,22 +6,19 @@
     "node_modules",
     "src/assets/components"
   ],
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "jquery": "2.1.1",
-    "modernizr": "~2.8.2",
-    "sassface": "~1.2.0"
+    "modernizr": "~2.8.3"
   },
   "preen": {
     "jquery": [
+      "bower.json",
       "dist/*.js"
     ],
     "modernizr": [
+      "bower.json",
       "modernizr.js"
-    ],
-    "sassface": [
-      "src/**/*.scss"
     ]
   }
 }
