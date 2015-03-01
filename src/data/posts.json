@@ -1,9 +1,18 @@
 {
-  "page1": [{
+  "page1": [
+  {
+    "title": "5 open source developers tell us how they got started",
+    "slug": "http://opensource.com/life/15/2/5-beginners-open-source-share-thoughts",
+    "pubDate": "25 Feb 2015",
+    "summary": "I was featured in Noel Peatfield's post on opensource.com about how open source developers got started.",
+    "external": true
+  },
+  {
     "title": "Front end is dead",
     "slug": "front-end-is-dead",
     "pubDate": "31st Jan 2015",
-    "summary": "I was asked to summarise for a group of IT students what goes into a job like mine, and in doing so I realised that it’s damn near impossible to do so these days&hellip;"
+    "summary": "I was asked to summarise for a group of IT students what goes into a job like mine, and in doing so I realised that it’s damn near impossible to do so these days&hellip;",
+    "unpublished": true
   },
   {
     "title": "Travis ain’t scary",
@@ -77,8 +86,10 @@
     "slug": "bash-profile-shortcuts",
     "pubDate": "4th Jul, 2014",
     "summary": "I wrote this Gist a while ago and it came in handy last week when I was showing a colleague some handy shortcuts to add to his .bash_profile - so here it is."
-  }],
-  "page2": [{
+  }
+  ],
+  "page2": [
+  {
     "title": "Getting a git repository going",
     "slug": "getting-a-git-repository-going",
     "pubDate": "21st Jun, 2014",
@@ -149,8 +160,10 @@
     "slug": "review-of-learning-from-jquery-by-callum-macrae-oreilly-media",
     "pubDate": "27th Jan, 2014",
     "summary": "I was given a copy of Learning from jQuery by Callum Macrae to review for the O’Reilly Reader Review Program."
-  }],
-  "page3": [{
+  }
+  ],
+  "page3": [
+  {
     "title": "My Google Analytics dashboard",
     "slug": "my-google-analytics-dashboard",
     "pubDate": "15th Jan, 2014",
@@ -167,5 +180,6 @@
     "slug": "review-of-raphael-js-by-chris-wilson-oreilly-media",
     "pubDate": "3rd Jan, 2014",
     "summary": "I was given a copy of Raphaël JS by Chris Wilson to review for the O’Reilly Reader Review Program."
-  }]
+  }
+  ]
 }
