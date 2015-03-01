@@ -4,9 +4,9 @@
     {
       "path": ".",
         "folder_exclude_patterns": [
-        ".sass-cache",
+        ".sass-cache"//,
         // "bower_components",
-        "node_modules"
+        // "node_modules"
       ],
       "file_exclude_patterns": [
         "*.css",
