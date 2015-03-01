@@ -312,27 +312,14 @@
           dest: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distScripts %>/'
         }
         ]
-      },
-      sassface: {
-        files: [
-        {
-          expand: true,
-          cwd: '<%= config.bower %>/sassface/src',
-          src: ['**/*'],
-          dest: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/<%= config.srcSass %>'
-        }
-        ]
       }
     },
 
     clean: {
-      // Clean SassFace component after setup
-      sassface: [
-      '<%= config.bower %>/sassface'
-      ],
       // Cleans artifacts
       production: [
-      '<%= config.dist %>/<%= config.distAssets %>/<%= config.distStyles %>/<%= config.mainCss %>.map'
+      '<%= config.dist %>/<%= config.distAssets %>/<%= config.distStyles %>/<%= config.mainCss %>.map',
+      '<%= config.dist %>/<%= config.distAssets %>/<%= config.distFonts %>/furzeface/selection.json'
       ],
       docs: [
       '<%= config.dist %>/<%= config.distDocs %>'
