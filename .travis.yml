@@ -21,6 +21,6 @@ deploy:
   local-dir: dist
   on:
     branch: master
-    repo: furzeface/daniel.furzeface.com
-# after_deploy:
-#   - grunt post_deploy
+    repo: furzeface/furzeface.com
+after_deploy:
+  - grunt post_deploy
