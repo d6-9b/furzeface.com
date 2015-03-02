@@ -4,38 +4,25 @@ pageClass: page-blog
 ---
 
 {{#extend "layout-page"}}
+  {{#content "page-header"}}
+    {{>banner-blog}}
+  {{/content}}
 
-{{#content "page-header"}}
+  {{#content "page-content"}}
+    <ul class="articles-list">
+      {{#each posts.page1}}
+        {{#unless unpublished}}
+          {{>blog-link this}}
+        {{/unless}}
+      {{/each}}
+    </ul>
 
-{{>banner-blog}}
-
-{{/content}}
-
-{{#content "page-content"}}
-
-<ul class="articles-list">
-  {{#each posts.page1}}
-  {{#unless unpublished}}
-
-  <a href="{{{slug}}}" class="articles-list__link" {{#if external}}rel="external"{{/if}}>
-    <li class="articles-list__item">
-      <h1>
-        {{{title}}}
-      </h1>
-      <p>{{{summary}}}</p>
-      <time datetime="{{{pubDate}}}" pubdate="{{{pubDate}}}" class="updated published">{{{pubDate}}}</time>
-    </li>
-  </a>
-  {{/unless}}
-  {{/each}}
-</ul>
-
-<nav class="articles-pagination">
-  <ul class="list-unstyled">
-    <li class="next"><a href="/blog/2">Next &rarr;</a> </li>
-  </ul>
-</nav>
-
-{{/content}}
-
+    <nav class="articles-pagination">
+      <ul class="list-unstyled">
+        <li class="next"><a href="/blog/2">Next &rarr;</a></li>
+      </ul>
+    </nav>
+  {{/content}}
 {{/extend}}
+
+{{!-- @todo rework blog page template a bit more --}}

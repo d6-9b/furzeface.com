@@ -1,0 +1,13 @@
+---
+component: blog-link
+---
+
+<a href="{{{slug}}}" class="articles-list__link" {{#if external}}rel="external"{{/if}}>
+  <li class="articles-list__item">
+    <h1>
+      {{{title}}}
+    </h1>
+    <p>{{{summary}}} {{#if external}}<small class="external">external</small>{{/if}}</p>
+    <time datetime="{{{pubDate}}}" pubdate="{{{pubDate}}}" class="updated published">{{{pubDate}}}</time>
+  </li>
+</a>

@@ -110,6 +110,7 @@
   }
 
   &[rel='external'],
+  &.external,
   &[href^='mailto:'] {
     &::after {
       @extend %icon-font;
@@ -120,7 +121,8 @@
     }
   }
 
-  &[rel='external'] {
+  &[rel='external'],
+  &.external {
     // External icon
     &::after {
       content: '\e600';
@@ -132,6 +134,18 @@
       // Email icon
       content: '\e603';
     }
+  }
+}
+
+.external {
+  // External icon
+  &::after {
+    @extend %icon-font;
+
+    color: $brand-grey--dark;
+    content: '\e600';
+    display: inline;
+    font-size: .75em;
   }
 }
 

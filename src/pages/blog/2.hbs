@@ -1,37 +1,27 @@
 ---
-title: Blog - Page 2
+title: Blog - Page 3
 pageClass: page-blog
 ---
 
 {{#extend "layout-page"}}
+  {{#content "page-header"}}
+    {{>banner-blog}}
+  {{/content}}
 
-{{#content "page-header"}}
+  {{#content "page-content"}}
+    <ul class="articles-list">
+      {{#each posts.page2}}
+       {{#unless unpublished}}
+            {{>blog-link this}}
+          {{/unless}}
+      {{/each}}
+    </ul>
 
-{{>banner-blog}}
-
-{{/content}}
-
-{{#content "page-content"}}
-
-<ul class="articles-list">
-  {{#each posts.page2}}
-  <li class="articles-list__item">
-    <h1>
-      <a href="/blog/{{{slug}}}" class="articles-list__link" {{#if external}}rel="external"{{/if}}>{{{title}}}</a>
-    </h1>
-    <p>{{{summary}}}</p>
-    <time datetime="{{{pubDate}}}" pubdate="{{{pubDate}}}" class="updated published">{{{pubDate}}}</time>
-  </li>
-  {{/each}}
-</ul>
-
-<nav class="articles-pagination">
-  <ul class="list-unstyled">
-    <li class="prev"><a href="/blog">&larr; Prev</a></li>
-    <li class="next"><a href="/blog/3">Next &rarr;</a></li>
-  </ul>
-</nav>
-
-{{/content}}
-
+    <nav class="articles-pagination">
+      <ul class="list-unstyled">
+        <li class="prev"><a href="/blog">&larr; Prev</a></li>
+        <li class="next"><a href="/blog/3">Next &rarr;</a></li>
+      </ul>
+    </nav>
+  {{/content}}
 {{/extend}}
