@@ -13,7 +13,7 @@
 }
 
 .banner__meta {
-  @include rgba-bg($brand-color, .9);
+  @include rgba-bg($brand-color, .75);
 
   color: $brand-white;
   padding: ($global-padding * 2) $global-padding;
