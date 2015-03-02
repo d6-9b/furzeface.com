@@ -3,7 +3,7 @@ component: banner
 ---
 
 {{#if bannerImage}}
-  <div class="banner banner--blog banner--small" style="background-image: url('{{assetsUrl}}/{{images}}/banner/{{bannerImage}}');">
+  <div class="banner banner--blog banner--small" style="background-image: url('{{assetsUrl}}/{{images}}/{{bannerImage}}');">
   {{else}}
   <div class="banner banner--solid">
 {{/if}}
@@ -24,9 +24,5 @@ component: banner
       {{/if}}
 
       <small id="mins_to_read" class="mins-to-read icon-stopwatch"></small>
-
-      {{!-- @todo: proper pubdate --}}
-      {{!-- @todo: category link? --}}
-
     </div>
   </div>
