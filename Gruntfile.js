@@ -422,7 +422,9 @@
           // plugins
           '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/plugins/combine/*.js',
           // from Bower components
-          '<%= config.bower %>/emojify.js/emojify.js',
+          '<%= config.bower %>/jquery-tiny-pubsub/dist/ba-tiny-pubsub.min.js',
+          '<%= config.bower %>/picturefill/dist/picturefill.min.js',
+          '<%= config.bower %>/jquery-unveil/jquery.unveil.min.js',
           // combined scripts
           '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/modules/combine/*.js',
           // initialise all modules afterwards

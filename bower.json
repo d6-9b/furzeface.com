@@ -9,16 +9,27 @@
   "dependencies": {},
   "devDependencies": {
     "jquery": "2.1.1",
-    "modernizr": "~2.8.3"
+    "jquery-tiny-pubsub": "~0.7.0",
+    "modernizr": "~2.8.3",
+    "picturefill": "~2.2.0",
+    "jquery-unveil": "~1.3.0"
   },
   "preen": {
     "jquery": [
       "bower.json",
       "dist/*.js"
     ],
+    "jquery-tiny-pubsub": [
+      "bower.json",
+      "dist/*.js"
+    ],
     "modernizr": [
       "bower.json",
       "modernizr.js"
+    ],
+    "picturefill": [
+      "bower.json",
+      "dist/*.js"
     ]
   }
 }
