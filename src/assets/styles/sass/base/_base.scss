@@ -315,9 +315,9 @@ sub {
  * @since 1.1.0
  * @author Daniel Furze
  *
- * @todo Implement list item styles.
  */
  li {
+  margin-bottom: px-to-rem(5px);
  }
 
 /**

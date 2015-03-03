@@ -1,7 +1,7 @@
 ---
 pageClass: page-post
 title: Git-flow ain’t scary
-pubDate: 13th Sept, 2014
+pubDate: 3rd Mar, 2015
 ogImage: blog/git_logo.png
 category: Front End Ain’t Scary
 tags:
@@ -19,30 +19,68 @@ I promised I’d write this when I overcame my initial apprehension of git-flow&
 {{#content "post-content"}}
 <h2>Git-what?</h2>
 <p>So I’ve used git-flow very little <small>(we have one project at work using it I believe)</small> - and I’ve mostly thought before that as a set of tools git-flow is pretty redundant and that you should probably just have a sensible work flow without it anyway.</p>
+<blockquote class="pullquote">Keep reading - I’m about to change my opinion&hellip;</blockquote>
 <p>In most projects I have a <code class="inline">master</code> branch that I deploy to production from, a <code class="inline">develop</code> branch that I work on fixes and <code class="inline">feature/*</code> branches for specific new tasks.</p>
-<p>My own workflow serves me well for small projects with just me or a couple of friends as developers but even mere minutes after starting to use git-flow properly for this post I already see the benefits!</p>
+<figure>
+  <img src="{{assetsUrl}}/{{images}}/blog/git_flow-branches_screenshot.png" alt="A screenshot of my repository branches on GitHub" />
+  <figcaption>All of the branches on <a href="https://github.com/furzeface/furzeface.com" rel="external">GitHub</a></figcaption>
+</figure>
+<p>My own workflow serves me well for small projects with just me developing or with a couple of friends but even mere minutes after starting to use git-flow properly for this post I already see the benefits!</p>
 
 <h2>Git-flow go</h2>
+<p>The easiest way to install git-flow <small>(on a Mac)</small> is via <a href="" rel="external">Homebrew</a> simply run:
+  <code>
+    $ brew install git-flow
+  </code>
+</p>
+<p>Another simple method is to use cURL:</p>
+<code>
+  $ curl -L -O https://raw.github.com/nvie/gitflow/develop/contrib/gitflow-installer.sh
+</code>
+Then run the installer with <code class="inline">bash gitflow-installer.sh</code>.</p>
 
+<aside class="tip">
+  <strong>Note: </strong> there’s some nice instructions for Windows installation on the <a href="https://github.com/nvie/gitflow/wiki/Windows" rel="external">git-flow wiki</a>. Sorry, I’m a bit lazy&hellip; {{emoji 'expressionless'}}
+</aside>
+
+<h2>Getting started</h2>
+<p>The main concepts behind git-flow that I use are:
+  <ul>
+    <li>Keep your <code class="inline">master</code> branch clean and ready to deploy to production at any moment</li>
+    <li>Merge complete features/fixes that are ready for release into your <code class="inline">develop</code> branch</li>
+    <li>Before a release, a <code class="inline">release</code> branch is created to prepare the appropriate features, which is then merged into <code class="inline">master</code> for deployment</li>
+    <li>Critical fixes can be made in a <code class="inline">hotfix</code> branch and merged back down the stream, to <code class="inline">develop</code> / <code class="inline">feature</code> branches</li>
+    <li>Other bug fixes addressed in <code class="inline">release</code> branches are also merged down</li>
+  </ul>
+</p>
+
+<p class="todo">@todo: moar stuff</p>
+
+{{!--
 <figure>
   <img src="{{assetsUrl}}/{{images}}/blog/git_flow-terminal_screenshot.png" alt="" />
   <figcaption>A screenshot of my terminal window with git flow, creating a feature branch.</figcaption>
 </figure>
 
-<h3>Useful resources</h3>
-<ul>
-<li><a href="http://nvie.com/posts/a-successful-git-branching-model" rel="external"><em>A successful Git branching model</em></a> - the original blog post by Vincent Driessen</li>
-<li><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow" rel="external">A git-flow tutorial</a> from Atlassian</li>
-<li><a href="http://danielkummer.github.io/git-flow-cheatsheet" rel="external">Git-flow cheatsheet</a> by Daniel Kummer</li>
-<li><a href="https://github.com/nvie/gitflow" rel="external">Git-flow on GitHub</a></li>
-</ul>
+<p>Now just keep working away on your feature and committing as normal.</p>
+
+<h2></h2>
+--}}
 
 {{/content}}
 
 
 {{#content "post-tldr"}}
 <p>This post is my brief introduction into using <a href="https://github.com/nvie/gitflow" rel="external">git-flow</a> the set of tools available to help with more advanced, structured workflows.</p>
-<p>Git-flow ain’t too bad, y’all.</p>
+<p>Git-flow ain’t too scary, y’all. {{emoji 'ghost'}}</p>
+
+<h3>Useful resources</h3>
+<ul>
+  <li><a href="http://nvie.com/posts/a-successful-git-branching-model" rel="external"><em>A successful Git branching model</em></a> - the original blog post by Vincent Driessen</li>
+  <li><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow" rel="external">A git-flow tutorial</a> from Atlassian</li>
+  <li><a href="http://danielkummer.github.io/git-flow-cheatsheet" rel="external">Git-flow cheatsheet</a> by Daniel Kummer</li>
+  <li><a href="https://github.com/nvie/gitflow" rel="external">Git-flow on GitHub</a></li>
+</ul>
 {{/content}}
 
 {{/extend}}
