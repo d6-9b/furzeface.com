@@ -383,6 +383,25 @@
       }
     },
 
+    px_to_rem: {
+      main: {
+        options: {
+          base: 16,
+          fallback: false,
+          fallback_existing_rem: false,
+          ignore: []
+        },
+        files: [
+        {
+          expand: true,
+          flatten: true,
+          src: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distStyles %>/<%= config.mainCss %>',
+          dest: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distStyles %>/'
+        }
+        ]
+      }
+    },
+
     cssmin: {
       options: {
         banner: '<%= meta.banner %>',
@@ -419,36 +438,36 @@
 
       scripts: {
         src: [
-          // plugins
-          '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/plugins/combine/*.js',
-          // from Bower components
-          '<%= config.bower %>/jquery-tiny-pubsub/dist/ba-tiny-pubsub.min.js',
-          '<%= config.bower %>/picturefill/dist/picturefill.min.js',
-          '<%= config.bower %>/jquery-unveil/jquery.unveil.min.js',
-          // combined scripts
-          '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/modules/combine/*.js',
-          // initialise all modules afterwards
-          '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/_init.js'
-          ],
-          dest: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distScripts %>/scripts.js'
-        }
-      },
+        // from Bower components
+        '<%= config.bower %>/jquery-tiny-pubsub/dist/ba-tiny-pubsub.min.js',
+        '<%= config.bower %>/picturefill/dist/picturefill.min.js',
+        '<%= config.bower %>/jquery-unveil/jquery.unveil.min.js',
+        // plugins
+        '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/plugins/combine/*.js',
+        // combined scripts
+        '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/modules/combine/*.js',
+        // initialise all modules afterwards
+        '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/_init.js'
+        ],
+        dest: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distScripts %>/scripts.js'
+      }
+    },
 
-      uglify: {
-        options: {
-          banner: '<%= meta.banner %>',
-          preserveComments: 'some',
-          mangle: true
-        },
-        jquery: {
-          src: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distScripts %>/jquery.js',
-          dest: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distScripts %>/jquery.js'
-        },
-        scripts: {
-          src: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distScripts %>/scripts.js',
-          dest: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distScripts %>/scripts.js'
-        }
+    uglify: {
+      options: {
+        banner: '<%= meta.banner %>',
+        preserveComments: 'some',
+        mangle: true
       },
+      jquery: {
+        src: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distScripts %>/jquery.js',
+        dest: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distScripts %>/jquery.js'
+      },
+      scripts: {
+        src: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distScripts %>/scripts.js',
+        dest: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distScripts %>/scripts.js'
+      }
+    },
 
 
     // Image tasks
@@ -652,7 +671,8 @@
   grunt.registerTask('build_styles', [
     'sass',
     'newer:autoprefixer',
-    'newer:combine_mq'
+    'newer:combine_mq',
+    'newer:px_to_rem'
     ]);
 
   grunt.registerTask('build_scripts', [
