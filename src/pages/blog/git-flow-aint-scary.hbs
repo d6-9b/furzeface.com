@@ -1,0 +1,48 @@
+---
+pageClass: page-post
+title: Git-flow ain’t scary
+pubDate: 13th Sept, 2014
+ogImage: blog/git_logo.png
+category: Front End Ain’t Scary
+tags:
+- front-end-aint-scary
+- git
+---
+
+{{#extend "layout-post"}}
+
+{{#content "post-summary"}}
+I promised I’d write this when I overcame my initial apprehension of git-flow&hellip;turns out it’s not scary at all.
+{{/content}}
+
+
+{{#content "post-content"}}
+<h2>Git-what?</h2>
+<p>So I’ve used git-flow very little <small>(we have one project at work using it I believe)</small> - and I’ve mostly thought before that as a set of tools git-flow is pretty redundant and that you should probably just have a sensible work flow without it anyway.</p>
+<p>In most projects I have a <code class="inline">master</code> branch that I deploy to production from, a <code class="inline">develop</code> branch that I work on fixes and <code class="inline">feature/*</code> branches for specific new tasks.</p>
+<p>My own workflow serves me well for small projects with just me or a couple of friends as developers but even mere minutes after starting to use git-flow properly for this post I already see the benefits!</p>
+
+<h2>Git-flow go</h2>
+
+<figure>
+  <img src="{{assetsUrl}}/{{images}}/blog/git_flow-terminal_screenshot.png" alt="" />
+  <figcaption>A screenshot of my terminal window with git flow, creating a feature branch.</figcaption>
+</figure>
+
+<h3>Useful resources</h3>
+<ul>
+<li><a href="http://nvie.com/posts/a-successful-git-branching-model" rel="external"><em>A successful Git branching model</em></a> - the original blog post by Vincent Driessen</li>
+<li><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow" rel="external">A git-flow tutorial</a> from Atlassian</li>
+<li><a href="http://danielkummer.github.io/git-flow-cheatsheet" rel="external">Git-flow cheatsheet</a> by Daniel Kummer</li>
+<li><a href="https://github.com/nvie/gitflow" rel="external">Git-flow on GitHub</a></li>
+</ul>
+
+{{/content}}
+
+
+{{#content "post-tldr"}}
+<p>This post is my brief introduction into using <a href="https://github.com/nvie/gitflow" rel="external">git-flow</a> the set of tools available to help with more advanced, structured workflows.</p>
+<p>Git-flow ain’t too bad, y’all.</p>
+{{/content}}
+
+{{/extend}}
