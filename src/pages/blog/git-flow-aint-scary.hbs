@@ -89,24 +89,37 @@ Then run the installer with <code class="inline">bash gitflow-installer.sh</code
 
 <figure>
   <img src="{{assetsUrl}}/{{images}}/blog/git_flow-terminal_screenshot2.png" alt="" />
-  <figcaption>A screenshot of my terminal window with git flow, creating a feature branch.</figcaption>
+  <figcaption>A screenshot of my terminal window with git flow, finishing a feature branch.</figcaption>
 </figure>
 <aside class="tip">
-  <strong>Note:</strong> I feel like at this point it should remove and push the remote feature branch, but it doesn’t. I’ll find out why and tell you.
+  <strong>Note:</strong>If you include the <code class="inline">-F</code> flag as an argument, it removes your remote branch for you - which I think is pretty handy.
 </aside>
 
 <p>Now this is a pretty basic usage of git-flow so far, but what about releasing and deploying features?</p>
 
 <h2>Getting deployed</h2>
+<p>The last thing we need to do for this post is create a release branch. You can do so as follows:
+  <code>
+    $ git flow release start <em>version</em>
+  </code>
+</p>
+<p>When every feature is in the release branch and you’re ready to go, run:
+  <code>
+    $ git flow release finish <em>version</em> -m <em>"release note"</em>
+  </code>
+  which will remove the release branch and merge it into <code class="inline">master</code> - which is where you should be deploying from.
+</p>
 
-<code>
-  $ git flow release start
-</code>
+<figure>
+<img src="{{assetsUrl}}/{{images}}/blog/git_flow-terminal_screenshot3.png" alt="" />
+  <figcaption>A screenshot of my terminal window with git flow, creating and finishing a release branch.</figcaption>
+</figure>
 
-<code>
-  $ git flow release finish
-</code>
+<p>Finally, push <code class="inline">master</code> to trigger a deploy - I’ll be doing this in just a few minutes to deploy this blog post!</p>
 
+<a href="http://furzeface.com/blog/travis-aint-scary" class="promo" rel="archives">
+  <aside>See my post on Travis for a nice intro to automated testing and deployment.</aside>
+</a>
 {{/content}}
 
 
@@ -117,9 +130,8 @@ Then run the installer with <code class="inline">bash gitflow-installer.sh</code
 <h3>Useful resources</h3>
 <ul>
   <li><a href="http://nvie.com/posts/a-successful-git-branching-model" rel="external"><em>A successful Git branching model</em></a> - the original blog post by Vincent Driessen</li>
-  <li><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow" rel="external">A git-flow tutorial</a> from Atlassian</li>
-  <li><a href="http://danielkummer.github.io/git-flow-cheatsheet" rel="external">Git-flow cheatsheet</a> by Daniel Kummer</li>
-  <li><a href="https://github.com/nvie/gitflow" rel="external">Git-flow on GitHub</a></li>
+  <li><a href="https://github.com/nvie/gitflow" rel="external">Git-flow tools on GitHub</a></li>
+  <li>A handy <a href="http://danielkummer.github.io/git-flow-cheatsheet" rel="external">git-flow cheatsheet</a> by Daniel Kummer</li>
 </ul>
 {{/content}}
 
