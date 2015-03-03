@@ -12,9 +12,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/furzeface/daniel.furzeface.com"
+    "url": "https://github.com/furzeface/furzeface.com"
   },
-  "issues": "https://waffle.io/furzeface/daniel.furzeface.com",
+  "issues": "https://waffle.io/furzeface/furzeface.com",
   "homepage": "http://furzeface.com",
   "keywords": [
     "assemble",
