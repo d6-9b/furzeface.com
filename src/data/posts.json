@@ -1,6 +1,12 @@
 {
   "page1": [
   {
+    "title": "Git-flow Ain’t Scary",
+    "slug": "git-flow-aint-scary",
+    "pubDate": "03 Mar 2015",
+    "summary": "I promised I’d write this when I overcame my initial apprehension of git-flow&hellip;turns out it’s not scary at all."
+  },
+  {
     "title": "5 open source developers tell us how they got started",
     "slug": "http://opensource.com/life/15/2/5-beginners-open-source-share-thoughts",
     "pubDate": "25 Feb 2015",
