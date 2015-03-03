@@ -18,13 +18,22 @@ I promised I’d write this when I overcame my initial apprehension of git-flow&
 
 {{#content "post-content"}}
 <h2>Git-what?</h2>
-<p>So I’ve used git-flow very little <small>(we have one project at work using it I believe)</small> - and I’ve mostly thought before that as a set of tools git-flow is pretty redundant and that you should probably just have a sensible work flow without it anyway.</p>
-<blockquote class="pullquote">Keep reading - I’m about to change my opinion&hellip;</blockquote>
+<p>Git flow (the actually toolset, not the methodology) is:</p>
+
+<blockquote>
+  Git extensions to provide high-level repository operations for Vincent Driessen's branching model.
+  <cite><a href="https://github.com/nvie/gitflow" rel="external">https://github.com/nvie/gitflow</a></cite>
+</blockquote>
+
+<p>So I’ve used git-flow very little <small>(we have one project at work using it I believe)</small> - and I’ve mostly thought before that as a set of tools git-flow is kind of redundant and that you should probably just have a sensible work flow without it anyway.</p>
+<p><strong>Keep reading - I’m about to change my opinion&hellip;</strong></p>
 <p>In most projects I have a <code class="inline">master</code> branch that I deploy to production from, a <code class="inline">develop</code> branch that I work on fixes and <code class="inline">feature/*</code> branches for specific new tasks.</p>
+
 <figure>
   <img src="{{assetsUrl}}/{{images}}/blog/git_flow-branches_screenshot.png" alt="A screenshot of my repository branches on GitHub" />
   <figcaption>All of the branches on <a href="https://github.com/furzeface/furzeface.com" rel="external">GitHub</a></figcaption>
 </figure>
+
 <p>My own workflow serves me well for small projects with just me developing or with a couple of friends but even mere minutes after starting to use git-flow properly for this post I already see the benefits!</p>
 
 <h2>Git-flow go</h2>
@@ -68,6 +77,35 @@ Then run the installer with <code class="inline">bash gitflow-installer.sh</code
 </figure>
 
 <p>Now just keep working away on your feature and committing as normal.</p>
+
+<h2>Getting finished</h2>
+<p>After a feature is finished, <small>(I had to pick a small feature from my <a href="http://waffle.io/furzeface/furzeface.com" rel="external">Waffle board</a> to do for this screenshot)</small> just run <code class="inline">$ git flow feature finish <em>awesome-feature-name</em></code> to:
+  <ul>
+    <li>Merge the finished feature into <code class="inline">develop</code> branch</li>
+    <li>Remove the now un-needed <code class="inline">feature/my-awesome-feature</code> branch</li>
+    <li>Switch to develop, ready for your next action</li>
+  </ul>
+</p>
+
+<figure>
+  <img src="{{assetsUrl}}/{{images}}/blog/git_flow-terminal_screenshot2.png" alt="" />
+  <figcaption>A screenshot of my terminal window with git flow, creating a feature branch.</figcaption>
+</figure>
+<aside class="tip">
+  <strong>Note:</strong> I feel like at this point it should remove and push the remote feature branch, but it doesn’t. I’ll find out why and tell you.
+</aside>
+
+<p>Now this is a pretty basic usage of git-flow so far, but what about releasing and deploying features?</p>
+
+<h2>Getting deployed</h2>
+
+<code>
+  $ git flow release start
+</code>
+
+<code>
+  $ git flow release finish
+</code>
 
 {{/content}}
 
