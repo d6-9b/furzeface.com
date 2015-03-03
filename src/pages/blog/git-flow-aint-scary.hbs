@@ -43,7 +43,7 @@ Then run the installer with <code class="inline">bash gitflow-installer.sh</code
   <strong>Note: </strong> there’s some nice instructions for Windows installation on the <a href="https://github.com/nvie/gitflow/wiki/Windows" rel="external">git-flow wiki</a>. Sorry, I’m a bit lazy&hellip; {{emoji 'expressionless'}}
 </aside>
 
-<h2>Getting started</h2>
+<h2>Concepts</h2>
 <p>The main concepts behind git-flow that I use are:
   <ul>
     <li>Keep your <code class="inline">master</code> branch clean and ready to deploy to production at any moment</li>
@@ -54,18 +54,20 @@ Then run the installer with <code class="inline">bash gitflow-installer.sh</code
   </ul>
 </p>
 
-<p class="todo">@todo: moar stuff</p>
+<h2>Getting started</h2>
+<p>To start git-flow run <code class="inline">$ git flow init</code> and follow the instructions for the inital setup, then to create your first feature branch enter:
+  <code>
+    $ git flow feature start <em>awesome-feature-name</em>
+  </code>
+  - which creates and switches to that branch for you, ready to work! Easier than remembering all of the Git commands individually.
+</p>
 
-{{!--
 <figure>
   <img src="{{assetsUrl}}/{{images}}/blog/git_flow-terminal_screenshot.png" alt="" />
   <figcaption>A screenshot of my terminal window with git flow, creating a feature branch.</figcaption>
 </figure>
 
 <p>Now just keep working away on your feature and committing as normal.</p>
-
-<h2></h2>
---}}
 
 {{/content}}
 
