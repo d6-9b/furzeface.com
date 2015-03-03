@@ -383,6 +383,25 @@
       }
     },
 
+    px_to_rem: {
+      main: {
+        options: {
+          base: 16,
+          fallback: false,
+          fallback_existing_rem: false,
+          ignore: []
+        },
+        files: [
+        {
+          expand: true,
+          flatten: true,
+          src: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distStyles %>/<%= config.mainCss %>',
+          dest: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distStyles %>/'
+        }
+        ]
+      }
+    },
+
     cssmin: {
       options: {
         banner: '<%= meta.banner %>',
@@ -652,7 +671,8 @@
   grunt.registerTask('build_styles', [
     'sass',
     'newer:autoprefixer',
-    'newer:combine_mq'
+    'newer:combine_mq',
+    'newer:px_to_rem'
     ]);
 
   grunt.registerTask('build_scripts', [
