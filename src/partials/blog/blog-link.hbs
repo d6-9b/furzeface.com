@@ -2,7 +2,7 @@
 component: blog-link
 ---
 
-<a href="/blog/{{{slug}}}" class="articles-list__link" {{#if external}}rel="external"{{/if}}>
+<a href="{{#unless external}}/blog/{{/unless}}{{{slug}}}" class="articles-list__link" {{#if external}}rel="external"{{/if}}>
   <li class="articles-list__item">
     <h1>
       {{{title}}}
