@@ -1,7 +1,7 @@
 {
   "page1": [
   {
-    "title": "Git-flow Ain’t Scary",
+    "title": "Git-flow ain’t scary",
     "slug": "git-flow-aint-scary",
     "pubDate": "03 Mar 2015",
     "summary": "I promised I’d write this when I overcame my initial apprehension of git-flow&hellip;turns out it’s not scary at all."
@@ -73,7 +73,9 @@
     "pubDate": "24th Sept, 2014",
     "summary": "A post I wrote for the Building Blocks blog on generating the XML feeds required by Pugpig to publish a digital publication.",
     "external": true
-  },
+  }
+  ],
+  "page2": [
   {
     "title": "Git ain’t scary",
     "slug": "git-aint-scary",
@@ -91,9 +93,7 @@
     "slug": "bash-profile-shortcuts",
     "pubDate": "4th Jul, 2014",
     "summary": "I wrote this Gist a while ago and it came in handy last week when I was showing a colleague some handy shortcuts to add to his .bash_profile - so here it is."
-  }
-  ],
-  "page2": [
+  },
   {
     "title": "Getting a git repository going",
     "slug": "getting-a-git-repository-going",
@@ -147,7 +147,9 @@
     "slug": "review-of-a-web-for-everyone",
     "pubDate": "11th Mar, 2014",
     "summary": "Back on to a tech book for my next O’Reilly blogger program review, I chose “A Web for Everyone: Designing Accessible User Experiences” by Sarah Horton &amp; Whitney Quesenbery."
-  },
+  }
+  ],
+  "page3": [
   {
     "title": "London JS Conf 2014 roundup",
     "slug": "london-js-conf-2014-roundup",
@@ -165,9 +167,7 @@
     "slug": "review-of-learning-from-jquery-by-callum-macrae-oreilly-media",
     "pubDate": "27th Jan, 2014",
     "summary": "I was given a copy of Learning from jQuery by Callum Macrae to review for the O’Reilly Reader Review Program."
-  }
-  ],
-  "page3": [
+  },
   {
     "title": "My Google Analytics dashboard",
     "slug": "my-google-analytics-dashboard",
