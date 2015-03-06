@@ -196,7 +196,7 @@
           if (grunt.option('production')) {
             return 'http://furzeface.com/_assets';
           } else {
-            return 'http://localhost:8008/_assets';
+            return '/_assets';
             // @todo Return dynamically built local URL for assetsUrl
             // return 'http://<%= connect.options.hostname %>:<%= connect.options.port %>/_assets';
           }
@@ -699,8 +699,8 @@
   grunt.registerTask('build_docs', [
     'todo',
     'clean:docs',
-    'jsdoc',
-    'sassdoc'
+    'jsdoc'/*,
+    'sassdoc'*/
     ]);
 
 
