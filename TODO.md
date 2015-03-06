@@ -8,24 +8,23 @@
 
 ## TODO
 
+## src/pages/blog.hbs
+
+-  **todo** `(line 28)`  rework blog page template a bit more --}}
+
 ## src/pages/ios-seven-me.hbs
 
 -  **todo** `(line 30)` : move over to labs.furzeface.com --}}
-
-## src/partials/blog/banner.hbs
-
--  **todo** `(line 28)` : proper pubdate --}}
--  **todo** `(line 29)` : category link? --}}
 
 ## Gruntfile.js
 
 -  **todo** `(line 200)`  Return dynamically built local URL for assetsUrl
 -  **todo** `(line 269)`  test out grunt-wiredep for assets
--  **todo** `(line 270)`  test out deployment and references to bower_components
--  **todo** `(line 271)`  test out usemin for assets
--  **todo** `(line 673)` : Add resp img task back in
+-  **todo** `(line 279)`  test out deployment and references to bower_components
+-  **todo** `(line 280)`  test out usemin for assets
+-  **todo** `(line 686)` : Add resp img task back in
 
 
 * * *
 
-Last generated: Fri Jan 30 2015 09:39:23 by [grunt-todo](https://github.com/leny/grunt-todo).
+Last generated: Fri Mar 06 2015 17:09:53 by [grunt-todo](https://github.com/leny/grunt-todo).
