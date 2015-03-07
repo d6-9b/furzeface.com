@@ -12,10 +12,6 @@
 
 -  **todo** `(line 28)`  rework blog page template a bit more --}}
 
-## src/pages/ios-seven-me.hbs
-
--  **todo** `(line 30)` : move over to labs.furzeface.com --}}
-
 ## Gruntfile.js
 
 -  **todo** `(line 200)`  Return dynamically built local URL for assetsUrl
@@ -27,4 +23,4 @@
 
 * * *
 
-Last generated: Fri Mar 06 2015 17:09:53 by [grunt-todo](https://github.com/leny/grunt-todo).
+Last generated: Sat Mar 07 2015 10:59:16 by [grunt-todo](https://github.com/leny/grunt-todo).
