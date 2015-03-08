@@ -147,7 +147,7 @@
       }
     },
 
-
+    // Documentation tasks
     jsdoc: {
       all: {
         src: [
@@ -170,6 +170,7 @@
       }
     },
 
+
     // Local server task
     connect: {
       options: {
@@ -187,6 +188,7 @@
         }
       }
     },
+
 
     // Build tasks
     assemble: {

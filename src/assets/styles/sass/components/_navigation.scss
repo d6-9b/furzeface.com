@@ -10,8 +10,13 @@
 
   font-family: $font-family-sans-serif;
   position: absolute!important;
+<<<<<<< HEAD
   top: $global-margin*2;
   left: $global-margin*2;
+=======
+  top: 2.25rem;
+  left: 2.25rem;
+>>>>>>> hotfix/navigation
   text-align: left;
 
   > h1 {
@@ -24,26 +29,30 @@
 
 .navigation__open,
 .navigation__close {
+  // <button>
+  color: $brand-color;
+  float: right;
   background: none;
   border: 0;
   display: none;
   font-size: 1.5rem;
   padding: $global-padding;
+<<<<<<< HEAD
 
   .js & {
     display: block;
   }
 }
+=======
+>>>>>>> hotfix/navigation
 
-.navigation__open,
-.navigation__close {
-  // <button>
-  color: $brand-color;
-  float: right;
+  .js & {
+    display: block;
 
-  @include MQ(M) {
-    // Hide if over medium sized screens
-    display: none;
+    @include MQ(M) {
+      // Hide if over medium sized screens
+      display: none;
+    }
   }
 }
 
@@ -63,6 +72,7 @@
    z-index: 99;
  }
 
+<<<<<<< HEAD
  @include rgba-bg($brand-color, .9);
 
  @include MQ(M) {
@@ -70,6 +80,24 @@
   display: block;
   position: static;
 }
+=======
+  .js & {
+   display: none;
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 99;
+
+   @include MQ(M) {
+    background: none;
+    display: block;
+    position: static;
+  }
+>>>>>>> hotfix/navigation
+}
+
 }
 
 .navigation-site__list {
@@ -87,6 +115,13 @@
 .navigation-site__item {
   .js & {
     margin: $global-margin;
+<<<<<<< HEAD
+=======
+
+    @include MQ(M) {
+      margin: 0 $global-margin 0 0;
+    }
+>>>>>>> hotfix/navigation
   }
 
   @include MQ(M) {
@@ -101,14 +136,31 @@
 }
 
 .navigation-site__link {
+<<<<<<< HEAD
   .js & {
     @extend %heading--alpha;
     padding: $global-padding;
+=======
+  padding: $global-padding;
+
+  .js & {
+    @extend %heading--alpha;
+    margin: 0;
+    padding: $global-padding/2;
+
+    @include MQ(M) {
+      font-size: 1.25rem;
+    }
+>>>>>>> hotfix/navigation
   }
 
   color: $brand-white;
   display: block;
+<<<<<<< HEAD
   padding: $global-padding/2;
+=======
+  // padding: $global-padding/2;
+>>>>>>> hotfix/navigation
   text-decoration: none;
   text-transform: uppercase;
 
@@ -119,11 +171,9 @@
 
   @include MQ(M) {
     color: $brand-color;
-    font-size: 1.25rem;
     font-weight: lighter;
     overflow: hidden;
-    margin: 0;
-    padding: 0 $global-padding / 2;
+    padding: 0 $global-padding/2;
     position: relative;
 
     @include MQ(S) {
