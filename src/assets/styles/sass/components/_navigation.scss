@@ -10,13 +10,8 @@
 
   font-family: $font-family-sans-serif;
   position: absolute!important;
-<<<<<<< HEAD
-  top: $global-margin*2;
-  left: $global-margin*2;
-=======
   top: 2.25rem;
   left: 2.25rem;
->>>>>>> hotfix/navigation
   text-align: left;
 
   > h1 {
@@ -37,14 +32,6 @@
   display: none;
   font-size: 1.5rem;
   padding: $global-padding;
-<<<<<<< HEAD
-
-  .js & {
-    display: block;
-  }
-}
-=======
->>>>>>> hotfix/navigation
 
   .js & {
     display: block;
@@ -62,26 +49,9 @@
 }
 
 .navigation-site {
-  .js & {
-   display: none;
-   position: fixed;
-   top: 0;
-   right: 0;
-   bottom: 0;
-   left: 0;
-   z-index: 99;
- }
-
-<<<<<<< HEAD
  @include rgba-bg($brand-color, .9);
 
- @include MQ(M) {
-  background: none;
-  display: block;
-  position: static;
-}
-=======
-  .js & {
+ .js & {
    display: none;
    position: fixed;
    top: 0;
@@ -95,9 +65,7 @@
     display: block;
     position: static;
   }
->>>>>>> hotfix/navigation
 }
-
 }
 
 .navigation-site__list {
@@ -115,13 +83,10 @@
 .navigation-site__item {
   .js & {
     margin: $global-margin;
-<<<<<<< HEAD
-=======
 
     @include MQ(M) {
       margin: 0 $global-margin 0 0;
     }
->>>>>>> hotfix/navigation
   }
 
   @include MQ(M) {
@@ -136,11 +101,6 @@
 }
 
 .navigation-site__link {
-<<<<<<< HEAD
-  .js & {
-    @extend %heading--alpha;
-    padding: $global-padding;
-=======
   padding: $global-padding;
 
   .js & {
@@ -151,16 +111,11 @@
     @include MQ(M) {
       font-size: 1.25rem;
     }
->>>>>>> hotfix/navigation
   }
 
   color: $brand-white;
   display: block;
-<<<<<<< HEAD
-  padding: $global-padding/2;
-=======
   // padding: $global-padding/2;
->>>>>>> hotfix/navigation
   text-decoration: none;
   text-transform: uppercase;
 
