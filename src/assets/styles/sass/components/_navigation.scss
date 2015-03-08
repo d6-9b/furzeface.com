@@ -9,9 +9,9 @@
   @extend %float-left;
 
   font-family: $font-family-sans-serif;
-  position: absolute!important; // @todo Get rid of this !important hack!
-  top: $global-margin*2;
-  left: $global-margin*2;
+  position: absolute!important;
+  top: 2.25rem;
+  left: 2.25rem;
   text-align: left;
 
   > h1 {
@@ -24,21 +24,22 @@
 
 .navigation__open,
 .navigation__close {
-  background: none;
-  border: 0;
-  font-size: 1.5rem;
-  padding: $global-padding;
-}
-
-.navigation__open,
-.navigation__close {
   // <button>
   color: $brand-color;
   float: right;
+  background: none;
+  border: 0;
+  display: none;
+  font-size: 1.5rem;
+  padding: $global-padding;
 
-  @include MQ(M) {
-    // Hide if over medium sized screens
-    display: none;
+  .js & {
+    display: block;
+
+    @include MQ(M) {
+      // Hide if over medium sized screens
+      display: none;
+    }
   }
 }
 
@@ -50,20 +51,22 @@
 .navigation-site {
   @include rgba-bg($brand-color, .9);
 
-  display: none;
-  // overflow: scroll;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 99;
+  .js & {
+   display: none;
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 99;
 
-  @include MQ(M) {
+   @include MQ(M) {
     background: none;
     display: block;
     position: static;
   }
+}
+
 }
 
 .navigation-site__list {
@@ -79,7 +82,13 @@
 }
 
 .navigation-site__item {
-  margin: $global-margin;
+  .js & {
+    margin: $global-margin;
+
+    @include MQ(M) {
+      margin: 0 $global-margin 0 0;
+    }
+  }
 
   @include MQ(M) {
     display: inline-block;
@@ -93,11 +102,21 @@
 }
 
 .navigation-site__link {
-  @extend %heading--alpha;
+  padding: $global-padding;
+
+  .js & {
+    @extend %heading--alpha;
+    margin: 0;
+    padding: $global-padding/2;
+
+    @include MQ(M) {
+      font-size: 1.25rem;
+    }
+  }
 
   color: $brand-white;
   display: block;
-  padding: $global-padding;
+  // padding: $global-padding/2;
   text-decoration: none;
   text-transform: uppercase;
 
@@ -108,11 +127,9 @@
 
   @include MQ(M) {
     color: $brand-color;
-    font-size: 1.25rem;
     font-weight: lighter;
     overflow: hidden;
-    margin: 0;
-    padding: 0 $global-padding / 2;
+    padding: 0 $global-padding/2;
     position: relative;
 
     @include MQ(S) {
