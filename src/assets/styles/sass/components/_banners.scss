@@ -16,7 +16,7 @@
   @include rgba-bg($brand-color, .75);
 
   color: $brand-white;
-  padding: ($global-padding * 2) $global-padding;
+  padding: $global-padding;
   position: absolute;
   top: 0;
   right: 0;
