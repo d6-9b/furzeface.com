@@ -5,12 +5,16 @@ published: false
 ---
 
 {{!-- Favourite icon --}}
-<link rel="shortcut icon" href="{{assetsUrl}}/{{images}}/icons/favicon.jpg" />
+<link rel="shortcut icon" href="{{assetsUrl}}/{{images}}/icons/favicon.ico" />
 {{!-- Icons for saving to iOS device home screens --}}
-<link rel="apple-touch-icon" href="{{assetsUrl}}/{{images}}/icons/57.jpg" sizes="57x57" />
-<link rel="apple-touch-icon" href="{{assetsUrl}}/{{images}}/icons/72.jpg" sizes="72x72" />
-<link rel="apple-touch-icon" href="{{assetsUrl}}/{{images}}/icons/114.jpg" sizes="114x114" />
-<link rel="apple-touch-icon" href="{{assetsUrl}}/{{images}}/icons/144.jpg" sizes="144x144" />
+
+<link rel="apple-touch-icon" href="{{assetsUrl}}/{{images}}/icons/apple-touch-icon-57x57.png" sizes="57x57" />
+<link rel="apple-touch-icon" href="{{assetsUrl}}/{{images}}/icons/apple-touch-icon-60x60.png" sizes="60x60" />
+<link rel="apple-touch-icon" href="{{assetsUrl}}/{{images}}/icons/apple-touch-icon-72x72.png" sizes="72x72" />
+<link rel="apple-touch-icon" href="{{assetsUrl}}/{{images}}/icons/apple-touch-icon-114x114.png" sizes="114x114" />
+<link rel="apple-touch-icon" href="{{assetsUrl}}/{{images}}/icons/apple-touch-icon-144x144.png" sizes="144x144" />
 
 {{!--For title when saving to iOS device --}}
 <meta name="apple-mobile-web-app-title" content="{{package.title}}">
+{{!-- For saving to Android home screen --}}
+<meta name="mobile-web-app-capable" content="yes">

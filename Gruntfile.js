@@ -555,6 +555,22 @@
 
 
     // Production tasks
+    favicons: {
+      options: {
+        androidHomescreen: true,
+        apple: true,
+        appleTouchPadding: 0,
+        precomposed: false,
+        regular: true,
+        firefox: false,
+        windowsTile: false
+      },
+      site: {
+        src: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcImages %>/icons/icon.png',
+        dest: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distImages %>/icons'
+      }
+    },
+
     cachebust: {
       default_options: {
         files: [
