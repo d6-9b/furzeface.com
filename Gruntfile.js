@@ -724,6 +724,7 @@
     'cssmin',
     'uglify',
     'htmlmin',
+    'favicons',
     'humans_txt',
     'robotstxt',
     'xml_sitemap',
