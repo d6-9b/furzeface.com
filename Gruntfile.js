@@ -554,6 +554,21 @@
     },
 
 
+    // Test tasks
+    phantomcss: {
+      options: {},
+      desktop: {
+        options: {
+          screenshots: 'test/src/screenshots/',
+          results: 'test/results/visual/'
+        },
+        src: [
+        'test/src/**/*.js'
+        ]
+      }
+    },
+
+
     // Production tasks
     favicons: {
       options: {
@@ -607,7 +622,6 @@
         ]
       }
     },
-
 
     humans_txt: {
       options: {
