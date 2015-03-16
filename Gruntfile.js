@@ -193,16 +193,7 @@
     // Build tasks
     assemble: {
       options: {
-        assetsUrl: function () {
-          // Production flag set on CI deploy task
-          if (grunt.option('production')) {
-            return 'http://furzeface.com/_assets';
-          } else {
-            return '/_assets';
-            // @todo Return dynamically built local URL for assetsUrl
-            // return 'http://<%= connect.options.hostname %>:<%= connect.options.port %>/_assets';
-          }
-        },
+        assetsUrl: '_assets',
         copyrightYear: '<%= grunt.template.today(\'yyyy\') %>',
         data: [
         '<%= config.src %>/data/*.{json,yml}',
@@ -763,7 +754,9 @@
 
   // Default task.
   grunt.registerTask('default', [
-    'serve'
+    'clean:everything',
+    'build_dev',
+    'watch'
     ]);
 
   grunt.registerTask('serve', [
