@@ -193,7 +193,16 @@
     // Build tasks
     assemble: {
       options: {
-        assetsUrl: '_assets',
+        assetsUrl: function () {
+          // Production flag set on CI deploy task
+          if (grunt.option('production')) {
+            return 'http://furzeface.com/_assets';
+          } else {
+            return '/_assets';
+            // @todo Return dynamically built local URL for assetsUrl
+            // return 'http://<%= connect.options.hostname %>:<%= connect.options.port %>/_assets';
+          }
+        },
         copyrightYear: '<%= grunt.template.today(\'yyyy\') %>',
         data: [
         '<%= config.src %>/data/*.{json,yml}',
@@ -545,38 +554,7 @@
     },
 
 
-    // Test tasks
-    phantomcss: {
-      options: {},
-      desktop: {
-        options: {
-          screenshots: 'test/src/screenshots/',
-          results: 'test/results/visual/'
-        },
-        src: [
-        'test/src/**/*.js'
-        ]
-      }
-    },
-
-
     // Production tasks
-    favicons: {
-      options: {
-        androidHomescreen: true,
-        apple: true,
-        appleTouchPadding: 0,
-        precomposed: false,
-        regular: true,
-        firefox: false,
-        windowsTile: false
-      },
-      site: {
-        src: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcImages %>/icons/icon.png',
-        dest: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distImages %>/icons'
-      }
-    },
-
     cachebust: {
       default_options: {
         files: [
@@ -613,6 +591,7 @@
         ]
       }
     },
+
 
     humans_txt: {
       options: {
@@ -745,7 +724,6 @@
     'cssmin',
     'uglify',
     'htmlmin',
-    'favicons',
     'humans_txt',
     'robotstxt',
     'xml_sitemap',
@@ -754,9 +732,7 @@
 
   // Default task.
   grunt.registerTask('default', [
-    'clean:everything',
-    'build_dev',
-    'watch'
+    'serve'
     ]);
 
   grunt.registerTask('serve', [
