@@ -60,7 +60,9 @@
     "slug": "dammit",
     "pubDate": "5th Oct 2014",
     "summary": "A little Node package I wrote to print out a random curse when something goes wrong!"
-  },
+  }
+  ],
+  "page2": [
   {
     "title": "Bower ain’t scary",
     "slug": "bower-aint-scary",
@@ -73,9 +75,7 @@
     "pubDate": "24th Sept, 2014",
     "summary": "A post I wrote for the Building Blocks blog on generating the XML feeds required by Pugpig to publish a digital publication.",
     "external": true
-  }
-  ],
-  "page2": [
+  },
   {
     "title": "Git ain’t scary",
     "slug": "git-aint-scary",
@@ -123,7 +123,9 @@
     "slug": "speaking-javascript-by-dr-axel-rauschmayer",
     "pubDate": "21st Apr, 2014",
     "summary": "My Review for the O’Reilly Blogger Review Program."
-  },
+  }
+  ],
+  "page3": [
   {
     "title": "On Compatibility",
     "slug": "on-compatibility",
@@ -147,9 +149,7 @@
     "slug": "review-of-a-web-for-everyone",
     "pubDate": "11th Mar, 2014",
     "summary": "Back on to a tech book for my next O’Reilly blogger program review, I chose “A Web for Everyone: Designing Accessible User Experiences” by Sarah Horton &amp; Whitney Quesenbery."
-  }
-  ],
-  "page3": [
+  },
   {
     "title": "London JS Conf 2014 roundup",
     "slug": "london-js-conf-2014-roundup",
