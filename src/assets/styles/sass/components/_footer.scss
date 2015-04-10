@@ -8,12 +8,23 @@
   @extend %clearfix;
 
   background: $brand-grey--light;
-  margin-top: $global-margin * 2;
+  margin-top: $global-margin*2;
+  overflow: hidden;
   padding: $global-padding;
+  position: relative;
+
+  @include footer-embellishment($size: 20px, $left: 25%, $right: 75%);
 
   .page-home & {
     background: none;
     margin-top: 0;
+
+    .csstransforms & {
+      &::before,
+      &::after {
+        background: $brand-color;
+      }
+    }
   }
 }
 
