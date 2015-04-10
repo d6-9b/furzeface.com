@@ -131,6 +131,34 @@
   @extend %col--8-of-12;
 
   hyphens: manual;
+  position: relative;
+  z-index: 0;
+
+  @include MQ(L) {
+    &::before,
+    &::after {
+      content: '';
+      background: $brand-grey;
+      opacity: .15;
+      position: absolute;
+      transform: rotate(45deg);
+      z-index: -1;
+    }
+
+    &::before {
+      @include size(250px);
+
+      top: 15%;
+      left: 0;
+    }
+
+    &::after {
+      @include size(450px);
+
+      top: 50%;
+      right: 0;
+    }
+  }
 
   @include MQ(M) {
     float: left;
