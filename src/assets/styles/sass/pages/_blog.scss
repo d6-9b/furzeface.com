@@ -233,16 +233,40 @@
 
   @extend %col--4-of-12;
 
-  @include MQ(M) {
-    float:right;
-  }
+  padding: $global-padding*2 $global-padding/2;
+  position: relative;
 
   @include MQ(S) {
     padding-right: $global-padding;
     padding-left: $global-padding;
   }
 
-  padding: $global-padding * 2 $global-padding / 2;
+  @include MQ(M) {
+    float:right;
+  }
+
+  @include MQ(L) {
+    &::before,
+    &::after {
+      @include size(100px);
+
+      content: '';
+      background: $brand-grey;
+      opacity: .15;
+      position: absolute;
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      top: 250px;
+      left: -30px;
+    }
+
+    &::after {
+      top: 500px;
+      right: -30px;
+    }
+  }
 }
 
 .post__sidebar__heading,
