@@ -12,7 +12,7 @@ tags:
 {{#extend "layout-post"}}
 
 {{#content "post-summary"}}
-<p>Further lessons in overcoming the learning curve on new front end technologies, this post focuses on Grunt - the JavaScript task runner.</p>
+Further lessons in overcoming the learning curve on new front end technologies, this post focuses on Grunt - the JavaScript task runner.
 {{/content}}
 
 
@@ -140,8 +140,8 @@ tags:
 <p>And you can then refer to this in your tasks by using Lo-Dash style delimeters like this:</p>
 <pre>
   <code>
-    src: '&lt;%= config.src&gt;',
-    dest '&lt;%= config.dist&gt;'
+    src: '&lt;%= config.src %&gt;',
+    dest '&lt;%= config.dist %&gt;'
   </code>
 </pre>
 <p>So if you ever need to change the location it now only needs to be updated in one place!</p>
