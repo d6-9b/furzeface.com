@@ -1,0 +1,39 @@
+/**
+ * Mixin to return banner diamond embellishments - over large breakpoint
+ *
+ * @author Daniel Furze
+ */
+
+/*
+ * @mixin banner-embellishment
+ * @param {Number} $size - the specified height/width
+ * @param {Number} $left - the specified value for the first item to be from the left
+ * @param {Number} $right - the specified value for the second item to be from the left
+ */
+ @mixin banner-embellishment($size: 20px, $left: 23%, $right: 77%) {
+   @include MQ(L) {
+    .csstransforms & {
+      &::before,
+      &::after {
+        @include size($size);
+
+        background: $brand-color;
+        content: '';
+        display: block;
+        position: absolute;
+        transform: rotate(45deg);
+        transform-origin: 50% 50%;
+      }
+
+      &::before {
+        top: -$size/2;
+        left: $left;
+      }
+
+      &::after {
+        bottom: -$size/2;
+        left: $right;
+      }
+    }
+  }
+}

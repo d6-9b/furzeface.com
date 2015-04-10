@@ -8,6 +8,14 @@
   position: relative;
 }
 
+.banner--solid {
+    @include banner-embellishment($size: 30px, $left: 25%, $right: 75%);
+
+    .banner__meta {
+      @include banner-embellishment($size: 20px, $left: 23%, $right: 77%);
+    }
+}
+
 .banner__image-wrap {
   position: absolute;
 }
@@ -31,6 +39,13 @@
   .banner--solid & {
     background: $brand-color;
     position: static;
+  }
+}
+
+.banner__meta__inner {
+  .banner--blog & {
+    // only need to align this if it’s an image banner
+    @include total-align();
   }
 }
 

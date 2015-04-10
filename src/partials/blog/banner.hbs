@@ -3,26 +3,28 @@ component: banner
 ---
 
 {{#if bannerImage}}
-  <div class="banner banner--blog banner--small" style="background-image: url('{{assetsUrl}}/{{images}}/{{bannerImage}}');">
+<div class="banner banner--blog banner--small" style="background-image: url('{{assetsUrl}}/{{images}}/{{bannerImage}}');">
   {{else}}
   <div class="banner banner--solid">
-{{/if}}
+    {{/if}}
 
     <div class="banner__meta">
-      <p class="banner__title"><a href="#TLDR" title="TL;DR? - Skip to the end." class="tldr">{{{title}}}</a></p>
+      <div class="banner__meta__inner">
+        <p class="banner__title"><a href="#TLDR" title="TL;DR? - Skip to the end." class="tldr">{{{title}}}</a></p>
 
-      {{#if pubDate}}
-      <p class="eta">
-        Posted on <time datetime="{{pubDate}}" pubdate="{{pubDate}}" class="updated published">{{{pubDate}}}</time>
-        {{#if category}}
-        in <em>{{category}}</em>
+        {{#if pubDate}}
+        <p class="eta">
+          Posted on <time datetime="{{pubDate}}" pubdate="{{pubDate}}" class="updated published">{{{pubDate}}}</time>
+          {{#if category}}
+          in <em>{{category}}</em>
+          {{/if}}
+          {{#if postAuthor}}
+          by <span class="vcard author"><span class="fn n">{{#if postAuthor}}{{{postAuthor}}}{{else}}{{{package.author.name}}}{{/if}}</span></span>.
+          {{/if}}
+        </p>
         {{/if}}
-        {{#if postAuthor}}
-        by <span class="vcard author"><span class="fn n">{{#if postAuthor}}{{{postAuthor}}}{{else}}{{{package.author.name}}}{{/if}}</span></span>.
-        {{/if}}
-      </p>
-      {{/if}}
 
-      <small id="mins_to_read" class="mins-to-read icon-stopwatch"></small>
+        <small id="mins_to_read" class="mins-to-read icon-stopwatch"></small>
+      </div>
     </div>
   </div>

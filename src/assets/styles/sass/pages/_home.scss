@@ -4,11 +4,22 @@
  * @author Daniel Furze
  */
 
+ .page-home {
+  .main {
+    @include banner-embellishment($size: 30px, $left: 25%, $right: 75%);
+
+    position: relative;
+  }
+}
+
 .page-home__hero {
+  @include banner-embellishment($size: 20px, $left: 23%, $right: 77%);
+
   background: $brand-color;
   color: $brand-white;
   padding-top: $global-padding;
   padding-bottom: $global-padding;
+  position: relative;
   text-align: center;
 }
 

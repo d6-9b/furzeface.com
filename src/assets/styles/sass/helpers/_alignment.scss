@@ -1,0 +1,30 @@
+/**
+ * Mixins to return easy vertical/horizontal alignment.
+ *
+ * @author Daniel Furze
+ */
+
+/*
+ * @mixin vertical-align
+ */
+ @mixin vertical-align () {
+  .csstransforms & {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+}
+
+/*
+ * @mixin vertical-align
+ */
+ @mixin total-align () {
+  .csstransforms & {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}
