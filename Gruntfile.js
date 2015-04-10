@@ -32,7 +32,7 @@
       srcScripts: 'scripts',
       srcImages: 'images',
       srcFonts: 'fonts',
-      mainSass: 'danielfurzeface.scss',
+      mainSass: 'furzeface.scss',
       // Dist settings
       dist: 'dist',
       distAssets: '_assets',

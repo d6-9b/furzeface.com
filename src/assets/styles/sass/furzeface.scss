@@ -13,14 +13,17 @@
 
 // Base
 @import 'base/normalize';
-@import 'helpers/clearfix';
-@import 'helpers/utilities';
-@import 'helpers/font-size';
-@import 'helpers/lists';
-@import 'helpers/links';
-@import 'helpers/size';
-@import 'helpers/vertical-align';
+
+// Helpers/mixins
+@import 'helpers/alignment';
 @import 'helpers/backgrounds';
+@import 'helpers/banner-embellishment';
+@import 'helpers/clearfix';
+@import 'helpers/font-size';
+@import 'helpers/links';
+@import 'helpers/lists';
+@import 'helpers/size';
+@import 'helpers/utilities';
 
 // Extra Awesome
 @import 'misc/selection';
