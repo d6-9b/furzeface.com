@@ -36,3 +36,10 @@
   margin: $global-margin auto;
   max-width: 100%;
 }
+
+.page-404 {
+  // @todo tidy this up
+  background: $brand-color;
+  color: $color-white;
+  text-align: center;
+}
