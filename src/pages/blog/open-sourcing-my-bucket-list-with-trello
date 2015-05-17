@@ -14,10 +14,24 @@ tags:
 
 
 {{#content "post-content"}}
+A bucket list?
+Just about everybody has a bucket list. If not a formal one, surely some type of list of things they'd like to achieve, places they want to visit and everything in between.
+
+I've written and lost both physical and digital lists countless times and found myself compiling yet another bucket list during some downtime in Kraków over the weekend - after just ticking off [a couple] [of items]!
+
+Enter Trello 
+When thinking of how to host said list somewhere I could always access it it occurred to me that [Trello] would be perfect as I could also now tick off accomplishments as I go...And who doesn't love a good checklist to complete and "Done" column to fill?! It constantly amazes me [the uses that I've seen] for Trello since I discovered it a year or so ago.
+
+Part way through cramming my board with absolutely EVERYTHING I could think of I came to the decision make it public as well. Giving potentially anybody in the world access could be a great way to get ideas and inspiration.
+
+Open ambition
+So I have in effect open sourced my ambitions, my achievements and ideas for what I want in the future. I've opened up commenting and voting on the board and I'm hoping that I can send this out to friends, family and colleagues and get their feedback and contributions towards my ideas. 
+Maybe it'll even get me some accompaniment or help with a few items on the list...I'm thinking a buddy for the Three Peaks, or a handy opportunity to speak at an event ;)
 {{/content}}
 
 
 {{#content "post-tldr"}}
+I wrote a big list of the things I want to achieve and [made it public] for the world to read, comment on and criticise! 
 {{/content}}
 
 {{/extend}}
