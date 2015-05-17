@@ -1,0 +1,23 @@
+---
+pageClass: page-post
+title: Open sourcing my bucket list with Trello
+pubDate: 17th May, 2015
+category: Personal
+tags:
+- personal
+---
+
+{{#extend "layout-post"}}
+
+{{#content "post-summary"}}
+{{/content}}
+
+
+{{#content "post-content"}}
+{{/content}}
+
+
+{{#content "post-tldr"}}
+{{/content}}
+
+{{/extend}}
