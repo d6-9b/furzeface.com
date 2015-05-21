@@ -9,8 +9,7 @@
 - 04-10-2014 - v3.0.0 - Initial release of [furzeface.com](furzeface.com) v3
 
 ## License
-Copyright (c) 2014 Daniel Furze. 
-
+All code, content and design © Daniel Furze 2015
 Licensed under the MIT license: [http://danielfurze.mit-license.org](http://danielfurze.mit-license.org)
 
 
