@@ -21,7 +21,7 @@
   backface-visibility: hidden;
   border: 0;
   border-radius: 2px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  // box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
   color: $brand-white;
   cursor: pointer;
   display: inline-block;
@@ -32,7 +32,7 @@
   padding: .5rem;
   text-decoration: none;
   text-transform: uppercase;
-  transition: background .25s ease, box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background .25s ease;//, box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   max-width: 100%;
 
   &:hover,
