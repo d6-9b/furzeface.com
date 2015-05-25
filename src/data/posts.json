@@ -1,6 +1,12 @@
 {
   "page1": [
   {
+    "title": "What we can apply from Upfront Conf",
+    "slug": "what-we-can-apply-from-upfront-conf",
+    "pubDate": "23rd May, 2015",
+    "summary": "We recently attended Upfront Conf 2015 - here are some things that we took away and started to implement straight away."
+  },
+  {
     "title": "Open sourcing my bucket list with Trello",
     "slug": "open-sourcing-my-bucket-list-with-trello",
     "pubDate": "17th May, 2015",
