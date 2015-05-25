@@ -1,0 +1,105 @@
+---
+pageClass: page-post
+title: What we can apply from Upfront Conf
+pubDate: 23rd May, 2015
+bannerImage: blog/ben_foxall_upfront.jpg
+ogImage:
+category: Front End
+tags:
+- front-end
+published: true
+---
+
+{{#extend "layout-post"}}
+
+{{#content "post-summary"}}
+We recently attended Upfront Conf 2015 - here are some things that we took away and started to implement straight away.
+{{/content}}
+
+
+{{#content "post-content"}}
+<p>This isn’t an exhaustive list - I only cover half of the speakers but each and every talk was fantastic in its own way.</p>
+<p>The following are the things we learned on the day and have begun to apply to our everyday work already.</p>
+
+<h2>Atomic Design - Brad Frost</h2>
+<p>Brad’s now quite famous talk - “<a href="bradfrost.com/blog/post/atomic-web-design" rel="external">Atomic Design</a>” was a great one to see. He explained Atomic Design - a system of designing and building websites in small, modular and resusable components, not pages.</p>
+<figure>
+  <img src="{{assetsUrl}}/{{images}}/placeholder.png" data-src="{{assetsUrl}}/{{images}}/blog/atom.png" alt="Atomic design’s Atom logo" />
+</figure>
+<p>This validated a lot of the processes we go through in the front end team at Building Blocks, as we build front end prototypes of websites in small components, ready for our back end team to integrate into a CMS.</p>
+<figure>
+  <img src="{{assetsUrl}}/{{images}}/placeholder.png" data-src="{{assetsUrl}}/{{images}}/blog/pattern_lab.png" alt="Pattern Lab" />
+</figure>
+<p>A few ideas came out of Brad’s explanation of <a href="http://patternlab.io" rel="external">Pattern Lab</a> to add to our style guides and I’ll be looking into it more as I now know there’s a <a href="https://github.com/pattern-lab/patternlab-node" rel="external">Node version</a> in the pipeline!</p>
+
+<h2>Front End Testing - Alicia Sedlock</h2>
+<p>Now Alicia is a woman after my heart {{emoji 'heart'}} - automating front end testing is a huge passion of mine and it was great to hear her talking on the subject and providing very good arguments to get testing into your workflow straight away.</p>
+<p>I even asked her for a couple of one-liners I can give to project management and non-tech folk to persuade of the clear benefits of spending time on front end testing.</p>
+<p>I particularly enjoyed the section on unit testing as it’s something that I’d love to implement with our front end team but we’ve not had the opportunity yet.</p>
+<p>The part of her talk on CSS regression testing with PhantomCSS re-envigorated my desire to get this into more projects and revamp my own presentation on the subject, ready to give to the rest of the company at some point in the coming weeks.</p>
+
+<figure>
+  <img src="{{assetsUrl}}/{{images}}/placeholder.png" data-src="{{assetsUrl}}/{{images}}/blog/presentation_screenshot.png" alt="A screenshot of the title card from my presentation on PhantomCSS." />
+  <figcaption>My presentation on PhantomCSS. {{emoji 'ghost'}}</figcaption>
+</figure>
+
+<h2>Faster Mobile Websites - Dean Hume</h2>
+<p>Dean’s talk gave us a great insight into optimising our code and websites as a whole for speed. He told us that when Amazon manually added a 100ms delay to their page load they lost 1% of their sales! If that’s not an argument for spending time on page speed then I don’t know what is.</p>
+<p>This talk was particularly fascinating for me as a lot of the tools he showed us I’d already had a play with but not on such a large scale. </p>
+<p>We’ve since implemented a few of them as the day after we got back from Upfront a client actually requested work on a project regarding it’s page load speed so I was happy to dive into the support tickets and optimise away!</p>
+<p>We also got everyone on the team <strong>obsessed</strong> with the Google PageSpeed tools:</p>
+<figure>
+  <img src="{{assetsUrl}}/{{images}}/placeholder.png" data-src="{{assetsUrl}}/{{images}}/blog/pagespeed_tools.png" alt="A screenshot of Google’s PageSpeed tools" />
+</figure>
+<p>A takeaway from this was that a lot of the nice tools and processes Dean showed us were very valid and easy enough to implement - on our static prototype sites. However on our CMS driven production sites it will be a little harder to implement a lot of the automated tools, so we’re thinking about this now&hellip;</p>
+
+<h2>Design Decisions Through the Lens of Performance - Yesenia Perez-Cruz</h2>
+<p>Now <strong>this</strong> talk really blew me <small>(and everyone else)</small> away. Yesenia begun by telling us the story of how she used to be a “Reckless Designer” and would design beautiful Photoshop documents with all of the features clients wanted without considering how it would be built, or the performance of it on the web. I bet you can all think of a person or company who are like this and I could definitely relate.</p>
+<p>Going on to talk about how we should be collaboratively working and educating our own team and 3rd party design companies really struck a chord with the guys from Building Blocks. I came away <strong>desperate</strong> for the slides and the recorded talk to come out so I can show my design colleagues right away! {{emoji '+1'}}</p>
+<figure>
+  <img src="{{assetsUrl}}/{{images}}/placeholder.png" data-src="{{assetsUrl}}/{{images}}/blog/designer_slide.png" alt="" />
+  <figcaption>The designer added 5 carousels again!</figcaption>
+</figure>
+<p>The most valuable lesson here was that of established a performance goal and <em>performance budget</em> to a website build - showing a client that in order to have a fast loading web page they may need to sacrifice a <em>huuuuuge</em> banner carousel and perhaps get rid of a couple of weights of the 16 font sets they have on a page.</p>
+<p>Emphasising that performance starts with the design process really made me want to get involved in projects from the very start and I am going to try and implement some of the things Yesenia spoke of.</p>
+<p>Our design team are getting pretty good at this and I feel great when one of them comes and asks me about page weight or load speed, optimising images and such like and I hope this will continue.</p>
+{{/content}}
+
+
+{{#content "post-tldr"}}
+<p>4 major things we can take away from <a href="http://upfrontconf.com" rel="external">Upfront Conf 2015</a> and apply to our work processes straight away:</p>
+<ul>
+  <li>Utilise more atomic design principles in our front end prototypes</li>
+  <li>Spend time testing and convince management to allow for time to do so</li>
+  <li>Implement some of the page speed optimisations and think how they can apply to CMS driven sites</li>
+  <li>Educate our design team <small>(more)</small> on performance and get involved early on in the design phase</li>
+</ul>
+
+<figure>
+  <img src="{{assetsUrl}}/{{images}}/placeholder.png" data-src="{{assetsUrl}}/{{images}}/blog/upfront_logo.png" alt="Upfront Conf" />
+  <figcaption>Thanks, <a href="http://upfrontconf.com" rel="external">Upfront Conf</a>!</figcaption>
+</figure>
+
+<h3>Speakers</h3>
+<ul>
+  <li><a href="http://twitter.com/brad_frost" rel="external">Brad Frost</a></li>
+  <li><a href="http://twitter.com/aliciability" rel="external">Alicia Sedlock</a></li>
+  <li><a href="http://twitter.com/clagnut" rel="external">Richard Rutter</a></li>
+  <li><a href="http://twitter.com/supersole" rel="external">Soledad Penadés</a></li>
+  <li><a href="http://twitter.com/anna_debenham" rel="external">Anna Debenham</a></li>
+  <li><a href="http://twitter.com/yeseniaa" rel="external">Yesenia Perez-Cruz</a></li>
+  <li><a href="http://twitter.com/benjaminbenben" rel="external">Ben Foxal</a></li>
+  <li><a href="http://twitter.com/deanohume" rel="external">Dean Hume</a></li>
+</ul>
+
+<h3>Image credits:</h3>
+<ul>
+  <li>Atomic design Atom - <a href="http://patternlab.io" rel="external">PatternLab</a></li>
+  <li>Pattern Lab logo - <a href="http://patternlab.io" rel="external">PatternLab</a></li>
+  <li>PageSpeed screenshot - <a href="https://developers.google.com/speed/pagespeed" rel="external">PageSpeed</a></li>
+  <li>Designer slide screenshot - <a href="https://speakerdeck.com/yeseniaperezcruz/design-decisions-through-the-lens-of-a-performance-budget" rel="external">Yesenia’s Slides</a></li>
+  <li>Upfront Conf logo - <a href="http://upfrontconf.com" rel="external">UpfrontConf</a></li>
+</ul>
+{{/content}}
+
+{{/extend}}
