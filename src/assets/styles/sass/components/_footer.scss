@@ -14,18 +14,6 @@
   position: relative;
 
   @include footer-embellishment($size: 20px, $left: 25%, $right: 75%);
-
-  .page-home & {
-    background: none;
-    margin-top: 0;
-
-    .csstransforms & {
-      &::before,
-      &::after {
-        background: $brand-color;
-      }
-    }
-  }
 }
 
 .site-footer__colophon {

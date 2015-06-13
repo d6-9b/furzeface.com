@@ -4,7 +4,8 @@
     "title": "Don’t be scared of open source!",
     "slug": "dont-be-scared-of-open-source",
     "pubDate": "12th June, 2015",
-    "summary": "My slides from Manchester Tech Nights #9."
+    "summary": "My slides from Manchester Tech Nights #9.",
+    "featured": true
   },
   {
     "title": "What we can apply from Upfront Conf",
@@ -16,7 +17,8 @@
     "title": "Open sourcing my bucket list with Trello",
     "slug": "open-sourcing-my-bucket-list-with-trello",
     "pubDate": "17th May, 2015",
-    "summary": "I needed a way to keep my bucket list available to me so I wouldn’t keep losing track of it, and making it public on Trello seems like a great idea!"
+    "summary": "I needed a way to keep my bucket list available to me so I wouldn’t keep losing track of it, and making it public on Trello seems like a great idea!",
+    "featured": true
   },
   {
     "title": "On stress",
@@ -28,7 +30,8 @@
     "title": "Git-flow ain’t scary",
     "slug": "git-flow-aint-scary",
     "pubDate": "3rd Mar 2015",
-    "summary": "I promised I’d write this when I overcame my initial apprehension of git-flow&hellip;turns out it’s not scary at all."
+    "summary": "I promised I’d write this when I overcame my initial apprehension of git-flow&hellip;turns out it’s not scary at all.",
+    "featured": true
   },
   {
     "title": "5 open source developers tell us how they got started",

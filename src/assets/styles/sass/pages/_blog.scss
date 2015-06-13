@@ -50,16 +50,10 @@
   border-radius: 1px;
   display: block;
   font-family: $font-family-sans-serif;
-  // transition: box-shadow .25s ease, border .25s ease, color .25s ease;
 
   &:hover,
   &:focus {
-    // box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     text-decoration: none;
-
-    // .boxshadow & {
-    //   outline: none;
-    // }
   }
 
   &[rel=external]::after {
@@ -77,18 +71,15 @@
 }
 
 .articles-list__item {
-  border: 1px solid $body-bg;
-  border-bottom-color: $brand-grey;
   border-radius: 1px;
   margin: $global-margin 0;
-  padding: $global-padding / 2;
+  padding: $global-padding/2 0;
 
   &:last-of-type {
-    border-bottom: 0;
     margin-bottom: 0;
   }
 
-  > h1 {
+  h1 {
     line-height: 1.25;
     margin-top: 0;
   }
