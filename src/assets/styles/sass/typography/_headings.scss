@@ -111,3 +111,12 @@ h6,
 .heading--zeta {
   @extend %heading--zeta;
 }
+
+// Heading themes
+.heading--style-a {
+  font-family: $font-family-sans-serif;
+
+  header & {
+    margin-top: 0;
+  }
+}

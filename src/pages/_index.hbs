@@ -7,7 +7,7 @@ pageClass: page-home
 {{#content "page-header"}}
   <section class="page-home__hero">
     <header itemscope itemtype="http://schema.org/Person">
-      <h1 class="nickname" itemprop="name">Daniel Furze</h1>
+      <h1 class="heading--style-a" itemprop="name">Daniel Furze</h1>
       <h2 class="heading--epsilon">Manchester, UK based front end developer.</h2>
     </header>
 
@@ -17,23 +17,24 @@ pageClass: page-home
 {{/content}}
 
 {{#content "page-content"}}
-    <h1>Featured posts:</h1>
+    <h1 class="heading--style-a">Featured posts:</h1>
 
-    {{#each posts.page1}}
-        {{#if featured}}
-          {{>blog-link this}}
-        {{/if}}
-    {{/each}}
-    {{#each posts.page1}}
-        {{#if featured}}
-          {{>blog-link this}}
-        {{/if}}
-    {{/each}}
-    {{#each posts.page1}}
-        {{#if featured}}
-          {{>blog-link this}}
-        {{/if}}
-    {{/each}}
-
+    <ul class="articles-list">
+      {{#each posts.page1}}
+          {{#if featured}}
+            {{>blog-link this}}
+          {{/if}}
+      {{/each}}
+      {{#each posts.page2}}
+          {{#if featured}}
+            {{>blog-link this}}
+          {{/if}}
+      {{/each}}
+      {{#each posts.page3}}
+          {{#if featured}}
+            {{>blog-link this}}
+          {{/if}}
+      {{/each}}
+    </ul>
 {{/content}}
 {{/extend}}

@@ -13,19 +13,7 @@
   padding: $global-padding;
   position: relative;
 
-  // @include footer-embellishment($size: 20px, $left: 25%, $right: 75%);
-
-  .page-home & {
-    background: none;
-    margin-top: 0;
-
-    .csstransforms & {
-      &::before,
-      &::after {
-        background: $brand-color;
-      }
-    }
-  }
+  @include footer-embellishment($size: 20px, $left: 25%, $right: 75%);
 }
 
 .site-footer__colophon {
