@@ -1,6 +1,12 @@
 {
   "page1": [
   {
+    "title": "Don’t be scared of open source!",
+    "slug": "dont-be-scared-of-open-source",
+    "pubDate": "12th June, 2015",
+    "summary": "My slides from Manchester Tech Nights #9."
+  },
+  {
     "title": "What we can apply from Upfront Conf",
     "slug": "what-we-can-apply-from-upfront-conf",
     "pubDate": "23rd May, 2015",
@@ -60,15 +66,15 @@
     "slug": "BEM-up-your-variables",
     "pubDate": "18th Oct 2014",
     "summary": "Taking the concept of BEM - Block, Element, Modifier - and applying it to help with Sass variables in my framework."
-  },
+  }
+  ],
+  "page2": [
   {
     "title": "Combine media queries with Gulp",
     "slug": "combine-media-queries-with-gulp",
     "pubDate": "14th Oct 2014",
     "summary": "I wrote my first Gulp plugin, a light wrapper for our node-combine-mq task."
-  }
-  ],
-  "page2": [
+  },
   {
     "title": "Yeoman ain’t scary",
     "slug": "yeoman-aint-scary",
@@ -115,7 +121,7 @@
   {
     "title": "Getting a git repository going",
     "slug": "getting-a-git-repository-going",
-    "pubDate": "21st Jun, 2014",
+    "pubDate": "21st June, 2014",
     "summary": "Another reference for myself so I don’t have to trawl my memory banks (and the internet) every time I set up a new project."
   },
   {
@@ -123,15 +129,15 @@
     "slug": "the-ux-five-second-rules",
     "pubDate": "4th June, 2014",
     "summary": "My review for the O’Reilly Bloggers review program on The UX Five-Second Rules by Paul Doncaster."
-  },
+  }
+  ],
+  "page3": [
   {
     "title": "My Sass media query mixin",
     "slug": "my-sass-media-query-mixin",
     "pubDate": "23rd Apr, 2014",
     "summary": "A gist of my Sass media query mixin. I keep forgetting to upload and share snippets of CSS/Sass with people who ask, so here it is!"
-  }
-  ],
-  "page3": [
+  },
   {
     "title": "Speaking JavaScript by Dr Axel Rauschmayer",
     "slug": "speaking-javascript-by-dr-axel-rauschmayer",
