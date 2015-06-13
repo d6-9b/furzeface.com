@@ -13,7 +13,7 @@
   padding: $global-padding;
   position: relative;
 
-  @include footer-embellishment($size: 20px, $left: 25%, $right: 75%);
+  // @include footer-embellishment($size: 20px, $left: 25%, $right: 75%);
 
   .page-home & {
     background: none;

@@ -6,7 +6,7 @@
 
  .page-home {
   .main {
-    @include banner-embellishment($size: 30px, $left: 25%, $right: 75%);
+    // @include banner-embellishment($size: 30px, $left: 25%, $right: 75%);
 
     position: relative;
   }
