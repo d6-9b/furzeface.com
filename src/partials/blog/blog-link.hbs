@@ -1,13 +1,9 @@
----
-component: blog-link
----
-
 <li class="articles-list__item">
   <a href="{{#unless external}}/blog/{{/unless}}{{{slug}}}" class="articles-list__link" {{#if external}}rel="external"{{/if}}>
     <h1>
       {{{title}}}
     </h1>
-    <p>{{{summary}}} {{#if external}}<small class="external">external</small>{{/if}}</p>
-    <time datetime="{{{pubDate}}}" pubdate="{{{pubDate}}}" class="updated published">{{{pubDate}}}</time>
   </a>
+  <p>{{{summary}}} {{#if external}}<small class="external">external</small>{{/if}}</p>
+  <time datetime="{{{pubDate}}}" pubdate="{{{pubDate}}}" class="updated published">{{{pubDate}}}</time>
 </li>
