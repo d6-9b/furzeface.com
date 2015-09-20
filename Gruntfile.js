@@ -72,8 +72,8 @@
         '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/<%= config.srcSass %>/**/*.scss'
         ],
         tasks: [
-        'build_styles',
-        'modernizr'
+        'build_styles'/*,
+        'modernizr'*/
         ]
       },
       scripts: {
@@ -81,8 +81,8 @@
         '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/**/*.js',
         ],
         tasks: [
-        'build_scripts',
-        'modernizr'
+        'build_scripts'/*,
+        'modernizr'*/
         ]
       },
       images: {
@@ -309,7 +309,7 @@
         files: [
         {
           expand: true,
-          cwd: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/modules/',
+          cwd: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/plugins',
           src: ['*.js'],
           dest: '<%= config.dist %>/<%= config.distAssets %>/<%= config.distScripts %>/'
         }
@@ -712,8 +712,8 @@
     'build_images',
     'build_scripts',
     'build_styles',
-    'build_fonts',
-    'modernizr'
+    'build_fonts'/*,
+    'modernizr'*/
     ]);
 
   grunt.registerTask('build_production', [
