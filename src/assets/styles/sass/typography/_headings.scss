@@ -19,7 +19,7 @@
  * @since 1.0.0
  * @author Daniel Furze
  */
-%heading-base {
+ %heading-base {
   font-weight: normal;
   text-rendering: optimizeLegibility;
 }
@@ -30,7 +30,7 @@
  * @since 1.0.0
  * @author Daniel Furze
  */
-%heading--mega {
+ %heading--mega {
   @include font-size(60px);
 
   @extend %heading-base;
@@ -78,7 +78,7 @@
  * @since 1.0.0
  * @author Daniel Furze
  */
-.heading--mega {
+ .heading--mega {
   @extend %heading--mega;
 }
 
@@ -115,8 +115,5 @@ h6,
 // Heading themes
 .heading--style-a {
   font-family: $font-family-sans-serif;
-
-  header & {
-    margin-top: 0;
-  }
+  margin-top: 0;
 }

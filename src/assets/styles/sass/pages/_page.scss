@@ -5,7 +5,10 @@
  */
 
  .page-content {
-  @extend %inner--small;
+ }
+
+ .page-content__inner {
+  // @extend %inner--small;
 }
 
 .page-title {

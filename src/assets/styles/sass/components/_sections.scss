@@ -1,0 +1,86 @@
+/**
+ * Sections
+ *
+ * @author Daniel Furze
+ */
+
+ .section {
+  // min-height: 80vh;
+  overflow: hidden;
+  position: relative
+}
+
+.section__inner {
+  @extend %inner;
+
+  min-height: 80vh;
+  position: relative
+}
+
+.section__content {
+ @include total-align();
+}
+
+.section__heading {
+  font-family: $font-family-sans-serif;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.section__background {
+  // <figure>
+  margin: 0;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    @include rgba-bg($brand-grey);
+
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%
+  }
+}
+
+// themes
+.section--style-a {
+  background: $brand-color;
+  color: $brand-white;
+
+  &::after {
+    background: $brand-color;
+    content: '';
+    display: block;
+    height: 10vh;
+    position: absolute;
+    left: 0;
+    bottom: -7vh;
+    transform: skewY(3deg);
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+.section--style-b {
+  background: $brand-grey;
+  color: $brand-white;
+  padding-top: 7vh;
+
+  &::after {
+    background: $brand-grey;
+    content: '';
+    display: block;
+    height: 10vh;
+    position: absolute;
+    left: 0;
+    bottom: -7vh;
+    transform: skewY(-3deg);
+    width: 100%;
+  }
+}

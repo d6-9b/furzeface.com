@@ -15,12 +15,13 @@ title: Master Page
 		{{/block}}
 	</head>
 	<body class="hentry {{#if pageClass}}{{pageClass}}{{/if}}">
-		{{>header}}
+		{{!-- {{>header}} --}}
 
 		{{#block "master-body"}}
 			{{body}}
 		{{/block}}
-		{{>footer}}
+
+		{{!-- {{>footer}} --}}
 
     {{#block "master-foot"}}
 			{{>foot-scripts}}

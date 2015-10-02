@@ -8,15 +8,6 @@
  * @author Daniel Furze
  */
 
-/**
- * Box sizing.
- * Set to correct box model, where possible.
- *
- * @group base
- *
- * @since 1.0.0
- * @author Daniel Furze
- */
  *,
  *::before,
  *::after {
@@ -32,8 +23,6 @@
  * @author Daniel Furze
  */
  html {
-  // font-size: 100%;
-
   @include MQ(L) {
     font-size: 120%;
   }
