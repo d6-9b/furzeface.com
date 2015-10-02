@@ -1,0 +1,3 @@
+design/about.psd filter=lfs -crlf
+design/blog.psd filter=lfs -crlf
+design/index.psd filter=lfs -crlf
