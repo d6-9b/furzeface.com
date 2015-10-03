@@ -27,27 +27,6 @@
   text-transform: uppercase;
 }
 
-.section__background {
-  // <figure>
-  margin: 0;
-
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  &::after {
-    @include rgba-bg($brand-grey);
-
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%
-  }
-}
-
 // themes
 .section--style-a {
   background: $brand-color;
@@ -72,15 +51,36 @@
   color: $brand-white;
   padding-top: 7vh;
 
-  &::after {
-    background: $brand-grey;
+  &::before {
+    @include rgba-bg($brand-grey);
+
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%
+  }
+}
+
+.section--style-c {
+  background: $brand-white;
+
+  &::before {
+    background: $brand-white;
     content: '';
     display: block;
     height: 10vh;
     position: absolute;
     left: 0;
-    bottom: -7vh;
+    top: -7vh;
     transform: skewY(-3deg);
     width: 100%;
   }
+}
+
+.section--with-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: left center;
 }

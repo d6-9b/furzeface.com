@@ -47,6 +47,7 @@
     "grunt-dev-update": "^1.0.2",
     "grunt-favicons": "^0.6.4",
     "grunt-humans-txt": "^0.2.1",
+    "grunt-jsbeautifier": "^0.2.10",
     "grunt-jsdoc": "^0.6.2",
     "grunt-modernizr": "0.6.0",
     "grunt-newer": "^1.1.0",

@@ -115,5 +115,14 @@ h6,
 // Heading themes
 .heading--style-a {
   font-family: $font-family-sans-serif;
-  margin-top: 0;
+  font-weight: 300;
+  margin: 0;
+}
+
+.heading--style-b {
+ font-family: $font-family-sans-serif;
+ font-weight: 600;
+ letter-spacing: 1px;
+ margin-top: 0;
+ text-transform: uppercase;
 }

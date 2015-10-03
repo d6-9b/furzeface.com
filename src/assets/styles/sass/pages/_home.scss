@@ -4,17 +4,73 @@
  * @author Daniel Furze
  */
 
- .page-home {
-  .main {
-    // @include banner-embellishment($size: 30px, $left: 25%, $right: 75%);
-
-    // position: relative;
-  }
-}
-
-.page-404 {
+ .page-404 {
   // @todo tidy this up
   background: $brand-color;
   color: $brand-white;
   text-align: center;
+}
+
+
+.page-home {
+  .blockquote {
+    @extend %col--6-of-12;
+    @extend %heading--alpha;
+
+    float: right;
+    font-family: $font-family-serif;
+    font-weight: 200;
+    font-style: italic;
+    margin: 0;
+
+    .author {
+      // <span>
+      font-family: $font-family-sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// refactor from here
+.homepage__title {
+  float: left;
+  margin: 0 5px 0 0;
+}
+
+.homepage__list {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.homepage__list-item {
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: all 1s;
+  transform: translateY(50px);
+
+  &.in {
+    opacity: 1;
+    transform: none;
+  }
+
+  &.out {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  &.gone {
+    display: none;
+  }
+}
+
+.homepage__copy {
+  @extend %col--6-of-12;
+
+  float: left;
 }
